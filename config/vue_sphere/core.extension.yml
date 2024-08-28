@@ -12,6 +12,7 @@ module:
   ckeditor5: 0
   comment: 0
   config: 0
+  consumers: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -25,6 +26,7 @@ module:
   help: 0
   history: 0
   image: 0
+  jsonapi: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -34,8 +36,12 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  rest: 0
+  restui: 0
   search: 0
+  serialization: 0
   shortcut: 0
+  simple_oauth: 0
   system: 0
   taxonomy: 0
   text: 0
