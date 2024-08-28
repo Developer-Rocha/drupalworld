@@ -1,0 +1,10 @@
+
+# Complete documentation at https://www.drush.org/latest/site-aliases/ .
+# Change the uri entries for your project.
+local:
+  root: /var/www/html/web
+  uri: https://vue-sphere.ddev.site
+
+production:
+  root: /var/www/html/web
+  uri: https://www.vue-sphere.drupalworld.com

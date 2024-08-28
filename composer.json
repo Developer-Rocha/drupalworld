@@ -22,6 +22,8 @@
         "drupal/core-recommended": "^10.1",
         "drupal/gin": "^3.0@rc",
         "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/restui": "^1.22",
+        "drupal/simple_oauth": "^5.2",
         "drush/drush": "^12.4"
     },
     "conflict": {

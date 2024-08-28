@@ -8,6 +8,7 @@ router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames:
   - aihub
+  - vue-sphere
 additional_fqdns: []
 database:
     type: mariadb
@@ -21,6 +22,8 @@ nodejs_version: "16"
 hooks:
   post-start:
     - exec: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS aihub; GRANT ALL ON aihub.* to 'db'@'%';"
+      service: db
+    - exec: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS vuesphere; GRANT ALL ON vuesphere.* to 'db'@'%';"
       service: db
     # Run install script if site not yet available.
     - exec-host: "(ddev drush status 2>&1 | grep -q Successful) || ddev install"
