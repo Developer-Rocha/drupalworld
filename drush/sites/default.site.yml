@@ -1,0 +1,9 @@
+# Complete documentation at https://www.drush.org/latest/site-aliases/ .
+# Change the uri entries for your project.
+local:
+  root: /var/www/html/web
+  uri: https://drupalworld.ddev.site
+
+production:
+  root: /var/www/html/web
+  uri: https://www.drupalworld.com
