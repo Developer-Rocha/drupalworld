@@ -6,7 +6,8 @@ webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
-additional_hostnames: []
+additional_hostnames:
+  - aihub
 additional_fqdns: []
 database:
     type: mariadb
@@ -17,6 +18,13 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 nodejs_version: "16"
+hooks:
+  post-start:
+    - exec: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS aihub; GRANT ALL ON aihub.* to 'db'@'%';"
+      service: db
+    # Run install script if site not yet available.
+    - exec-host: "(ddev drush status 2>&1 | grep -q Successful) || ddev install"
+
 
 # Key features of ddev's config.yaml:
 
