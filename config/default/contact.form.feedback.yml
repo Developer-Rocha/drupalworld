@@ -1,0 +1,14 @@
+uuid: b6e0e3a9-64f8-4fa1-b6dc-dd8f43ece99a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - fabricio.lopesx@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
