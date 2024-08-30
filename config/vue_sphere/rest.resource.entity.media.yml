@@ -1,0 +1,18 @@
+uuid: fe5e3431-11e7-4f0d-81bf-09f2afdd98df
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - serialization
+    - simple_oauth
+id: entity.media
+plugin_id: 'entity:media'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

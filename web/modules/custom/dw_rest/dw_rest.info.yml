@@ -1,0 +1,7 @@
+name: 'Drupal World REST'
+type: module
+description: 'Alters the JSON:API or REST response.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - serialization

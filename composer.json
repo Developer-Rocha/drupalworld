@@ -20,8 +20,11 @@
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
+        "drupal/field_group": "^3.6",
         "drupal/gin": "^3.0@rc",
         "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/jsonapi_response_alter": "^2.0",
+        "drupal/maxlength": "^3.1",
         "drupal/restui": "^1.22",
         "drupal/simple_oauth": "^5.2",
         "drush/drush": "^12.4"

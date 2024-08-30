@@ -1,0 +1,31 @@
+uuid: 2ff1e9c9-cb05-4866-ba83-216e46115565
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.rest
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.rest
+targetEntityType: media
+bundle: image
+mode: rest
+content:
+  field_media_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: large
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

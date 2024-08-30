@@ -1,0 +1,18 @@
+uuid: 6bb3c331-3265-42c4-8bc2-e452422ff71b
+langcode: en
+status: false
+dependencies:
+  module:
+    - language
+    - serialization
+    - simple_oauth
+id: entity.configurable_language
+plugin_id: 'entity:configurable_language'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

@@ -1,0 +1,11 @@
+uuid: e9f52f6d-a53b-4f4c-90b7-6585ea794aad
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.rest
+label: REST
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,19 @@
+uuid: d06815ce-b1f4-4333-b190-af274b4a5dbc
+langcode: en
+status: false
+dependencies:
+  module:
+    - serialization
+    - simple_oauth
+    - user
+id: entity.entity_view_display
+plugin_id: 'entity:entity_view_display'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2
+    - cookie
