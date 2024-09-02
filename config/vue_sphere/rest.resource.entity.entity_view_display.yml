@@ -4,7 +4,6 @@ status: false
 dependencies:
   module:
     - serialization
-    - simple_oauth
     - user
 id: entity.entity_view_display
 plugin_id: 'entity:entity_view_display'
@@ -15,5 +14,4 @@ configuration:
   formats:
     - json
   authentication:
-    - oauth2
-    - cookie
+    1: cookie
