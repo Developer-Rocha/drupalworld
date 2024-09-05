@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
@@ -42,7 +43,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
@@ -52,6 +54,7 @@
                 "web-root": "web/"
             }
         },
+        "enable-patching": true,
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
@@ -101,6 +104,23 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "installer-types": [
+            "drupal-custom",
+            "drupal-feature",
+            "npm-asset"
+        ],
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "3301782 - PHP8 Deprecated function : htmlspecialchars(): Passing null to parameter #1": "https://www.drupal.org/files/issues/2023-08-02/htmlspecialchars_passing_null_to_parameter1-3301782-23.patch",
+                "3052608 - DateTimeComputed tries to compute from an empty value": "https://www.drupal.org/files/issues/2023-04-11/3052608-22.patch",
+                "3218674 - Translation file not found notice for en langcode": "https://www.drupal.org/files/issues/2022-10-10/drupal-install-throwing-translation-file-not-found-3218674-9.diff",
+                "3218426 - Using partially synchronized image fields causes validation errors and PHP warnings": "https://www.drupal.org/files/issues/2024-08-27/drupal-11.x-MR-5385--20240827-1.patch",
+                "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch"
+            }
         }
     }
 }
