@@ -27,6 +27,8 @@ module:
   filter: 0
   graphql: 0
   graphql_core: 0
+  graphql_webform: 0
+  graphql_webform_states: 0
   help: 0
   history: 0
   image: 0
@@ -63,6 +65,8 @@ module:
   user: 0
   users_jwt: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   content_translation: 10
   views: 10
   standard: 1000

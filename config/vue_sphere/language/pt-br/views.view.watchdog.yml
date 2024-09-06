@@ -27,6 +27,7 @@ display:
       pager:
         options:
           tags:
+            next: ››
             previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
