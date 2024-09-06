@@ -25,11 +25,13 @@
         "drupal/gin": "^3.0@rc",
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
+        "drupal/graphql_webform": "^1.0@alpha",
         "drupal/jsonapi_response_alter": "^2.0",
         "drupal/jwt": "^2.1",
         "drupal/maxlength": "^3.1",
         "drupal/restui": "^1.22",
         "drupal/simple_oauth": "^5.2",
+        "drupal/webform": "^6.2",
         "drush/drush": "^12.4"
     },
     "conflict": {
