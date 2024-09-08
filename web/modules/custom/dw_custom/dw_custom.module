@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_presave().
+ */
+function dw_custom_entity_presave(EntityInterface $entity) {
+  if ($entity->bundle() === 'article') {
+    if($entity->hasField('field_path_alias')) {
+      $path = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $entity->id());
+
+      if (!empty($path)) {
+        $entity->set('field_path_alias', $path);
+      }
+    }
+  }
+}

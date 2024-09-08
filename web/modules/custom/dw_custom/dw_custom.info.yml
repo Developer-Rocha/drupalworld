@@ -1,0 +1,8 @@
+name: 'Drupal World Custom'
+type: module
+description: 'Create custom functionalities to Drupal World project.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:path
+  - drupal:node

@@ -1,7 +1,0 @@
-name: 'Drupal World GraphQL'
-type: module
-description: 'Alters the GraphQL.'
-core_version_requirement: ^9 || ^10
-package: Custom
-dependencies:
-  - jwt

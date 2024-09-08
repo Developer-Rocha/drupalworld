@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_path_alias
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser
     - node.type.article
@@ -53,4 +54,5 @@ hidden:
   body: true
   comment: true
   field_paragraphs: true
+  field_path_alias: true
   langcode: true
