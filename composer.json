@@ -32,6 +32,7 @@
         "drupal/key": "*",
         "drupal/maxlength": "^3.1",
         "drupal/paragraphs": "^1.18",
+        "drupal/pathauto": "^1.13",
         "drupal/restui": "^1.22",
         "drupal/simple_oauth": "^5.2",
         "drupal/webform": "^6.2",

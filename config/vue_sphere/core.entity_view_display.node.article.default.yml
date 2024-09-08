@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser
     - node.type.article
   module:
     - comment
+    - entity_reference_revisions
     - text
     - user
 _core:
@@ -45,6 +47,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_tags:
     type: entity_reference_label
