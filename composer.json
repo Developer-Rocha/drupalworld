@@ -28,6 +28,7 @@
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
         "drupal/graphql_webform": "^1.0@alpha",
+        "drupal/highlight_php": "^1.0",
         "drupal/jsonapi_response_alter": "^2.0",
         "drupal/key": "*",
         "drupal/maxlength": "^3.1",
