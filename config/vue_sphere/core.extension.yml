@@ -31,6 +31,7 @@ module:
   graphql_webform: 0
   graphql_webform_states: 0
   help: 0
+  highlight_php: 0
   history: 0
   image: 0
   jsonapi: 0
