@@ -784,3 +784,9 @@ $settings['state_cache'] = TRUE;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
+// Fix the problem with Redirects to external
+if (isset($GLOBALS['request']) and
+  '/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME')) {
+  $GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php');
+}
