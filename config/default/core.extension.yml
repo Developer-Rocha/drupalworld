@@ -3,6 +3,17 @@ _core:
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  ai: 0
+  ai_api_explorer: 0
+  ai_assistant_api: 0
+  ai_automator: 0
+  ai_chatbot: 0
+  ai_ckeditor: 0
+  ai_content: 0
+  ai_external_moderation: 0
+  ai_logging: 0
+  ai_translate: 0
+  ai_validations: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -19,11 +30,14 @@ module:
   editor: 0
   field: 0
   field_ui: 0
+  field_validation: 0
   file: 0
   filter: 0
   help: 0
   history: 0
   image: 0
+  key: 0
+  language: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -33,16 +47,21 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  provider_lmstudio: 0
+  provider_openai: 0
   search: 0
   shortcut: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
-  tour: 0
+  unstructured: 0
   update: 0
   user: 0
+  vdb_provider_milvus: 0
   views_ui: 0
+  content_translation: 10
   views: 10
   standard: 1000
 theme:
