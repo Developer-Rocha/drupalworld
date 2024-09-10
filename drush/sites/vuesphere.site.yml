@@ -7,4 +7,4 @@ local:
 
 production:
   root: /var/www/html/web
-  uri: http://api-devrocha.pt
+  uri: http://drupalizer.tech
