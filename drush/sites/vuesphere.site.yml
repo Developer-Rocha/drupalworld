@@ -7,4 +7,4 @@ local:
 
 production:
   root: /var/www/html/web
-  uri: http://drupalizer.tech
+  uri: http://vue-api.drupalizer.tech

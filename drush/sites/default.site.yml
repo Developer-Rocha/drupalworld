@@ -6,4 +6,4 @@ local:
 
 production:
   root: /var/www/html/web
-  uri: https://www.drupalworld.com
+  uri: https://drupalizer.tech
