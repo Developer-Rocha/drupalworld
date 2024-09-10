@@ -57,9 +57,9 @@
  */
 
 $sites = [
-  'drupalworld.com'   => 'default',
-  'aihub.drupalworld.com'   => 'aihub',
-  'vue-sphere.drupalworld.com' => 'vue_sphere'
+  'drupalizer.tech'   => 'default',
+  'aihub.drupalizer.tech'   => 'aihub',
+  'vue-api.drupalizer.tech' => 'vue_sphere'
 ];
 
 /**

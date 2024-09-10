@@ -1,5 +1,5 @@
 <?php
 
 $sites['drupalizer.tech'] = 'default';
-$sites['aihub.ddev.site'] = 'aihub';
+$sites['aihub.drupalizer.tech'] = 'aihub';
 $sites['vue-api.drupalizer.tech'] = 'vue_sphere';
