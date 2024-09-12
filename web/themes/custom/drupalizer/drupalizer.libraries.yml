@@ -1,0 +1,11 @@
+main:
+  css:
+    theme:
+      css/theme.css: {weight: 97}
+  js:
+    js/scripts.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupalSettings

@@ -1,0 +1,21 @@
+.wrap-field-read-time {
+  display: flex;
+  justify-content: flex-end;
+
+  .field--read-time {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+
+  svg {
+    height: 2em;
+    margin-right: .5em;
+    width: 2em;
+  }
+
+  .label {
+    padding-top: 3px;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,22 @@
+uuid: 30d08199-d19c-4f62-b5ad-9930af40bb70
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalizer
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: drupalizer_primary_local_tasks
+theme: drupalizer
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

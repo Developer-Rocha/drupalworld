@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set classes = [
+  'field',
+  'field__item',
+  'wrap-field-read-time'
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="field--read-time">
+    {% set file = active_theme_path() ~  '/icons/clock.svg' %}
+    {% include file ignore missing %}
+
+    {% for item in items %}
+      <div class="label">{{ item.content }}</div>
+    {% endfor %}
+  </div>
+</div>

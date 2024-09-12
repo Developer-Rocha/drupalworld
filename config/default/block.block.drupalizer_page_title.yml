@@ -1,0 +1,20 @@
+uuid: 75368d2d-2eae-457e-8532-e492e62eddba
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupalizer
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: drupalizer_page_title
+theme: drupalizer
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

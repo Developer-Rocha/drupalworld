@@ -1,0 +1,23 @@
+uuid: a469ffde-482a-4808-9c6d-f52927bf6de6
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - drupalizer
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: drupalizer_search_form_narrow
+theme: drupalizer
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

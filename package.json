@@ -1,0 +1,46 @@
+{
+  "name": "drupalizer",
+  "version": "1.0.0",
+  "description": "Drupalizer themed website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "drupal-breakpoints-scss": "^1.2.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-pixrem": "1.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "lodash": "^4.17.11",
+    "random-token": "0.0.8",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-no-browser-hacks": "^1.2.1",
+    "stylelint-scss": "^3.10.1",
+    "uglifyjs-webpack-plugin": "^1.1.16",
+    "yargs": "^17.6.2"
+  },
+  "author": "Fabrício Rocha",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Developer-Rocha/drupalworld"
+  },
+  "devDependencies": {}
+}

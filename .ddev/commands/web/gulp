@@ -1,0 +1,36 @@
+#!/bin/bash
+
+## Description: Run gulp.
+## Usage: gulp build|watch
+## Example: "ddev gulp", "ddev gulp build", "ddev gulp watch"
+
+## Gulp/theme compatible node version.
+## Workaround until we can set this in the ddev config.
+NODE_VERSION=12
+
+## The relative path from DDEV_DOCROOT to the directory of gulpfile.js.
+## By default it is the DDEV_DOCROOT directory.
+## If the gulpfile is somewhere else, update this variable to its location.
+GULPFILE_DIRECTORY_RELATIVE_PATH=''
+
+## ------------- Don't edit anything after this line ------------- ##
+
+## Install "n" so we can change the node version.
+sudo npm install -g n;
+## Set the node version.
+sudo n ${NODE_VERSION}
+
+## Concatenates path to theme directory for your project.
+GULPFILE_DIRECTORY_PATH=/var/www/html/${DDEV_DOCROOT}/${GULPFILE_DIRECTORY_RELATIVE_PATH}
+
+## Check if directory exists.
+if [ -d ${GULPFILE_DIRECTORY_PATH} ]
+then
+  cd ${GULPFILE_DIRECTORY_PATH};
+  npm install;
+  gulp $@
+else
+  echo "Error: Directory ${GULPFILE_DIRECTORY_PATH} does not exist."
+  echo '(Edit GULPFILE_DIRECTORY_RELATIVE_PATH variable in ./ddev/commands/web/gulp to fix this.)'
+fi
+exit

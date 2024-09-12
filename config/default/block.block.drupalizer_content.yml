@@ -1,0 +1,22 @@
+uuid: bf6f0d53-3eaf-4f90-85c9-fa2d954ca4cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupalizer
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: drupalizer_content
+theme: drupalizer
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
