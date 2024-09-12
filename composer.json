@@ -18,12 +18,16 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/ai": "^1.0@alpha",
+        "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/entity_reference_revisions": "^1.12",
         "drupal/entity_update": "*",
+        "drupal/estimated_read_time": "^1.1",
         "drupal/field_group": "^3.6",
+        "drupal/field_validation": "^3.0@beta",
         "drupal/gin": "^3.0@rc",
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
@@ -36,6 +40,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/restui": "^1.22",
         "drupal/simple_oauth": "^5.2",
+        "drupal/unstructured": "^2.0@beta",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.4"
     },
@@ -51,7 +56,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
@@ -129,5 +135,8 @@
                 "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch"
             }
         }
+    },
+    "require-dev": {
+        "drupal/devel": "^5.0"
     }
 }

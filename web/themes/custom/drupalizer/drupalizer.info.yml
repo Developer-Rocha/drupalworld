@@ -1,0 +1,9 @@
+name: Drupalizer
+description: Drupalizer powered theme.
+type: theme
+package: Custom
+base theme: olivero
+core_version_requirement: ^8 || ^9 || ^10
+version: VERSION
+dependencies:
+  - theme:olivero

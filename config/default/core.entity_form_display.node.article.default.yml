@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_read_time
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - estimated_read_time
     - image
     - path
     - text
@@ -51,6 +53,13 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_read_time:
+    type: estimated_read_time_default
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+    third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
@@ -60,6 +69,13 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path

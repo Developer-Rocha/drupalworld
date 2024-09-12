@@ -74,3 +74,11 @@ console/
 
 # Ignore config importer files
 config-import
+
+# Ignore config-split importer files
+/config/default/key.key*.yml
+/config/default-local-split/key.key*.yml
+/config/default-production-split/key.key*.yml
+/config/vue_sphere/key.key*.yml
+/config/vue-sphere-local-split/key.key*.yml
+/config/vue-sphere-production-split/key.key*.yml
