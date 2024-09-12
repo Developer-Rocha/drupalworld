@@ -1,0 +1,16 @@
+uuid: 88810fd5-461c-4978-80ce-6286b7ab8e9b
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ./../config/vue-sphere-local-split
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

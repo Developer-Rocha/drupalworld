@@ -1,0 +1,16 @@
+uuid: d0e283a3-e260-4733-80ff-221a224aa14e
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ./../config/vue-sphere-production-split
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }
