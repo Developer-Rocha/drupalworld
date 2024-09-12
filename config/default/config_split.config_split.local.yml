@@ -1,0 +1,21 @@
+uuid: 5c841a95-627a-4e66-8b52-a2673aff6bb2
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ./../config/default-local-split
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+complete_list:
+  - key.key.openai
+  - key.key.unstructured
+  - key.key.zillix_milvus
+partial_list: {  }

@@ -1,0 +1,19 @@
+uuid: be4607d9-d563-49af-8db3-c06399336015
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ./../config/default-production-split
+module: {  }
+theme: {  }
+complete_list:
+  - key.key.openai
+  - key.key.unstructured
+  - key.key.zillix_milvus
+partial_list: {  }
