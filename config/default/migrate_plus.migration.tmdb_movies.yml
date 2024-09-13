@@ -20,7 +20,7 @@ source:
     - 'https://api.themoviedb.org/3/movie/popular'
   request_options:
     query:
-      language: 'en'
+      language: en
   item_selector: results
   fields:
     -
@@ -29,11 +29,11 @@ source:
       selector: id
     -
       name: original_title
-      label: 'Title'
+      label: Title
       selector: original_title
     -
       name: overview
-      label: 'Overview'
+      label: Overview
       selector: overview
     -
       name: poster_path
@@ -57,6 +57,9 @@ process:
   field_overview/format: basic_html
   field_release_date: release_date
   field_vote_average: vote_average
+  field_movie_banner:
+    plugin: file_import
+    source: poster_path
 destination:
   plugin: 'entity:node'
   default_bundle: movies

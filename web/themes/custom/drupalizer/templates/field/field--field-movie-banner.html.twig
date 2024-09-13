@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set classes = [
+  'field',
+  'field__item',
+  'field__image',
+  'movie-banner'
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    <img src="{{ item.content }}" alt="Image">
+  {% endfor %}
+</div>

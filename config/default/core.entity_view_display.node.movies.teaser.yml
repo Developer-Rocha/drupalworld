@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.movies.field_adult
+    - field.field.node.movies.field_movie_banner
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
     - field.field.node.movies.field_tmdb_id
@@ -24,6 +25,7 @@ content:
     region: content
 hidden:
   field_adult: true
+  field_movie_banner: true
   field_overview: true
   field_release_date: true
   field_tmdb_id: true

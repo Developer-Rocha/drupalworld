@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.movies.field_adult
+    - field.field.node.movies.field_movie_banner
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
     - field.field.node.movies.field_tmdb_id
@@ -31,6 +32,14 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_movie_banner:
+    type: string_textfield
+    weight: 127
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_overview:
     type: text_textarea
