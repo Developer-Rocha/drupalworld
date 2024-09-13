@@ -4,7 +4,7 @@ description: 'Imports top 10 movies from The Movie Database API and creates Movi
 core_version_requirement: ^10
 package: Custom
 dependencies:
-  - drupal:migrate
-  - drupal:node
-  - drupal:field
+  - migrate
+  - migrate_plus
+  - migrate_tools
 version: 1.0

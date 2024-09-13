@@ -2,7 +2,43 @@ id: tmdb_movies
 label: 'Import Top 10 Movies from TMDb'
 migration_group: tmdb_movies
 source:
-  plugin: tmdb_movies_source
+  plugin: url
+  data_fetcher_plugin: http_tmdb
+  data_parser_plugin: json
+  urls:
+    - 'https://api.themoviedb.org/3/movie/popular'
+  request_options:
+    query:
+      language: 'en'
+  item_selector: results
+  fields:
+    -
+      name: id
+      label: 'TMDb ID'
+      selector: id
+    -
+      name: original_title
+      label: 'Title'
+      selector: original_title
+    -
+      name: overview
+      label: 'Overview'
+      selector: overview
+    -
+      name: poster_path
+      label: 'Poster URL'
+      selector: poster_path
+    -
+      name: release_date
+      label: 'Release Date'
+      selector: release_date
+    -
+      name: vote_average
+      label: 'Vote Average'
+      selector: vote_average
+  ids:
+    id:
+      type: string
 process:
   title: original_title
   field_tmdb_id: id
@@ -10,9 +46,6 @@ process:
   field_overview/format: 'basic_html'
   field_release_date: release_date
   field_vote_average: vote_average
-  field_poster:
-    plugin: file_import
-    source: poster_path
 destination:
   plugin: entity:node
   default_bundle: movies
