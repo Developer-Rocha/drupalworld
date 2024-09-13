@@ -1,0 +1,9 @@
+uuid: bb75add7-f881-4a40-b433-0ecc79f8b57f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Driver Category'
+vid: driver_category
+description: null
+weight: 0
+new_revision: false

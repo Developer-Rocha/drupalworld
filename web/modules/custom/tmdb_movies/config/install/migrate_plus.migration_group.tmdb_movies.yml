@@ -1,0 +1,3 @@
+id: tmdb_movies
+label: 'TMDb Movies'
+description: 'Migrations to import movies from TMDb API.'

@@ -24,13 +24,16 @@ module:
   config: 0
   config_split: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   estimated_read_time: 0
   field: 0
+  field_group: 0
   field_ui: 0
   field_validation: 0
   file: 0
@@ -43,19 +46,25 @@ module:
   link: 0
   menu_link_content: 0
   menu_ui: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_tools: 0
   mysql: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  phpass: 0
   provider_lmstudio: 0
   provider_openai: 0
   search: 0
   shortcut: 0
+  starrating: 0
   system: 0
   taxonomy: 0
   text: 0
+  tmdb_movies: 0
   token: 0
   toolbar: 0
   unstructured: 0
@@ -63,8 +72,14 @@ module:
   user: 0
   vdb_provider_milvus: 0
   views_ui: 0
+  webform: 0
+  webform_templates: 0
+  webform_ui: 0
+  workflows: 0
+  pathauto: 1
   content_translation: 10
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   olivero: 0

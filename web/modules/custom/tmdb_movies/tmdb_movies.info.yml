@@ -1,0 +1,10 @@
+name: 'TMDb Movies Importer'
+type: module
+description: 'Imports top 10 movies from The Movie Database API and creates Movie nodes using Migrate API.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:migrate
+  - drupal:node
+  - drupal:field
+version: 1.0

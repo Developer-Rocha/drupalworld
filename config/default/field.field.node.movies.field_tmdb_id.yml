@@ -1,0 +1,23 @@
+uuid: 156d91db-d071-470f-993d-928e7e4c2c4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmdb_id
+    - node.type.movies
+id: node.movies.field_tmdb_id
+field_name: field_tmdb_id
+entity_type: node
+bundle: movies
+label: 'TMDB ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

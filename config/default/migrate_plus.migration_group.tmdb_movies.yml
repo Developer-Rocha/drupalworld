@@ -1,0 +1,12 @@
+uuid: 8d0978cb-9714-4464-949c-1d40d7376ca8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SbZ_bFBHzvubtsgJ4wXLZL3xCurYFUK4ufYK7Uen5-M
+id: tmdb_movies
+label: 'TMDb Movies'
+description: 'Migrations to import movies from TMDb API.'
+source_type: null
+module: null
+shared_configuration: null

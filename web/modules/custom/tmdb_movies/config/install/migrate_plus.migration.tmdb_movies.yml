@@ -1,0 +1,24 @@
+id: tmdb_movies
+label: 'Import Top 10 Movies from TMDb'
+migration_group: tmdb_movies
+source:
+  plugin: tmdb_movies_source
+process:
+  title: original_title
+  field_tmdb_id: id
+  field_overview/value: overview
+  field_overview/format: 'basic_html'
+  field_release_date: release_date
+  field_vote_average: vote_average
+  field_poster:
+    plugin: file_import
+    source: poster_path
+destination:
+  plugin: entity:node
+  default_bundle: movies
+  default_langcode: en
+  uid: 1
+  status: 1
+migration_tags:
+  - TMDb
+dependencies: {}

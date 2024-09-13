@@ -36,10 +36,13 @@
         "drupal/jsonapi_response_alter": "^2.0",
         "drupal/key": "*",
         "drupal/maxlength": "^3.1",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.0",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
         "drupal/restui": "^1.22",
         "drupal/simple_oauth": "^5.2",
+        "drupal/starrating": "^4.1@alpha",
         "drupal/unstructured": "^2.0@beta",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.4"
@@ -137,6 +140,7 @@
         }
     },
     "require-dev": {
-        "drupal/devel": "^5.0"
+        "drupal/devel": "^5.0",
+        "drupal/twig_xdebug": "^1.3"
     }
 }

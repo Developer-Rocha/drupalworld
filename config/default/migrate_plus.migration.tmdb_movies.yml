@@ -1,0 +1,33 @@
+uuid: de860079-aeeb-4fd8-9e9c-fcac5cbd8a7f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2WPPnGJ0E9h3BCJ88b_tRgW86ZAr_jHkBHHltAdHfEA
+id: tmdb_movies
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - TMDb
+migration_group: tmdb_movies
+label: 'Import Top 10 Movies from TMDb'
+source:
+  plugin: tmdb_movies_source
+process:
+  title: original_title
+  field_tmdb_id: id
+  field_overview/value: overview
+  field_overview/format: basic_html
+  field_release_date: release_date
+  field_vote_average: vote_average
+  field_poster:
+    plugin: file_import
+    source: poster_path
+destination:
+  plugin: 'entity:node'
+  default_bundle: movies
+  default_langcode: en
+  uid: 1
+  status: 1
+migration_dependencies: null
