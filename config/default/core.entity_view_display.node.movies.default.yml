@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.movies.field_adult
     - field.field.node.movies.field_movie_banner
+    - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
     - field.field.node.movies.field_tmdb_id
@@ -28,13 +29,22 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_movie_banner:
     type: string
     label: above
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_movie_poster:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 1
     region: content
@@ -43,7 +53,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_release_date:
     type: datetime_default
@@ -52,7 +62,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_tmdb_id:
     type: number_integer
@@ -61,7 +71,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_vote_average:
     type: starrating
@@ -71,7 +81,7 @@ content:
       icon_type: star
       icon_color: 1
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   links:
     settings: {  }

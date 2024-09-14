@@ -57,7 +57,7 @@ process:
   field_overview/format: basic_html
   field_release_date: release_date
   field_vote_average: vote_average
-  field_movie_banner:
+  field_movie_poster:
     plugin: file_import
     source: poster_path
 destination:
