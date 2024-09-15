@@ -1,0 +1,25 @@
+uuid: fa583ed8-cfc6-439c-9526-9b30f6502a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - drupalizer
+id: drupalizer_footer_2
+theme: drupalizer
+region: footer_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
