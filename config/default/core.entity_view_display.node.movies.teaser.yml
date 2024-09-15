@@ -13,9 +13,9 @@ dependencies:
     - node.type.movies
   module:
     - datetime
+    - manage_display
     - starrating
     - text
-    - user
 id: node.movies.teaser
 targetEntityType: node
 bundle: movies
@@ -35,7 +35,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_release_date:
     type: datetime_default
@@ -44,7 +44,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_vote_average:
     type: starrating
@@ -54,14 +54,26 @@ content:
       icon_type: star
       icon_color: 1
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
+  created: true
   field_adult: true
   field_tmdb_id: true
   langcode: true
+  search_api_excerpt: true
+  uid: true

@@ -44,6 +44,7 @@ module:
   key: 0
   language: 0
   link: 0
+  manage_display: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -68,6 +69,7 @@ module:
   starrating: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   tmdb_movies: 0
   token: 0

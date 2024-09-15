@@ -1,20 +1,20 @@
-uuid: 9ae32ced-ff35-4b4f-b566-8940d2392483
+uuid: 6d861134-014c-4a8b-93e1-5666c6c0cd2b
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.movies
-id: node.movies.promote
-field_name: promote
-entity_type: node
-bundle: movies
-label: 'Promoted to front page'
+    - media.type.document
+id: media.document.status
+field_name: status
+entity_type: media
+bundle: document
+label: Published
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'

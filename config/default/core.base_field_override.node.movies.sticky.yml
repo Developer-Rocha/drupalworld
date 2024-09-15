@@ -1,14 +1,14 @@
-uuid: 9ae32ced-ff35-4b4f-b566-8940d2392483
+uuid: 694bd0ef-4b2f-4656-8e9d-4a5479de7643
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.movies
-id: node.movies.promote
-field_name: promote
+id: node.movies.sticky
+field_name: sticky
 entity_type: node
 bundle: movies
-label: 'Promoted to front page'
+label: 'Sticky at top of lists'
 description: ''
 required: false
 translatable: false

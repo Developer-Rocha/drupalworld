@@ -1,0 +1,18 @@
+uuid: af2a4820-6533-4afd-be3e-82a74e4bade8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.driver_category
+id: taxonomy_term.driver_category.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: driver_category
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

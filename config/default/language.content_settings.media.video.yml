@@ -1,9 +1,9 @@
-uuid: 898f5f79-7bcd-4bae-9186-7e62b0fc9f3b
+uuid: c907144e-a373-4dbb-91a5-8ef6aa63f917
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.driver_category
+    - media.type.video
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.driver_category
-target_entity_type_id: taxonomy_term
-target_bundle: driver_category
+id: media.video
+target_entity_type_id: media
+target_bundle: video
 default_langcode: site_default
 language_alterable: false

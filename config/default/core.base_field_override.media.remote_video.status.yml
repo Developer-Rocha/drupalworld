@@ -1,20 +1,20 @@
-uuid: 9ae32ced-ff35-4b4f-b566-8940d2392483
+uuid: 4e34f715-ab53-4390-8bdb-b4ccae1f1f18
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.movies
-id: node.movies.promote
-field_name: promote
-entity_type: node
-bundle: movies
-label: 'Promoted to front page'
+    - media.type.remote_video
+id: media.remote_video.status
+field_name: status
+entity_type: media
+bundle: remote_video
+label: Published
 description: ''
 required: false
 translatable: false
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'
