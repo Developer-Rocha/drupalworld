@@ -50,9 +50,9 @@ content:
     type: starrating
     label: hidden
     settings:
-      fill_blank: 0
+      fill_blank: '1'
       icon_type: star
-      icon_color: 1
+      icon_color: '1'
     third_party_settings: {  }
     weight: 3
     region: content

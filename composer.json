@@ -19,6 +19,8 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ai": "^1.0@alpha",
+        "drupal/ajax_loader": "^2.1",
+        "drupal/better_exposed_filters": "^7.0",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
@@ -48,6 +50,7 @@
         "drupal/starrating": "^4.1@alpha",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/unstructured": "^2.0@beta",
+        "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.4"
     },
@@ -140,6 +143,9 @@
                 "3218674 - Translation file not found notice for en langcode": "https://www.drupal.org/files/issues/2022-10-10/drupal-install-throwing-translation-file-not-found-3218674-9.diff",
                 "3218426 - Using partially synchronized image fields causes validation errors and PHP warnings": "https://www.drupal.org/files/issues/2024-08-27/drupal-11.x-MR-5385--20240827-1.patch",
                 "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch"
+            },
+            "drupal/views_infinite_scroll": {
+                "2894307 - Any way to Automatically Load Content when scrolling within a DIV": "https://www.drupal.org/files/issues/2022-02-09/support-for-overflow-scrolls-2894307-23.patch"
             }
         }
     },

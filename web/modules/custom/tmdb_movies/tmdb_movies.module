@@ -8,7 +8,7 @@ use Drupal\migrate\MigrateMessage;
  * Implements hook_cron().
  */
 function tmdb_movies_cron() {
-  $migrationID = 'tmdb_movies_migration';
+  $migrationID = 'tmdb_movies';
 
   try {
     /** @var \Drupal\migrate\Plugin\Migration $migration */

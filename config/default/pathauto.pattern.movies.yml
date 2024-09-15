@@ -7,12 +7,12 @@ dependencies:
 id: movies
 label: Movies
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: 'movies/[node:title]'
 selection_criteria:
-  b66625f5-ae32-4ecf-9a06-a260b968089c:
+  7e7e3a54-7441-417e-a1fa-4ec83432b9b8:
     id: 'entity_bundle:node'
     negate: false
-    uuid: b66625f5-ae32-4ecf-9a06-a260b968089c
+    uuid: 7e7e3a54-7441-417e-a1fa-4ec83432b9b8
     context_mapping:
       node: node
     bundles:

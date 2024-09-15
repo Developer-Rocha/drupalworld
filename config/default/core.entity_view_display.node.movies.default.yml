@@ -12,72 +12,67 @@ dependencies:
     - node.type.movies
   module:
     - datetime
+    - manage_display
     - starrating
     - text
-    - user
 id: node.movies.default
 targetEntityType: node
 bundle: movies
 mode: default
 content:
-  field_adult:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_movie_poster:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_overview:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_release_date:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 4
-    region: content
-  field_tmdb_id:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 7
+    weight: 3
     region: content
   field_vote_average:
     type: starrating
-    label: above
+    label: hidden
     settings:
-      fill_blank: 0
+      fill_blank: '1'
       icon_type: star
-      icon_color: 1
+      icon_color: '1'
     third_party_settings: {  }
-    weight: 6
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 5
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
+  created: true
+  field_adult: true
+  field_tmdb_id: true
   langcode: true
+  search_api_excerpt: true
+  uid: true
