@@ -12,22 +12,56 @@ dependencies:
     - field.field.node.movies.field_vote_average
     - node.type.movies
   module:
+    - datetime
+    - starrating
+    - text
     - user
 id: node.movies.teaser
 targetEntityType: node
 bundle: movies
 mode: teaser
 content:
+  field_movie_poster:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_overview:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_release_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_vote_average:
+    type: starrating
+    label: hidden
+    settings:
+      fill_blank: 0
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+    weight: 2
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
 hidden:
   field_adult: true
-  field_movie_poster: true
-  field_overview: true
-  field_release_date: true
   field_tmdb_id: true
-  field_vote_average: true
   langcode: true

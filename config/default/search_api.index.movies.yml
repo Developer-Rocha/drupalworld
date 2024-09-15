@@ -1,0 +1,55 @@
+uuid: 838fe1b3-5290-4990-928d-0519a9874ea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview
+    - search_api.server.server_db
+  module:
+    - node
+    - search_api
+id: movies
+name: Movies
+description: ''
+read_only: false
+field_settings:
+  field_overview:
+    label: Overview
+    datasource_id: 'entity:node'
+    property_path: field_overview
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_overview
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - movies
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: server_db
