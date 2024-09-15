@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.movies.field_adult
-    - field.field.node.movies.field_movie_banner
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
@@ -34,14 +33,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_movie_banner:
-    type: string_textfield
-    weight: 127
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_movie_poster:
     type: media_library_widget
@@ -96,6 +87,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

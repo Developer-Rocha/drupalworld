@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.movies.field_adult
-    - field.field.node.movies.field_movie_banner
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
@@ -30,14 +29,6 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_movie_banner:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
     region: content
   field_movie_poster:
     type: entity_reference_entity_view
