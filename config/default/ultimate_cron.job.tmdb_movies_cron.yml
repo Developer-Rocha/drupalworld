@@ -1,0 +1,29 @@
+uuid: f103ce07-04f8-4cd7-9c61-d44a9d6067bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - tmdb_movies
+title: 'Default cron handler'
+id: tmdb_movies_cron
+weight: 0
+module: tmdb_movies
+callback: tmdb_movies_cron
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '0+@ */6 * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000
