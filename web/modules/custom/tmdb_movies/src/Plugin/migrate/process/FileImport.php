@@ -27,27 +27,27 @@ class FileImport extends ProcessPluginBase implements MigrateProcessInterface {
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
     $url = 'https://image.tmdb.org/t/p/w500' . $value;
 
-    // Definir o diretório de destino.
+    // Define the destination directory.
     $directory = 'public://movies';
 
-    // Verifique se o diretório existe ou crie-o.
+    // Check if the directory exists or create it.
     $file_system = \Drupal::service('file_system');
     $file_system->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY);
 
     try {
-      // Baixar o conteúdo da imagem.
+      // Download the image content.
       $http_client = \Drupal::httpClient();
       $response = $http_client->get($url);
       $image_data = $response->getBody()->getContents();
 
-      // Definir o caminho completo do arquivo.
+      // Define the full path of the file.
       $file_name = basename($url);
       $destination = $directory . '/' . $file_name;
 
-      // Salvar o arquivo.
+      // Save the file.
       $file = \Drupal::service('file.repository')->writeData($image_data, $destination, FileSystemInterface::EXISTS_REPLACE);
 
-      // Se o arquivo foi salvo, criar uma entidade Media Image.
+      // If the file has been saved, create a Media Image entity.
       if ($file instanceof File) {
         $media = Media::create([
           'bundle' => 'image',
@@ -56,7 +56,7 @@ class FileImport extends ProcessPluginBase implements MigrateProcessInterface {
             'target_id' => $file->id(),
             'alt' => $row->getSourceProperty('title') ?? 'Poster',
           ],
-          'uid' => 1, // ID do usuário que será o autor da mídia.
+          'uid' => 1,
           'status' => 1,
         ]);
 
@@ -66,7 +66,7 @@ class FileImport extends ProcessPluginBase implements MigrateProcessInterface {
       }
     }
     catch (RequestException $e) {
-      \Drupal::logger('tmdb_movies')->error('Erro ao baixar a imagem da URL @url: @message', [
+      \Drupal::logger('tmdb_movies')->error('Error downloading image from URL @url: @message', [
         '@url' => $url,
         '@message' => $e->getMessage(),
       ]);
