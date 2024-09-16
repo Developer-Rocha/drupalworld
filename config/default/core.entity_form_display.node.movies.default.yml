@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.movies.field_adult
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
@@ -26,13 +25,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_adult:
-    type: boolean_checkbox
-    weight: 122
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_movie_poster:
     type: media_library_widget
     weight: 128
@@ -50,7 +42,7 @@ content:
     third_party_settings: {  }
   field_release_date:
     type: datetime_default
-    weight: 123
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -45,6 +45,14 @@
       </h3>
     {% endblock title %}
 
+    {% block post_date %}
+      {% if date %}
+        <div class="{{ component ~ '__date' }} {{ component ~ '__date--post-date' }}">
+          {{ date }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
     {% block component_text %}
       {% if text %}
         <div class="{{ component ~ '__text' }}">
@@ -60,13 +68,5 @@
         {% endfor %}
       </div>
     {% endif %}
-
-    {% block post_date %}
-      {% if date %}
-        <div class="{{ component ~ '__date' }} {{ component ~ '__date--post-date' }}">
-          {{ date }}
-        </div>
-      {% endif %}
-    {% endblock %}
   </div>
 {% endblock %}

@@ -17,9 +17,9 @@ source:
       label: 'TMDb ID'
       selector: id
     -
-      name: original_title
+      name: title
       label: 'Title'
-      selector: original_title
+      selector: title
     -
       name: overview
       label: 'Overview'
@@ -40,11 +40,13 @@ source:
     id:
       type: string
 process:
-  title: original_title
+  title: title
   field_tmdb_id: id
   field_overview/value: overview
   field_overview/format: 'basic_html'
-  field_release_date: release_date
+  field_release_date:
+    plugin: release_date_format
+    source: release_date
   field_vote_average: vote_average
   field_movie_poster:
     plugin: file_import

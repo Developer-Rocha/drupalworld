@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.movies.field_adult
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
@@ -29,11 +28,10 @@ third_party_settings:
     regions:
       tags:
         - field_vote_average
-        - field_adult
-      image:
-        - field_movie_poster
       date:
         - field_release_date
+      image:
+        - field_movie_poster
       title:
         - title
       text:
@@ -51,16 +49,6 @@ targetEntityType: node
 bundle: movies
 mode: teaser
 content:
-  field_adult:
-    type: boolean
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 1
-    region: tags
   field_movie_poster:
     type: entity_reference_entity_view
     label: hidden
@@ -78,13 +66,13 @@ content:
     weight: 5
     region: text
   field_release_date:
-    type: datetime_custom
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'Y-m-d\TH:i:s'
+      format_type: html_date
     third_party_settings: {  }
-    weight: 3
+    weight: 0
     region: date
   field_vote_average:
     type: number_decimal
