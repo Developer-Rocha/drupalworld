@@ -1,0 +1,87 @@
+@import '../_helper/config';
+
+// Component: Card
+// --------------------------------------------------
+
+// Precede the component's name with c- to indicate it is a component.
+$component: 'c-card';
+$default-theme: 'primary';
+
+// Styling
+.#{$component} {
+  position: relative;
+  height: 100%;
+  isolation: isolate;
+
+  // Image
+  &__image {
+    img {
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin: 15px 0;
+    text-align: center;
+
+    h2 {
+      font-size: 1.7rem;
+      line-height: 2.1rem;
+      margin: 0;
+    }
+  }
+
+  .overlay-link {
+    display: block;
+
+    &,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: inherit;
+    }
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      content: '';
+    }
+  }
+
+  .overlay-link:focus-visible {
+    &::after {
+      outline: thin dotted var(--color--primary-50);
+      outline-offset: .2rem;
+    }
+  }
+
+  .overlay-link:focus {
+    &,
+    &:not(:focus-visible)::after {
+      outline: none;
+    }
+  }
+
+  // Focus states
+  &.has-link:hover,
+  &:focus-within {
+    .#{$component}__title {
+      color: inherit;
+      text-decoration-color: inherit;
+    }
+
+    .#{$component}__image img {
+      transform: scale(1.02);
+    }
+  }
+
+  &__text {
+    padding: 30px 0;
+
+    p {
+      line-height: 2rem;
+    }
+  }
+}

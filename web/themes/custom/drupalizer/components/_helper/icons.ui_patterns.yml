@@ -1,0 +1,1735 @@
+icons:
+  label: Icons
+  description: Provides a list of icons than can be extended on other patterns.
+  settings:
+    icon:
+      type: iconpicker
+      label: Icon
+      description: Go with an icon alongside your text.
+      options:
+        '': None
+        icon-123: 123
+        icon-activity: activity
+        icon-alarm-fill: alarm fill
+        icon-alarm: alarm
+        icon-align-bottom: align bottom
+        icon-align-center: align center
+        icon-align-end: align end
+        icon-align-middle: align middle
+        icon-align-start: align start
+        icon-align-top: align top
+        icon-alt: alt
+        icon-app-indicator: app indicator
+        icon-app: app
+        icon-apple: apple
+        icon-archive-fill: archive fill
+        icon-archive: archive
+        icon-arrow-90deg-down: arrow 90deg down
+        icon-arrow-90deg-left: arrow 90deg left
+        icon-arrow-90deg-right: arrow 90deg right
+        icon-arrow-90deg-up: arrow 90deg up
+        icon-arrow-bar-down: arrow bar down
+        icon-arrow-bar-left: arrow bar left
+        icon-arrow-bar-right: arrow bar right
+        icon-arrow-bar-up: arrow bar up
+        icon-arrow-bottom-double: arrow bottom double
+        icon-arrow-clockwise: arrow clockwise
+        icon-arrow-counterclockwise: arrow counterclockwise
+        icon-arrow-down-circle-fill: arrow down circle fill
+        icon-arrow-down-circle: arrow down circle
+        icon-arrow-down-left-circle-fill: arrow down left circle fill
+        icon-arrow-down-left-circle: arrow down left circle
+        icon-arrow-down-left-square-fill: arrow down left square fill
+        icon-arrow-down-left-square: arrow down left square
+        icon-arrow-down-left: arrow down left
+        icon-arrow-down-right-circle-fill: arrow down right circle fill
+        icon-arrow-down-right-circle: arrow down right circle
+        icon-arrow-down-right-square-fill: arrow down right square fill
+        icon-arrow-down-right-square: arrow down right square
+        icon-arrow-down-right: arrow down right
+        icon-arrow-down-short: arrow down short
+        icon-arrow-down-square-fill: arrow down square fill
+        icon-arrow-down-square: arrow down square
+        icon-arrow-down-up: arrow down up
+        icon-arrow-down: arrow down
+        icon-arrow-left-circle-fill: arrow left circle fill
+        icon-arrow-left-circle: arrow left circle
+        icon-arrow-left-double: arrow left double
+        icon-arrow-left-right: arrow left right
+        icon-arrow-left-short: arrow left short
+        icon-arrow-left-square-fill: arrow left square fill
+        icon-arrow-left-square: arrow left square
+        icon-arrow-left: arrow left
+        icon-arrow-repeat: arrow repeat
+        icon-arrow-return-left: arrow return left
+        icon-arrow-return-right: arrow return right
+        icon-arrow-right-circle-fill: arrow right circle fill
+        icon-arrow-right-circle: arrow right circle
+        icon-arrow-right-double: arrow right double
+        icon-arrow-right-short: arrow right short
+        icon-arrow-right-square-fill: arrow right square fill
+        icon-arrow-right-square: arrow right square
+        icon-arrow-right: arrow right
+        icon-arrow-through-heart-fill: arrow through heart fill
+        icon-arrow-through-heart: arrow through heart
+        icon-arrow-top-double: arrow top double
+        icon-arrow-up-circle-fill: arrow up circle fill
+        icon-arrow-up-circle: arrow up circle
+        icon-arrow-up-left-circle-fill: arrow up left circle fill
+        icon-arrow-up-left-circle: arrow up left circle
+        icon-arrow-up-left-square-fill: arrow up left square fill
+        icon-arrow-up-left-square: arrow up left square
+        icon-arrow-up-left: arrow up left
+        icon-arrow-up-right-circle-fill: arrow up right circle fill
+        icon-arrow-up-right-circle: arrow up right circle
+        icon-arrow-up-right-square-fill: arrow up right square fill
+        icon-arrow-up-right-square: arrow up right square
+        icon-arrow-up-right: arrow up right
+        icon-arrow-up-short: arrow up short
+        icon-arrow-up-square-fill: arrow up square fill
+        icon-arrow-up-square: arrow up square
+        icon-arrow-up: arrow up
+        icon-arrows-angle-contract: arrows angle contract
+        icon-arrows-angle-expand: arrows angle expand
+        icon-arrows-collapse: arrows collapse
+        icon-arrows-expand: arrows expand
+        icon-arrows-fullscreen: arrows fullscreen
+        icon-arrows-move: arrows move
+        icon-aspect-ratio-fill: aspect ratio fill
+        icon-aspect-ratio: aspect ratio
+        icon-asterisk: asterisk
+        icon-at: at
+        icon-award-fill: award fill
+        icon-award: award
+        icon-back: back
+        icon-backspace-fill: backspace fill
+        icon-backspace-reverse-fill: backspace reverse fill
+        icon-backspace-reverse: backspace reverse
+        icon-backspace: backspace
+        icon-badge-3d-fill: badge 3d fill
+        icon-badge-3d: badge 3d
+        icon-badge-4k-fill: badge 4k fill
+        icon-badge-4k: badge 4k
+        icon-badge-8k-fill: badge 8k fill
+        icon-badge-8k: badge 8k
+        icon-badge-ad-fill: badge ad fill
+        icon-badge-ad: badge ad
+        icon-badge-ar-fill: badge ar fill
+        icon-badge-ar: badge ar
+        icon-badge-cc-fill: badge cc fill
+        icon-badge-cc: badge cc
+        icon-badge-hd-fill: badge hd fill
+        icon-badge-hd: badge hd
+        icon-badge-sd-fill: badge sd fill
+        icon-badge-sd: badge sd
+        icon-badge-tm-fill: badge tm fill
+        icon-badge-tm: badge tm
+        icon-badge-vo-fill: badge vo fill
+        icon-badge-vo: badge vo
+        icon-badge-vr-fill: badge vr fill
+        icon-badge-vr: badge vr
+        icon-badge-wc-fill: badge wc fill
+        icon-badge-wc: badge wc
+        icon-bag-check-fill: bag check fill
+        icon-bag-check: bag check
+        icon-bag-dash-fill: bag dash fill
+        icon-bag-dash: bag dash
+        icon-bag-fill: bag fill
+        icon-bag-heart-fill: bag heart fill
+        icon-bag-heart: bag heart
+        icon-bag-plus-fill: bag plus fill
+        icon-bag-plus: bag plus
+        icon-bag-x-fill: bag x fill
+        icon-bag-x: bag x
+        icon-bag: bag
+        icon-balloon-fill: balloon fill
+        icon-balloon-heart-fill: balloon heart fill
+        icon-balloon-heart: balloon heart
+        icon-balloon: balloon
+        icon-bandaid-fill: bandaid fill
+        icon-bandaid: bandaid
+        icon-bank: bank
+        icon-bank2: bank2
+        icon-bar-chart-fill: bar chart fill
+        icon-bar-chart-line-fill: bar chart line fill
+        icon-bar-chart-line: bar chart line
+        icon-bar-chart-steps: bar chart steps
+        icon-bar-chart: bar chart
+        icon-basket-fill: basket fill
+        icon-basket: basket
+        icon-basket2-fill: basket2 fill
+        icon-basket2: basket2
+        icon-basket3-fill: basket3 fill
+        icon-basket3: basket3
+        icon-battery-charging: battery charging
+        icon-battery-full: battery full
+        icon-battery-half: battery half
+        icon-battery: battery
+        icon-behance: behance
+        icon-bell-fill: bell fill
+        icon-bell-slash-fill: bell slash fill
+        icon-bell-slash: bell slash
+        icon-bell: bell
+        icon-bezier: bezier
+        icon-bezier2: bezier2
+        icon-bicycle: bicycle
+        icon-binoculars-fill: binoculars fill
+        icon-binoculars: binoculars
+        icon-blockquote-left: blockquote left
+        icon-blockquote-right: blockquote right
+        icon-bluetooth: bluetooth
+        icon-body-text: body text
+        icon-book-fill: book fill
+        icon-book-half: book half
+        icon-book: book
+        icon-bookmark-check-fill: bookmark check fill
+        icon-bookmark-check: bookmark check
+        icon-bookmark-dash-fill: bookmark dash fill
+        icon-bookmark-dash: bookmark dash
+        icon-bookmark-fill: bookmark fill
+        icon-bookmark-heart-fill: bookmark heart fill
+        icon-bookmark-heart: bookmark heart
+        icon-bookmark-plus-fill: bookmark plus fill
+        icon-bookmark-plus: bookmark plus
+        icon-bookmark-star-fill: bookmark star fill
+        icon-bookmark-star: bookmark star
+        icon-bookmark-x-fill: bookmark x fill
+        icon-bookmark-x: bookmark x
+        icon-bookmark: bookmark
+        icon-bookmarks-fill: bookmarks fill
+        icon-bookmarks: bookmarks
+        icon-bookshelf: bookshelf
+        icon-boombox-fill: boombox fill
+        icon-boombox: boombox
+        icon-bootstrap-fill: bootstrap fill
+        icon-bootstrap-reboot: bootstrap reboot
+        icon-bootstrap: bootstrap
+        icon-border-all: border all
+        icon-border-bottom: border bottom
+        icon-border-center: border center
+        icon-border-inner: border inner
+        icon-border-left: border left
+        icon-border-middle: border middle
+        icon-border-outer: border outer
+        icon-border-right: border right
+        icon-border-style: border style
+        icon-border-top: border top
+        icon-border-width: border width
+        icon-border: border
+        icon-bounding-box-circles: bounding box circles
+        icon-bounding-box: bounding box
+        icon-box-arrow-down-left: box arrow down left
+        icon-box-arrow-down-right: box arrow down right
+        icon-box-arrow-down: box arrow down
+        icon-box-arrow-in-down-left: box arrow in down left
+        icon-box-arrow-in-down-right: box arrow in down right
+        icon-box-arrow-in-down: box arrow in down
+        icon-box-arrow-in-left: box arrow in left
+        icon-box-arrow-in-right: box arrow in right
+        icon-box-arrow-in-up-left: box arrow in up left
+        icon-box-arrow-in-up-right: box arrow in up right
+        icon-box-arrow-in-up: box arrow in up
+        icon-box-arrow-left: box arrow left
+        icon-box-arrow-right: box arrow right
+        icon-box-arrow-up-left: box arrow up left
+        icon-box-arrow-up-right: box arrow up right
+        icon-box-arrow-up: box arrow up
+        icon-box-seam: box seam
+        icon-box: box
+        icon-box2-fill: box2 fill
+        icon-box2-heart-fill: box2 heart fill
+        icon-box2-heart: box2 heart
+        icon-box2: box2
+        icon-boxes: boxes
+        icon-braces-asterisk: braces asterisk
+        icon-braces: braces
+        icon-bricks: bricks
+        icon-briefcase-fill: briefcase fill
+        icon-briefcase: briefcase
+        icon-brightness-alt-high-fill: brightness alt high fill
+        icon-brightness-alt-high: brightness alt high
+        icon-brightness-alt-low-fill: brightness alt low fill
+        icon-brightness-alt-low: brightness alt low
+        icon-brightness-high-fill: brightness high fill
+        icon-brightness-high: brightness high
+        icon-brightness-low-fill: brightness low fill
+        icon-brightness-low: brightness low
+        icon-broadcast-pin: broadcast pin
+        icon-broadcast: broadcast
+        icon-brush-fill: brush fill
+        icon-brush: brush
+        icon-bucket-fill: bucket fill
+        icon-bucket: bucket
+        icon-bug-fill: bug fill
+        icon-bug: bug
+        icon-building: building
+        icon-bullseye: bullseye
+        icon-calculator-fill: calculator fill
+        icon-calculator: calculator
+        icon-calendar-check-fill: calendar check fill
+        icon-calendar-check: calendar check
+        icon-calendar-date-fill: calendar date fill
+        icon-calendar-date: calendar date
+        icon-calendar-day-fill: calendar day fill
+        icon-calendar-day: calendar day
+        icon-calendar-event-fill: calendar event fill
+        icon-calendar-event: calendar event
+        icon-calendar-fill: calendar fill
+        icon-calendar-heart-fill: calendar heart fill
+        icon-calendar-heart: calendar heart
+        icon-calendar-minus-fill: calendar minus fill
+        icon-calendar-minus: calendar minus
+        icon-calendar-month-fill: calendar month fill
+        icon-calendar-month: calendar month
+        icon-calendar-plus-fill: calendar plus fill
+        icon-calendar-plus: calendar plus
+        icon-calendar-range-fill: calendar range fill
+        icon-calendar-range: calendar range
+        icon-calendar-week-fill: calendar week fill
+        icon-calendar-week: calendar week
+        icon-calendar-x-fill: calendar x fill
+        icon-calendar-x: calendar x
+        icon-calendar: calendar
+        icon-calendar2-check-fill: calendar2 check fill
+        icon-calendar2-check: calendar2 check
+        icon-calendar2-date-fill: calendar2 date fill
+        icon-calendar2-date: calendar2 date
+        icon-calendar2-day-fill: calendar2 day fill
+        icon-calendar2-day: calendar2 day
+        icon-calendar2-event-fill: calendar2 event fill
+        icon-calendar2-event: calendar2 event
+        icon-calendar2-fill: calendar2 fill
+        icon-calendar2-heart-fill: calendar2 heart fill
+        icon-calendar2-heart: calendar2 heart
+        icon-calendar2-minus-fill: calendar2 minus fill
+        icon-calendar2-minus: calendar2 minus
+        icon-calendar2-month-fill: calendar2 month fill
+        icon-calendar2-month: calendar2 month
+        icon-calendar2-plus-fill: calendar2 plus fill
+        icon-calendar2-plus: calendar2 plus
+        icon-calendar2-range-fill: calendar2 range fill
+        icon-calendar2-range: calendar2 range
+        icon-calendar2-week-fill: calendar2 week fill
+        icon-calendar2-week: calendar2 week
+        icon-calendar2-x-fill: calendar2 x fill
+        icon-calendar2-x: calendar2 x
+        icon-calendar2: calendar2
+        icon-calendar3-event-fill: calendar3 event fill
+        icon-calendar3-event: calendar3 event
+        icon-calendar3-fill: calendar3 fill
+        icon-calendar3-range-fill: calendar3 range fill
+        icon-calendar3-range: calendar3 range
+        icon-calendar3-week-fill: calendar3 week fill
+        icon-calendar3-week: calendar3 week
+        icon-calendar3: calendar3
+        icon-calendar4-event: calendar4 event
+        icon-calendar4-range: calendar4 range
+        icon-calendar4-week: calendar4 week
+        icon-calendar4: calendar4
+        icon-camera-fill: camera fill
+        icon-camera-reels-fill: camera reels fill
+        icon-camera-reels: camera reels
+        icon-camera-video-fill: camera video fill
+        icon-camera-video-off-fill: camera video off fill
+        icon-camera-video-off: camera video off
+        icon-camera-video: camera video
+        icon-camera: camera
+        icon-camera2: camera2
+        icon-capslock-fill: capslock fill
+        icon-capslock: capslock
+        icon-card-checklist: card checklist
+        icon-card-heading: card heading
+        icon-card-image: card image
+        icon-card-list: card list
+        icon-card-text: card text
+        icon-caret-down-fill: caret down fill
+        icon-caret-down-square-fill: caret down square fill
+        icon-caret-down-square: caret down square
+        icon-caret-down: caret down
+        icon-caret-left-fill: caret left fill
+        icon-caret-left-square-fill: caret left square fill
+        icon-caret-left-square: caret left square
+        icon-caret-left: caret left
+        icon-caret-right-fill: caret right fill
+        icon-caret-right-square-fill: caret right square fill
+        icon-caret-right-square: caret right square
+        icon-caret-right: caret right
+        icon-caret-up-fill: caret up fill
+        icon-caret-up-square-fill: caret up square fill
+        icon-caret-up-square: caret up square
+        icon-caret-up: caret up
+        icon-cart-check-fill: cart check fill
+        icon-cart-check: cart check
+        icon-cart-dash-fill: cart dash fill
+        icon-cart-dash: cart dash
+        icon-cart-fill: cart fill
+        icon-cart-plus-fill: cart plus fill
+        icon-cart-plus: cart plus
+        icon-cart-x-fill: cart x fill
+        icon-cart-x: cart x
+        icon-cart: cart
+        icon-cart2: cart2
+        icon-cart3: cart3
+        icon-cart4: cart4
+        icon-cash-coin: cash coin
+        icon-cash-stack: cash stack
+        icon-cash: cash
+        icon-cast: cast
+        icon-chat-dots-fill: chat dots fill
+        icon-chat-dots: chat dots
+        icon-chat-fill: chat fill
+        icon-chat-heart-fill: chat heart fill
+        icon-chat-heart: chat heart
+        icon-chat-left-dots-fill: chat left dots fill
+        icon-chat-left-dots: chat left dots
+        icon-chat-left-fill: chat left fill
+        icon-chat-left-heart-fill: chat left heart fill
+        icon-chat-left-heart: chat left heart
+        icon-chat-left-quote-fill: chat left quote fill
+        icon-chat-left-quote: chat left quote
+        icon-chat-left-text-fill: chat left text fill
+        icon-chat-left-text: chat left text
+        icon-chat-left: chat left
+        icon-chat-quote-fill: chat quote fill
+        icon-chat-quote: chat quote
+        icon-chat-right-dots-fill: chat right dots fill
+        icon-chat-right-dots: chat right dots
+        icon-chat-right-fill: chat right fill
+        icon-chat-right-heart-fill: chat right heart fill
+        icon-chat-right-heart: chat right heart
+        icon-chat-right-quote-fill: chat right quote fill
+        icon-chat-right-quote: chat right quote
+        icon-chat-right-text-fill: chat right text fill
+        icon-chat-right-text: chat right text
+        icon-chat-right: chat right
+        icon-chat-square-dots-fill: chat square dots fill
+        icon-chat-square-dots: chat square dots
+        icon-chat-square-fill: chat square fill
+        icon-chat-square-heart-fill: chat square heart fill
+        icon-chat-square-heart: chat square heart
+        icon-chat-square-quote-fill: chat square quote fill
+        icon-chat-square-quote: chat square quote
+        icon-chat-square-text-fill: chat square text fill
+        icon-chat-square-text: chat square text
+        icon-chat-square: chat square
+        icon-chat-text-fill: chat text fill
+        icon-chat-text: chat text
+        icon-chat: chat
+        icon-check-all: check all
+        icon-check-circle-fill: check circle fill
+        icon-check-circle: check circle
+        icon-check-lg: check lg
+        icon-check-square-fill: check square fill
+        icon-check-square: check square
+        icon-check: check
+        icon-check2-all: check2 all
+        icon-check2-circle: check2 circle
+        icon-check2-square: check2 square
+        icon-check2: check2
+        icon-chevron-bar-contract: chevron bar contract
+        icon-chevron-bar-down: chevron bar down
+        icon-chevron-bar-expand: chevron bar expand
+        icon-chevron-bar-left: chevron bar left
+        icon-chevron-bar-right: chevron bar right
+        icon-chevron-bar-up: chevron bar up
+        icon-chevron-compact-down: chevron compact down
+        icon-chevron-compact-left: chevron compact left
+        icon-chevron-compact-right: chevron compact right
+        icon-chevron-compact-up: chevron compact up
+        icon-chevron-contract: chevron contract
+        icon-chevron-double-down: chevron double down
+        icon-chevron-double-left: chevron double left
+        icon-chevron-double-right: chevron double right
+        icon-chevron-double-up: chevron double up
+        icon-chevron-down: chevron down
+        icon-chevron-expand: chevron expand
+        icon-chevron-left: chevron left
+        icon-chevron-right: chevron right
+        icon-chevron-up: chevron up
+        icon-circle-fill: circle fill
+        icon-circle-half: circle half
+        icon-circle-minus: circle minus
+        icon-circle-plus: circle plus
+        icon-circle-square: circle square
+        icon-circle: circle
+        icon-clipboard-check-fill: clipboard check fill
+        icon-clipboard-check: clipboard check
+        icon-clipboard-data-fill: clipboard data fill
+        icon-clipboard-data: clipboard data
+        icon-clipboard-fill: clipboard fill
+        icon-clipboard-heart-fill: clipboard heart fill
+        icon-clipboard-heart: clipboard heart
+        icon-clipboard-minus-fill: clipboard minus fill
+        icon-clipboard-minus: clipboard minus
+        icon-clipboard-plus-fill: clipboard plus fill
+        icon-clipboard-plus: clipboard plus
+        icon-clipboard-pulse: clipboard pulse
+        icon-clipboard-x-fill: clipboard x fill
+        icon-clipboard-x: clipboard x
+        icon-clipboard: clipboard
+        icon-clipboard2-check-fill: clipboard2 check fill
+        icon-clipboard2-check: clipboard2 check
+        icon-clipboard2-data-fill: clipboard2 data fill
+        icon-clipboard2-data: clipboard2 data
+        icon-clipboard2-fill: clipboard2 fill
+        icon-clipboard2-heart-fill: clipboard2 heart fill
+        icon-clipboard2-heart: clipboard2 heart
+        icon-clipboard2-minus-fill: clipboard2 minus fill
+        icon-clipboard2-minus: clipboard2 minus
+        icon-clipboard2-plus-fill: clipboard2 plus fill
+        icon-clipboard2-plus: clipboard2 plus
+        icon-clipboard2-pulse-fill: clipboard2 pulse fill
+        icon-clipboard2-pulse: clipboard2 pulse
+        icon-clipboard2-x-fill: clipboard2 x fill
+        icon-clipboard2-x: clipboard2 x
+        icon-clipboard2: clipboard2
+        icon-clock-fill: clock fill
+        icon-clock-history: clock history
+        icon-clock: clock
+        icon-close: close
+        icon-cloud-arrow-down-fill: cloud arrow down fill
+        icon-cloud-arrow-down: cloud arrow down
+        icon-cloud-arrow-up-fill: cloud arrow up fill
+        icon-cloud-arrow-up: cloud arrow up
+        icon-cloud-check-fill: cloud check fill
+        icon-cloud-check: cloud check
+        icon-cloud-download-fill: cloud download fill
+        icon-cloud-download: cloud download
+        icon-cloud-drizzle-fill: cloud drizzle fill
+        icon-cloud-drizzle: cloud drizzle
+        icon-cloud-fill: cloud fill
+        icon-cloud-fog-fill: cloud fog fill
+        icon-cloud-fog: cloud fog
+        icon-cloud-fog2-fill: cloud fog2 fill
+        icon-cloud-fog2: cloud fog2
+        icon-cloud-hail-fill: cloud hail fill
+        icon-cloud-hail: cloud hail
+        icon-cloud-haze-fill: cloud haze fill
+        icon-cloud-haze: cloud haze
+        icon-cloud-haze2-fill: cloud haze2 fill
+        icon-cloud-haze2: cloud haze2
+        icon-cloud-lightning-fill: cloud lightning fill
+        icon-cloud-lightning-rain-fill: cloud lightning rain fill
+        icon-cloud-lightning-rain: cloud lightning rain
+        icon-cloud-lightning: cloud lightning
+        icon-cloud-minus-fill: cloud minus fill
+        icon-cloud-minus: cloud minus
+        icon-cloud-moon-fill: cloud moon fill
+        icon-cloud-moon: cloud moon
+        icon-cloud-plus-fill: cloud plus fill
+        icon-cloud-plus: cloud plus
+        icon-cloud-rain-fill: cloud rain fill
+        icon-cloud-rain-heavy-fill: cloud rain heavy fill
+        icon-cloud-rain-heavy: cloud rain heavy
+        icon-cloud-rain: cloud rain
+        icon-cloud-slash-fill: cloud slash fill
+        icon-cloud-slash: cloud slash
+        icon-cloud-sleet-fill: cloud sleet fill
+        icon-cloud-sleet: cloud sleet
+        icon-cloud-snow-fill: cloud snow fill
+        icon-cloud-snow: cloud snow
+        icon-cloud-sun-fill: cloud sun fill
+        icon-cloud-sun: cloud sun
+        icon-cloud-upload-fill: cloud upload fill
+        icon-cloud-upload: cloud upload
+        icon-cloud: cloud
+        icon-clouds-fill: clouds fill
+        icon-clouds: clouds
+        icon-cloudy-fill: cloudy fill
+        icon-cloudy: cloudy
+        icon-code-slash: code slash
+        icon-code-square: code square
+        icon-code: code
+        icon-coin: coin
+        icon-collection-fill: collection fill
+        icon-collection-play-fill: collection play fill
+        icon-collection-play: collection play
+        icon-collection: collection
+        icon-columns-gap: columns gap
+        icon-columns: columns
+        icon-command: command
+        icon-comment: comment
+        icon-comments: comments
+        icon-compass-fill: compass fill
+        icon-compass: compass
+        icon-cone-striped: cone striped
+        icon-cone: cone
+        icon-controller: controller
+        icon-cookie: cookie
+        icon-cpu-fill: cpu fill
+        icon-cpu: cpu
+        icon-credit-card-2-back-fill: credit card 2 back fill
+        icon-credit-card-2-back: credit card 2 back
+        icon-credit-card-2-front-fill: credit card 2 front fill
+        icon-credit-card-2-front: credit card 2 front
+        icon-credit-card-fill: credit card fill
+        icon-credit-card: credit card
+        icon-crop: crop
+        icon-cup-fill: cup fill
+        icon-cup-straw: cup straw
+        icon-cup: cup
+        icon-currency-bitcoin: currency bitcoin
+        icon-currency-dollar: currency dollar
+        icon-currency-euro: currency euro
+        icon-currency-exchange: currency exchange
+        icon-currency-pound: currency pound
+        icon-currency-yen: currency yen
+        icon-cursor-fill: cursor fill
+        icon-cursor-text: cursor text
+        icon-cursor: cursor
+        icon-dash-circle-dotted: dash circle dotted
+        icon-dash-circle-fill: dash circle fill
+        icon-dash-circle: dash circle
+        icon-dash-lg: dash lg
+        icon-dash-square-dotted: dash square dotted
+        icon-dash-square-fill: dash square fill
+        icon-dash-square: dash square
+        icon-dash: dash
+        icon-dashboard: dashboard
+        icon-device-hdd-fill: device hdd fill
+        icon-device-hdd: device hdd
+        icon-device-ssd-fill: device ssd fill
+        icon-device-ssd: device ssd
+        icon-diagram-2-fill: diagram 2 fill
+        icon-diagram-2: diagram 2
+        icon-diagram-3-fill: diagram 3 fill
+        icon-diagram-3: diagram 3
+        icon-diamond-fill: diamond fill
+        icon-diamond-half: diamond half
+        icon-diamond: diamond
+        icon-dice-1-fill: dice 1 fill
+        icon-dice-1: dice 1
+        icon-dice-2-fill: dice 2 fill
+        icon-dice-2: dice 2
+        icon-dice-3-fill: dice 3 fill
+        icon-dice-3: dice 3
+        icon-dice-4-fill: dice 4 fill
+        icon-dice-4: dice 4
+        icon-dice-5-fill: dice 5 fill
+        icon-dice-5: dice 5
+        icon-dice-6-fill: dice 6 fill
+        icon-dice-6: dice 6
+        icon-disc-fill: disc fill
+        icon-disc: disc
+        icon-discord: discord
+        icon-display-fill: display fill
+        icon-display: display
+        icon-displayport-fill: displayport fill
+        icon-displayport: displayport
+        icon-distribute-horizontal: distribute horizontal
+        icon-distribute-vertical: distribute vertical
+        icon-door-closed-fill: door closed fill
+        icon-door-closed: door closed
+        icon-door-open-fill: door open fill
+        icon-door-open: door open
+        icon-dot: dot
+        icon-download: download
+        icon-dpad-fill: dpad fill
+        icon-dpad: dpad
+        icon-dribbble: dribbble
+        icon-droplet-fill: droplet fill
+        icon-droplet-half: droplet half
+        icon-droplet: droplet
+        icon-drupal: drupal
+        icon-ear-fill: ear fill
+        icon-ear: ear
+        icon-earbuds: earbuds
+        icon-easel-fill: easel fill
+        icon-easel: easel
+        icon-easel2-fill: easel2 fill
+        icon-easel2: easel2
+        icon-easel3-fill: easel3 fill
+        icon-easel3: easel3
+        icon-edit: edit
+        icon-egg-fill: egg fill
+        icon-egg-fried: egg fried
+        icon-egg: egg
+        icon-eject-fill: eject fill
+        icon-eject: eject
+        icon-emoji-angry-fill: emoji angry fill
+        icon-emoji-angry: emoji angry
+        icon-emoji-dizzy-fill: emoji dizzy fill
+        icon-emoji-dizzy: emoji dizzy
+        icon-emoji-expressionless-fill: emoji expressionless fill
+        icon-emoji-expressionless: emoji expressionless
+        icon-emoji-frown-fill: emoji frown fill
+        icon-emoji-frown: emoji frown
+        icon-emoji-heart-eyes-fill: emoji heart eyes fill
+        icon-emoji-heart-eyes: emoji heart eyes
+        icon-emoji-kiss-fill: emoji kiss fill
+        icon-emoji-kiss: emoji kiss
+        icon-emoji-laughing-fill: emoji laughing fill
+        icon-emoji-laughing: emoji laughing
+        icon-emoji-neutral-fill: emoji neutral fill
+        icon-emoji-neutral: emoji neutral
+        icon-emoji-smile-fill: emoji smile fill
+        icon-emoji-smile-upside-down-fill: emoji smile upside down fill
+        icon-emoji-smile-upside-down: emoji smile upside down
+        icon-emoji-smile: emoji smile
+        icon-emoji-sunglasses-fill: emoji sunglasses fill
+        icon-emoji-sunglasses: emoji sunglasses
+        icon-emoji-wink-fill: emoji wink fill
+        icon-emoji-wink: emoji wink
+        icon-envelope-check-fill: envelope check fill
+        icon-envelope-check: envelope check
+        icon-envelope-dash-fill: envelope dash fill
+        icon-envelope-dash: envelope dash
+        icon-envelope-exclamation-fill: envelope exclamation fill
+        icon-envelope-exclamation: envelope exclamation
+        icon-envelope-fill: envelope fill
+        icon-envelope-heart-fill: envelope heart fill
+        icon-envelope-heart: envelope heart
+        icon-envelope-open-fill: envelope open fill
+        icon-envelope-open-heart-fill: envelope open heart fill
+        icon-envelope-open-heart: envelope open heart
+        icon-envelope-open: envelope open
+        icon-envelope-paper-fill: envelope paper fill
+        icon-envelope-paper-heart-fill: envelope paper heart fill
+        icon-envelope-paper-heart: envelope paper heart
+        icon-envelope-paper: envelope paper
+        icon-envelope-plus-fill: envelope plus fill
+        icon-envelope-plus: envelope plus
+        icon-envelope-slash-fill: envelope slash fill
+        icon-envelope-slash: envelope slash
+        icon-envelope-x-fill: envelope x fill
+        icon-envelope-x: envelope x
+        icon-envelope: envelope
+        icon-eraser-fill: eraser fill
+        icon-eraser: eraser
+        icon-ethernet: ethernet
+        icon-exclamation-circle-fill: exclamation circle fill
+        icon-exclamation-circle: exclamation circle
+        icon-exclamation-diamond-fill: exclamation diamond fill
+        icon-exclamation-diamond: exclamation diamond
+        icon-exclamation-lg: exclamation lg
+        icon-exclamation-octagon-fill: exclamation octagon fill
+        icon-exclamation-octagon: exclamation octagon
+        icon-exclamation-square-fill: exclamation square fill
+        icon-exclamation-square: exclamation square
+        icon-exclamation-triangle-fill: exclamation triangle fill
+        icon-exclamation-triangle: exclamation triangle
+        icon-exclamation: exclamation
+        icon-exclude: exclude
+        icon-explicit-fill: explicit fill
+        icon-explicit: explicit
+        icon-eye-fill: eye fill
+        icon-eye-slash-fill: eye slash fill
+        icon-eye-slash: eye slash
+        icon-eye: eye
+        icon-eyedropper: eyedropper
+        icon-eyeglasses: eyeglasses
+        icon-facebook: facebook
+        icon-fan: fan
+        icon-file-arrow-down-fill: file arrow down fill
+        icon-file-arrow-down: file arrow down
+        icon-file-arrow-up-fill: file arrow up fill
+        icon-file-arrow-up: file arrow up
+        icon-file-bar-graph-fill: file bar graph fill
+        icon-file-bar-graph: file bar graph
+        icon-file-binary-fill: file binary fill
+        icon-file-binary: file binary
+        icon-file-break-fill: file break fill
+        icon-file-break: file break
+        icon-file-check-fill: file check fill
+        icon-file-check: file check
+        icon-file-code-fill: file code fill
+        icon-file-code: file code
+        icon-file-diff-fill: file diff fill
+        icon-file-diff: file diff
+        icon-file-doc: file doc
+        icon-file-docx: file docx
+        icon-file-earmark-arrow-down-fill: file earmark arrow down fill
+        icon-file-earmark-arrow-down: file earmark arrow down
+        icon-file-earmark-arrow-up-fill: file earmark arrow up fill
+        icon-file-earmark-arrow-up: file earmark arrow up
+        icon-file-earmark-bar-graph-fill: file earmark bar graph fill
+        icon-file-earmark-bar-graph: file earmark bar graph
+        icon-file-earmark-binary-fill: file earmark binary fill
+        icon-file-earmark-binary: file earmark binary
+        icon-file-earmark-break-fill: file earmark break fill
+        icon-file-earmark-break: file earmark break
+        icon-file-earmark-check-fill: file earmark check fill
+        icon-file-earmark-check: file earmark check
+        icon-file-earmark-code-fill: file earmark code fill
+        icon-file-earmark-code: file earmark code
+        icon-file-earmark-diff-fill: file earmark diff fill
+        icon-file-earmark-diff: file earmark diff
+        icon-file-earmark-easel-fill: file earmark easel fill
+        icon-file-earmark-easel: file earmark easel
+        icon-file-earmark-excel-fill: file earmark excel fill
+        icon-file-earmark-excel: file earmark excel
+        icon-file-earmark-fill: file earmark fill
+        icon-file-earmark-font-fill: file earmark font fill
+        icon-file-earmark-font: file earmark font
+        icon-file-earmark-image-fill: file earmark image fill
+        icon-file-earmark-image: file earmark image
+        icon-file-earmark-lock-fill: file earmark lock fill
+        icon-file-earmark-lock: file earmark lock
+        icon-file-earmark-lock2-fill: file earmark lock2 fill
+        icon-file-earmark-lock2: file earmark lock2
+        icon-file-earmark-medical-fill: file earmark medical fill
+        icon-file-earmark-medical: file earmark medical
+        icon-file-earmark-minus-fill: file earmark minus fill
+        icon-file-earmark-minus: file earmark minus
+        icon-file-earmark-music-fill: file earmark music fill
+        icon-file-earmark-music: file earmark music
+        icon-file-earmark-pdf-fill: file earmark pdf fill
+        icon-file-earmark-pdf: file earmark pdf
+        icon-file-earmark-person-fill: file earmark person fill
+        icon-file-earmark-person: file earmark person
+        icon-file-earmark-play-fill: file earmark play fill
+        icon-file-earmark-play: file earmark play
+        icon-file-earmark-plus-fill: file earmark plus fill
+        icon-file-earmark-plus: file earmark plus
+        icon-file-earmark-post-fill: file earmark post fill
+        icon-file-earmark-post: file earmark post
+        icon-file-earmark-ppt-fill: file earmark ppt fill
+        icon-file-earmark-ppt: file earmark ppt
+        icon-file-earmark-richtext-fill: file earmark richtext fill
+        icon-file-earmark-richtext: file earmark richtext
+        icon-file-earmark-ruled-fill: file earmark ruled fill
+        icon-file-earmark-ruled: file earmark ruled
+        icon-file-earmark-slides-fill: file earmark slides fill
+        icon-file-earmark-slides: file earmark slides
+        icon-file-earmark-spreadsheet-fill: file earmark spreadsheet fill
+        icon-file-earmark-spreadsheet: file earmark spreadsheet
+        icon-file-earmark-text-fill: file earmark text fill
+        icon-file-earmark-text: file earmark text
+        icon-file-earmark-word-fill: file earmark word fill
+        icon-file-earmark-word: file earmark word
+        icon-file-earmark-x-fill: file earmark x fill
+        icon-file-earmark-x: file earmark x
+        icon-file-earmark-zip-fill: file earmark zip fill
+        icon-file-earmark-zip: file earmark zip
+        icon-file-earmark: file earmark
+        icon-file-easel-fill: file easel fill
+        icon-file-easel: file easel
+        icon-file-excel-fill: file excel fill
+        icon-file-excel: file excel
+        icon-file-fill: file fill
+        icon-file-font-fill: file font fill
+        icon-file-font: file font
+        icon-file-image-fill: file image fill
+        icon-file-image: file image
+        icon-file-lock-fill: file lock fill
+        icon-file-lock: file lock
+        icon-file-lock2-fill: file lock2 fill
+        icon-file-lock2: file lock2
+        icon-file-medical-fill: file medical fill
+        icon-file-medical: file medical
+        icon-file-minus-fill: file minus fill
+        icon-file-minus: file minus
+        icon-file-music-fill: file music fill
+        icon-file-music: file music
+        icon-file-pdf-fill: file pdf fill
+        icon-file-pdf: file pdf
+        icon-file-person-fill: file person fill
+        icon-file-person: file person
+        icon-file-play-fill: file play fill
+        icon-file-play: file play
+        icon-file-plus-fill: file plus fill
+        icon-file-plus: file plus
+        icon-file-post-fill: file post fill
+        icon-file-post: file post
+        icon-file-ppt-fill: file ppt fill
+        icon-file-ppt: file ppt
+        icon-file-richtext-fill: file richtext fill
+        icon-file-richtext: file richtext
+        icon-file-ruled-fill: file ruled fill
+        icon-file-ruled: file ruled
+        icon-file-slides-fill: file slides fill
+        icon-file-slides: file slides
+        icon-file-spreadsheet-fill: file spreadsheet fill
+        icon-file-spreadsheet: file spreadsheet
+        icon-file-text-fill: file text fill
+        icon-file-text: file text
+        icon-file-txt: file txt
+        icon-file-word-fill: file word fill
+        icon-file-word: file word
+        icon-file-x-fill: file x fill
+        icon-file-x: file x
+        icon-file-xls: file xls
+        icon-file-xlsx: file xlsx
+        icon-file-zip-fill: file zip fill
+        icon-file-zip: file zip
+        icon-file: file
+        icon-files-alt: files alt
+        icon-files: files
+        icon-filetype-aac: filetype aac
+        icon-filetype-ai: filetype ai
+        icon-filetype-bmp: filetype bmp
+        icon-filetype-cs: filetype cs
+        icon-filetype-css: filetype css
+        icon-filetype-csv: filetype csv
+        icon-filetype-doc: filetype doc
+        icon-filetype-docx: filetype docx
+        icon-filetype-exe: filetype exe
+        icon-filetype-gif: filetype gif
+        icon-filetype-heic: filetype heic
+        icon-filetype-html: filetype html
+        icon-filetype-java: filetype java
+        icon-filetype-jpg: filetype jpg
+        icon-filetype-js: filetype js
+        icon-filetype-json: filetype json
+        icon-filetype-jsx: filetype jsx
+        icon-filetype-key: filetype key
+        icon-filetype-m4p: filetype m4p
+        icon-filetype-md: filetype md
+        icon-filetype-mdx: filetype mdx
+        icon-filetype-mov: filetype mov
+        icon-filetype-mp3: filetype mp3
+        icon-filetype-mp4: filetype mp4
+        icon-filetype-otf: filetype otf
+        icon-filetype-pdf: filetype pdf
+        icon-filetype-php: filetype php
+        icon-filetype-png: filetype png
+        icon-filetype-ppt: filetype ppt
+        icon-filetype-pptx: filetype pptx
+        icon-filetype-psd: filetype psd
+        icon-filetype-py: filetype py
+        icon-filetype-raw: filetype raw
+        icon-filetype-rb: filetype rb
+        icon-filetype-sass: filetype sass
+        icon-filetype-scss: filetype scss
+        icon-filetype-sh: filetype sh
+        icon-filetype-svg: filetype svg
+        icon-filetype-tiff: filetype tiff
+        icon-filetype-tsx: filetype tsx
+        icon-filetype-ttf: filetype ttf
+        icon-filetype-txt: filetype txt
+        icon-filetype-wav: filetype wav
+        icon-filetype-woff: filetype woff
+        icon-filetype-xls: filetype xls
+        icon-filetype-xlsx: filetype xlsx
+        icon-filetype-xml: filetype xml
+        icon-filetype-yml: filetype yml
+        icon-film: film
+        icon-filter-circle-fill: filter circle fill
+        icon-filter-circle: filter circle
+        icon-filter-left: filter left
+        icon-filter-right: filter right
+        icon-filter-square-fill: filter square fill
+        icon-filter-square: filter square
+        icon-filter: filter
+        icon-fingerprint: fingerprint
+        icon-flag-fill: flag fill
+        icon-flag: flag
+        icon-flower1: flower1
+        icon-flower2: flower2
+        icon-flower3: flower3
+        icon-folder-check: folder check
+        icon-folder-fill: folder fill
+        icon-folder-minus: folder minus
+        icon-folder-plus: folder plus
+        icon-folder-symlink-fill: folder symlink fill
+        icon-folder-symlink: folder symlink
+        icon-folder-x: folder x
+        icon-folder: folder
+        icon-folder2-open: folder2 open
+        icon-folder2: folder2
+        icon-fonts: fonts
+        icon-forward-fill: forward fill
+        icon-forward: forward
+        icon-front: front
+        icon-fullscreen-exit: fullscreen exit
+        icon-fullscreen: fullscreen
+        icon-funnel-fill: funnel fill
+        icon-funnel: funnel
+        icon-gear-fill: gear fill
+        icon-gear-wide-connected: gear wide connected
+        icon-gear-wide: gear wide
+        icon-gear: gear
+        icon-gem: gem
+        icon-gender-ambiguous: gender ambiguous
+        icon-gender-female: gender female
+        icon-gender-male: gender male
+        icon-gender-trans: gender trans
+        icon-geo-alt-fill: geo alt fill
+        icon-geo-alt: geo alt
+        icon-geo-fill: geo fill
+        icon-geo: geo
+        icon-gift-fill: gift fill
+        icon-gift: gift
+        icon-git: git
+        icon-github: github
+        icon-globe: globe
+        icon-globe2: globe2
+        icon-google: google
+        icon-gpu-card: gpu card
+        icon-graph-down-arrow: graph down arrow
+        icon-graph-down: graph down
+        icon-graph-up-arrow: graph up arrow
+        icon-graph-up: graph up
+        icon-grid-1x2-fill: grid 1x2 fill
+        icon-grid-1x2: grid 1x2
+        icon-grid-3x2-gap-fill: grid 3x2 gap fill
+        icon-grid-3x2-gap: grid 3x2 gap
+        icon-grid-3x2: grid 3x2
+        icon-grid-3x3-gap-fill: grid 3x3 gap fill
+        icon-grid-3x3-gap: grid 3x3 gap
+        icon-grid-3x3: grid 3x3
+        icon-grid-fill: grid fill
+        icon-grid: grid
+        icon-grip-horizontal: grip horizontal
+        icon-grip-vertical: grip vertical
+        icon-hammer: hammer
+        icon-hand-index-fill: hand index fill
+        icon-hand-index-thumb-fill: hand index thumb fill
+        icon-hand-index-thumb: hand index thumb
+        icon-hand-index: hand index
+        icon-hand-thumbs-down-fill: hand thumbs down fill
+        icon-hand-thumbs-down: hand thumbs down
+        icon-hand-thumbs-up-fill: hand thumbs up fill
+        icon-hand-thumbs-up: hand thumbs up
+        icon-handbag-fill: handbag fill
+        icon-handbag: handbag
+        icon-handle: handle
+        icon-hash: hash
+        icon-hdd-fill: hdd fill
+        icon-hdd-network-fill: hdd network fill
+        icon-hdd-network: hdd network
+        icon-hdd-rack-fill: hdd rack fill
+        icon-hdd-rack: hdd rack
+        icon-hdd-stack-fill: hdd stack fill
+        icon-hdd-stack: hdd stack
+        icon-hdd: hdd
+        icon-hdmi-fill: hdmi fill
+        icon-hdmi: hdmi
+        icon-headphones: headphones
+        icon-headset-vr: headset vr
+        icon-headset: headset
+        icon-heart-arrow: heart arrow
+        icon-heart-fill: heart fill
+        icon-heart-half: heart half
+        icon-heart-pulse-fill: heart pulse fill
+        icon-heart-pulse: heart pulse
+        icon-heart: heart
+        icon-heartbreak-fill: heartbreak fill
+        icon-heartbreak: heartbreak
+        icon-hearts: hearts
+        icon-help: help
+        icon-heptagon-fill: heptagon fill
+        icon-heptagon-half: heptagon half
+        icon-heptagon: heptagon
+        icon-hexagon-fill: hexagon fill
+        icon-hexagon-half: hexagon half
+        icon-hexagon: hexagon
+        icon-home: home
+        icon-hospital-fill: hospital fill
+        icon-hospital: hospital
+        icon-hourglass-bottom: hourglass bottom
+        icon-hourglass-split: hourglass split
+        icon-hourglass-top: hourglass top
+        icon-hourglass: hourglass
+        icon-house-door-fill: house door fill
+        icon-house-door: house door
+        icon-house-fill: house fill
+        icon-house-heart-fill: house heart fill
+        icon-house-heart: house heart
+        icon-house: house
+        icon-hr: hr
+        icon-hurricane: hurricane
+        icon-hypnotize: hypnotize
+        icon-image-alt: image alt
+        icon-image-fill: image fill
+        icon-image: image
+        icon-images: images
+        icon-inbox-fill: inbox fill
+        icon-inbox: inbox
+        icon-inboxes-fill: inboxes fill
+        icon-inboxes: inboxes
+        icon-incognito: incognito
+        icon-index.html infinity: index.html infinity
+        icon-info-circle-fill: info circle fill
+        icon-info-circle: info circle
+        icon-info-lg: info lg
+        icon-info-square-fill: info square fill
+        icon-info-square: info square
+        icon-info: info
+        icon-input-cursor-text: input cursor text
+        icon-input-cursor: input cursor
+        icon-instagram: instagram
+        icon-intersect: intersect
+        icon-journal-album: journal album
+        icon-journal-arrow-down: journal arrow down
+        icon-journal-arrow-up: journal arrow up
+        icon-journal-bookmark-fill: journal bookmark fill
+        icon-journal-bookmark: journal bookmark
+        icon-journal-check: journal check
+        icon-journal-code: journal code
+        icon-journal-medical: journal medical
+        icon-journal-minus: journal minus
+        icon-journal-plus: journal plus
+        icon-journal-richtext: journal richtext
+        icon-journal-text: journal text
+        icon-journal-x: journal x
+        icon-journal: journal
+        icon-journals: journals
+        icon-joystick: joystick
+        icon-justify-left: justify left
+        icon-justify-right: justify right
+        icon-justify: justify
+        icon-kanban-fill: kanban fill
+        icon-kanban: kanban
+        icon-key-fill: key fill
+        icon-key: key
+        icon-keyboard-fill: keyboard fill
+        icon-keyboard: keyboard
+        icon-ladder: ladder
+        icon-lamp-fill: lamp fill
+        icon-lamp: lamp
+        icon-laptop-fill: laptop fill
+        icon-laptop: laptop
+        icon-layer-backward: layer backward
+        icon-layer-forward: layer forward
+        icon-layers-fill: layers fill
+        icon-layers-half: layers half
+        icon-layers: layers
+        icon-layout-sidebar-inset-reverse: layout sidebar inset reverse
+        icon-layout-sidebar-inset: layout sidebar inset
+        icon-layout-sidebar-reverse: layout sidebar reverse
+        icon-layout-sidebar: layout sidebar
+        icon-layout-split: layout split
+        icon-layout-text-sidebar-reverse: layout text sidebar reverse
+        icon-layout-text-sidebar: layout text sidebar
+        icon-layout-text-window-reverse: layout text window reverse
+        icon-layout-text-window: layout text window
+        icon-layout-three-columns: layout three columns
+        icon-layout-wtf: layout wtf
+        icon-license: license
+        icon-life-preserver: life preserver
+        icon-lightbulb-fill: lightbulb fill
+        icon-lightbulb-off-fill: lightbulb off fill
+        icon-lightbulb-off: lightbulb off
+        icon-lightbulb: lightbulb
+        icon-lightning-charge-fill: lightning charge fill
+        icon-lightning-charge: lightning charge
+        icon-lightning-fill: lightning fill
+        icon-lightning: lightning
+        icon-line: line
+        icon-link-45deg: link 45deg
+        icon-link: link
+        icon-linkedin: linkedin
+        icon-list-check: list check
+        icon-list-columns-reverse: list columns reverse
+        icon-list-columns: list columns
+        icon-list-nested: list nested
+        icon-list-ol: list ol
+        icon-list-stars: list stars
+        icon-list-task: list task
+        icon-list-ul: list ul
+        icon-list: list
+        icon-lock-fill: lock fill
+        icon-lock-open: lock open
+        icon-lock: lock
+        icon-logout: logout
+        icon-magic: magic
+        icon-magnet-fill: magnet fill
+        icon-magnet: magnet
+        icon-mail: mail
+        icon-mailbox: mailbox
+        icon-mailbox2: mailbox2
+        icon-map-fill: map fill
+        icon-map: map
+        icon-markdown-fill: markdown fill
+        icon-markdown: markdown
+        icon-marker: marker
+        icon-mask: mask
+        icon-mastodon: mastodon
+        icon-medium: medium
+        icon-megaphone-fill: megaphone fill
+        icon-megaphone: megaphone
+        icon-memory: memory
+        icon-menu-app-fill: menu app fill
+        icon-menu-app: menu app
+        icon-menu-button-fill: menu button fill
+        icon-menu-button-wide-fill: menu button wide fill
+        icon-menu-button-wide: menu button wide
+        icon-menu-button: menu button
+        icon-menu-down: menu down
+        icon-menu-up: menu up
+        icon-menu: menu
+        icon-messenger: messenger
+        icon-meta: meta
+        icon-mic-fill: mic fill
+        icon-mic-mute-fill: mic mute fill
+        icon-mic-mute: mic mute
+        icon-mic: mic
+        icon-microsoft: microsoft
+        icon-minecart-loaded: minecart loaded
+        icon-minecart: minecart
+        icon-minus: minus
+        icon-modem-fill: modem fill
+        icon-modem: modem
+        icon-moisture: moisture
+        icon-moon-fill: moon fill
+        icon-moon-stars-fill: moon stars fill
+        icon-moon-stars: moon stars
+        icon-moon: moon
+        icon-more: more
+        icon-mortarboard-fill: mortarboard fill
+        icon-mortarboard: mortarboard
+        icon-motherboard-fill: motherboard fill
+        icon-motherboard: motherboard
+        icon-mouse-fill: mouse fill
+        icon-mouse: mouse
+        icon-mouse2-fill: mouse2 fill
+        icon-mouse2: mouse2
+        icon-mouse3-fill: mouse3 fill
+        icon-mouse3: mouse3
+        icon-music-note-beamed: music note beamed
+        icon-music-note-list: music note list
+        icon-music-note: music note
+        icon-music-player-fill: music player fill
+        icon-music-player: music player
+        icon-newspaper: newspaper
+        icon-nintendo-switch: nintendo switch
+        icon-node-minus-fill: node minus fill
+        icon-node-minus: node minus
+        icon-node-plus-fill: node plus fill
+        icon-node-plus: node plus
+        icon-nut-fill: nut fill
+        icon-nut: nut
+        icon-octagon-fill: octagon fill
+        icon-octagon-half: octagon half
+        icon-octagon: octagon
+        icon-optical-audio-fill: optical audio fill
+        icon-optical-audio: optical audio
+        icon-option: option
+        icon-outlet: outlet
+        icon-paint-bucket: paint bucket
+        icon-palette-fill: palette fill
+        icon-palette: palette
+        icon-palette2: palette2
+        icon-paperclip: paperclip
+        icon-paragraph: paragraph
+        icon-patch-check-fill: patch check fill
+        icon-patch-check: patch check
+        icon-patch-exclamation-fill: patch exclamation fill
+        icon-patch-exclamation: patch exclamation
+        icon-patch-minus-fill: patch minus fill
+        icon-patch-minus: patch minus
+        icon-patch-plus-fill: patch plus fill
+        icon-patch-plus: patch plus
+        icon-patch-question-fill: patch question fill
+        icon-patch-question: patch question
+        icon-pause-btn-fill: pause btn fill
+        icon-pause-btn: pause btn
+        icon-pause-circle-fill: pause circle fill
+        icon-pause-circle: pause circle
+        icon-pause-fill: pause fill
+        icon-pause: pause
+        icon-paypal: paypal
+        icon-pc-display-horizontal: pc display horizontal
+        icon-pc-display: pc display
+        icon-pc-horizontal: pc horizontal
+        icon-pc: pc
+        icon-pci-card: pci card
+        icon-peace-fill: peace fill
+        icon-peace: peace
+        icon-pen-fill: pen fill
+        icon-pen: pen
+        icon-pencil-fill: pencil fill
+        icon-pencil-square: pencil square
+        icon-pencil: pencil
+        icon-pentagon-fill: pentagon fill
+        icon-pentagon-half: pentagon half
+        icon-pentagon: pentagon
+        icon-people-fill: people fill
+        icon-people: people
+        icon-percent: percent
+        icon-person-badge-fill: person badge fill
+        icon-person-badge: person badge
+        icon-person-bounding-box: person bounding box
+        icon-person-check-fill: person check fill
+        icon-person-check: person check
+        icon-person-circle: person circle
+        icon-person-dash-fill: person dash fill
+        icon-person-dash: person dash
+        icon-person-fill: person fill
+        icon-person-heart: person heart
+        icon-person-hearts: person hearts
+        icon-person-lines-fill: person lines fill
+        icon-person-plus-fill: person plus fill
+        icon-person-plus: person plus
+        icon-person-rolodex: person rolodex
+        icon-person-square: person square
+        icon-person-video: person video
+        icon-person-video2: person video2
+        icon-person-video3: person video3
+        icon-person-workspace: person workspace
+        icon-person-x-fill: person x fill
+        icon-person-x: person x
+        icon-person: person
+        icon-phone-fill: phone fill
+        icon-phone-flip: phone flip
+        icon-phone-landscape-fill: phone landscape fill
+        icon-phone-landscape: phone landscape
+        icon-phone-vibrate-fill: phone vibrate fill
+        icon-phone-vibrate: phone vibrate
+        icon-phone: phone
+        icon-pie-chart-fill: pie chart fill
+        icon-pie-chart: pie chart
+        icon-piggy-bank-fill: piggy bank fill
+        icon-piggy-bank: piggy bank
+        icon-pin-angle-fill: pin angle fill
+        icon-pin-angle: pin angle
+        icon-pin-fill: pin fill
+        icon-pin-map-fill: pin map fill
+        icon-pin-map: pin map
+        icon-pin: pin
+        icon-pinterest: pinterest
+        icon-pip-fill: pip fill
+        icon-pip: pip
+        icon-play-btn-fill: play btn fill
+        icon-play-btn: play btn
+        icon-play-circle-fill: play circle fill
+        icon-play-circle: play circle
+        icon-play-fill: play fill
+        icon-play: play
+        icon-playstation: playstation
+        icon-plug-fill: plug fill
+        icon-plug: plug
+        icon-plugin: plugin
+        icon-plus-circle-dotted: plus circle dotted
+        icon-plus-circle-fill: plus circle fill
+        icon-plus-circle: plus circle
+        icon-plus-lg: plus lg
+        icon-plus-slash-minus: plus slash minus
+        icon-plus-square-dotted: plus square dotted
+        icon-plus-square-fill: plus square fill
+        icon-plus-square: plus square
+        icon-plus: plus
+        icon-postage-fill: postage fill
+        icon-postage-heart-fill: postage heart fill
+        icon-postage-heart: postage heart
+        icon-postage: postage
+        icon-postcard-fill: postcard fill
+        icon-postcard-heart-fill: postcard heart fill
+        icon-postcard-heart: postcard heart
+        icon-postcard: postcard
+        icon-power: power
+        icon-print: print
+        icon-printer-fill: printer fill
+        icon-printer: printer
+        icon-projector-fill: projector fill
+        icon-projector: projector
+        icon-puzzle-fill: puzzle fill
+        icon-puzzle: puzzle
+        icon-qr-code-scan: qr code scan
+        icon-qr-code: qr code
+        icon-question-circle-fill: question circle fill
+        icon-question-circle: question circle
+        icon-question-diamond-fill: question diamond fill
+        icon-question-diamond: question diamond
+        icon-question-lg: question lg
+        icon-question-octagon-fill: question octagon fill
+        icon-question-octagon: question octagon
+        icon-question-square-fill: question square fill
+        icon-question-square: question square
+        icon-question: question
+        icon-quora: quora
+        icon-quote-end: quote end
+        icon-quote-start: quote start
+        icon-quote: quote
+        icon-radioactive: radioactive
+        icon-rainbow: rainbow
+        icon-read-more: read more
+        icon-receipt-cutoff: receipt cutoff
+        icon-receipt: receipt
+        icon-reception-0: reception 0
+        icon-reception-1: reception 1
+        icon-reception-2: reception 2
+        icon-reception-3: reception 3
+        icon-reception-4: reception 4
+        icon-record-btn-fill: record btn fill
+        icon-record-btn: record btn
+        icon-record-circle-fill: record circle fill
+        icon-record-circle: record circle
+        icon-record-fill: record fill
+        icon-record: record
+        icon-record2-fill: record2 fill
+        icon-record2: record2
+        icon-recycle: recycle
+        icon-reddit: reddit
+        icon-reply-all-fill: reply all fill
+        icon-reply-all: reply all
+        icon-reply-fill: reply fill
+        icon-reply: reply
+        icon-reset: reset
+        icon-robot: robot
+        icon-router-fill: router fill
+        icon-router: router
+        icon-rss-fill: rss fill
+        icon-rss: rss
+        icon-rulers: rulers
+        icon-safe-fill: safe fill
+        icon-safe: safe
+        icon-safe2-fill: safe2 fill
+        icon-safe2: safe2
+        icon-save-fill: save fill
+        icon-save: save
+        icon-save2-fill: save2 fill
+        icon-save2: save2
+        icon-scissors: scissors
+        icon-screwdriver: screwdriver
+        icon-sd-card-fill: sd card fill
+        icon-sd-card: sd card
+        icon-search-heart-fill: search heart fill
+        icon-search-heart: search heart
+        icon-search: search
+        icon-segmented-nav: segmented nav
+        icon-send-check-fill: send check fill
+        icon-send-check: send check
+        icon-send-dash-fill: send dash fill
+        icon-send-dash: send dash
+        icon-send-exclamation-fill: send exclamation fill
+        icon-send-exclamation: send exclamation
+        icon-send-fill: send fill
+        icon-send-plus-fill: send plus fill
+        icon-send-plus: send plus
+        icon-send-slash-fill: send slash fill
+        icon-send-slash: send slash
+        icon-send-x-fill: send x fill
+        icon-send-x: send x
+        icon-send: send
+        icon-server: server
+        icon-share-fill: share fill
+        icon-share: share
+        icon-shield-check: shield check
+        icon-shield-exclamation: shield exclamation
+        icon-shield-fill-check: shield fill check
+        icon-shield-fill-exclamation: shield fill exclamation
+        icon-shield-fill-minus: shield fill minus
+        icon-shield-fill-plus: shield fill plus
+        icon-shield-fill-x: shield fill x
+        icon-shield-fill: shield fill
+        icon-shield-lock-fill: shield lock fill
+        icon-shield-lock: shield lock
+        icon-shield-minus: shield minus
+        icon-shield-plus: shield plus
+        icon-shield-shaded: shield shaded
+        icon-shield-slash-fill: shield slash fill
+        icon-shield-slash: shield slash
+        icon-shield-x: shield x
+        icon-shield: shield
+        icon-shift-fill: shift fill
+        icon-shift: shift
+        icon-shop-window: shop window
+        icon-shop: shop
+        icon-shuffle: shuffle
+        icon-signal: signal
+        icon-signpost-2-fill: signpost 2 fill
+        icon-signpost-2: signpost 2
+        icon-signpost-fill: signpost fill
+        icon-signpost-split-fill: signpost split fill
+        icon-signpost-split: signpost split
+        icon-signpost: signpost
+        icon-sim-fill: sim fill
+        icon-sim: sim
+        icon-skip-backward-btn-fill: skip backward btn fill
+        icon-skip-backward-btn: skip backward btn
+        icon-skip-backward-circle-fill: skip backward circle fill
+        icon-skip-backward-circle: skip backward circle
+        icon-skip-backward-fill: skip backward fill
+        icon-skip-backward: skip backward
+        icon-skip-end-btn-fill: skip end btn fill
+        icon-skip-end-btn: skip end btn
+        icon-skip-end-circle-fill: skip end circle fill
+        icon-skip-end-circle: skip end circle
+        icon-skip-end-fill: skip end fill
+        icon-skip-end: skip end
+        icon-skip-forward-btn-fill: skip forward btn fill
+        icon-skip-forward-btn: skip forward btn
+        icon-skip-forward-circle-fill: skip forward circle fill
+        icon-skip-forward-circle: skip forward circle
+        icon-skip-forward-fill: skip forward fill
+        icon-skip-forward: skip forward
+        icon-skip-start-btn-fill: skip start btn fill
+        icon-skip-start-btn: skip start btn
+        icon-skip-start-circle-fill: skip start circle fill
+        icon-skip-start-circle: skip start circle
+        icon-skip-start-fill: skip start fill
+        icon-skip-start: skip start
+        icon-skype: skype
+        icon-slack: slack
+        icon-slash-circle-fill: slash circle fill
+        icon-slash-circle: slash circle
+        icon-slash-lg: slash lg
+        icon-slash-square-fill: slash square fill
+        icon-slash-square: slash square
+        icon-slash: slash
+        icon-sliders: sliders
+        icon-sliders2-vertical: sliders2 vertical
+        icon-sliders2: sliders2
+        icon-smartwatch: smartwatch
+        icon-snapchat: snapchat
+        icon-snow: snow
+        icon-snow2: snow2
+        icon-snow3: snow3
+        icon-social-facebook: social facebook
+        icon-social-googleplus: social googleplus
+        icon-social-instagram: social instagram
+        icon-social-linkedin: social linkedin
+        icon-social-mail: social mail
+        icon-social-reddit: social reddit
+        icon-social-rss: social rss
+        icon-social-twitter: social twitter
+        icon-social-youtube: social youtube
+        icon-sort-alpha-down-alt: sort alpha down alt
+        icon-sort-alpha-down: sort alpha down
+        icon-sort-alpha-up-alt: sort alpha up alt
+        icon-sort-alpha-up: sort alpha up
+        icon-sort-down-alt: sort down alt
+        icon-sort-down: sort down
+        icon-sort-numeric-down-alt: sort numeric down alt
+        icon-sort-numeric-down: sort numeric down
+        icon-sort-numeric-up-alt: sort numeric up alt
+        icon-sort-numeric-up: sort numeric up
+        icon-sort-up-alt: sort up alt
+        icon-sort-up: sort up
+        icon-soundwave: soundwave
+        icon-speaker-fill: speaker fill
+        icon-speaker: speaker
+        icon-speedometer: speedometer
+        icon-speedometer2: speedometer2
+        icon-spellcheck: spellcheck
+        icon-spotify: spotify
+        icon-square-fill: square fill
+        icon-square-half: square half
+        icon-square: square
+        icon-stack-overflow: stack overflow
+        icon-stack: stack
+        icon-star-fill: star fill
+        icon-star-half: star half
+        icon-star: star
+        icon-stars: stars
+        icon-stats: stats
+        icon-status-check: status check
+        icon-status-error: status error
+        icon-status-info: status info
+        icon-status-question: status question
+        icon-status-warning: status warning
+        icon-steam: steam
+        icon-stickies-fill: stickies fill
+        icon-stickies: stickies
+        icon-sticky-fill: sticky fill
+        icon-sticky: sticky
+        icon-stop-btn-fill: stop btn fill
+        icon-stop-btn: stop btn
+        icon-stop-circle-fill: stop circle fill
+        icon-stop-circle: stop circle
+        icon-stop-fill: stop fill
+        icon-stop: stop
+        icon-stoplights-fill: stoplights fill
+        icon-stoplights: stoplights
+        icon-stopwatch-fill: stopwatch fill
+        icon-stopwatch: stopwatch
+        icon-strava: strava
+        icon-subtract: subtract
+        icon-suit-club-fill: suit club fill
+        icon-suit-club: suit club
+        icon-suit-diamond-fill: suit diamond fill
+        icon-suit-diamond: suit diamond
+        icon-suit-heart-fill: suit heart fill
+        icon-suit-heart: suit heart
+        icon-suit-spade-fill: suit spade fill
+        icon-suit-spade: suit spade
+        icon-sun-fill: sun fill
+        icon-sun: sun
+        icon-sunglasses: sunglasses
+        icon-sunrise-fill: sunrise fill
+        icon-sunrise: sunrise
+        icon-sunset-fill: sunset fill
+        icon-sunset: sunset
+        icon-symmetry-horizontal: symmetry horizontal
+        icon-symmetry-vertical: symmetry vertical
+        icon-table: table
+        icon-tablet-fill: tablet fill
+        icon-tablet-landscape-fill: tablet landscape fill
+        icon-tablet-landscape: tablet landscape
+        icon-tablet: tablet
+        icon-tag-fill: tag fill
+        icon-tag: tag
+        icon-tags-fill: tags fill
+        icon-tags: tags
+        icon-telegram: telegram
+        icon-telephone-fill: telephone fill
+        icon-telephone-forward-fill: telephone forward fill
+        icon-telephone-forward: telephone forward
+        icon-telephone-inbound-fill: telephone inbound fill
+        icon-telephone-inbound: telephone inbound
+        icon-telephone-minus-fill: telephone minus fill
+        icon-telephone-minus: telephone minus
+        icon-telephone-outbound-fill: telephone outbound fill
+        icon-telephone-outbound: telephone outbound
+        icon-telephone-plus-fill: telephone plus fill
+        icon-telephone-plus: telephone plus
+        icon-telephone-x-fill: telephone x fill
+        icon-telephone-x: telephone x
+        icon-telephone: telephone
+        icon-terminal-dash: terminal dash
+        icon-terminal-fill: terminal fill
+        icon-terminal-plus: terminal plus
+        icon-terminal-split: terminal split
+        icon-terminal-x: terminal x
+        icon-terminal: terminal
+        icon-text-center: text center
+        icon-text-indent-left: text indent left
+        icon-text-indent-right: text indent right
+        icon-text-left: text left
+        icon-text-paragraph: text paragraph
+        icon-text-right: text right
+        icon-textarea-resize: textarea resize
+        icon-textarea-t: textarea t
+        icon-textarea: textarea
+        icon-thermometer-half: thermometer half
+        icon-thermometer-high: thermometer high
+        icon-thermometer-low: thermometer low
+        icon-thermometer-snow: thermometer snow
+        icon-thermometer-sun: thermometer sun
+        icon-thermometer: thermometer
+        icon-three-dots-vertical: three dots vertical
+        icon-three-dots: three dots
+        icon-thunderbolt-fill: thunderbolt fill
+        icon-thunderbolt: thunderbolt
+        icon-ticket-detailed-fill: ticket detailed fill
+        icon-ticket-detailed: ticket detailed
+        icon-ticket-fill: ticket fill
+        icon-ticket-perforated-fill: ticket perforated fill
+        icon-ticket-perforated: ticket perforated
+        icon-ticket: ticket
+        icon-tiktok: tiktok
+        icon-time: time
+        icon-toggle-off: toggle off
+        icon-toggle-on: toggle on
+        icon-toggle2-off: toggle2 off
+        icon-toggle2-on: toggle2 on
+        icon-toggles: toggles
+        icon-toggles2: toggles2
+        icon-tools: tools
+        icon-tornado: tornado
+        icon-translate: translate
+        icon-trash-fill: trash fill
+        icon-trash: trash
+        icon-trash2-fill: trash2 fill
+        icon-trash2: trash2
+        icon-trash3-fill: trash3 fill
+        icon-trash3: trash3
+        icon-tree-fill: tree fill
+        icon-tree: tree
+        icon-triangle-down: triangle down
+        icon-triangle-fill: triangle fill
+        icon-triangle-half: triangle half
+        icon-triangle-left: triangle left
+        icon-triangle-right: triangle right
+        icon-triangle-up: triangle up
+        icon-triangle: triangle
+        icon-trophy-fill: trophy fill
+        icon-trophy: trophy
+        icon-tropical-storm: tropical storm
+        icon-truck-flatbed: truck flatbed
+        icon-truck: truck
+        icon-tsunami: tsunami
+        icon-tv-fill: tv fill
+        icon-tv: tv
+        icon-twitch: twitch
+        icon-twitter: twitter
+        icon-type-bold: type bold
+        icon-type-h1: type h1
+        icon-type-h2: type h2
+        icon-type-h3: type h3
+        icon-type-italic: type italic
+        icon-type-strikethrough: type strikethrough
+        icon-type-underline: type underline
+        icon-type: type
+        icon-ui-checks-grid: ui checks grid
+        icon-ui-checks: ui checks
+        icon-ui-radios-grid: ui radios grid
+        icon-ui-radios: ui radios
+        icon-umbrella-fill: umbrella fill
+        icon-umbrella: umbrella
+        icon-union: union
+        icon-unlock-fill: unlock fill
+        icon-unlock: unlock
+        icon-upc-scan: upc scan
+        icon-upc: upc
+        icon-upload: upload
+        icon-usb-c-fill: usb c fill
+        icon-usb-c: usb c
+        icon-usb-drive-fill: usb drive fill
+        icon-usb-drive: usb drive
+        icon-usb-fill: usb fill
+        icon-usb-micro-fill: usb micro fill
+        icon-usb-micro: usb micro
+        icon-usb-mini-fill: usb mini fill
+        icon-usb-mini: usb mini
+        icon-usb-plug-fill: usb plug fill
+        icon-usb-plug: usb plug
+        icon-usb-symbol: usb symbol
+        icon-usb: usb
+        icon-user: user
+        icon-users: users
+        icon-valentine: valentine
+        icon-valentine2: valentine2
+        icon-vector-pen: vector pen
+        icon-view-list: view list
+        icon-view-stacked: view stacked
+        icon-vimeo: vimeo
+        icon-vinyl-fill: vinyl fill
+        icon-vinyl: vinyl
+        icon-voicemail: voicemail
+        icon-volume-down-fill: volume down fill
+        icon-volume-down: volume down
+        icon-volume-mute-fill: volume mute fill
+        icon-volume-mute: volume mute
+        icon-volume-off-fill: volume off fill
+        icon-volume-off: volume off
+        icon-volume-up-fill: volume up fill
+        icon-volume-up: volume up
+        icon-vr: vr
+        icon-wallet-fill: wallet fill
+        icon-wallet: wallet
+        icon-wallet2: wallet2
+        icon-watch: watch
+        icon-water: water
+        icon-webcam-fill: webcam fill
+        icon-webcam: webcam
+        icon-whatsapp: whatsapp
+        icon-wifi-1: wifi 1
+        icon-wifi-2: wifi 2
+        icon-wifi-off: wifi off
+        icon-wifi: wifi
+        icon-wind: wind
+        icon-window-dash: window dash
+        icon-window-desktop: window desktop
+        icon-window-dock: window dock
+        icon-window-fullscreen: window fullscreen
+        icon-window-plus: window plus
+        icon-window-sidebar: window sidebar
+        icon-window-split: window split
+        icon-window-stack: window stack
+        icon-window-x: window x
+        icon-window: window
+        icon-windows: windows
+        icon-wordpress: wordpress
+        icon-wrench-adjustable-circle-fill: wrench adjustable circle fill
+        icon-wrench-adjustable-circle: wrench adjustable circle
+        icon-wrench-adjustable: wrench adjustable
+        icon-wrench: wrench
+        icon-x-circle-fill: x circle fill
+        icon-x-circle: x circle
+        icon-x-diamond-fill: x diamond fill
+        icon-x-diamond: x diamond
+        icon-x-lg: x lg
+        icon-x-octagon-fill: x octagon fill
+        icon-x-octagon: x octagon
+        icon-x-square-fill: x square fill
+        icon-x-square: x square
+        icon-x: x
+        icon-xbox: xbox
+        icon-yin-yang: yin yang
+        icon-youtube: youtube
+        icon-zoom-in: zoom in
+        icon-zoom-out: zoom out
+

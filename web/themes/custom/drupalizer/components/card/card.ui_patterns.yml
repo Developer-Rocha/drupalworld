@@ -1,0 +1,68 @@
+card:
+  label: Card
+  description: Display content as a card
+  fields:
+    tags:
+      type: mixed
+      label: Tags
+      description: Taxonomy tags for the card.
+      preview:
+        - label: DXP
+        - label: Drupalizer
+        - label: Drupal
+    image:
+      type: text
+      label: Image
+      description: Image for the card.
+      preview: <div><img src="/themes/custom/drupalizer/components/card/preview.jpg" /></div>
+    date:
+      type: text
+      label: Date
+      description: Post date of the card's content.
+      preview: 01/01/2022 - 13:37
+    title:
+      type: text
+      label: Title
+      description: The card's title.
+      preview: De weg naar digitaal success
+    text:
+      type: text
+      label: Text
+      description: Teaser text for the card.
+      preview: Digitale communicatie die expertise en focus koppelt aan transparantie en een no-bullshit aanpak. Dat is Calibrate.
+    content:
+      type: mixed
+      label: Content
+      description: Add content here that doesn't fit in any other region.
+      preview: Een extra veld met content naar keuze.
+    author:
+      type: text
+      label: Author
+      description: Author of the card's content.
+      preview:
+        name: Kelly Breed
+        description: Social media manager
+        image: X
+    url:
+      type: text
+      label: URL to link the card to.
+      description: Add an url this card links to.
+      preview: https://calibrate.be
+    card_classes:
+      type: text
+      label: Card Classes
+      description: Add classes to this card.
+  variants:
+    vertical:
+      label: Vertical
+    horizontal:
+      label: Horizontal
+    bg_image:
+      label: Image as background
+    text:
+      label: Vertical text
+  libraries:
+    - card:
+       css:
+         component:
+           card.css: {}

@@ -1,0 +1,29 @@
+
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-example' %}
+
+{# Override the default component html element. #}
+{% set component_element = 'article' %}
+
+{# Add custom classes to component. #}
+{%
+  set custom_classes = [
+      'your-class-here',
+  ]
+%}
+
+{% block component_content %}
+  <header class="{{ component ~ '__header' }}">
+    <h3 class="{{ component ~ '__title' }} auto-heading">
+      {{ title }}
+    </h3>
+  </header>
+
+  <div class="{{ component ~ '__content' }}">
+    {{ text }}
+  </div>
+{% endblock %}

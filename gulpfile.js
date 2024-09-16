@@ -60,18 +60,18 @@ var paths = {
     src: themePath + 'sass/**/*.scss',
     dest: themePath + 'css/'
   },
-  // componentStyles: {
-  //   src: themePath + 'components/**/*.scss',
-  //   dest: themePath + 'components/'
-  // },
+  componentStyles: {
+    src: themePath + 'components/**/*.scss',
+    dest: themePath + 'components/'
+  },
   scripts: {
     src: themePath + 'scripts/**/*.js',
     dest: themePath + 'js/'
   },
-  // componentScripts: {
-  //   src: themePath + 'components/**/!(*.min)*.js',
-  //   dest: themePath + 'components/'
-  // },
+  componentScripts: {
+    src: themePath + 'components/**/!(*.min)*.js',
+    dest: themePath + 'components/'
+  },
   csscomb: {
     src: themePath + 'sass/**/*.scss',
     dest: themePath
@@ -146,16 +146,16 @@ function lintsass() {
 }
 
 // Sass lint components
-// function lintsassComponents() {
-//   return gulp
-//     .src(paths.componentStyles.src)
-//     .pipe(gulpStylelint({
-//       failAfterError: false,
-//       reporters: [
-//         {formatter: 'string', console: true}
-//       ]
-//     }));
-// }
+function lintsassComponents() {
+  return gulp
+    .src(paths.componentStyles.src)
+    .pipe(gulpStylelint({
+      failAfterError: false,
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+}
 
 
 // Sass compile + prefix task
@@ -212,33 +212,33 @@ function scripts() {
 }
 
 // Javascript minify task
-// function scriptsComponents() {
-//   return gulp
-//     .src(paths.componentScripts.src)
-//     .pipe($.plumber())
-//     .pipe($.uglify({ mangle: { reserved: ['Drupal'] } }))
-//     .pipe($.rename(function (path) {
-//       path.basename += '.min';
-//     }))
-//     .pipe(gulp.dest(paths.componentScripts.dest));
-// }
+function scriptsComponents() {
+  return gulp
+    .src(paths.componentScripts.src)
+    .pipe($.plumber())
+    .pipe($.uglify({ mangle: { reserved: ['Drupal'] } }))
+    .pipe($.rename(function (path) {
+      path.basename += '.min';
+    }))
+    .pipe(gulp.dest(paths.componentScripts.dest));
+}
 
 
 // Watch files
 function watchFiles() {
   // gulp.watch(paths.breakpoints.src, {usePolling: true}, breakpoints());
   gulp.watch(paths.styles.src, {usePolling: true}, gulp.series(sass, lintsass, sassComponents));
-  // gulp.watch(paths.componentStyles.src, {usePolling: true}, gulp.series(sassComponents, lintsassComponents));
+  gulp.watch(paths.componentStyles.src, {usePolling: true}, gulp.series(sassComponents, lintsassComponents));
   gulp.watch(paths.scripts.src, {usePolling: true}, scripts);
-  // gulp.watch(paths.componentScripts.src, {usePolling: true}, scriptsComponents);
+  gulp.watch(paths.componentScripts.src, {usePolling: true}, scriptsComponents);
 }
 
 
 // Commands
 // const build = gulp.series(icons, iconsComponents, gulp.parallel(gulp.series(sass, lintsass, sassComponents, lintsassComponents), scripts, scriptsComponents));
-const build = gulp.series(gulp.parallel(gulp.series(sass, lintsass), scripts));
+const build = gulp.series(gulp.parallel(gulp.series(sass, lintsass, sassComponents, lintsassComponents), scripts, scriptsComponents));
 const watch = gulp.series(build, watchFiles);
-const sasslint = gulp.series(lintsass);
+const sasslint = gulp.series(lintsass, lintsassComponents);
 
 exports.build = build;
 exports.watch = watch;

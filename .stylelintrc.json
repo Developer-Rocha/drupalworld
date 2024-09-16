@@ -1,0 +1,44 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "comment-empty-line-before": null,
+    "function-linear-gradient-no-nonstandard-direction": null,
+    "function-whitespace-after": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "no-unknown-animations": true,
+    "media-feature-name-no-unknown": [true, {
+      "ignoreMediaFeatureNames": ["prefers-reduced-motion","min--moz-device-pixel-ratio", "min-device-pixel-ratio"]
+    } ],
+    "number-leading-zero": "never",
+    "property-no-unknown": null,
+    "selector-pseudo-element-colon-notation": null,
+    "shorthand-property-no-redundant-values": null,
+    "string-quotes": "single",
+    "unit-whitelist": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh", "fr"],
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "max-empty-lines": 2,
+    "rule-empty-line-before": ["always", {
+      "ignore": ["after-comment", "first-nested"]
+    } ],
+    "at-rule-empty-line-before": [ "always", {
+      "except": ["blockless-after-blockless", "blockless-after-same-name-blockless", "first-nested"],
+      "ignore": ["after-comment"],
+      "ignoreAtRules": ["else"]
+    } ],
+    "declaration-empty-line-before": [ "always", {
+      "except": ["after-declaration","first-nested"],
+      "ignore": ["after-comment","inside-single-line-block"]
+    } ],
+    "declaration-colon-space-after": [ "always-single-line" ],
+    "color-hex-length": "long",
+    "block-closing-brace-newline-after": ["always", {
+      "ignoreAtRules": ["if", "else"]
+    } ],
+    "font-family-no-missing-generic-family-keyword": null
+  }
+}

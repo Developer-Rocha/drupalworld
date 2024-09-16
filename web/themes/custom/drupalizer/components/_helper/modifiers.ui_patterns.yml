@@ -1,0 +1,25 @@
+modifiers:
+  label: Modifiers
+  description: Provides a list of modifiers than can be extended on other patterns.
+  settings:
+    color:
+      type: select
+      label: Color
+      default_value: default
+      description: Choose your color.
+      options:
+        # default: Automatic
+        # light: Light
+        primary: Green
+        secondary: Orange
+        # success: Success
+        # warning: Warning
+        # error: Error
+        # info: Info
+        # dark: Dark
+        black: Black
+        # green: Green
+        # orange: Orange
+        yellow: Yellow
+        white: White
+        transparent-w-outline: Transparent w/ outline

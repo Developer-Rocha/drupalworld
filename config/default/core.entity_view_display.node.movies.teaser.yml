@@ -13,14 +13,56 @@ dependencies:
     - node.type.movies
   module:
     - datetime
+    - ds
     - manage_display
     - starrating
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: only_content
+          variant: vertical
+    regions:
+      tags:
+        - field_adult
+      image:
+        - field_movie_poster
+      date:
+        - field_release_date
+      title:
+        - title
+        - field_vote_average
+      text:
+        - field_overview
+      url:
+        - 'dynamic_token_field:node-url'
+    fields:
+      'dynamic_token_field:node-url':
+        plugin_id: 'dynamic_token_field:node-url'
+        weight: 6
+        label: hidden
+        formatter: default
 id: node.movies.teaser
 targetEntityType: node
 bundle: movies
 mode: teaser
 content:
+  field_adult:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: tags
   field_movie_poster:
     type: entity_reference_entity_view
     label: hidden
@@ -28,15 +70,15 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 0
-    region: content
+    weight: 1
+    region: image
   field_overview:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
-    region: content
+    weight: 5
+    region: text
   field_release_date:
     type: datetime_default
     label: hidden
@@ -45,35 +87,30 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 2
-    region: content
+    region: date
   field_vote_average:
     type: starrating
     label: hidden
     settings:
       fill_blank: '1'
-      icon_type: star
+      icon_type: movie
       icon_color: '1'
     third_party_settings: {  }
-    weight: 3
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
+    weight: 4
+    region: title
   title:
     type: title
     label: hidden
     settings:
-      link_to_entity: true
-      tag: h2
+      link_to_entity: false
+      tag: h3
     third_party_settings: {  }
-    weight: 1
-    region: content
+    weight: 3
+    region: title
 hidden:
   created: true
-  field_adult: true
   field_tmdb_id: true
   langcode: true
+  links: true
   search_api_excerpt: true
   uid: true

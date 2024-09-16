@@ -1,0 +1,14 @@
+id: url
+label: URL
+ui_limit: ''
+type: token
+type_label: 'Token field'
+entities:
+  node: node
+properties:
+  content:
+    value: '[node:url]'
+    format: plain_text
+  force_global_entity: false
+  use_global_entity: false
+  use_global_view_token: false

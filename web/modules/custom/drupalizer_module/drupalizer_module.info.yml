@@ -1,0 +1,7 @@
+name: 'Drupalizer Module'
+type: module
+description: 'Create custom functionalities to Drupalizer project.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - ds:ds

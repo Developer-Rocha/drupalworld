@@ -1,0 +1,46 @@
+
+{# Set component name from child template (if it exists), otherwise give it a general name #}
+{% set component = component_name|default('c-component-unknown') %}
+
+{# Set component html element from child template (if it exists), otherwise default to a div #}
+{% set element = component_element|default('div') %}
+
+{# Set component default color from child template (if it exists), otherwise give it the primary color #}
+{% set default_color = component_default_color|default('default') %}
+
+{# Stripping #}
+{% set clean_url = url|render|striptags|trim %}
+{% set clean_title = title|render|striptags|trim %}
+
+{% set extra_card_classes = card_classes|render|striptags|trim %}
+
+{# Set default classes shared by all components #}
+{%
+  set default_classes = [
+  'c-component',
+  component,
+  variant ? component ~ '--' ~ variant|clean_class : '',
+  color ? 'c-theme' ~ '--' ~ color : 'c-theme' ~ '--' ~ default_color,
+  size ? component ~ '--' ~ size : '',
+  'has-link',
+  image|render|striptags('<img><picture>')|trim ? 'has-image' : '',
+  image|render|striptags('<iframe>')|trim ? 'has-video' : '',
+  icon|render|striptags('<span>')|trim ? 'has-icon' : '',
+  extra_card_classes ? extra_card_classes
+]
+%}
+
+{# Merge any custom classes defined in the child template (if they exist) with the default classes #}
+{% set classes = default_classes|merge(custom_classes|default([])) %}
+
+{% block component %}
+  <{{ element }} {{ attributes.addClass(classes) }}>
+    {# Contextual links #}
+    {{ title_prefix }}
+    {{ title_suffix }}
+
+    {% block component_content %}
+      {# component here #}
+    {% endblock %}
+  </{{ element }}>
+{% endblock %}
