@@ -42,8 +42,10 @@ content:
     type: entity_reference_label
     label: above
     settings:
-      link: true
-    third_party_settings: {  }
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
     weight: 3
     region: second
   field_movie_poster:

@@ -36,6 +36,10 @@ source:
       name: vote_average
       label: 'Vote Average'
       selector: vote_average
+    -
+      name: genre_ids
+      label: 'Genre IDS'
+      selector: genre_ids
   ids:
     id:
       type: string
@@ -51,6 +55,14 @@ process:
   field_movie_poster:
     plugin: file_import
     source: poster_path
+  field_genre:
+    plugin: migration_lookup
+    source: genre_ids
+    no_stub: true
+    migration: movies_genre
+    map:
+      source: field_genre_id
+      target: id
 destination:
   plugin: entity:node
   default_bundle: movies
@@ -60,3 +72,6 @@ destination:
 migration_tags:
   - TMDb
 dependencies: {}
+migration_dependencies:
+  required:
+    - movies_genre
