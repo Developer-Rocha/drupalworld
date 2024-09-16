@@ -31,6 +31,7 @@
         "drupal/estimated_read_time": "^1.1",
         "drupal/field_group": "^3.6",
         "drupal/field_validation": "^3.0@beta",
+        "drupal/fivestar": "^1.0@alpha",
         "drupal/gin": "^3.0@rc",
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
@@ -54,6 +55,7 @@
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/unstructured": "^2.0@beta",
         "drupal/views_infinite_scroll": "^2.0",
+        "drupal/votingapi": "^3.0@beta",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.4"
     },
@@ -149,6 +151,9 @@
             },
             "drupal/views_infinite_scroll": {
                 "2894307 - Any way to Automatically Load Content when scrolling within a DIV": "https://www.drupal.org/files/issues/2022-02-09/support-for-overflow-scrolls-2894307-23.patch"
+            },
+            "drupal/fivestar": {
+                "3388828 - Add token support for results": "https://www.drupal.org/files/issues/2023-10-05/fivestar-3388828-7.patch"
             }
         }
     },

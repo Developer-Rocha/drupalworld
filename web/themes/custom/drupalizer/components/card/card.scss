@@ -78,10 +78,13 @@ $default-theme: 'primary';
   }
 
   &__text {
-    padding: 30px 0;
-
     p {
       line-height: 2rem;
     }
+  }
+
+  &__tags {
+    margin: 10px 0;
+    display: flex;
   }
 }

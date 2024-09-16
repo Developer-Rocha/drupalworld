@@ -1,16 +1,15 @@
-uuid: c31229a1-43bd-4d60-8d71-809a61879891
+uuid: 951db678-e919-466d-82b0-a8c891b67673
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - starrating
 id: node.field_vote_average
 field_name: field_vote_average
 entity_type: node
-type: starrating
+type: float
 settings: {  }
-module: starrating
+module: core
 locked: false
 cardinality: 1
 translatable: true

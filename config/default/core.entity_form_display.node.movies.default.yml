@@ -14,7 +14,6 @@ dependencies:
     - datetime
     - media_library
     - path
-    - starrating
     - text
 id: node.movies.default
 targetEntityType: node
@@ -63,10 +62,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_vote_average:
-    type: starrating
-    weight: 125
+    type: number
+    weight: 129
     region: content
-    settings: {  }
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

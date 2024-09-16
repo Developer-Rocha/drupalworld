@@ -14,8 +14,6 @@ dependencies:
   module:
     - datetime
     - ds
-    - manage_display
-    - starrating
     - text
 third_party_settings:
   ds:
@@ -26,10 +24,11 @@ third_party_settings:
       entity_classes: all_classes
       settings:
         pattern:
-          field_templates: only_content
+          field_templates: default
           variant: vertical
     regions:
       tags:
+        - field_vote_average
         - field_adult
       image:
         - field_movie_poster
@@ -37,7 +36,6 @@ third_party_settings:
         - field_release_date
       title:
         - title
-        - field_vote_average
       text:
         - field_overview
       url:
@@ -61,7 +59,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: tags
   field_movie_poster:
     type: entity_reference_entity_view
@@ -70,7 +68,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: image
   field_overview:
     type: text_default
@@ -80,32 +78,32 @@ content:
     weight: 5
     region: text
   field_release_date:
-    type: datetime_default
+    type: datetime_custom
     label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      date_format: 'Y-m-d\TH:i:s'
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: date
   field_vote_average:
-    type: starrating
+    type: number_decimal
     label: hidden
     settings:
-      fill_blank: '1'
-      icon_type: movie
-      icon_color: '1'
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 1
+      prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
-    region: title
+    weight: 0
+    region: tags
   title:
-    type: title
+    type: string
     label: hidden
     settings:
       link_to_entity: false
-      tag: h3
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: title
 hidden:
   created: true

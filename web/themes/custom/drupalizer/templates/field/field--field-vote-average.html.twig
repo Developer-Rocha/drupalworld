@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set classes = [
+  'field',
+  'field__item',
+  'field-vote-average'
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% set file = active_theme_path() ~  '/icons/star.svg' %}
+  {% include file ignore missing %}
+
+  {% for item in items %}
+    <div class="label">{{ item.content }}</div>
+  {% endfor %}
+</div>

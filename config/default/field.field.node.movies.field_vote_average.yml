@@ -1,22 +1,23 @@
-uuid: af1deae4-100b-4e11-a0b4-bd227472629b
+uuid: 3644e715-81e5-4f24-b597-2db919e055bf
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_vote_average
     - node.type.movies
-  module:
-    - starrating
 id: node.movies.field_vote_average
 field_name: field_vote_average
 entity_type: node
 bundle: movies
-label: 'Vote Average'
+label: 'Vote average'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  max_value: '10'
-field_type: starrating
+  min: 0.0
+  max: 10.0
+  prefix: ''
+  suffix: ''
+field_type: float
