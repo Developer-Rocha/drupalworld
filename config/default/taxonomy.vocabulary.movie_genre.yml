@@ -1,9 +1,9 @@
-uuid: bb75add7-f881-4a40-b433-0ecc79f8b57f
+uuid: b6f80417-fad5-4e0f-a9dc-4f1530eb73cf
 langcode: en
 status: true
 dependencies: {  }
-name: 'Driver Category'
-vid: driver_category
+name: 'Movie Genre'
+vid: movie_genre
 description: null
 weight: 0
 new_revision: false

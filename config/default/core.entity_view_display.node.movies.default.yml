@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
@@ -11,13 +12,40 @@ dependencies:
     - node.type.movies
   module:
     - datetime
+    - ds
     - manage_display
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      first:
+        - field_movie_poster
+      second:
+        - title
+        - field_overview
+        - field_genre
+        - field_vote_average
+        - field_release_date
 id: node.movies.default
 targetEntityType: node
 bundle: movies
 mode: default
 content:
+  field_genre:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: second
   field_movie_poster:
     type: entity_reference_entity_view
     label: hidden
@@ -26,51 +54,47 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
-    region: content
+    region: first
   field_overview:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
-    region: content
+    weight: 2
+    region: second
   field_release_date:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: html_date
     third_party_settings: {  }
-    weight: 7
-    region: content
+    weight: 5
+    region: second
   field_vote_average:
     type: number_decimal
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       decimal_separator: .
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 6
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
+    weight: 4
+    region: second
   title:
     type: title
     label: hidden
     settings:
-      link_to_entity: true
+      link_to_entity: false
       tag: h2
     third_party_settings: {  }
     weight: 1
-    region: content
+    region: second
 hidden:
   created: true
   field_tmdb_id: true
   langcode: true
+  links: true
   search_api_excerpt: true
   uid: true

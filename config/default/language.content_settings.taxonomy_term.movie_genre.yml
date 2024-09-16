@@ -1,0 +1,16 @@
+uuid: 122b147a-2d9e-4d84-a644-9fbbc40ac4dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.movie_genre
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.movie_genre
+target_entity_type_id: taxonomy_term
+target_bundle: movie_genre
+default_langcode: site_default
+language_alterable: false

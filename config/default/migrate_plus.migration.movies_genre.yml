@@ -1,0 +1,46 @@
+uuid: e0724908-9019-45fc-9b60-326a502f9d01
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UdW5LBZM33YFq398HjxK4TSiVpPM4hq4VRDGe2ko7zQ
+id: movies_genre
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - TMDb
+migration_group: tmdb_movies
+label: 'Import movie genre from TMDB'
+source:
+  plugin: url
+  data_fetcher_plugin: http_tmdb
+  data_parser_plugin: json
+  urls:
+    - 'https://api.themoviedb.org/3/genre/movie/list'
+  request_options:
+    query:
+      language: en
+  item_selector: results
+  fields:
+    -
+      name: id
+      label: 'Genre ID'
+      selector: id
+    -
+      name: name
+      label: Name
+      selector: name
+  ids:
+    id:
+      type: string
+process:
+  title: name
+  field_genre_id: id
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: movie_genre
+  default_langcode: en
+  uid: 1
+  status: 1
+migration_dependencies: null

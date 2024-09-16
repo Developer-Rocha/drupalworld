@@ -1,0 +1,42 @@
+uuid: ee1b407b-7edb-4d19-85e4-7d6d1dab1f58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.movie_genre.field_genre_id
+    - taxonomy.vocabulary.movie_genre
+  module:
+    - manage_display
+    - text
+id: taxonomy_term.movie_genre.default
+targetEntityType: taxonomy_term
+bundle: movie_genre
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_genre_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

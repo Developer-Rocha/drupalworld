@@ -1,5 +1,5 @@
 id: tmdb_movies
-label: 'Import Top 10 Movies from TMDb'
+label: 'Import Top 20 Movies from TMDb'
 migration_group: tmdb_movies
 source:
   plugin: url
