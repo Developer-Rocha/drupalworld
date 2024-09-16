@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b1e9492324e8e447a4037e49f2ec420",
+    "content-hash": "8d1ec860cc114eb33620a4aeed82bf21",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4676,62 +4676,6 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/simple_sitemap",
                 "issues": "https://drupal.org/project/issues/simple_sitemap"
-            }
-        },
-        {
-            "name": "drupal/starrating",
-            "version": "4.1.0-alpha4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/starrating.git",
-                "reference": "8.x-4.1-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/starrating-8.x-4.1-alpha4.zip",
-                "reference": "8.x-4.1-alpha4",
-                "shasum": "c52337e3aecf3cd50c626dc7649153984142ff37"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-4.1-alpha4",
-                    "datestamp": "1690803051",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "karthikeyan-manivasagam",
-                    "homepage": "https://www.drupal.org/user/1494424"
-                },
-                {
-                    "name": "marcoka",
-                    "homepage": "https://www.drupal.org/user/255202"
-                },
-                {
-                    "name": "pixture",
-                    "homepage": "https://www.drupal.org/user/270720"
-                },
-                {
-                    "name": "voleger",
-                    "homepage": "https://www.drupal.org/user/3260314"
-                }
-            ],
-            "description": "Provides star rating field type and formatter.",
-            "homepage": "https://www.drupal.org/project/starrating",
-            "support": {
-                "source": "https://git.drupalcode.org/project/starrating"
             }
         },
         {
@@ -14044,7 +13988,6 @@
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
         "drupal/graphql_webform": 15,
-        "drupal/starrating": 15,
         "drupal/ultimate_cron": 15,
         "drupal/unstructured": 10,
         "drupal/votingapi": 10
