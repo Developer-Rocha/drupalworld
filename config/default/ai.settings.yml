@@ -1,15 +1,9 @@
 prompt_logging: false
 prompt_logging_tags: ''
 default_providers:
-  image_to_video:
-    provider_id: ''
-    model_id: null
   moderation:
     provider_id: openai
     model_id: text-moderation-latest
-  speech_to_speech:
-    provider_id: ''
-    model_id: null
   chat:
     provider_id: openai
     model_id: gpt-4o
@@ -19,17 +13,17 @@ default_providers:
   text_to_speech:
     provider_id: openai
     model_id: tts-1
-  image_and_audio_to_video:
-    provider_id: ''
-    model_id: null
   embeddings:
     provider_id: openai
     model_id: text-embedding-3-large
-  audio_to_audio:
-    provider_id: ''
-    model_id: null
   text_to_image:
     provider_id: openai
     model_id: dall-e-3
+  chat_with_image_vision:
+    provider_id: openai
+    model_id: gpt-4-turbo
+  chat_with_complex_json:
+    provider_id: openai
+    model_id: gpt-4-turbo
 _core:
   default_config_hash: RGedRkFydKZjS0ZJ6vbtZH00KbhYVGsK-ABILHdQLyw

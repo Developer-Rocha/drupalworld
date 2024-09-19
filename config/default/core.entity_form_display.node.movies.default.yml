@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
@@ -25,6 +26,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_ai_review:
+    type: text_textarea
+    weight: 132
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_genre:
     type: entity_reference_autocomplete

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
@@ -33,11 +34,20 @@ third_party_settings:
         - field_genre
         - field_vote_average
         - field_release_date
+      bottom:
+        - field_ai_review
 id: node.movies.default
 targetEntityType: node
 bundle: movies
 mode: default
 content:
+  field_ai_review:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: bottom
   field_genre:
     type: entity_reference_label
     label: above

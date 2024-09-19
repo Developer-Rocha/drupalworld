@@ -1,0 +1,6 @@
+services:
+  tmdb_movies.migration_post_import_subscriber:
+    class: '\Drupal\tmdb_movies\EventSubscriber\MigrationPostImportSubscriber'
+    arguments: ['@queue', '@entity_type.manager']
+    tags:
+      - { name: 'event_subscriber' }

@@ -1,0 +1,19 @@
+uuid: 1e0eefdb-91d6-462d-84c8-3fbe00b36a61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ai_review
+field_name: field_ai_review
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

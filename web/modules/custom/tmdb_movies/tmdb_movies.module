@@ -38,3 +38,20 @@ function tmdb_movies_cron() {
     \Drupal::logger('tmdb_movies')->error('Error in "@migration" migration.', ['@migration' => $migrationID]);
   }
 }
+
+/**
+ * Implements hook_migration_post_import().
+ */
+function tmdb_movies_migration_post_import(array $migration_ids, \Drupal\migrate\Event\MigratePostRowSaveEvent $event) {
+  if (in_array('tmdb_movies', $migration_ids)) {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $movies = $node_storage->loadByProperties(['type' => 'movies']);
+
+    $ai_automator = \Drupal::service('ai_automator.entity_modifier');
+
+    foreach ($movies as $movie) {
+      $ai_automator->saveEntity($movie, TRUE);
+    }
+  }
+}
+

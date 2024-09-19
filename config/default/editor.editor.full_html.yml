@@ -13,6 +13,7 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - aickeditor
       - bold
       - italic
       - strikethrough
@@ -35,6 +36,33 @@ settings:
       - '|'
       - sourceEditing
   plugins:
+    ai_ckeditor_ai:
+      dialog:
+        autoresize: 'min-width: 600px'
+        height: '750'
+        width: '900'
+        dialog_class: ai-ckeditor-modal
+      plugins:
+        ai_ckeditor_completion:
+          provider: openai__gpt-4
+          enabled: true
+        ai_ckeditor_help:
+          enabled: true
+        ai_ckeditor_summarize:
+          provider: openai__gpt-4
+          enabled: true
+        ai_ckeditor_tone:
+          autocreate: false
+          provider: openai__gpt-4
+          tone_vocabulary: tone_for_ai
+          use_description: 1
+          enabled: true
+        ai_ckeditor_translate:
+          autocreate: true
+          provider: openai__gpt-4
+          translate_vocabulary: languages
+          use_description: false
+          enabled: true
     ckeditor5_codeBlock:
       languages:
         -
