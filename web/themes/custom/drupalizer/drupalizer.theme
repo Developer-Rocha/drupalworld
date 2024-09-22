@@ -3,14 +3,4 @@
  * @file
  * template.php
  */
-function drupalizer_preprocess_html(&$variables) {
 
-  // Add class/library the authenticated users pages
-  // and unauthenticated users pages.
-  if ($variables['logged_in']) {
-    $test = $variables['logged_in'];
-  }
-  else {
-    $test2 = $variables['logged_in'];
-  }
-}

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.movies.ai_automator_status
+    - field.field.node.movies.body
     - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
@@ -53,6 +55,14 @@ targetEntityType: node
 bundle: movies
 mode: teaser
 content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_genre:
     type: entity_reference_label
     label: hidden
@@ -108,6 +118,7 @@ content:
     weight: 3
     region: title
 hidden:
+  ai_automator_status: true
   created: true
   field_ai_review: true
   field_tmdb_id: true
