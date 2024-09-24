@@ -1,0 +1,20 @@
+uuid: 391c3b7a-2b15-42f7-9f1b-b562a58f69e7
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - drupalizer
+id: drupalizer_languageswitcher
+theme: drupalizer
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

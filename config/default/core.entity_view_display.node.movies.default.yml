@@ -3,8 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.movies.ai_automator_status
+    - core.entity_view_display.comment.comment.default
     - field.field.node.movies.body
+    - field.field.node.movies.comment
     - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.movies.field_vote_average
     - node.type.movies
   module:
+    - comment
     - datetime
     - ds
     - manage_display
@@ -28,6 +30,8 @@ third_party_settings:
       settings:
         label: ''
     regions:
+      top:
+        - body
       first:
         - field_movie_poster
       second:
@@ -38,6 +42,7 @@ third_party_settings:
         - field_release_date
       bottom:
         - field_ai_review
+        - comment
 id: node.movies.default
 targetEntityType: node
 bundle: movies
@@ -48,14 +53,23 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
+    weight: 0
+    region: top
+  comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 8
+    region: bottom
   field_ai_review:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: bottom
   field_genre:
     type: entity_reference_label
@@ -65,7 +79,7 @@ content:
     third_party_settings:
       ds:
         ds_limit: ''
-    weight: 3
+    weight: 4
     region: second
   field_movie_poster:
     type: entity_reference_entity_view
@@ -74,14 +88,14 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: first
   field_overview:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: second
   field_release_date:
     type: datetime_default
@@ -90,7 +104,7 @@ content:
       timezone_override: ''
       format_type: html_date
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: second
   field_vote_average:
     type: number_decimal
@@ -101,7 +115,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: second
   title:
     type: title
@@ -110,10 +124,9 @@ content:
       link_to_entity: false
       tag: h2
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: second
 hidden:
-  ai_automator_status: true
   created: true
   field_tmdb_id: true
   langcode: true

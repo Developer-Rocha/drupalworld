@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.movies.ai_automator_status
     - field.field.node.movies.body
+    - field.field.node.movies.comment
     - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.movies.field_vote_average
     - node.type.movies
   module:
+    - comment
     - datetime
     - media_library
     - path
@@ -32,6 +33,12 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -154,5 +161,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  ai_automator_status: true
+hidden: {  }

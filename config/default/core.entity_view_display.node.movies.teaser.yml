@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.movies.ai_automator_status
     - field.field.node.movies.body
+    - field.field.node.movies.comment
     - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
     - field.field.node.movies.field_movie_poster
@@ -118,7 +118,7 @@ content:
     weight: 3
     region: title
 hidden:
-  ai_automator_status: true
+  comment: true
   created: true
   field_ai_review: true
   field_tmdb_id: true
