@@ -32,7 +32,7 @@
         "drupal/field_group": "^3.6",
         "drupal/field_validation": "^3.0@beta",
         "drupal/fivestar": "^1.0@alpha",
-        "drupal/gin": "^3.0@rc",
+        "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
         "drupal/graphql_webform": "^1.0@alpha",
