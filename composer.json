@@ -18,7 +18,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.4",
-        "drupal/ai": "^1.0@alpha",
+        "drupal/ai": "1.0.x-dev@dev",
         "drupal/ajax_loader": "^2.1",
         "drupal/better_exposed_filters": "^7.0",
         "drupal/config_split": "^2.0",
@@ -155,8 +155,7 @@
                 "3388828 - Add token support for results": "https://www.drupal.org/files/issues/2023-10-05/fivestar-3388828-7.patch"
             },
             "drupal/ai": {
-                "3466966 - Fix dialog scrolling": "https://www.drupal.org/files/issues/2024-09-18/fix-dialog-scrolling-3466966-16.patch",
-                "3476038 - Problem with translation of multiple formatter fields turning HTML into string": "https://www.drupal.org/files/issues/2024-09-22/translation-field-formatter-fix-3476038-3.patch"
+                "3466966 - Fix dialog scrolling": "https://www.drupal.org/files/issues/2024-09-18/fix-dialog-scrolling-3466966-16.patch"
             }
         }
     },
