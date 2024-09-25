@@ -99,6 +99,7 @@ module:
   workflows: 0
   ds: 1
   pathauto: 1
+  simple_pass_reset: 1
   content_translation: 10
   views: 10
   paragraphs: 11
