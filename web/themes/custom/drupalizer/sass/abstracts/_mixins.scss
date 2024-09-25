@@ -1,0 +1,367 @@
+
+// Mixins
+// --------------------------------------------------
+
+// CLEARFIX
+
+@mixin clearfix() {
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+// Visually hide elements but keep accessible for screen readers
+
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+// Unit conversion
+// --------------------------------------------------
+
+// STRIP UNIT
+// Strip any unit from numeric variables.
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// PIXELS TO REM
+// Convert a pixels value to rems.
+
+@function ptr($num, $showUnit: false) {
+  @if ($showUnit) {
+    @return #{strip-unit($num) / 16}rem;
+  }
+
+  @return strip-unit($num) / 16;
+}
+
+// REM TO PIXELS
+// Convert a rems value to pixels.
+
+@function rtp($num, $showUnit: false) {
+  @if ($showUnit) {
+    @return #{strip-unit($num) * 16}px;
+  }
+
+  @return strip-unit($num) * 16;
+}
+
+// Fonts
+// --------------------------------------------------
+
+// FONT FACE
+// Include font files from the fonts folder.
+// $font-path is set in config/_settings.scss
+// - $name: the name of the font to be used in CSS
+// - $font-weight: bold or normal
+// - $font-style: normal or italic
+// - $filename: filename without extension
+
+@mixin font-face($name, $font-weight, $font-style, $filename, $token: '') {
+  @if ($token != '') {
+    @font-face {
+      font-family: $name;
+      src:
+        url('#{$font-path}/#{$filename}.woff2?itok=#{$token}') format('woff2'),
+        url('#{$font-path}/#{$filename}.woff?itok=#{$token}') format('woff');
+      font-weight: $font-weight;
+      font-style: $font-style;
+      font-display: swap;
+    }
+  } @else {
+    @font-face {
+      font-family: $name;
+      src:
+        url('#{$font-path}/#{$filename}.woff2') format('woff2'),
+        url('#{$font-path}/#{$filename}.woff') format('woff');
+      font-weight: $font-weight;
+      font-style: $font-style;
+      font-display: swap;
+    }
+  }
+}
+
+
+// FONT SIZE
+// Converts a points value to rems and adds a default
+// line-height bases on $line-height-factor.
+// Examples:
+// - @include font-size(24, 18)
+// - @include font-size(24, 0) will return no line-height
+
+@mixin font-size($values...) {
+  $max: length($values);
+  $font-size: 16 !default;
+  $line-height: false !default;
+
+  // If font-size is supplied, override default
+  @if $max != 0 {
+    $font-size: nth($values, 1);
+  }
+
+  // If line-height is supplied, override default
+  @if $max > 1 and type-of(nth($values, 2)) == number {
+    $line-height: nth($values, 2);
+  }
+
+  // Else calculate line-height using $font-size
+  @else if $line-height == false {
+    $line-height: $font-size * $line-height-factor;
+  }
+
+  // Output supplied values
+  @if $max != 0 {
+    @if nth($values, $max) == '!important' {
+      font-size: $font-size / 16 + rem !important;
+
+      @if $line-height != 0 {
+        line-height: $line-height / 16 !important;
+      }
+    }
+    @else {
+      font-size: $font-size / 16 + rem;
+
+      @if $line-height != 0 {
+        line-height: $line-height / 16;
+      }
+    }
+  }
+  // Else output default values
+  @else {
+    font-size: $font-size / 16 + rem;
+    line-height: $line-height / 16 + rem;
+  }
+}
+
+// FONT SMOOTHING
+// Better text rendering for modern browsers.
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// Breakpoints and Media Queries
+// --------------------------------------------------
+
+// BREAKPOINT EXTRACT
+// Extract the numeric value from media query.
+// - $mq: media query
+
+@function bp-extract($mq) {
+  $num-start: str-index($mq, ': ') + 2;
+  $num-end: str-index($mq, 'px') - 1;
+  $num: str-slice($mq, $num-start, $num-end);
+
+  @return unquote($num);
+}
+
+// BREAKPOINT
+// Creates a media query.
+// - $point:    sm, md, lg, xl
+// - $limiter:  min (default), max, only
+// - $mediatype:  screen (default), print, speech, 'print,' , all (if you want to use 'print, ' you have to wrap it in single quotes)
+
+
+@mixin bp($point, $limiter: min, $mediatype: screen) {
+  @if $mediatype != 'print,' {
+    @if $mediatype == all {
+      $mediatype: $mediatype + ' and';
+    }
+    @else {
+      $mediatype: 'only ' + $mediatype + ' and';
+    }
+  }
+
+  $query: '';
+
+  @if $point == retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (min-device-pixel-ratio: 2) { @content; }
+  }
+  @else {
+    @if $limiter == min {
+      @if $point == sm {
+        $query: (min-width: $sm-width);
+      }
+      @else if $point == md {
+        $query: (min-width: $md-width);
+      }
+      @else if $point == lg {
+        $query: (min-width: $lg-width);
+      }
+      @else if $point == xl {
+        $query: (min-width: $xl-width);
+      }
+      $query: quote($query);
+
+      @media #{$mediatype + $query} { @content; }
+    }
+
+    @if $limiter == max {
+      @if $point == sm {
+        $query: (max-width: (unquote($md-width) - .01));
+      }
+      @else if $point == md {
+        $query: (max-width: (unquote($lg-width) - .01) + 'px');
+      }
+      @else if $point == lg {
+        $query: (max-width: (unquote($xl-width) - .01) + 'px');
+      }
+      @else if $point == xl {
+        $query: '';
+      }
+      $query: quote($query);
+
+      @media #{$mediatype + $query} { @content; }
+    }
+
+    @if $limiter == only {
+      @if $point == sm {
+        $query: (min-width: $sm-width) and (max-width: (unquote($md-width) - .01) + 'px');
+      }
+      @else if $point == md {
+        $query: (min-width: $md-width) and (max-width: (unquote($lg-width) - .01) + 'px');
+      }
+      @else if $point == lg {
+        $query: (min-width: $lg-width) and (max-width: (unquote($xl-width) - .01) + 'px');
+      }
+      @else if $point == xl {
+        $query: (min-width: $xl-width);
+      }
+      @else {
+        $query: '';
+      }
+      $query: quote($query);
+
+      @media #{$mediatype + $query} { @content; }
+    }
+  }
+}
+
+// Compatibility
+// --------------------------------------------------
+
+// APPEARANCE
+// https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
+
+@mixin appearance($style) {
+  -moz-appearance: $style;
+  -webkit-appearance: $style;
+  appearance: $style;
+}
+
+// LINEAR GRADIENT
+// Creates a linear gradient with color fallback.
+// Example: @include linear-gradient(left, rgba($color-black, 1) 0%, rgba($color-white, 1) 100%);
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin text-contrast($color, $muted: false) {
+  @if ($color) {
+    $brightness: round((red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000);
+    $lightness: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+    @if abs($brightness) < ($lightness/2) {
+      @if $muted {
+        color: darken(#ffffff, 20%);
+      } @else {
+        color: #ffffff;
+      }
+    } @else {
+      @if $muted {
+        color: lighten(#000000, 20%);
+      } @else {
+        color: #000000;
+      }
+    }
+  }
+}
+
+@mixin border-contrast($color, $muted: false) {
+  $brightness: round((red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000);
+  $lightness: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+  @if abs($brightness) < ($lightness/2) {
+    @if $muted {
+      border-color: darken(#ffffff, 15%);
+    } @else {
+      border-color: #ffffff;
+    }
+  } @else {
+    @if $muted {
+      border-color: lighten(#000000, 15%);
+    } @else {
+      border-color: #000000;
+    }
+  }
+}
+
+@mixin focus-style($enable: true) {
+  @if $enable == true {
+    outline: thin dotted $ardo-green;
+    outline-offset: .2rem;
+  }
+  @else {
+    outline: none;
+  }
+}
+
+@mixin auto-fill-grid($gap, $columns, $min-width) {
+  // https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+  --grid-layout-gap: #{$gap};
+  --grid-column-count: #{$columns};
+  --grid-item--min-width: #{$min-width};
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  // m#{a}x is to avoid conflict with SASS function...
+  grid-template-columns: repeat(auto-fill, minmax(m#{a}x(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)) !important;
+  grid-gap: var(--grid-layout-gap) !important;
+  display: grid;
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// Node sass doesn't support map.get() and map-get can't handle deep maps.
+// If we ever switch to dart-sass, this can be removed.
+@function get ($map, $keys...) {
+  @if type-of($map) != 'map' {
+    @error 'The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!';
+  }
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}

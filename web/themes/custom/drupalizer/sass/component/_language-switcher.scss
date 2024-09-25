@@ -1,0 +1,378 @@
+// Language selector
+// --------------------------------------------------
+
+#block-drupalizer-languageswitcher {
+  @include bp(md) {
+    margin-inline-start: var(--sp2);
+  }
+}
+
+.language-switcher {
+  display: flex;
+  position: relative;
+  height: 100%;
+  padding-block-start: 1.75rem;
+
+  @include bp(md) {
+    padding: 0;
+  }
+
+  &__anchor {
+    @include font-size(14);
+
+    font-family: $variable-font;
+    display: block;
+    text-transform: capitalize;
+    position: relative;
+    border: .0625rem solid $drupalizer-neutral-5;
+    width: 100%;
+    text-align: left;
+    border-radius: .5rem;
+    padding: .95rem 1.5rem .8rem 3rem;
+
+    @include bp(md) {
+      padding: .75rem 0;
+      padding-left: 1.875rem;
+      border: none;
+      width: fit-content;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(../icons/icon-global.svg);
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      top: 50%;
+      left: 1rem;
+      transform: translate(0, -50%);
+
+      @include bp(md) {
+        left: 0;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../icons/icon-chevron-down.svg);
+      display: inline-block;
+      width: 1.5rem;
+      height: .6875rem;
+      top: 50%;
+      right: 1rem;
+      transform: translate(0, -50%);
+
+      @include bp(md) {
+        content: none;
+      }
+    }
+  }
+
+  &__anchor--nl,
+  &__anchor--fr {
+    &::before {
+      background-image: url(../icons/icon-belgium.svg);
+    }
+  }
+
+  &__anchor--nl-nl {
+    &::before {
+      background-image: url(../icons/icon-netherlands.svg);
+    }
+  }
+
+  &__anchor--fr-fr {
+    &::before {
+      background-image: url(../icons/icon-france.svg);
+    }
+  }
+
+  &__anchor--es {
+    &::before {
+      background-image: url(../icons/icon-spain.svg);
+    }
+  }
+
+  &__anchor--de {
+    &::before {
+      background-image: url(../icons/icon-germany.svg);
+    }
+  }
+
+  &__anchor--pt-br {
+    &::before {
+      background-image: url(../icons/icon-brazil.svg);
+    }
+  }
+
+  &__label--mobile {
+    display: block;
+
+    @include bp(md) {
+      display: none;
+    }
+
+    span:first-child {
+      font-weight: 700;
+    }
+  }
+
+  &__label--desktop {
+    display: none;
+
+    @include bp(md) {
+      display: block;
+    }
+  }
+
+  &__label {
+    span:first-child {
+      font-weight: 700;
+    }
+  }
+
+  .language-switcher__anchor[aria-expanded='true'] {
+    &::after {
+      transform: translate(0, -50%) rotate(180deg);
+    }
+  }
+
+  &__dropdown {
+    font-family: $variable-font;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 4rem;
+    background: $color-white;
+    border-radius: 1rem;
+    box-shadow: 0 0 2.25rem 0 rgba(0, 0, 0, .03);
+    min-width: 100%;
+    height: fit-content;
+
+    @include bp(md) {
+      min-width: 14rem;
+      top: 0;
+      bottom: 5rem;
+    }
+
+    .language-switcher__anchor[aria-expanded='true'] + & {
+      display: block;
+    }
+
+    .site-header & {
+      top: 100%;
+      bottom: auto;
+    }
+
+    .site-footer & {
+      top: auto;
+      bottom: 100%;
+    }
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+
+    & + & {
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0 1.5rem auto;
+        height: .01rem;
+        background-color: $color-border;
+      }
+    }
+
+    a {
+      @include font-size(16);
+
+      display: block;
+      min-width: max-content;
+      padding: .95rem 1.5rem .8rem 3rem;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../icons/icon-global.svg);
+        display: inline-block;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 50%;
+        left: 1.25rem;
+        transform: translate(0, -50%);
+      }
+
+      .last-word {
+        font-weight: 400;
+      }
+    }
+
+    &.nl,
+    &.fr {
+      a {
+        &::before {
+          background-image: url(../icons/icon-belgium.svg);
+        }
+      }
+    }
+
+    &.nl-nl {
+      a {
+        &::before {
+          background-image: url(../icons/icon-netherlands.svg);
+        }
+      }
+    }
+
+    &.fr-fr {
+      a {
+        &::before {
+          background-image: url(../icons/icon-france.svg);
+        }
+      }
+    }
+
+    &.es {
+      a {
+        &::before {
+          background-image: url(../icons/icon-spain.svg);
+        }
+      }
+    }
+
+    &.de {
+      a {
+        &::before {
+          background-image: url(../icons/icon-germany.svg);
+        }
+      }
+    }
+
+    &.pt-br {
+      a {
+        &::before {
+          background-image: url(../icons/icon-brazil.svg);
+        }
+      }
+    }
+  }
+
+  &--banner & {
+    &__anchor {
+      @include font-size(16);
+
+      border: .0625rem solid $color-white;
+      text-align: left;
+      border-radius: .5rem;
+      padding: .5rem 1.5rem .5rem 3rem;
+
+      @include bp(md) {
+        min-width: 22.5rem;
+      }
+
+      &::before {
+        left: 1rem;
+      }
+
+      &:after {
+        content: none;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translate(0, -50%);
+        width: 1.5rem;
+        height: 1.0625rem;
+
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+
+    &__dropdown {
+      top: 5rem;
+
+      @include bp(md) {
+        top: 3.5rem;
+        min-width: 22.5rem;
+      }
+    }
+  }
+
+  &--banner {
+    width: 100%;
+    order: 2;
+
+    @include bp(md) {
+      width: auto;
+      order: initial;
+    }
+  }
+
+  &--footer {
+    margin-inline: auto;
+
+    @include bp(md) {
+      margin-inline-start: auto;
+      margin-inline-end: 0;
+      padding-block-start: 0;
+    }
+  }
+
+  &--footer & {
+    padding-block-start: 0;
+
+    &__anchor {
+      padding: .25rem 0;
+      padding-left: 1.875rem;
+      border: none;
+      width: fit-content;
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__label--mobile {
+      display: none;
+    }
+
+    &__label--desktop {
+      display: block;
+    }
+
+    &__dropdown {
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: fit-content;
+    }
+  }
+}

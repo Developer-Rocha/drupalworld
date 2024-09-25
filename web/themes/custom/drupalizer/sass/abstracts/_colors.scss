@@ -1,0 +1,106 @@
+
+// Corporate colors
+$drupalizer-green: #00843d;
+$drupalizer-orange: #ff6900;
+$drupalizer-sustain: #48a23f;
+$drupalizer-bio: #84bd00;
+$drupalizer-yellow: #fed141;
+$drupalizer-red: #d50032;
+$drupalizer-blue: #ccdff5;
+$drupalizer-dark: #333333;
+$drupalizer-light: #f0f0f0;
+
+// Color pallets
+$drupalizer-green-1: #f0f8f3;
+$drupalizer-green-2: #d6ebe0;
+$drupalizer-green-3: #b7dcc8;
+$drupalizer-green-4: #8ec8a9;
+$drupalizer-green-5: #5bb082;
+$drupalizer-green-6: $drupalizer-green;
+$drupalizer-green-7: #005e2f;
+$drupalizer-green-8: #00381e;
+$drupalizer-green-9: #00120a;
+$drupalizer-green-10: #000000;
+$drupalizer-green-11: #97c664;
+
+$drupalizer-orange-1: #fff4e6;
+$drupalizer-orange-2: #ffd6a3;
+$drupalizer-orange-3: #ffbf7a;
+$drupalizer-orange-4: #ffa552;
+$drupalizer-orange-5: #ff8929;
+$drupalizer-orange-6: $drupalizer-orange;
+$drupalizer-orange-7: #d95300;
+$drupalizer-orange-8: #b33e00;
+$drupalizer-orange-9: #8c2c00;
+$drupalizer-orange-10: #661d00;
+
+$drupalizer-yellow-1: #fffef0;
+$drupalizer-yellow-2: #fffdf0;
+$drupalizer-yellow-3: #fff8c9;
+$drupalizer-yellow-4: #ffefa1;
+$drupalizer-yellow-5: #ffe478;
+$drupalizer-yellow-6: #ffd550;
+$drupalizer-yellow-7: #d9ae38;
+$drupalizer-yellow-8: #b38825;
+$drupalizer-yellow-9: #8c6516;
+$drupalizer-yellow-10: #66460f;
+
+$drupalizer-bio-1: #eef1e5;
+$drupalizer-bio-2: #dae8bc;
+$drupalizer-bio-3: #c7de91;
+$drupalizer-bio-4: #b3d466;
+$drupalizer-bio-5: #a0cb3c;
+$drupalizer-bio-6: $drupalizer-bio;
+$drupalizer-bio-7: #73a301;
+$drupalizer-bio-8: #5b8101;
+$drupalizer-bio-9: #3d5701;
+$drupalizer-bio-10: #202e01;
+
+$drupalizer-sustain-1: #f2f8f1;
+$drupalizer-sustain-2: #d4e9d2;
+$drupalizer-sustain-3: #b3d8af;
+$drupalizer-sustain-4: #94c98f;
+$drupalizer-sustain-5: #69b262;
+$drupalizer-sustain-6: $drupalizer-sustain;
+$drupalizer-sustain-7: #3e8a36;
+$drupalizer-sustain-8: #306b2a;
+$drupalizer-sustain-9: #21491d;
+$drupalizer-sustain-10: #122710;
+
+$drupalizer-neutral-1: #ffffff;
+$drupalizer-neutral-2: #f5f5f5;
+$drupalizer-neutral-3: $drupalizer-light;
+$drupalizer-neutral-4: #d9d9d9;
+$drupalizer-neutral-5: #bfbfbf;
+$drupalizer-neutral-6: #595959;
+$drupalizer-neutral-7: #434343;
+$drupalizer-neutral-8: #262626;
+$drupalizer-neutral-9: #1f1f1f;
+$drupalizer-neutral-10: #000000;
+
+// Theming colors
+$color-primary:               $drupalizer-green-7;
+$color-secondary:             $drupalizer-orange;
+$color-tertiary:              $drupalizer-bio;
+$color-background:            #ffffff;
+
+$color-white:                 #ffffff;
+$color-black:                 #000000;
+$color-grey:                  #eeeeee; // grey backgrounds like inactive tabs etc.
+
+$color-text:                  $drupalizer-dark;
+$color-muted:                 lighten($color-text, 10%); // muted text like descriptions etc.
+$color-caption:               #999999; // muted text like descriptions etc.
+$color-link:                  $color-black;
+$color-link-hover:            lighten($color-link, 10%);
+
+$color-success:               $drupalizer-sustain; // status messages
+$color-status:                $drupalizer-sustain; // Fallback
+$color-warning:               $drupalizer-yellow; // warning messages
+$color-error:                 $drupalizer-red; // error messages
+$color-info:                  #55acee; // info messages
+
+$color-code:                  #e83e8c; // code tags
+
+$color-border:                rgba($color-black, .1); // default border color,
+$color-form-border:           #d8d9d9; // border color for input elements

@@ -4,3 +4,19 @@
  * template.php
  */
 
+/**
+ * Implements hook_preprocess_block().
+ */
+function drupalizer_preprocess_block(&$variables) {
+
+  switch ($variables['base_plugin_id']) {
+    case 'language_block':
+      $current_language = Drupal::languageManager()->getCurrentLanguage();
+      $variables['current_language_id'] = $current_language->getId();
+      $variables['current_language_name'] = $current_language->getName();
+      break;
+  }
+//  switch ($variables['plugin_id']) {
+//
+//  }
+}

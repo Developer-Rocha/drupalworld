@@ -8,7 +8,7 @@ dependencies:
     - drupalizer
 id: drupalizer_languageswitcher
 theme: drupalizer
-region: primary_menu
+region: secondary_menu
 weight: -6
 provider: null
 plugin: 'language_block:language_interface'

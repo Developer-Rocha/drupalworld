@@ -1,0 +1,24 @@
+drupalizer_easytheme.sm:
+  label: sm
+  mediaQuery: 'screen and (min-width: 392px)'
+  weight: 0
+  multipliers:
+    - 1x
+drupalizer_easytheme.md:
+  label: md
+  mediaQuery: 'screen and (min-width: 692px)'
+  weight: 1
+  multipliers:
+    - 1x
+drupalizer_easytheme.lg:
+  label: lg
+  mediaQuery: 'screen and (min-width: 992px)'
+  weight: 1
+  multipliers:
+    - 1x
+drupalizer_easytheme.xl:
+  label: xl
+  mediaQuery: 'screen and (min-width: 1292px)'
+  weight: 1
+  multipliers:
+    - 1x

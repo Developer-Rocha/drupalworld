@@ -1,0 +1,156 @@
+
+
+// Settings
+// --------------------------------------------------
+
+@import 'breakpoints.scss';
+@import 'colors';
+
+// Fonts
+
+$font-path:                   '/themes/custom/drupalizer/fonts';
+$default-font:                'Work Sans', sans-serif;
+$variable-font:               'Work Sans variable', 'Work Sans', sans-serif;
+$title-font:                  'Poppins', sans-serif;
+$highlight-font:              'Merriweather', serif;
+
+// Font sizes
+
+$default-font-size:           16;
+$line-height-factor:          1.75;
+
+// Grid
+
+$container-width:             1160px;
+$sidebar-width:               340px;
+$sidebar-width-small:         260px;
+
+$offset-1-col:                ($container-width/12) * 1;
+
+// Blocks
+
+$block-spacing-sm: 2.5rem; // Space between blocks (mobile)
+$block-padding-sm: 3.5rem; // Space between blocks (mobile)
+$block-spacing-md: 5rem; // Space between blocks (not mobile)
+$block-padding-md: 6rem; // Space between blocks (not mobile)
+$block-content-margin: 1.5rem; // Margin between header / content / footer
+
+// Breakpoints
+// Edit in drupalizer.breakpoints.yml
+
+$sm-width: bp-extract($sm) + 'px';
+$md-width: bp-extract($md) + 'px';
+$lg-width: bp-extract($lg) + 'px';
+$xl-width: bp-extract($xl) + 'px';
+
+$sm-width-max: ($sm-width - .01);
+$md-width-max: ($md-width - .01);
+$lg-width-max: ($lg-width - .01);
+$xl-width-max: ($xl-width - .01);
+
+// Colors
+
+$contrast-treshold:         70; // Threshold for switching between black/white text on colored backgrounds.
+
+// Borders
+
+$default-border:              thin solid $color-border;
+$default-border-radius:       4px;
+
+// Backgrounds
+
+$background-black-transparent: rgba($color-black, .8);
+$background-white-transparent: rgba($color-white, .8);
+
+// Shadow
+
+$text-shadow:                 2px 2px 0 rgba($color-black, .2);
+$box-shadow:                  0 8px 8px 0 rgba(0, 0, 0, .02);
+$box-shadow-card:             0 0 36px 0 rgba(0, 0, 0, .05);
+
+// Transitions (More examples at http://easings.net)
+
+$easeIn:                      cubic-bezier(.55, .055, .675, .19);
+$easeOut:                     cubic-bezier(.215, .61, .355, 1);
+$easeInOut:                   cubic-bezier(.645, .045, .355, 1);
+$easeInOutQuart:              cubic-bezier(.76, 0, .24, 1);
+
+$default-transition-time:     .48s;
+$transition-time-slow:        .72s;
+$default-transition:          $easeInOutQuart $default-transition-time;
+
+// Pager
+
+$pager-font-size:             $default-font-size;
+$pager-padding:               .8rem;
+$pager-padding-2:             1.06rem;
+
+// Forms
+
+$form-group-margin-bottom:    1rem;
+$form-font-size:              $default-font-size;
+$form-padding:                .6rem;
+$form-width:                  24rem;
+$form-background:             $color-white;
+$form-border:                 solid 1px $color-form-border;
+$form-border-radius:          4px;
+$color-form-hover:            $color-link-hover;
+$color-form-focus:            $color-link;
+$color-form-shadow:           $color-grey;
+
+// Buttons
+
+$color-button:                $color-white;
+$button-border:               solid .0625rem tranparent;
+$button-border-radius:        .5rem;
+
+// Modals
+
+$modal-width:                 600px;
+$modal-background:            rgba($color-black, .8);
+
+// Toolbar
+
+$toolbar-bg-color:            $color-black;
+$toolbar-link-color:          $color-text;
+$toolbar-link-hover:          $color-link-hover;
+
+// Main menu
+
+$main-menu-link-color:        $color-text;
+$main-menu-link-hover:        $color-text;
+$main-menu-link-active:       $color-black;
+$main-menu-link-bg-hover:     $color-grey;
+$main-menu-link-bg-active:    $color-grey;
+$main-menu-dropdown-width:    240px;
+$main-menu-dropdown-link-color:  $main-menu-link-color;
+$main-menu-dropdown-link-hover:  $main-menu-link-hover;
+$main-menu-dropdown-link-active: $main-menu-link-active;
+$main-menu-dropdown-bg-hover:    $main-menu-link-bg-hover;
+$main-menu-dropdown-bg-active:   $main-menu-link-bg-active;
+
+// Mobile menu
+
+$mobile-menu-bg-color:        $color-white;
+$mobile-menu-border:          solid 1px rgba($color-text, .2);
+$mobile-menu-link-color:      $color-text;
+$mobile-menu-link-hover:      $color-link-hover;
+$mobile-menu-link-active:     $color-primary;
+$mobile-menu-active-bg:       rgba($color-white, .2);
+
+// Page title
+
+$page-title-color:            $color-text;
+$page-title-weight:           800;
+
+// Breadcrumb
+
+$breadcrumb-link-color:       $color-text;
+$breadcrumb-link-hover:       $color-link-hover;
+$breadcrumb-spacer-color:     $color-muted;
+
+// Footer
+
+$footer-bg-color:             $color-white;
+$footer-link-color:           $color-link;
+$footer-link-hover:           $color-link-hover;

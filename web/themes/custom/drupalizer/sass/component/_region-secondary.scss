@@ -1,0 +1,11 @@
+// Region Secondary
+// --------------------------------------------------
+
+.region--secondary-menu {
+  display: block;
+
+  @include bp(md) {
+    align-items: center;
+    display: flex;
+  }
+}

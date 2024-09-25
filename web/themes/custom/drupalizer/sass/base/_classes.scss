@@ -1,0 +1,299 @@
+
+
+// Classes
+// --------------------------------------------------
+
+// Show / hide on mobile
+
+.hide-mobile {
+  @include bp(sm, max) { display: none; }
+}
+
+.show-mobile {
+  @include bp(md, min) { display: none; }
+}
+
+// Hidden Elements
+
+.visually-hidden,
+.element-invisible {
+  @include visually-hidden;
+}
+
+// Extends
+
+.extendfull {
+  padding-left: 3000px !important;
+  margin-left: -3000px !important;
+  padding-right: 3000px !important;
+  margin-right: -3000px !important;
+}
+
+.extendleft {
+  padding-left: 3000px !important;
+  margin-left: -3000px !important;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.extendright {
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 3000px !important;
+  margin-right: -3000px !important;
+}
+
+// Margin
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-vertical {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.no-margin-horizontal {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
+}
+
+// Padding
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-vertical {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no-padding-horizontal {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+// Text
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-small {
+  font-size: 90%;
+}
+
+// Colors
+
+.color-background {
+  color: $color-background;
+}
+
+.color-primary {
+  color: $color-primary;
+}
+
+.color-secondary {
+  color: $drupalizer-orange-7;
+}
+
+.color-black {
+  color: $color-black;
+}
+
+.color-grey {
+  color: $color-grey;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.color-text {
+  color: $color-text;
+}
+
+.color-muted {
+  color: $color-muted;
+}
+
+.color-link {
+  color: $color-link;
+}
+
+.color-status {
+  color: $color-status;
+}
+
+.color-warning {
+  color: $color-warning;
+}
+
+.color-error {
+  color: $color-error;
+}
+
+// Background colors
+
+.background-background {
+  background-color: $color-background;
+}
+
+.background-primary {
+  background-color: $color-primary;
+}
+
+.background-secondary {
+  background-color: $color-secondary;
+}
+
+.background-black {
+  background-color: $color-black;
+}
+
+.background-grey {
+  background-color: $color-grey;
+}
+
+.background-white {
+  background-color: $color-white;
+}
+
+.background-text {
+  background-color: $color-text;
+}
+
+.background-muted {
+  background-color: $color-muted;
+}
+
+.background-link {
+  background-color: $color-link;
+}
+
+.background-status {
+  background-color: $color-status;
+}
+
+.background-warning {
+  background-color: $color-warning;
+}
+
+.background-error {
+  background-color: $color-error;
+}
+
+.color-drupalizer-green {
+  background: $drupalizer-green;
+}
+
+.color-drupalizer-bio-5 {
+  background: $drupalizer-bio-5;
+}
+
+.color-drupalizer-neutral-6 {
+  background: $drupalizer-neutral-6;
+}
+
+// Border
+
+.default-border {
+  border: $default-border;
+}
+
+.default-border-top {
+  border-top: $default-border;
+}
+
+.default-border-right {
+  border-right: $default-border;
+}
+
+.default-border-bottom {
+  border-bottom: $default-border;
+}
+
+// Border-radius
+
+.default-border-radius {
+  border-radius: $default-border-radius;
+}
+
+.default-border-left {
+  border-left: $default-border;
+}
+
+// Overlay link
+
+.overlay-link {
+  display: block;
+
+  &,
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: inherit;
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: '';
+  }
+}
+
+// Gradient
+
+.gradient-overlay {
+  &--black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(38, 38, 38, .58) 90%, rgba(38, 38, 38, .88) 100%);
+  }
+}

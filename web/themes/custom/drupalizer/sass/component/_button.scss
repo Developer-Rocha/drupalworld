@@ -1,0 +1,178 @@
+
+
+// Buttons
+// --------------------------------------------------
+
+
+
+// Small
+.button-small {
+  @include font-size(10);
+
+  padding: .2rem .5rem;
+
+  &:before {
+    margin-right: .2rem;
+  }
+
+  &:after {
+    margin-left: .2rem;
+  }
+}
+
+// Large
+.button-large {
+  @include font-size(14);
+
+  padding: .8rem 2rem;
+}
+
+// @todo: Do we still need these styles, now that we are using the button ui_pattern?
+// Primary
+.button-primary {
+  color: $color-white;
+  background-color: $color-primary;
+  outline-color: $color-primary;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  color: $color-white;
+  background-color: lighten($color-primary, 10%);
+}
+
+// Secondary
+.button-secondary {
+  color: $color-white;
+  background-color: $color-secondary;
+  outline-color: $color-secondary;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  color: $color-white;
+  background-color: lighten($color-secondary, 10%);
+}
+
+// Grey
+.button-muted {
+  color: $color-white;
+  background-color: $color-muted;
+  outline-color: $color-muted;
+}
+
+.button-muted:hover,
+.button-muted:focus {
+  color: $color-white;
+  background-color: lighten($color-muted, 10%);
+}
+
+// Error
+.button-error {
+  color: $color-white;
+  background-color: $color-error;
+  outline-color: $color-error;
+}
+
+.button-error:hover,
+.button-error:focus {
+  color: $color-white;
+  background-color: lighten($color-error, 10%);
+}
+
+// Warning
+.button-warning {
+  color: $color-white;
+  background-color: $color-warning;
+  outline-color: $color-warning;
+}
+
+.button-warning:hover,
+.button-warning:focus {
+  color: $color-white;
+  background-color: lighten($color-warning, 10%);
+}
+
+// Status
+.button-status {
+  color: $color-white;
+  background-color: $color-status;
+  outline-color: $color-status;
+}
+
+.button-status:hover,
+.button-status:focus {
+  color: $color-white;
+  background-color: lighten($color-status, 10%);
+}
+
+.button-circle {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  border: solid 2px rgba($color-white, .25);
+  border-radius: 100%;
+  background: transparent;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0 !important;
+    color: $color-muted;
+    text-align: center;
+  }
+
+  &:hover {
+    background: transparent;
+
+    &:before {
+      color: $color-link-hover;
+    }
+  }
+
+  > span {
+    @extend .visually-hidden;
+  }
+}
+
+//password eye
+
+button.eye-close,
+button.eye-open {
+  position: absolute;
+  opacity: .5;
+  transform: translateY(8px);
+  margin-left: -3.1rem;
+
+  @include bp(md, min, 'print,') {
+    position: relative;
+    transform: translateY(5.5px);
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: unset;
+    border: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// mobile menu state
+.button-reset {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.link {
+  border-bottom: 1px solid $color-primary;
+}
