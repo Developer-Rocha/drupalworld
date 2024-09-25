@@ -18,4 +18,5 @@ complete_list:
   - key.key.openai
   - key.key.unstructured
   - key.key.zillix_milvus
+  - phpmailer_smtp.settings
 partial_list: {  }

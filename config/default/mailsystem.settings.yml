@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
+theme: drupalizer
+defaults:
+  sender: phpmailer_smtp
+  formatter: phpmailer_smtp
+modules:
+  system: {  }

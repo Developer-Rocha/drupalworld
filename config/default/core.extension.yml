@@ -48,6 +48,7 @@ module:
   language: 0
   layout_discovery: 0
   link: 0
+  mailsystem: 0
   manage_display: 0
   media: 0
   media_library: 0
@@ -63,6 +64,7 @@ module:
   path: 0
   path_alias: 0
   phpass: 0
+  phpmailer_smtp: 0
   provider_lmstudio: 0
   provider_openai: 0
   search: 0
