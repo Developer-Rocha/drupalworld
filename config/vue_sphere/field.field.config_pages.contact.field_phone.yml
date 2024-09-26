@@ -1,0 +1,26 @@
+uuid: 46425f47-7d69-41a2-9b5c-d02a5fea2085
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.contact
+    - field.storage.config_pages.field_phone
+  module:
+    - mobile_number
+id: config_pages.contact.field_phone
+field_name: field_phone
+entity_type: config_pages
+bundle: contact
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  verify: none
+  countries: {  }
+  message: |-
+    Your verification code from !site_name:
+    !code
+field_type: mobile_number

@@ -1,0 +1,62 @@
+uuid: 5be2987f-0709-4cf0-849a-1ed340e5a7fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.contact
+    - field.field.config_pages.contact.field_address
+    - field.field.config_pages.contact.field_email
+    - field.field.config_pages.contact.field_phone
+    - field.field.config_pages.contact.field_text
+    - field.field.config_pages.contact.field_title
+  module:
+    - address
+    - mobile_number
+    - text
+id: config_pages.contact.default
+targetEntityType: config_pages
+bundle: contact
+mode: default
+content:
+  field_address:
+    type: address_default
+    weight: 1
+    region: content
+    settings:
+      wrapper_type: fieldset
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_phone:
+    type: mobile_number_default
+    weight: 2
+    region: content
+    settings:
+      countries: {  }
+      default_country: US
+      placeholder: null
+    third_party_settings: {  }
+  field_text:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true

@@ -1,0 +1,25 @@
+uuid: 78405e0e-29a7-4e6b-9b10-86c47183cf1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.contact
+    - field.storage.config_pages.field_address
+  module:
+    - address
+id: config_pages.contact.field_address
+field_name: field_address
+entity_type: config_pages
+bundle: contact
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

@@ -8,6 +8,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - comment
+    - config_pages
     - contextual
     - file
     - graphql
@@ -38,6 +39,7 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit contact config page entity'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
@@ -46,5 +48,7 @@ permissions:
   - 'execute persisted graphql requests'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view config_pages entity'
+  - 'view contact config page entity'
   - 'view own unpublished content'
   - 'view the administration theme'

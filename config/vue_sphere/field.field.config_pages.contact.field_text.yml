@@ -1,0 +1,24 @@
+uuid: f17f1e5c-02a0-4c7c-8254-624d7ece76e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.contact
+    - field.storage.config_pages.field_text
+    - filter.format.basic_html
+  module:
+    - text
+id: config_pages.contact.field_text
+field_name: field_text
+entity_type: config_pages
+bundle: contact
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

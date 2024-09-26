@@ -1,0 +1,19 @@
+uuid: caedee99-b06a-4f63-b245-eae31f5c3a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.contact
+    - field.storage.config_pages.field_title
+id: config_pages.contact.field_title
+field_name: field_title
+entity_type: config_pages
+bundle: contact
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

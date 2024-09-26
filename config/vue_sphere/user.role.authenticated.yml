@@ -7,6 +7,7 @@ dependencies:
     - filter.format.webform_default
   module:
     - comment
+    - config_pages
     - contact
     - file
     - filter
@@ -35,4 +36,5 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'view contact config page entity'
   - 'view media'
