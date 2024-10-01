@@ -16,6 +16,14 @@ display:
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
       filters:
+        status:
+          group_info:
+            label: Publicado
+            group_items:
+              1:
+                title: Publicado
+              2:
+                title: 'Não publicado'
         name:
           expose:
             label: Nome

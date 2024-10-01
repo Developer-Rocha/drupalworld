@@ -16,6 +16,9 @@ display:
           separator: ', '
         status:
           label: Status
+          settings:
+            format_custom_false: 'Não publicado'
+            format_custom_true: Publicado
           separator: ', '
         changed:
           separator: ', '
@@ -40,6 +43,13 @@ display:
         bundle:
           expose:
             label: Tipo
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Publicado
+              2:
+                title: 'Não publicado'
   media_page_list:
     display_title: Mídia
     display_options:

@@ -9,6 +9,9 @@ display:
           separator: ', '
         status:
           label: Status
+          settings:
+            format_custom_false: 'Não publicado'
+            format_custom_true: Publicado
         langcode:
           separator: ', '
         operations:
@@ -31,3 +34,9 @@ display:
         status:
           expose:
             label: Status
+          group_info:
+            group_items:
+              1:
+                title: Publicado
+              2:
+                title: 'Não publicado'

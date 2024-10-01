@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.image
     - views.view.media_library
   module:
+    - dropzonejs_eb_widget
+    - media
     - views
 name: upload_or_existing
 label: 'Upload or Existing'
@@ -29,3 +32,23 @@ widgets:
       auto_select: false
       view: media_library
       view_display: entity_browser_1
+  199b2836-2173-48d8-8bf9-2a6544596dbe:
+    id: dropzonejs_media_entity_inline_entity_form
+    uuid: 199b2836-2173-48d8-8bf9-2a6544596dbe
+    label: Upload
+    weight: 2
+    settings:
+      submit_text: Select
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop images here to upload them'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: 1.0
+      resize_method: contain
+      thumbnail_method: contain
+      media_type: image
+      inherit_settings: true
+      form_mode: default
