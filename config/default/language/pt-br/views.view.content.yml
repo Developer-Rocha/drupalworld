@@ -1,0 +1,33 @@
+display:
+  default:
+    display_title: Padrão
+    display_options:
+      fields:
+        title:
+          label: Título
+        type:
+          separator: ', '
+        status:
+          label: Status
+        langcode:
+          separator: ', '
+        operations:
+          label: Operações
+      pager:
+        options:
+          tags:
+            next: 'Avançar ›'
+            previous: '‹ Voltar'
+      exposed_form:
+        options:
+          reset_button_label: Redefinir
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      filters:
+        title:
+          expose:
+            label: Título
+        status:
+          expose:
+            label: Status

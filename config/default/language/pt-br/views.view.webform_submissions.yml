@@ -1,0 +1,91 @@
+display:
+  default:
+    display_title: Principal
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Redefinir
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        created:
+          label: Criado
+          separator: ', '
+        remote_addr:
+          separator: ', '
+        view_webform_submission:
+          label: Operações
+  embed_administer:
+    display_options:
+      fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        sticky:
+          separator: ', '
+        locked:
+          separator: ', '
+        created:
+          label: Criado
+          separator: ', '
+        completed:
+          separator: ', '
+        remote_addr:
+          separator: ', '
+        operations:
+          label: Operações
+  embed_manage:
+    display_options:
+      fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        sticky:
+          separator: ', '
+        locked:
+          separator: ', '
+        created:
+          label: Criado
+          separator: ', '
+        completed:
+          separator: ', '
+        remote_addr:
+          separator: ', '
+        view_webform_submission:
+          label: Operações
+        edit_webform_submission:
+          label: Operações
+  embed_review:
+    display_options:
+      fields:
+        sid:
+          separator: ', '
+        in_draft:
+          separator: ', '
+        sticky:
+          separator: ', '
+        locked:
+          separator: ', '
+        created:
+          label: Criado
+          separator: ', '
+        completed:
+          separator: ', '
+        remote_addr:
+          separator: ', '
+        view_webform_submission:
+          label: Operações

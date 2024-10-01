@@ -1,0 +1,50 @@
+display:
+  default:
+    display_title: Padrão
+    display_options:
+      title: Mídia
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      exposed_form:
+        options:
+          reset_button_label: Redefinir
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      filters:
+        name:
+          expose:
+            label: Nome
+        bundle:
+          expose:
+            label: 'Tipo de mídia'
+          group_info:
+            label: 'Tipo de mídia'
+  page:
+    display_options:
+      fields:
+        name:
+          separator: ', '
+        edit_media:
+          text: Editar
+        delete_media:
+          text: Apagar
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nome
+  widget_table:
+    display_options:
+      fields:
+        name:
+          label: Nome
+      filters:
+        name:
+          expose:
+            label: Nome

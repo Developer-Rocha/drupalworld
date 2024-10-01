@@ -28,12 +28,11 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/ds": "^3.23",
+        "drupal/entity_browser": "^2.11",
         "drupal/entity_reference_revisions": "^1.12",
-        "drupal/entity_update": "*",
         "drupal/estimated_read_time": "^1.1",
         "drupal/field_group": "^3.6",
         "drupal/field_validation": "^3.0@beta",
-        "drupal/fivestar": "^1.0@alpha",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
@@ -51,6 +50,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/phpmailer_smtp": "^2.2",
         "drupal/restui": "^1.22",
+        "drupal/s3fs": "^3.6",
         "drupal/search_api": "^1.35",
         "drupal/simple_oauth": "^5.2",
         "drupal/simple_pass_reset": "^1.2",
@@ -59,6 +59,7 @@
         "drupal/ui_patterns": "^1.9",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/unstructured": "^2.0@beta",
+        "drupal/upgrade_status": "^4.3",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/votingapi": "^3.0@beta",
         "drupal/webform": "^6.2",
@@ -147,21 +148,23 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/ai": {
+                "3466966 - Fix dialog scrolling": "https://www.drupal.org/files/issues/2024-09-18/fix-dialog-scrolling-3466966-16.patch"
+            },
             "drupal/core": {
                 "3301782 - PHP8 Deprecated function : htmlspecialchars(): Passing null to parameter #1": "https://www.drupal.org/files/issues/2023-08-02/htmlspecialchars_passing_null_to_parameter1-3301782-23.patch",
                 "3052608 - DateTimeComputed tries to compute from an empty value": "https://www.drupal.org/files/issues/2023-04-11/3052608-22.patch",
                 "3218674 - Translation file not found notice for en langcode": "https://www.drupal.org/files/issues/2022-10-10/drupal-install-throwing-translation-file-not-found-3218674-9.diff",
                 "3218426 - Using partially synchronized image fields causes validation errors and PHP warnings": "https://www.drupal.org/files/issues/2024-08-27/drupal-11.x-MR-5385--20240827-1.patch",
-                "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch"
+                "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch",
+                "3052617 - Media library does not open when clicking \"Add media\": “TypeError: Argument 2 passed to Drupal\\media_library\\MediaLibraryState::create() must be of the type array, null given": "https://www.drupal.org/files/issues/2023-04-10/3052617.patch"
+            },
+            "drupal/entity_browser": {
+                "2851580 - Re-order + remove broken with the Entity Reference (and File) widget": "https://www.drupal.org/files/issues/2023-12-12/2851580-117.patch",
+                "2856138 - Error messages are not being displayed correctly in modal windows": "https://www.drupal.org/files/issues/0001-Issue-2856138-by-gordon-Error-messages-are-not-being.patch"
             },
             "drupal/views_infinite_scroll": {
                 "2894307 - Any way to Automatically Load Content when scrolling within a DIV": "https://www.drupal.org/files/issues/2022-02-09/support-for-overflow-scrolls-2894307-23.patch"
-            },
-            "drupal/fivestar": {
-                "3388828 - Add token support for results": "https://www.drupal.org/files/issues/2023-10-05/fivestar-3388828-7.patch"
-            },
-            "drupal/ai": {
-                "3466966 - Fix dialog scrolling": "https://www.drupal.org/files/issues/2024-09-18/fix-dialog-scrolling-3466966-16.patch"
             }
         }
     },

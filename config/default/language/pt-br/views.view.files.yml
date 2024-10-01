@@ -1,0 +1,54 @@
+label: Arquivos
+display:
+  default:
+    display_title: Padrão
+    display_options:
+      title: Arquivos
+      fields:
+        filename:
+          label: Nome
+          separator: ', '
+        status:
+          label: Status
+        operations:
+          label: Operações
+      pager:
+        options:
+          tags:
+            next: 'Avançar ›'
+            previous: '‹ Voltar'
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      exposed_form:
+        options:
+          reset_button_label: Redefinir
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      filters:
+        filename:
+          expose:
+            label: 'Nome do arquivo'
+        status:
+          expose:
+            label: Status
+  page_1:
+    display_options:
+      menu:
+        title: Arquivos
+  page_2:
+    display_options:
+      fields:
+        type:
+          label: 'Tipo de entidade'
+      pager:
+        options:
+          tags:
+            next: 'Avançar ›'
+            previous: '‹ Voltar'
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
