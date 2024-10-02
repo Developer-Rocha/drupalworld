@@ -13,6 +13,7 @@ folder: ./../config/default-production-split
 module: {  }
 theme: {  }
 complete_list:
+  - eu_cookie_compliance.settings
   - key.key.openai
   - key.key.unstructured
   - key.key.zillix_milvus

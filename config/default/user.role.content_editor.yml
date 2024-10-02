@@ -10,6 +10,7 @@ dependencies:
     - comment
     - content_translation
     - contextual
+    - eu_cookie_compliance
     - file
     - help
     - node
@@ -40,6 +41,7 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'display eu cookie compliance popup'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'

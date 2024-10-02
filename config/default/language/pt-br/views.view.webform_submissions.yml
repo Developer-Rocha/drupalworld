@@ -24,6 +24,7 @@ display:
           label: Criado
           separator: ', '
         remote_addr:
+          label: 'Endereço IP'
           separator: ', '
         view_webform_submission:
           label: Operações
@@ -44,6 +45,7 @@ display:
         completed:
           separator: ', '
         remote_addr:
+          label: 'Endereço IP'
           separator: ', '
         operations:
           label: Operações
@@ -64,6 +66,7 @@ display:
         completed:
           separator: ', '
         remote_addr:
+          label: 'Endereço IP'
           separator: ', '
         view_webform_submission:
           label: Operações
@@ -86,6 +89,7 @@ display:
         completed:
           separator: ', '
         remote_addr:
+          label: 'Endereço IP'
           separator: ', '
         view_webform_submission:
           label: Operações
