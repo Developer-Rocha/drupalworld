@@ -1,0 +1,17 @@
+popup_info:
+  value: '<h2>Usamos cookies neste site para aprimorar sua experiência de usuário</h2><p>Ao clicar no botão Aceitar, você concorda que façamos isso.</p>'
+  format: full_html
+popup_agree_button_message: Aceitar
+popup_more_info_button_message: 'Mais informações'
+popup_agreed:
+  value: '<h2>Obrigado por aceitar cookies</h2><p>Agora você pode ocultar essa mensagem ou saber mais sobre cookies.</p>'
+  format: full_html
+popup_find_more_button_message: 'Mais informações'
+popup_hide_button_message: Esconder
+withdraw_message:
+  value: '<h2>Usamos cookies neste site para aprimorar sua experiência de usuário</h2><p>Ao clicar no botão Aceitar, você concorda que façamos isso.</p>'
+  format: full_html
+withdraw_tab_button_label: 'Configurações de privacidade'
+withdraw_action_button_label: 'Retirar o consentimento'
+save_preferences_button_label: 'Salvar preferências'
+accept_all_categories_button_label: 'Aceitar todos os cookies'
