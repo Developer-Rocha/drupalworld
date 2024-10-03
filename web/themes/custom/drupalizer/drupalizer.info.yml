@@ -9,19 +9,37 @@ dependencies:
   - theme:olivero
 
 regions:
-  header: Header
-  primary_menu: Primary menu
-  secondary_menu: Secondary menu
-  hero: Hero (full width)
-  highlighted: Highlighted
-  breadcrumb: Breadcrumb
-  social: Social Bar
-  content_above: Content Above
-  content: Content
-  sidebar: Sidebar
-  content_below: Content Below
-  footer_top: Footer Top
-  footer_bottom: Footer Bottom
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
+  social: 'Social Bar'
+  content_above: 'Content Above'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
+  search_menu: 'Search menu'
 
 libraries:
+  - drupalizer/normalize
   - drupalizer/main
+
+stylesheets-remove:
+  - '@olivero/css/components/navigation/menu-sidebar.css'
+  - '@olivero/css/components/navigation/nav-button-mobile.css'
+  - '@olivero/css/components/navigation/nav-primary.css'
+  - '@olivero/css/components/navigation/nav-primary-button.css'
+  - '@olivero/css/components/navigation/nav-primary-no-js.css'
+  - '@olivero/css/components/navigation/nav-primary-wide.css'
+  - '@olivero/css/components/navigation/nav-secondary.css'
+  - '@olivero/css/components/navigation/wide-nav-expand.css'
+  - '@olivero/css/components/header-buttons-mobile.css'
+  - '@olivero/css/components/header-navigation.css'
+  - '@olivero/css/components/header-search-narrow.css'
+  - '@olivero/css/components/header-search-wide.css'
+  - '@olivero/css/components/header-site-branding.css'
+  - '@olivero/css/components/header-sticky-toggle.css'

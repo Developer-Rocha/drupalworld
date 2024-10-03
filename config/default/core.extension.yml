@@ -15,6 +15,7 @@ module:
   ai_translate: 0
   ai_validations: 0
   ajax_loader: 0
+  autocomplete_deluxe: 0
   automated_cron: 0
   better_exposed_filters: 0
   big_pipe: 0
@@ -73,8 +74,8 @@ module:
   phpmailer_smtp: 0
   provider_lmstudio: 0
   provider_openai: 0
-  search: 0
   search_api: 0
+  search_api_autocomplete: 0
   search_api_db: 0
   shortcut: 0
   simple_sitemap: 0

@@ -8,6 +8,8 @@ display:
         filename:
           label: Nome
           separator: ', '
+        filesize:
+          label: Tamanho
         status:
           label: Status
         operations:

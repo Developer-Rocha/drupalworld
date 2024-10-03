@@ -1,0 +1,29 @@
+uuid: 2a2008d1-b656-40e4-9b66-9d6b98354422
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.search
+    - views.view.search
+  module:
+    - views
+    - search_api_autocomplete
+id: search
+label: Search
+index_id: search
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:search':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

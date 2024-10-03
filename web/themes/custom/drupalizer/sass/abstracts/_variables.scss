@@ -1,1 +1,81 @@
 
+// CSS Custom Properties
+// --------------------------------------------------
+
+// @todo: In time, replace as much as possible with CSS variables
+
+:root {
+  // Colors
+  --drupalizer__bg-page: #ffffff;
+
+  // Spacing
+  --drupalizer__gutter: 2rem;
+  --drupalizer__gutter--mobile: 1rem;
+
+  // Font sizes
+  --drupalizer__font-size: #{ptr($default-font-size)};
+  --drupalizer__font-size--h1: clamp(1.875rem, 4.5vw, 3rem);
+  --drupalizer__font-size--h2: clamp(1.625rem, 3.75vw, 2.5rem);
+  --drupalizer__font-size--h3: clamp(1.5rem, 3vw, 1.75rem);
+  --drupalizer__font-size--h4: clamp(1.125rem, 2.25vw, 1.5rem);
+  --drupalizer__font-size--h5: clamp(.95rem, 1.875vw, 1.25rem);
+  --drupalizer__font-size--h6: clamp(.75rem, 1.5vw, 1rem);
+  --drupalizer__font-size--xs: .75rem;
+  --drupalizer__font-size--sm: clamp(.75rem, 1.3125vw, .875rem);
+  --drupalizer__font-size--lg: clamp(.95rem, 1.875vw, 1.25rem);
+  --drupalizer__font-size--xl: clamp(.95rem, 1.875vw, 1.25rem);
+  --drupalizer__font-size--2xl: clamp(1.125rem, 2.25vw, 1.5rem);
+  --drupalizer__font-size--3xl: clamp(1.3125rem, 2.625vw, 1.75rem);
+  --drupalizer__font-size--4xl: clamp(1.5rem, 3vw, 2rem);
+  --drupalizer__font-size--5xl: clamp(1.575rem, 3.375vw, 2.25rem);
+  --drupalizer__font-size--6xl: clamp(1.625rem, 3.75vw, 2.5rem);
+  --drupalizer__font-size--7xl: clamp(1.875rem, 4.5vw, 3rem);
+  --drupalizer__font-size--8xl: clamp(2rem, 6vw, 4rem);
+  --drupalizer__font-size--9xl: clamp(2.125rem, 9vw, 6rem);
+
+  @include bp(md) {
+    //--drupalizer__font-size--h1: 3rem;
+    //--drupalizer__font-size--h2: 2.5rem;
+    //--drupalizer__font-size--h3: 2rem;
+    //--drupalizer__font-size--h4: 1.5rem;
+    //--drupalizer__font-size--h5: 1.25rem;
+    //--drupalizer__font-size--h6: 1rem;
+  }
+  /*
+  @include bp(sm) { }
+
+  @include bp(md) {
+    // Spacing
+    --drupalizer__gutter: 2rem;
+
+    // Font sizes
+    //--drupalizer__font-size--h1: 2.25rem;
+    //--drupalizer__font-size--h2: 1.875rem;
+    //--drupalizer__font-size--h3: 1.25rem;
+    //--drupalizer__font-size--4xl: 2rem;
+    //--drupalizer__font-size--5xl: 2.5rem;
+    //--drupalizer__font-size--6xl: 3rem;
+    //--drupalizer__font-size--7xl: 3.75rem;
+    //--drupalizer__font-size--8xl: 4.5rem;
+    //--drupalizer__font-size--9xl: 6rem;
+  }
+
+  @include bp(lg) {
+    // Font sizes
+    //--drupalizer__font-size--h1: 3rem;
+    //--drupalizer__font-size--h2: 2.25rem;
+    //--drupalizer__font-size--h3: 1.5rem;
+    //--drupalizer__font-size--h4: 1.25rem;
+    //--drupalizer__font-size--3xl: 1.875rem;
+    //--drupalizer__font-size--4xl: 2.25rem;
+    //--drupalizer__font-size--5xl: 3rem;
+    //--drupalizer__font-size--6xl: 3.75rem;
+    //--drupalizer__font-size--7xl: 4.5rem;
+    //--drupalizer__font-size--8xl: 6rem;
+    //--drupalizer__font-size--9xl: 8rem;
+  }
+
+  @include bp(xl) {}
+
+   */
+}

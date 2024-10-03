@@ -1,2 +1,17 @@
 <?php
 
+/**
+ * Implements hook_search_api_autocomplete_suggestions_alter().
+ */
+//function drupalizer_module_search_api_autocomplete_suggestions_alter( &$suggestions, $alter_params) {
+//  if(!empty($alter_params['user_input'])) {
+//    if(!empty($suggestions)) {
+//      $search_param = ['search' => $alter_params['user_input']];
+//      foreach ($suggestions as &$suggestion) {
+//        if($suggestion->getUrl()) {
+//          $suggestion->setUrl($suggestion->getUrl()->setOption('query', $search_param));
+//        }
+//      }
+//    }
+//  }
+//}

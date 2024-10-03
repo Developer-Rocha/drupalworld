@@ -10,9 +10,27 @@
 @import 'base/classes';
 
 // Components
+@import 'component/header-buttons-mobile';
+@import 'component/header-navigation';
+@import 'component/header-search-narrow';
+@import 'component/header-search-wide';
+@import 'component/header-site-branding';
+@import 'component/header-sticky-toggle';
+@import 'component/menu-sidebar';
+@import 'component/nav-primary';
+@import 'component/nav-primary-button';
+@import 'component/nav-primary-no-js';
+@import 'component/nav-primary-wide';
+@import 'component/nav-secondary';
+@import 'component/wide-nav-expand';
+@import 'component/nav-button-mobile';
 @import 'component/button';
 @import 'component/read-time';
 @import 'component/ajax-loading';
 @import 'component/voting';
+@import 'component/forms';
 @import 'component/language-switcher';
 @import 'component/region-secondary';
+@import 'component/search';
+@import 'component/search-api-autocomplete';
+@import 'component/search-menu';

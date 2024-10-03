@@ -28,7 +28,7 @@ popup_agreed:
   format: full_html
 popup_find_more_button_message: 'More info'
 popup_hide_button_message: Hide
-popup_link: /node/810
+popup_link: /node/1050
 popup_link_new_window: true
 popup_height: null
 popup_width: 100%

@@ -1,0 +1,68 @@
+.search-api-autocomplete-search {
+  border-color: transparent;
+  padding: .5rem 0 0;
+  background-color: $color-white;
+  box-shadow: 0 0 2.25rem 0 rgba(0, 0, 0, .03);
+  border-radius: 0 0 1rem 1rem;
+  margin: 0;
+  border: thin solid $drupalizer-neutral-3 !important;
+  border-top-width: 0 !important;
+  overflow: hidden;
+
+  // <a>
+  .ui-menu-item-wrapper {
+    //padding: 0.5rem 0.5rem;
+    display: block;
+    background-color: transparent;
+  }
+
+  .ui-menu-item {
+    border-color: transparent;
+    padding: .3rem 0;
+    border: none;
+    margin: 0;
+
+    &:first-child {
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-radius: 0;
+    }
+
+    .search-api-autocomplete-suggestion {
+      color: $color-black;
+      background-color: $color-white;
+      position: relative;
+      padding-left: 2.5rem;
+
+      &:before {
+        content: '';
+        display: block;
+        background-image: url('../icons/search.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: .5rem;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $drupalizer-neutral-2;
+
+      .search-api-autocomplete-suggestion {
+        background-color: $drupalizer-neutral-2 !important;
+      }
+    }
+  }
+
+  .search-api-autocomplete-suggestion {
+    background-color: $color-white !important;
+    color: $color-black !important;
+  }
+}

@@ -1,7 +1,12 @@
+normalize:
+  css:
+    theme:
+      css/normalize.css: {weight: 90}
+
 main:
   css:
     theme:
-      css/theme.css: {weight: 97}
+      css/theme.css: {weight: 91}
   js:
     js/scripts.min.js: {}
   dependencies:

@@ -1,0 +1,30 @@
+// Autocomplete
+
+.ui-autocomplete {
+  border: none !important;
+  background: $form-background;
+
+  .ui-menu-item {
+    position: relative;
+    z-index: 1;
+    margin: -1px 0 0;
+    padding: ($form-padding/2) $form-padding;
+    border: $form-border;
+    transition: border $default-transition;
+
+    &:last-child {
+      border-bottom-left-radius: $form-border-radius;
+      border-bottom-right-radius: $form-border-radius;
+    }
+  }
+
+  .ui-state-focus {
+    z-index: 2;
+    background: none;
+    border: solid 1px $color-form-focus;
+  }
+
+  &.search-api-autocomplete-search {
+    z-index: 1000;
+  }
+}
