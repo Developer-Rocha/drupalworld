@@ -1,0 +1,17 @@
+uuid: d1e85c4f-2417-4abd-a162-7df927db3782
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: background_image_xl
+label: 'Background image (xl) - 1600x600'
+effects:
+  b448c23a-4631-49ae-866f-97b5e531400f:
+    uuid: b448c23a-4631-49ae-866f-97b5e531400f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 600
+      crop_type: focal_point

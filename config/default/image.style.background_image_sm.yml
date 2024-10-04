@@ -1,0 +1,17 @@
+uuid: 76544b0c-53b2-4953-9f6f-9adaf6a3e25f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: background_image_sm
+label: 'Background image (sm) - 800x300'
+effects:
+  0a8142e5-51b7-4dd4-adc1-2be2bcc624f8:
+    uuid: 0a8142e5-51b7-4dd4-adc1-2be2bcc624f8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 300
+      crop_type: focal_point

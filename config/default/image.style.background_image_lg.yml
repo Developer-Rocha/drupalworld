@@ -1,0 +1,17 @@
+uuid: 338aef7b-c0c0-485a-a5f8-13fb85de70f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: background_image_lg
+label: 'Background image (lg) - 1400x525'
+effects:
+  1447af17-562f-4037-92df-dac62602e650:
+    uuid: 1447af17-562f-4037-92df-dac62602e650
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 525
+      crop_type: focal_point

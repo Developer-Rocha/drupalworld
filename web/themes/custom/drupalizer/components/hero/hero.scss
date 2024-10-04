@@ -36,6 +36,8 @@ $component: 'c-hero';
   }
 
   &__title {
+    @extend %h1;
+
     margin-bottom: .5rem;
     color: $drupalizer-green;
     text-wrap: balance;

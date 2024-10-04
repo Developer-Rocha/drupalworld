@@ -1,0 +1,17 @@
+uuid: d184f406-cef6-4424-b232-a64482fd5d0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: background_image_md
+label: 'Background image (md) - 1000x375'
+effects:
+  0c522c44-4ae0-41bd-a81e-5e16e312a4bf:
+    uuid: 0c522c44-4ae0-41bd-a81e-5e16e312a4bf
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 375
+      crop_type: focal_point
