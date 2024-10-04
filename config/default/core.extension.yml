@@ -30,6 +30,7 @@ module:
   contact: 0
   content_moderation: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dropzonejs: 0
@@ -54,6 +55,7 @@ module:
   language: 0
   layout_discovery: 0
   link: 0
+  link_attributes: 0
   locale: 0
   mailsystem: 0
   manage_display: 0
@@ -87,11 +89,14 @@ module:
   token: 0
   toolbar: 0
   twig_field_value: 0
+  twig_tweak: 0
+  twig_xdebug: 0
   ui_patterns: 0
   ui_patterns_ds: 0
   ui_patterns_field_group: 0
   ui_patterns_layouts: 0
   ui_patterns_library: 0
+  ui_patterns_settings: 0
   ui_patterns_views: 0
   ultimate_cron: 0
   unstructured: 0
@@ -108,6 +113,7 @@ module:
   ds: 1
   pathauto: 1
   simple_pass_reset: 1
+  ds_extras: 2
   content_translation: 10
   views: 10
   paragraphs: 11
