@@ -1,0 +1,58 @@
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-hero' %}
+
+{# Override the defaults #}
+{% set component_element = 'header' %}
+
+{% block component_content %}
+  <div class="{{ component ~ '__title_block' }} ">
+    <div class="container">
+      {% if breadcrumb %}
+        {{ breadcrumb }}
+      {% endif %}
+      <h1 class="{{ component ~ '__title' }}">
+        {% if title|render|striptags|trim is not empty %}
+          {{ title }}
+        {% endif %}
+      </h1>
+    </div>
+  </div>
+  {% if image|render|striptags('<img><picture>') %}
+    <div class="{{ component ~ '__image' }}">{{ image }}</div>
+    <svg class="visually-hidden" aria-hidden="true" preserveAspectRatio="none">
+      <clipPath id="hero-clip-path" clipPathUnits="objectBoundingBox">
+        <path d="M1,0 v0.721 c0,0.001,-0.002,0.004,-0.004,0.005 c-0.002,0.001,-0.003,0.005,-0.006,0.007 c-0.003,0.003,-0.01,0.013,-0.022,0.025 C0.906,0.827,0.725,1,0.491,1 c-0.045,0,-0.092,-0.007,-0.141,-0.021 c-0.048,-0.015,-0.098,-0.039,-0.149,-0.072 C0.156,0.875,0.083,0.816,0,0.721 V0 H1"></path>
+      </clipPath>
+    </svg>
+  {% endif %}
+
+  <div class="{{ component ~ '__content-wrapper' }}">
+    <div class="container">
+
+      <div class="{{ component ~ '__content' }} {{ category_type }}">
+
+        {% if pretitle|render|striptags|trim is not empty %}
+          <div class="{{ component ~ '__pretitle' }}">
+            {{ pretitle }}
+          </div>
+        {% endif %}
+
+        {% if text|render|striptags|trim is not empty or cta|render|striptags|trim is not empty or content|render|striptags|trim is not empty %}
+          <div class="{{ component ~ '__intro' }}">
+
+            {% if text|render|striptags|trim is not empty %}
+              <div class="{{ component ~ '__text' }}">
+                {{ text }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

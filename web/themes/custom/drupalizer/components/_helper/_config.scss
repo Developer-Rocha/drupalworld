@@ -1,0 +1,48 @@
+
+// Imports
+// -------
+
+// Import config from Drupalizer.
+@import '../../sass/abstracts/mixins';
+@import '../../sass/abstracts/settings';
+@import '../../sass/abstracts/themes';
+@import 'themes';
+
+// Colors
+// ------
+
+// Color variants for components.
+$color-variants: (
+  'light': $color-grey,
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'success': $color-success,
+  'warning': $color-warning,
+  'error': $color-error,
+  'info': $color-info,
+  'dark': $color-text,
+  //'light_green': _color(get($themes, 'light_green', 'highlight')), // todo: make this work for RGB/HSL
+  'sky': red,
+);
+
+// Use the array below to determine which component color variant (value)
+// you want to display for which layout builder section theme (key).
+// @todo: ^ this seems incorrect, fix it
+$theme-combos: (
+  'light': 'primary',
+  'primary': 'secondary',
+  'secondary': 'primary',
+  'success': 'light',
+  'warning': 'dark',
+  'error': 'light',
+  'info': 'light',
+  'dark': 'sky',
+  'sky': 'primary',
+);
+
+// Mixins
+// -------
+
+
+// Mixin to make components compatible with LB sections.
+@import 'theme_compatibility';

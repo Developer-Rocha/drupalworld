@@ -1,0 +1,15 @@
+@import '../../sass/abstracts/mixins';
+@import '../../sass/abstracts/colors';
+@import '../../sass/abstracts/themes';
+@import 'themes';
+
+:root {
+  --drupalizer-component__color-interactive-l--hover: 16%;
+  --drupalizer-component__color-muted: 80%;
+}
+
+@each $variant, $colors in $component-themes {
+  .c-theme--#{$variant} {
+    @extend %c-theme--#{$variant};
+  }
+}

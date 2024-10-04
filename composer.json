@@ -52,6 +52,7 @@
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
+        "drupal/ctools": "^4.1",
         "drupal/dropzonejs": "^2.11",
         "drupal/ds": "^3.23",
         "drupal/entity_browser": "^2.11",
@@ -68,6 +69,7 @@
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/jsonapi_response_alter": "^2.0",
         "drupal/key": "*",
+        "drupal/link_attributes": "^2.1",
         "drupal/mailsystem": "^4.5",
         "drupal/manage_display": "^3.0",
         "drupal/maxlength": "^3.1",
@@ -85,7 +87,9 @@
         "drupal/simple_pass_reset": "^1.2",
         "drupal/simple_sitemap": "^4.2",
         "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.4",
         "drupal/ui_patterns": "^1.9",
+        "drupal/ui_patterns_settings": "^2.4",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/unstructured": "^2.0@beta",
         "drupal/upgrade_status": "^4.3",
@@ -181,6 +185,15 @@
             },
             "drupal/s3fs": {
                 "3247639 - Files being written to s3fs_file table with s3:// when they are in file_managed with private://": "https://www.drupal.org/files/issues/2021-11-04/3247639-6.patch"
+            },
+            "drupal/ui_patterns": {
+                "PR299 - Incorrect \"path\" in hook_theme definitions when the theme that contains patterns is not active": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/299.diff",
+                "3315661 - Check for views live preview instead of preview when rendering row warning": "https://www.drupal.org/files/issues/2023-07-06/check-for-views-preview-3315661-21.patch"
+            },
+            "drupal/ui_patterns_field_formatters": {
+                "3342332 - Changing the sub formatter within a UI patterns field formatter doesn't work as expected (temporary solution to get file URI from media entity into the pattern wrapper)": "./patches/ui_patterns_field_formatters-3342332-local.diff",
+                "3341586 + 3355983 - Allow to get the label from the field_display_label module + Support the Entity Form/Display Field Label module": "./patches/ui_patterns_field_formatters-3341586-3355983.diff",
+                "3355989 - Support UI limit from Display Suite": "./patches/ui_patterns_field_formatters-3355989.diff"
             },
             "drupal/views_infinite_scroll": {
                 "2894307 - Any way to Automatically Load Content when scrolling within a DIV": "https://www.drupal.org/files/issues/2022-02-09/support-for-overflow-scrolls-2894307-23.patch"

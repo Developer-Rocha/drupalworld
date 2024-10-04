@@ -1,0 +1,37 @@
+
+@each $variant, $colors in $component-themes {
+  %c-theme--#{$variant} {
+    // We don't use spaces so CSS vars with empty values don't get set.
+    // (So we disable sass validation here).
+    /* stylelint-disable */
+    $color-settings: ('main', 'border', 'background', 'text', 'link');
+    @each $value in $color-settings {
+      --drupalizer-component__color-#{$value}: #{get($colors, $value)};
+      --drupalizer-component__color-#{$value}-h: #{str-slice(quote(hue(get($colors, $value))), 1, -4)};
+      --drupalizer-component__color-#{$value}-s: #{saturation(get($colors, $value))};
+      --drupalizer-component__color-#{$value}-l: #{lightness(get($colors, $value))};
+    }
+
+    --drupalizer-component__color-text:#{get($colors, 'text')};
+    // --drupalizer-component__color-on-interactive:#{get($colors, 'on-interactive')};
+    --drupalizer-component__color-on-interactive-l:#{get($colors, 'on-interactive-l')};
+    --drupalizer-component__color-interactive:#{get($colors, 'interactive')};
+
+    &:hover {
+      $color-settings: ('on-interactive-l', 'text', 'text-hover','border', 'link-hover');
+      @each $value in $color-settings {
+        --drupalizer-component__color-#{$value}: #{get($colors, $value)};
+      }
+    }
+    /* stylelint-enable */
+  }
+}
+
+%c-theme--transparent {
+  // Nothing to see here..
+  // We don't use spaces so CSS vars with empty values don't get set.
+  // (So we disable sass validation here).
+  /* stylelint-disable */
+  --drupalizer-component__color-background:transparent;
+  /* stylelint-enable */
+}
