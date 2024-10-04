@@ -1,0 +1,44 @@
+uuid: 1d90b4ad-987a-465d-be1b-d35a94305864
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_hero_cta
+    - field.field.node.landing_page.field_hero_image
+    - field.field.node.landing_page.field_hero_pretitle
+    - field.field.node.landing_page.field_hero_subtitle
+    - field.field.node.landing_page.field_hero_text
+    - field.field.node.landing_page.field_hero_title
+    - node.type.landing_page
+  module:
+    - manage_display
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_hero_cta: true
+  field_hero_image: true
+  field_hero_pretitle: true
+  field_hero_subtitle: true
+  field_hero_text: true
+  field_hero_title: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

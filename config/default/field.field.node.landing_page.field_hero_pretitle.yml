@@ -1,0 +1,19 @@
+uuid: 9890f53f-15ab-44ea-b4b6-fd3e4fc021f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_pretitle
+    - node.type.landing_page
+id: node.landing_page.field_hero_pretitle
+field_name: field_hero_pretitle
+entity_type: node
+bundle: landing_page
+label: 'Hero Pretitle'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

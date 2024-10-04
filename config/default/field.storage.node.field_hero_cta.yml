@@ -1,0 +1,19 @@
+uuid: 70ef46a7-3f28-48de-8ad9-502eb1b4b24c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_hero_cta
+field_name: field_hero_cta
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
