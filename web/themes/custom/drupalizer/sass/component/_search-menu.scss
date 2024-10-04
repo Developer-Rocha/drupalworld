@@ -43,7 +43,7 @@ body.is-mobile-nav {
       &:hover,
       &:focus {
         color: $color-black;
-        border-bottom-color: $drupalizer-green;
+        border-bottom-color: $drupalizer-dark-blue;
       }
 
       svg {
@@ -123,7 +123,7 @@ body:not(.is-mobile-nav){
       &:hover,
       &:focus {
         color: $color-black;
-        border-bottom-color: $drupalizer-green;
+        border-bottom-color: $drupalizer-dark-blue;
       }
 
       svg {

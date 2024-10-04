@@ -43,6 +43,7 @@ module:
   entity_reference_revisions: 0
   estimated_read_time: 0
   field: 0
+  field_formatter: 0
   field_group: 0
   field_ui: 0
   field_validation: 0
@@ -58,6 +59,7 @@ module:
   layout_discovery: 0
   link: 0
   link_attributes: 0
+  link_attributes_menu_link_content: 0
   locale: 0
   mailsystem: 0
   manage_display: 0
@@ -96,11 +98,14 @@ module:
   twig_xdebug: 0
   ui_patterns: 0
   ui_patterns_ds: 0
+  ui_patterns_extends: 0
+  ui_patterns_field_formatters: 0
   ui_patterns_field_group: 0
   ui_patterns_layouts: 0
   ui_patterns_library: 0
   ui_patterns_settings: 0
   ui_patterns_views: 0
+  ui_patterns_views_style: 0
   ultimate_cron: 0
   unstructured: 0
   update: 0

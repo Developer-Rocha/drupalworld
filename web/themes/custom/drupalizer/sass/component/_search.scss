@@ -179,10 +179,10 @@ body.search-page {
     margin-left: 3px;
 
     &:focus {
-      border: .0625rem solid $drupalizer-green-4;
+      border: .0625rem solid $drupalizer-dark-blue-4;
       outline: .125rem solid $color-white;
-      box-shadow: 0 0 0 .1875rem $drupalizer-green-6;
-      background-color: $drupalizer-green-1;
+      box-shadow: 0 0 0 .1875rem $drupalizer-dark-blue-6;
+      background-color: $drupalizer-dark-blue-1;
       outline-offset: 0;
     }
   }
@@ -236,10 +236,10 @@ body.search-page {
     border-radius: 1.25rem;
 
     &.is-focus {
-      border-color: $drupalizer-green-4;
+      border-color: $drupalizer-dark-blue-4;
       outline: .125rem solid $color-white;
-      box-shadow: 0 0 0 .1875rem $drupalizer-green-6;
-      background-color: $drupalizer-green-1;
+      box-shadow: 0 0 0 .1875rem $drupalizer-dark-blue-6;
+      background-color: $drupalizer-dark-blue-1;
       outline-offset: 0;
     }
   }

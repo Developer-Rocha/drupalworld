@@ -1,0 +1,44 @@
+button:
+  label: Button
+  extends:
+    - modifiers.settings
+    # - icons.settings
+  description: Display a button link
+  fields:
+    text:
+      type: text
+      label: Title
+      description: Link text of the button.
+      preview: Call to action
+    url:
+      type: text
+      label: URL
+      description: URL the button should link to.
+      preview: https://drupalizer.tech
+  settings:
+    cta_id:
+      type: textfield
+      label: CTA Id
+    size:
+      type: select
+      required: true
+      label: Size
+      default_value: medium
+      options:
+        small: Small
+        medium: Medium
+        large: Large
+  variants:
+    button:
+      label: Button
+    # outline:
+    #   label: Outline
+    link:
+      label: Link
+    button_w_icon:
+      label: Button w/ Search Icon
+  libraries:
+    - button:
+        css:
+          component:
+            button.css: {}

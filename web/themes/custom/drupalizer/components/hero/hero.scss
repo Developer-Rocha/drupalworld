@@ -39,7 +39,7 @@ $component: 'c-hero';
     @extend %h1;
 
     margin-bottom: .5rem;
-    color: $drupalizer-green;
+    color: $drupalizer-dark-blue;
     text-wrap: balance;
 
     &__underline {
@@ -111,7 +111,7 @@ $component: 'c-hero';
     }
 
     .#{$component}__title {
-      color: $drupalizer-green-7;
+      color: $drupalizer-dark-blue-7;
       flex-basis: 22rem;
     }
 

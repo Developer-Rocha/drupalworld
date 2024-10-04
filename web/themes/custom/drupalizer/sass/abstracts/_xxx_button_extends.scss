@@ -151,53 +151,53 @@
   }
 }
 
-%green-button {
+%blue-button {
   @extend %default-button;
 
-  background-color: $drupalizer-green;
-  border-color: $drupalizer-green;
+  background-color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
   color: $color-white;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-green-7;
+    background-color: $drupalizer-dark-blue-7;
   }
 }
 
-%green-link {
+%blue-link {
   @extend %default-link;
 
-  color: $drupalizer-green;
-  border-color: $drupalizer-green;
+  color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-green-1;
+    background-color: $drupalizer-dark-blue-1;
   }
 }
 
-%orange-button {
+%blue-button {
   @extend %default-button;
 
-  background-color: $drupalizer-orange;
-  border-color: $drupalizer-orange;
+  background-color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
   color: $color-white;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-orange-7;
+    background-color: $drupalizer-blue-7;
   }
 }
 
-%orange-link {
+%blue-link {
   @extend %default-link;
 
-  color: $drupalizer-orange;
-  border-color: $drupalizer-orange;
+  color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-orange-1;
+    background-color: $drupalizer-blue-1;
   }
 }
 
@@ -244,53 +244,53 @@
   }
 }
 
-%green-button {
+%blue-button {
   @extend %default-button;
 
-  background-color: $drupalizer-green;
-  border-color: $drupalizer-green;
+  background-color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
   color: $color-white;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-green-7;
+    background-color: $drupalizer-dark-blue-7;
   }
 }
 
-%green-link {
+%blue-link {
   @extend %default-link;
 
-  color: $drupalizer-green;
-  border-color: $drupalizer-green;
+  color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-green-1;
+    background-color: $drupalizer-dark-blue-1;
   }
 }
 
-%orange-button {
+%blue-button {
   @extend %default-button;
 
-  background-color: $drupalizer-orange;
-  border-color: $drupalizer-orange;
+  background-color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
   color: $color-white;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-orange-7;
+    background-color: $drupalizer-blue-7;
   }
 }
 
-%orange-link {
+%blue-link {
   @extend %default-link;
 
-  color: $drupalizer-orange;
-  border-color: $drupalizer-orange;
+  color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
 
   &:hover,
   &:focus {
-    background-color: $drupalizer-orange-1;
+    background-color: $drupalizer-blue-1;
   }
 }
 

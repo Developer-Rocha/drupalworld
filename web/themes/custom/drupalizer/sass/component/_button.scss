@@ -3,7 +3,16 @@
 // Buttons
 // --------------------------------------------------
 
+@import '../abstracts/_xxx_button_extends';
 
+// @todo: We really need to fix this styling. It's too global, now that FE and BE themes are used simultaneously on Layout Builder pages.
+// Already added the ":not(.glb-button)" to fix some of it.
+.button:not(.glb-button),
+input[type='submit']:not(.glb-button),
+input[type='reset']:not(.glb-button),
+input[type='button']:not(.glb-button) {
+  @extend %default-button;
+}
 
 // Small
 .button-small {
@@ -175,8 +184,4 @@ button.eye-open {
 
 .link {
   border-bottom: 1px solid $color-primary;
-}
-
-button {
-  cursor: pointer;
 }

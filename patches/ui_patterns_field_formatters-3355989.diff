@@ -1,0 +1,18 @@
+diff --git a/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php b/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
+index 3814584cf20d205f3502a53eac0912465a9f7427..eacae5e2a5596f9b497097ce9c85135f18b8fda4 100644
+--- a/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
+@@ -179,6 +179,13 @@ class PatternOneForAllFormatter extends FieldWrapperBase implements ContainerFac
+           $field_output = $this->getFieldOutput($items, $langcode);
+           // Take the element children from the field output and return them.
+           $children = Element::children($field_output);
++
++          // Support DS UI limit option.
++          if ($this->moduleHandler->moduleExists('ds')) {
++            $ui_limit = $this->getThirdPartySetting('ds', 'ds_limit');
++            $children = array_slice($children, 0, !empty($ui_limit) ? $ui_limit : NULL);
++          }
++
+           $fields[$field['destination']][] = array_intersect_key($field_output, array_flip($children));
+         }
+       }

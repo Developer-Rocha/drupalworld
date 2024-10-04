@@ -59,6 +59,7 @@
         "drupal/entity_reference_revisions": "^1.12",
         "drupal/estimated_read_time": "^1.1",
         "drupal/eu_cookie_compliance": "^1.24",
+        "drupal/field_formatter": "^3.0@RC",
         "drupal/field_group": "^3.6",
         "drupal/field_validation": "^3.0@beta",
         "drupal/focal_point": "^2.1",
@@ -90,7 +91,10 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/ui_patterns": "^1.9",
+        "drupal/ui_patterns_extends": "^1.0@beta",
+        "drupal/ui_patterns_field_formatters": "^2.1",
         "drupal/ui_patterns_settings": "^2.4",
+        "drupal/ui_patterns_views_style": "^1.4",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/unstructured": "^2.0@beta",
         "drupal/upgrade_status": "^4.3",
@@ -184,6 +188,9 @@
                 "2851580 - Re-order + remove broken with the Entity Reference (and File) widget": "https://www.drupal.org/files/issues/2023-12-12/2851580-117.patch",
                 "2856138 - Error messages are not being displayed correctly in modal windows": "https://www.drupal.org/files/issues/0001-Issue-2856138-by-gordon-Error-messages-are-not-being.patch"
             },
+            "drupal/field_formatter": {
+                "3358395 - LogicException: Getting the base fields is not supported for entity type Domain record": "https://www.drupal.org/files/issues/2023-05-05/field_formatter-3358395-3.patch"
+            },
             "drupal/s3fs": {
                 "3247639 - Files being written to s3fs_file table with s3:// when they are in file_managed with private://": "https://www.drupal.org/files/issues/2021-11-04/3247639-6.patch"
             },
@@ -193,7 +200,6 @@
             },
             "drupal/ui_patterns_field_formatters": {
                 "3342332 - Changing the sub formatter within a UI patterns field formatter doesn't work as expected (temporary solution to get file URI from media entity into the pattern wrapper)": "./patches/ui_patterns_field_formatters-3342332-local.diff",
-                "3341586 + 3355983 - Allow to get the label from the field_display_label module + Support the Entity Form/Display Field Label module": "./patches/ui_patterns_field_formatters-3341586-3355983.diff",
                 "3355989 - Support UI limit from Display Suite": "./patches/ui_patterns_field_formatters-3355989.diff"
             },
             "drupal/views_infinite_scroll": {

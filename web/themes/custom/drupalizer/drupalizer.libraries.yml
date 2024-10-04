@@ -7,6 +7,7 @@ main:
   css:
     theme:
       css/theme.css: {weight: 91}
+      components/_helper/component-themes.css: {}
   js:
     js/scripts.min.js: {}
   dependencies:
