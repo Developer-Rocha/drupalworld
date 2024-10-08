@@ -10,12 +10,13 @@ dependencies:
     - field.field.node.landing_page.field_hero_subtitle
     - field.field.node.landing_page.field_hero_text
     - field.field.node.landing_page.field_hero_title
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
     - ds
+    - link
     - manage_display
     - text
-    - ui_patterns_field_formatters
 third_party_settings:
   ds:
     layout:
@@ -48,35 +49,14 @@ bundle: landing_page
 mode: hero
 content:
   field_hero_cta:
-    type: pattern_all_formatter
+    type: link
     label: hidden
     settings:
-      type: link_separate
-      settings:
-        trim_length: 80
-        url_only: false
-        url_plain: false
-        rel: nofollow
-        target: _blank
-      pattern: button
-      pattern_variant: link
-      pattern_mapping:
-        'field_raw_properties:uri':
-          weight: 0
-          destination: url
-          plugin: field_raw_properties
-          source: uri
-        'field_raw_properties:title':
-          weight: 1
-          destination: text
-          plugin: field_raw_properties
-          source: title
-      pattern_settings:
-        button:
-          cta_id: cta-hero-homepage
-          size: medium
-          color: primary
-      variants_token: {  }
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: nofollow
+      target: _blank
     third_party_settings:
       ds:
         ft:
@@ -147,6 +127,7 @@ content:
 hidden:
   created: true
   langcode: true
+  layout_builder__layout: true
   links: true
   search_api_excerpt: true
   uid: true

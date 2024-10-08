@@ -1,0 +1,10 @@
+uuid: 58dd925a-ab45-4924-9d74-629da105ad78
+langcode: en
+status: true
+dependencies: {  }
+id: blocks
+label: Blocks
+weight: null
+opened: true
+image_path: ''
+image_alt: ''

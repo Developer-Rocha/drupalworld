@@ -6,6 +6,7 @@ display:
         id:
           separator: ', '
         provider:
+          label: Provedor
           separator: ', '
         model:
           separator: ', '
@@ -35,3 +36,7 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+      filters:
+        provider:
+          expose:
+            label: Provedor

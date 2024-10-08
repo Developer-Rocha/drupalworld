@@ -1,0 +1,10 @@
+uuid: 5a81a55f-6ddb-4bcf-92a7-c6dc1db2482c
+langcode: en
+status: true
+dependencies: {  }
+id: content
+label: Content
+weight: null
+opened: true
+image_path: ''
+image_alt: ''
