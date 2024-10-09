@@ -1,0 +1,68 @@
+
+@import '../_helper/config';
+
+// Component: Button
+// --------------------------------------------------
+
+// Precede the component's name with c- to indicate it is a component.
+$component: 'c-section-title';
+
+// Style variables
+
+// Styling
+.#{$component} {
+  color: inherit;
+
+  @include container();
+  // override the above
+  padding-inline: 0;
+
+  @include bp(md) {
+    padding-inline: 0;
+  }
+
+  &.has-icon {
+    [class^='icon-'] {
+      &:before {
+        font-size: inherit;
+      }
+    }
+  }
+
+  span.highlight {
+    color: var(--drupalizer__color-highlight, #{$color-secondary});
+  }
+
+  .bt-title__underline--dark-blue {
+    svg {
+      fill: $drupalizer-dark-blue-6;
+    }
+  }
+}
+
+h2.#{$component} {
+  @extend %h2;
+
+  color: $drupalizer-blue-7;
+  margin-bottom: 0;
+  text-wrap: balance;
+}
+
+@each $variant, $color in $color-variants {
+  .#{$component}--#{$variant} {
+    span.highlight {
+      color: var(--drupalizer__color-highlight, #{$color});
+    }
+
+    &.has-icon {
+      [class^='icon-'] {
+        &:before {
+          color: var(--drupalizer__color-highlight, #{$color});
+        }
+      }
+    }
+  }
+}
+
+// Compatibility with drupalizer 'Theme' field
+@include theme_compatibility($component);

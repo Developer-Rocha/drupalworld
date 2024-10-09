@@ -1,0 +1,32 @@
+uuid: c7ba9228-632f-4b88-90ef-d75dafafe5bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heading
+    - field.field.block_content.heading.field_heading
+    - field.field.block_content.heading.field_heading_type
+  module:
+    - text
+id: block_content.heading.default
+targetEntityType: block_content
+bundle: heading
+mode: default
+content:
+  field_heading:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true

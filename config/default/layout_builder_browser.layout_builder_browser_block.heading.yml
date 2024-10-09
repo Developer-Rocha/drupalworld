@@ -1,0 +1,11 @@
+uuid: 05f5ffac-d956-47f0-8b9d-d6e9ed86ea59
+langcode: en
+status: true
+dependencies: {  }
+id: heading
+block_id: 'inline_block:heading'
+category: content
+label: Heading
+image_path: /themes/custom/drupalizer/components/section-title/lb-preview.png
+image_alt: ''
+weight: -100

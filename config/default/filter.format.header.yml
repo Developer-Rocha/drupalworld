@@ -1,0 +1,17 @@
+uuid: 631b9d9c-a7ab-4659-b650-b58c51f9f9be
+langcode: en
+status: true
+dependencies: {  }
+name: Header
+format: header
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <span class="color-primary color-secondary">'
+      filter_html_help: true
+      filter_html_nofollow: false

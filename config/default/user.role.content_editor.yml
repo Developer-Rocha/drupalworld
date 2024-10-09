@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.header
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
@@ -12,6 +13,7 @@ dependencies:
     - contextual
     - eu_cookie_compliance
     - file
+    - filter
     - help
     - node
     - path
@@ -48,6 +50,7 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'translate article node'
+  - 'use text format header'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

@@ -1,0 +1,51 @@
+uuid: 18bd87a2-7bb3-47a1-9357-39854ff20278
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heading
+    - field.field.block_content.heading.field_heading
+    - field.field.block_content.heading.field_heading_type
+  module:
+    - ds
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_section_title
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: only_content
+          settings:
+            color: ''
+    regions:
+      title:
+        - field_heading
+      heading:
+        - field_heading_type
+id: block_content.heading.default
+targetEntityType: block_content
+bundle: heading
+mode: default
+content:
+  field_heading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: title
+  field_heading_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: heading
+hidden:
+  langcode: true
+  search_api_excerpt: true

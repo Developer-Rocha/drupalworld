@@ -1,0 +1,10 @@
+ckeditor5_span_span:
+  ckeditor5:
+    plugins:
+      - essentials.Essentials
+  drupal:
+    label: Span
+    library: core/ckeditor5.essentials
+    admin_library: ckeditor5/internal.admin.essentials
+    elements:
+      - <span>
