@@ -1,22 +1,22 @@
-uuid: 232bf170-25fb-4364-8328-7bbc7e0aced0
+uuid: f24754c3-f324-463a-9287-cae66bfffbda
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.secondary
   module:
     - system
   theme:
     - drupalizer
-id: drupalizer_footer
+id: drupalizer_secondary
 theme: drupalizer
 region: header
-weight: 0
+weight: -8
 provider: null
-plugin: 'system_menu_block:footer'
+plugin: 'system_menu_block:secondary'
 settings:
-  id: 'system_menu_block:footer'
-  label: Footer
+  id: 'system_menu_block:secondary'
+  label: Secondary
   label_display: '0'
   provider: system
   level: 1

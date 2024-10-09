@@ -8,8 +8,8 @@ dependencies:
     - drupalizer
 id: drupalizer_entityviewcontent
 theme: drupalizer
-region: hero
-weight: 0
+region: full_width
+weight: -5
 provider: null
 plugin: 'entity_view:node'
 settings:

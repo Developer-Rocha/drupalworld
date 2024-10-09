@@ -59,8 +59,9 @@ third_party_settings:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       allowed_layouts:
-        - ds_1col
-        - ds_2col
+        - ds_reset
+        - layout_twocol_section
+        - layout_threecol_section
       denylisted_blocks:
         'Inline blocks': {  }
       allowlisted_blocks: {  }
@@ -68,20 +69,10 @@ third_party_settings:
         - AI
     entity_view_mode_restriction_by_region:
       allowed_layouts:
-        - ds_1col
-        - ds_2col
-      allowlisted_blocks:
-        ds_1col:
-          ds_content:
-            'Inline blocks':
-              - 'inline_block:basic'
-        ds_2col:
-          left:
-            'Inline blocks':
-              - 'inline_block:basic'
-          right:
-            'Inline blocks':
-              - 'inline_block:basic'
+        - ds_reset
+        - layout_twocol_section
+        - layout_threecol_section
+      allowlisted_blocks: {  }
 id: node.landing_page.full
 targetEntityType: node
 bundle: landing_page

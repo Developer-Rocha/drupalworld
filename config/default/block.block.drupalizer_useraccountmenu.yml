@@ -1,0 +1,33 @@
+uuid: fd572b88-9dca-4b97-a87f-7b3e00fb53d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - menu_block
+  theme:
+    - drupalizer
+id: drupalizer_useraccountmenu
+theme: drupalizer
+region: header
+weight: -7
+provider: null
+plugin: 'menu_block:account'
+settings:
+  id: 'menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'account:'
+  render_parent: false
+  suggestion: account
+  hide_on_nonactive: false
+visibility: {  }
