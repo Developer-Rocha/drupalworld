@@ -2,44 +2,33 @@ name: Drupalizer
 description: Drupalizer powered theme.
 type: theme
 package: Custom
-base theme: olivero
-core_version_requirement: ^8 || ^9 || ^10
+base theme: starterkit_theme
+core_version_requirement: ^9 || ^10
 version: VERSION
 dependencies:
-  - theme:olivero
+  - theme:starterkit_theme
 
 regions:
+  toolbar: 'Toolbar'
+  language_bar: 'Language bar'
+  #branding: 'Branding'
   header: 'Header'
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
-  hero: 'Hero (full width)'
+  navigation: 'Navigation'
+  help: 'Help'
   highlighted: 'Highlighted'
-  breadcrumb: 'Breadcrumb'
-  social: 'Social Bar'
-  content_above: 'Content Above'
+  full_width: 'Full width'
+  content_top: 'Content top'
   content: 'Content'
-  sidebar: 'Sidebar'
-  content_below: 'Content Below'
+  content_bottom: 'Content bottom'
+  sidebar_left: 'Sidebar left'
+  #  sidebar_right: 'Sidebar right'
   footer_top: 'Footer Top'
-  footer_bottom: 'Footer Bottom'
+  footer: 'Footer'
+  footer_bottom: 'Footer bottom'
+  mobile_menu: 'Mobile menu'
   search_menu: 'Search menu'
 
 libraries:
   - drupalizer/normalize
   - drupalizer/main
-
-stylesheets-remove:
-  - '@olivero/css/components/navigation/menu-sidebar.css'
-  - '@olivero/css/components/navigation/nav-button-mobile.css'
-  - '@olivero/css/components/navigation/nav-primary.css'
-  - '@olivero/css/components/navigation/nav-primary-button.css'
-  - '@olivero/css/components/navigation/nav-primary-no-js.css'
-  - '@olivero/css/components/navigation/nav-primary-wide.css'
-  - '@olivero/css/components/navigation/nav-secondary.css'
-  - '@olivero/css/components/navigation/wide-nav-expand.css'
-  - '@olivero/css/components/header-buttons-mobile.css'
-  - '@olivero/css/components/header-navigation.css'
-  - '@olivero/css/components/header-search-narrow.css'
-  - '@olivero/css/components/header-search-wide.css'
-  - '@olivero/css/components/header-site-branding.css'
-  - '@olivero/css/components/header-sticky-toggle.css'
+  - drupalizer/toggle-tag-popup

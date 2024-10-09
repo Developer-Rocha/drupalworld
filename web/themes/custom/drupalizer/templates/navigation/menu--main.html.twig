@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{{ attach_library('drupalizer/toggle-stuff') }}
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(menu_name, items, attributes, 0) }}
+
+{% macro menu_links(menu_name, items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% set classes = [ menu_name ~ '-menu' ~ '__items' ] %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {% set classes = classes|merge([ menu_name ~ '-menu__items--parent' ]) %}
+    {% else %}
+      {% set menu_level_pervious = menu_level - 1  %}
+      {% set classes = classes|merge([ menu_name ~ '-menu__items--sub-menu', menu_name ~ '-menu__items--sub-menu--level-' ~ menu_level ]) %}
+      {% set remove_parent_class = menu_name ~ '-menu__items--parent' %}
+      {% set remove_level_classes = menu_name ~ '-menu__items--sub-menu--level-' ~ menu_level_pervious %}
+    {% endif %}
+    {% if menu_level == 1 %}
+      {% set classes = classes|merge(['js-toggle-stuff-target' ]) %}
+    {% endif %}
+      <ul{{ attributes.addClass(classes).removeClass(remove_parent_class, remove_level_classes) }}>
+    {% for item in items %}
+      {%
+        set item_classes = [
+          menu_name ~ '-menu__item',
+          item.is_expanded ? menu_name ~ '-menu__item--expanded',
+          item.is_collapsed ? menu_name ~ '-menu__item--collapsed',
+          item.in_active_trail ? menu_name ~ '-menu__item--active-trail',
+          menu_level == 0 ? menu_name ~ '-menu__item--ground' : '',
+          menu_level != 0 ? menu_name ~ '-menu__item--level-' ~ menu_level,
+          item.in_active_trail ? 'js-active-trail',
+          item.is_expanded and menu_level == 0 ? 'js-toggle-stuff',
+        ]
+      %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {% if item.is_expanded and menu_level == 0 %}
+          <a href="{{ item.url }}" class="{{ menu_name }}-menu__expandable-link">
+            {{- item.title -}}
+          </a>
+          <button class="{{ menu_name }}-menu__expand-trigger js-toggle-stuff-trigger" aria-label="{{ "Menu levels"|t }}" aria-expanded="false">
+            {% set icon = active_theme_path() ~ '/images/expand-chevron.svg' %}
+            <span class="{{ menu_name }}-menu__expand-trigger__icon" aria-hidden="true" role="presentation">
+              {% include icon ignore missing %}
+            </span>
+          </button>
+        {% else %}
+          {{ link(item.title, item.url) }}
+        {% endif %}
+        {% if item.below %}
+          {{ menus.menu_links(menu_name, item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

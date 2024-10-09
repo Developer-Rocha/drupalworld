@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Olivero's theme implementation to display a single page.
+ * Bartik's theme implementation to display a single page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template normally located in the
@@ -20,7 +20,12 @@
  * Site identity:
  * - front_page: The URL of the front page. Use this instead of base_path when
  *   linking to the front page. This includes the language domain or prefix.
- *
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+
  * Page content (in order of occurrence in the default page.html.twig):
  * - node: Fully loaded node, if there is an automatically-loaded node
  *   associated with the page and the node ID is the second argument in the
@@ -28,131 +33,304 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.header: Items for the header region.
- * - page.highlighted: Items for the highlighted region.
- * - page.primary_menu: Items for the primary menu region.
- * - page.secondary_menu: Items for the secondary menu region.
- * - page.content: The main content of the current page.
- * - page.sidebar: Items for the first sidebar.
- * - page.featured_bottom_first: Items for the first featured bottom region.
- * - page.featured_bottom_second: Items for the second featured bottom region.
- * - page.footer_first: Items for the first footer column.
- * - page.footer_second: Items for the second footer column.
- * - page.breadcrumb: Items for the breadcrumb region.
- * - page.social: Items for the social region.
+ * - page.toolbar
+ * - page.branding
+ * - page.header
+ * - page.navigation
+ * - page.mobile_menu
+ * - page.help
+ * - page.highlighted
+ * - page.content_top
+ * - page.content
+ * - page.content_bottom
+ * - page.sidebar_left
+ * - page.sidebar_right
+ * - page.footer
  *
  * @see template_preprocess_page()
+ * @see drupalizer_preprocess_page()
  * @see html.html.twig
  */
 #}
+<div id="site-wrapper">
 
-<div id="page-wrapper" class="page-wrapper">
-  <div id="page">
+  {% if page.toolbar %}
+    <nav class="region region--toolbar clearfix">
+      <div class="container">
+        <div class="toolbar-region-wrapper">
+          {{ page.toolbar }}
+        </div>
+      </div>
+    </nav>
+  {% endif %}
 
-    {% if page.header or page.primary_menu or page.secondary_menu %}
-      <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+{#  {% if not hide_language_bar_region %}#}
+{#    {% if page.language_bar %}#}
+{#      <div class="region region--language-bar">#}
+{#        <div class="site-language-bar">#}
+{#          <div class="container">#}
+{#            <div class="site-language-bar__wrapper">#}
+{#              <p class="site-language-bar__label">#}
+{#                {{ 'Choose another country or region if you want to see the content for your location.'|t }}#}
+{#              </p>#}
+{#              <div class="site-language-bar__wrapper-content">#}
+{#                {{ page.language_bar }}#}
+{#                <div class="site-language-bar__submit-btn" aria-label="{{ 'Submit'|t }}">{{ 'Continue'|t }}</div>#}
+{#                <div class="site-language-bar__close-btn" aria-label="{{ 'Close banner'|t }}">#}
+{#                  {% set close_btn = active_theme_path() ~  '/images/icon-close-btn.svg' %}#}
+{#                  {% include close_btn ignore missing %}#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    {% endif %}#}
+{#  {% endif %}#}
 
-        {# Gets fixed by JavaScript at wide widths. #}
-        <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
-          <div class="site-header__initial">
-            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="{{ 'Sticky header'|t }}" aria-checked="false">
-              <span class="sticky-header-toggle__icon">
-                <span></span>
-                <span></span>
-                <span></span>
+  <header class="region region--header">
+    <div class="container">
+      <div class="site-header">
+
+        <div class="site-header__branding">
+          <div class="branding branding--header">
+            {% if is_front %}
+              <a href="{{ path('<front>') }}" rel="home" class="branding__link" aria-current="page">
+                <span class="visually-hidden">{{ 'Homepage'|t }} {{ site_name }}</span>
+                {% set file = active_theme_path() ~ '/logo.svg' %}
+                <span class="branding__logo" aria-hidden="true">
+                {% include file ignore missing %}
               </span>
-            </button>
-          </div>
-
-          {# Needs to extend full width so box shadow will also extend. #}
-          <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
-            <div class="container site-header__inner__container">
-
-              {{ page.header }}
-
-              {% if page.primary_menu or page.secondary_menu %}
-                <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
-                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="{{ 'Main Menu'|t }}" aria-controls="header-nav" aria-expanded="false">
-                    <span class="mobile-nav-button__label">{{ 'Menu'|t }}</span>
-                    <span class="mobile-nav-button__icon"></span>
-                  </button>
-                </div>
-
-                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
-                  {{ page.primary_menu }}
-
-                  {# Search layout START #}
-                  <div class="header-anchors">
-                    <button type="button" id="search-menu-anchor" class="button-reset search-menu__button" aria-label="{{ "search"|t }}" aria-haspopup="true" aria-expanded="false" aria-controls="search-menu"><i aria-hidden="true" class="icon-search"></i>
-                      {% set search = active_theme_path() ~  '/icons/search.svg' %}
-                      {% include search ignore missing %}
-                      <span>{{ "Search"|t }}</span>
-                    </button>
-                    <button type="button" id="mobile-menu-anchor" class="button-reset mobile-menu__button" aria-label="{{ "menu"|t }}" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu"><span class="visually-hidden">{{ "Menu"|t }}</span></button>
-                  </div>
-                  {% if page.search_menu %}
-                    <nav id="search-menu" aria-labelledby="search-menu-title" style="display: none;">
-                      <div class="search-menu__inner">
-                        <button type="button" class="button-reset search-menu__close search-menu__button--close">
-                          <span class="element-invisible">{{ "Close search modal"|t }}</span>
-                        </button>
-                        {{ page.search_menu }}
-                      </div>
-                      <div class="search-menu__overlay"></div>
-                    </nav>
-                  {% endif %}
-                  {# Search Layout END #}
-
-                  {{ page.secondary_menu }}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </header>
-    {% endif %}
-
-    <div id="main-wrapper" class="layout-main-wrapper layout-container">
-      <div id="main" class="layout-main">
-        <div class="main-content">
-          <a id="main-content" tabindex="-1"></a>
-          {{ page.hero }}
-          <div class="main-content__container container">
-            {{ page.highlighted }}
-            {{ page.breadcrumb }}
-
-            {% if page.sidebar %}
-              <div class="sidebar-grid grid-full">
-                <main role="main" class="site-main">
-                  {{ page.content_above }}
-                  {{ page.content }}
-                </main>
-
-                {{ page.sidebar }}
-              </div>
+              </a>
             {% else %}
-              <main role="main">
-                {{ page.content_above }}
-                {{ page.content }}
-              </main>
+              <a href="{{ path('<front>') }}" rel="home" class="branding__link">
+                <span class="visually-hidden">{{ 'Homepage'|t }} {{ site_name }}</span>
+                {% set file = active_theme_path() ~ '/logo.svg' %}
+                <span class="branding__logo" aria-hidden="true">
+                {% include file ignore missing %}
+              </span>
+              </a>
             {% endif %}
-            {{ page.content_below }}
+            {% if site_slogan %}
+              <span class="branding__slogan visually-hidden">
+              {{ site_slogan }}
+            </span>
+            {% endif %}
           </div>
         </div>
-        <div class="social-bar">
-          {{ page.social }}
+
+        <div class="site-header__top">
+          {% if page.header %}
+            {{ page.header }}
+          {% endif %}
         </div>
+
+        <div class="site-header__bottom">
+          {% if page.navigation %}
+            {{ page.navigation }}
+            <div class="header-anchors">
+              <button type="button" id="search-menu-anchor" class="button-reset search-menu__button" aria-label="{{ "search"|t }}" aria-haspopup="true" aria-expanded="false" aria-controls="search-menu"><i aria-hidden="true" class="icon-search"></i>
+                {% set search = active_theme_path() ~  '/images/search.svg' %}
+                {% include search ignore missing %}
+                <span>{{ "Search"|t }}</span>
+              </button>
+              <button type="button" id="mobile-menu-anchor" class="button-reset mobile-menu__button" aria-label="{{ "menu"|t }}" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu"><span class="visually-hidden">{{ "Menu"|t }}</span></button>
+            </div>
+            {% if page.search_menu %}
+              <nav id="search-menu" aria-labelledby="search-menu-title" style="display: none;">
+                <div class="search-menu__inner">
+                  <button type="button" class="button-reset search-menu__close search-menu__button--close">
+                    <span class="element-invisible">{{ "Close search modal"|t }}</span>
+                  </button>
+                  {{ page.search_menu }}
+                </div>
+                <div class="search-menu__overlay"></div>
+              </nav>
+            {% endif %}
+
+          {% endif %}
+        </div>
+
       </div>
     </div>
 
-    <footer class="site-footer">
-      <div class="site-footer__inner container">
-        {{ page.footer_top }}
-        {{ page.footer_bottom }}
-      </div>
-    </footer>
+    {% if page.mobile_menu %}
+      <nav id="mobile-menu" aria-labelledby="mobile-menu-anchor" style="display: none;">
+        <button type="button" id="mobile-menu-btn" class="button-reset mobile-menu__button mobile-menu__button--close" aria-label="{{ "close button"|t }}" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-menu"><span class="visually-hidden">{{ "Close Menu"|t }}</span></button>
+        <div class="mobile-menu__inner">
+          {{ page.mobile_menu }}
+        </div>
+      </nav>
+    {% endif %}
 
-    <div class="overlay" data-drupal-selector="overlay"></div>
+  </header>
+
+  {% block page_highlighted %}
+    <div class="region region--content-info">
+      <div class="container">
+        {% if page.highlighted %}
+          {{ page.highlighted }}
+        {% endif %}
+        <a id="main-content" tabindex="-1"></a>
+      </div>
+    </div>
+  {% endblock page_highlighted %}
+
+  {# Only display breadcumbs when no hero image is present #}
+  {% if node and not node.field_hero_image.0.target_id %}
+    {% if 'location' in node.getType %}
+    {% else %}
+      {% if breadcrumb %}
+        {{ pattern('breadcrumbs', {breadcrumb: breadcrumb}) }}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% if page.full_width and node.getType == 'lb_page' or page.full_width and node.getType == 'location' %}
+    <div class="region region--full-width">
+      {{ page.full_width }}
+    </div>
+  {% endif %}
+
+  <div {{ content_attributes.addClass('content-wrapper') }}>
+
+    {% if page.content_top %}
+      <div class="region region--content-top">
+        <div class="container">
+          {{ page.content_top }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% block page_content %}
+      {% if page.content %}
+
+        {% if(is_node or is_taxonomy_term) %}
+          {#
+          Regular node:
+          Page title, breadcrumb and sidebars are shown on node--full.html.twig
+          #}
+          {{ page.content }}
+
+        {% else %}
+          {#
+          Not node: (For example user login, etc.)
+          Show page title, breadcrumb, sidebars.
+          #}
+          <main{{ layout_attributes.addClass('page-layout--no-hero') }}>
+            {% block page_title_region %}
+              <div class="page-header page-layout__header">
+                <div class="container">
+                  <h1 class="page-title">{{ page_title }}</h1>
+                </div>
+              </div>
+            {% endblock page_title_region %}
+
+            {% if page.sidebar_left %}
+              {% block sidebar_left %}
+                <aside {{ sidebar_left_attributes.addClass('page-layout__sidebar-left') }}>
+                  <div class="container">
+                    {{ page.sidebar_left }}
+                  </div>
+                </aside>
+              {% endblock sidebar_left %}
+            {% endif %}
+
+            <div class="page-layout__content">
+              <div class="page-layout__content-wrapper">
+                <div class="container">
+                  {{ page.content }}
+                </div>
+              </div>
+            </div>
+
+            {% if page.sidebar_right %}
+              {% block sidebar_right %}
+                <aside {{ sidebar_right_attributes.addClass('page-layout__sidebar-right') }}>
+                  <div class="container">
+                    {{ page.sidebar_right }}
+                  </div>
+                </aside>
+              {% endblock sidebar_right %}
+            {% endif %}
+          </main>
+
+        {% endif %}
+
+      {% endif %}
+    {% endblock page_content %}
+
+    {% if page.content_bottom %}
+      <div class="region region--content-bottom">
+        <div class="container">
+          {{ page.content_bottom }}
+        </div>
+      </div>
+    {% endif %}
 
   </div>
+
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <section class="site-footer__top">
+        <div class="site-footer__top-layout">
+          <div class="site-footer__communicate">
+            <h2 class="site-footer__title">{{ 'Contact & Follow'|t }}</h2>
+            {{ page.footer_top.contact }}
+            {{ page.footer_top.social_media_links }}
+          </div>
+          <div class="site-footer__newsletter">
+            <h2 class="site-footer__title">{{ 'Stay up to date on the latest Drupalizer news'|t }}</h2>
+            {{ page.footer_top|without('contact', 'social_media_links') }}
+          </div>
+        </div>
+      </section>
+
+      <section class="site-footer__middle">
+        <div class="site-footer__middle-layout">
+          <div class="site-footer__navigation">
+            {{ page.footer|without('config_pages') }}
+          </div>
+          <div class="site-footer__corporate">
+            <div class="branding branding--footer">
+              {% if is_front %}
+                <a href="{{ path('<front>') }}" rel="home" class="branding__link" aria-current="page">
+                  <span class="visually-hidden">{{ 'Homepage'|t }} {{ site_name }}</span>
+                  {% set file = active_theme_path() ~ '/logo.svg' %}
+                  <span class="branding__logo" aria-hidden="true">
+                    {% include file ignore missing %}
+                  </span>
+                </a>
+              {% else %}
+                <a href="{{ path('<front>') }}" rel="home" class="branding branding__link">
+                  <span class="visually-hidden">{{ 'Homepage'|t }} {{ site_name }}</span>
+                  {% set file = active_theme_path() ~ '/logo.svg' %}
+                  <span class="branding__logo" aria-hidden="true">
+                    {% include file ignore missing %}
+                  </span>
+                </a>
+              {% endif %}
+              <p class="visually-hidden">{{ site_slogan }}</p>
+            </div>
+            {{ page.footer.config_pages }}
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="site-footer__bottom">
+      <div class="container">
+        <div class="site-footer__bottom-layout">
+          <div class="copyright-info">&copy; {{ site_name }} {{ "now"|date("Y") }}</div>
+          {{ page.footer_bottom.legal }}
+          {{ page.footer_bottom|without('legal') }}
+        </div>
+      </div>
+    </section>
+
+  </footer>
+
 </div>

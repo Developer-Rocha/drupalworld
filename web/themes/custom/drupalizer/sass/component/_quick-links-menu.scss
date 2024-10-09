@@ -1,0 +1,52 @@
+.quick-links-menu {
+  padding-block-start: 1.5rem;
+
+  h2 {
+    @include font-size(14);
+
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 600;
+    line-height: .875rem;
+    text-transform: uppercase;
+    color: $drupalizer-neutral-5;
+    margin-bottom: .625rem;
+  }
+
+  &__items {
+    list-style: none;
+    margin: 0;
+  }
+
+  &__item {
+    @include font-size(18);
+
+    margin: 0;
+    font-family: $title-font;
+    line-height: 1rem;
+
+    @include bp(lg) {
+      @include font-size(16);
+
+      font-weight: 500;
+      line-height: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      color: $color-text;
+      padding-block: .625rem;
+
+      @include bp(lg) {
+        margin-bottom: -1px;
+        border-bottom: .125rem solid transparent;
+        text-decoration: underline;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

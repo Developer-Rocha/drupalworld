@@ -1,0 +1,177 @@
+
+
+// Views
+// --------------------------------------------------
+
+// Header
+.view-header {
+  margin-bottom: 3rem;
+}
+
+// Footer
+.view .more-link {
+  a {
+    @extend .read-more;
+  }
+}
+
+// Content
+//.view-content {
+//  @include clearfix();
+//}
+
+// Empty view
+.view-empty {
+  @extend .messages;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Exposed filters
+// --------------------------------------------------
+
+.views-exposed-form {
+  margin-block-end: 3rem;
+
+  > .form--inline {
+    flex-flow: wrap;
+    display: flex;
+    align-items: center;
+
+    > .form-item {
+      margin: 0;
+    }
+  }
+
+  .form-radios {
+    display: flex;
+    flex-flow: wrap;
+    gap: .5rem;
+    justify-content: center;
+
+    > .form-item {
+      float: none;
+      margin: 0;
+    }
+
+    label {
+      @extend %default-button;
+
+      &.option {
+        margin-bottom: 0;
+      }
+    }
+
+    input {
+      @include visually-hidden;
+    }
+
+    input {
+      &:focus {
+        ~ label {
+          background-color: $color-black;
+          color: $color-white;
+        }
+      }
+    }
+
+    input:checked {
+      &:focus {
+        ~ label {
+          background-color: $color-white;
+          color: $color-black;
+        }
+      }
+    }
+
+    input:checked ~ label {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}
+// Grids
+// --------------------------------------------------
+// @todo: do we still need this?
+
+.view--grid--1-cols .view-content {
+  @include flexgrid-container-gutters();
+}
+
+.view--grid--2-cols .view-content,
+.view--grid--3-cols .view-content,
+.view--grid--4-cols .view-content {
+  margin-bottom: calc(var(--drupalizer__gutter) * -1);
+}
+
+.view--grid--2-cols .view-content {
+  @include flexgrid-container-gutters();
+
+  margin-bottom: calc(var(--drupalizer__gutter) * -1);
+
+  > .views-row {
+    @include bp(md, min, 'print,') {
+      width: 50%;
+    }
+
+    > .node {
+      height: 100%;
+    }
+  }
+}
+
+.view--grid--3-cols .view-content {
+  @include flexgrid-container-gutters();
+
+  margin-bottom: calc(var(--drupalizer__gutter) * -1);
+
+  > .views-row {
+    @include bp(md, min, 'print,') {
+      width: 33.33%;
+    }
+
+    > .node {
+      height: 100%;
+    }
+  }
+}
+
+.view--grid--4-cols .view-content {
+  @include flexgrid-container-gutters();
+
+  margin-bottom: calc(var(--drupalizer__gutter) * -1);
+
+  > .views-row {
+    @include bp(md) {
+      width: 50%;
+    }
+
+    @include bp(lg, min, 'print,') {
+      width: 25%;
+    }
+
+    > .node {
+      height: 100%;
+    }
+  }
+}
+
+.view-products-indexed {
+  .c-flex-grid__grid-items {
+    grid-row-gap: calc(var(--drupalizer__gutter) * 1.25);
+  }
+
+  .c-card__text__new {
+    position: absolute;
+    padding: .75rem 1rem;
+    background: $drupalizer-blue;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+}

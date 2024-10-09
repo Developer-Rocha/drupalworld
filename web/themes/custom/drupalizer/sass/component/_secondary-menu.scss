@@ -1,0 +1,74 @@
+.secondary-menu {
+
+  &__items {
+    height: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    display: flex;
+    gap: 1rem 2rem;
+    flex-direction: column;
+    padding-block-start: 1.5rem;
+
+    @include bp(lg) {
+      flex-direction: row;
+      padding-block-start: 0;
+    }
+  }
+
+  &__item {
+    @include font-size(18);
+
+    margin: 0;
+    font-family: $variable-font;
+
+    @include bp(lg) {
+      @include font-size(14);
+    }
+
+    > .js-sub-menu {
+      display: none;
+    }
+
+    &:hover {
+      position: relative;
+
+      > .js-sub-menu {
+        display: block;
+        position: absolute;
+        width: fit-content;
+        height: auto;
+        left: 50%;
+        right: 0;
+        transform: translate(-50%, 0);
+        padding: 2.5rem;
+        background-color: $color-white;
+        border-radius: 1rem;
+        box-shadow: 0 0 2.25rem 0 rgba(0, 0, 0, .03);
+        z-index: 1;
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding-block: 0 .75rem;
+      font-weight: 400;
+      transition-property: all;
+
+      @include bp(lg) {
+        padding-block: .75rem;
+      }
+
+      &.is-active,
+      &:hover,
+      &:focus {
+        @include bp(lg) {
+          font-weight: 600;
+          letter-spacing: -.004em;
+          color: $drupalizer-blue;
+        }
+      }
+    }
+  }
+}

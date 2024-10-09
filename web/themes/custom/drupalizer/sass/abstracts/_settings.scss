@@ -22,6 +22,8 @@ $line-height-factor:          1.75;
 // Grid
 
 $container-width:             1160px;
+$container-width-medium:      calc(((#{$container-width} / 12) * var(--drupalizer__container--medium)));
+$container-width-small:       calc(((#{$container-width} / 12) * var(--drupalizer__container--small)));
 $sidebar-width:               340px;
 $sidebar-width-small:         260px;
 

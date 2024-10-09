@@ -15,3 +15,15 @@ main:
     - core/jquery
     - core/once
     - core/drupalSettings
+
+toggle-stuff:
+  js:
+    js/toggle-stuff.min.js: {}
+  dependencies:
+    - core/drupal
+
+toggle-tag-popup:
+  js:
+    js/toggle-tag-popup.min.js: {}
+  dependencies:
+    - core/drupal
