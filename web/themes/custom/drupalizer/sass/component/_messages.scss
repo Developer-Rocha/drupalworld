@@ -4,10 +4,6 @@
 // --------------------------------------------------
 
 .messages {
-  padding: .5rem 1rem;
-  border-left: solid 5px;
-  border-color: $color-border;
-  background-color: $color-grey;
 
   &.messages--status {
     border-color: $color-status;

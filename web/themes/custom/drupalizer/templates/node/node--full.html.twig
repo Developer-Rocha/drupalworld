@@ -25,7 +25,9 @@
     {% block content %}
       <div{{ content_attributes.addClass('page-layout__content') }}>
         <div class="page-layout__content-wrapper">
-          {{ content }}
+          <div class="container">
+            {{ content }}
+          </div>
         </div>
       </div>
     {% endblock content %}

@@ -1,12 +1,13 @@
 
 // Corporate colors
+$drupalizer-green: #00843d;
 $drupalizer-dark-blue: #005a8b;
 $drupalizer-blue: #0077c0;
 $drupalizer-sustain: #33a9dc;
 $drupalizer-bio: #0081a7;
-$drupalizer-yellow: #0093b2;
-$drupalizer-red: #ffd700;
-$drupalizer-blue: #d50032;
+$drupalizer-yellow: #ffd700;
+$drupalizer-red: #d50032;
+$drupalizer-blue: #0077c0;
 $drupalizer-dark: #1e1e2c;
 $drupalizer-light: #e6f2f5;
 
@@ -95,8 +96,8 @@ $color-caption:               #999999; // muted text like descriptions etc.
 $color-link:                  $color-black;
 $color-link-hover:            lighten($color-link, 10%);
 
-$color-success:               $drupalizer-sustain; // status messages
-$color-status:                $drupalizer-sustain; // Fallback
+$color-success:               $drupalizer-green; // status messages
+$color-status:                $drupalizer-green; // Fallback
 $color-warning:               $drupalizer-yellow; // warning messages
 $color-error:                 $drupalizer-red; // error messages
 $color-info:                  #55acee; // info messages
