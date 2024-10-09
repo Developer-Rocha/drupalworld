@@ -40,3 +40,5 @@ display:
         provider:
           expose:
             label: Provedor
+  page_1:
+    display_title: Página

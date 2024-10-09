@@ -17,3 +17,5 @@ display:
           sort_desc_label: Decrescente
   block_1:
     display_title: Bloco
+  page_1:
+    display_title: Página

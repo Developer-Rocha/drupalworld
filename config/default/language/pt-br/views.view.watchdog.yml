@@ -25,3 +25,5 @@ display:
         type:
           expose:
             label: Tipo
+  page:
+    display_title: Página

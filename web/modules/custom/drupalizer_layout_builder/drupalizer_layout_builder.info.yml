@@ -1,0 +1,17 @@
+name: 'Drupalizer Layout builder'
+description: 'Drupalizer Setup for Layout builder'
+type: module
+# Core version needs to be at least 9.4, because this is a requirement of the Layout Builder Browser and helper modules.
+core_version_requirement: ^9.4 || ^10
+dependencies:
+  - drupal:block_content
+  - drupal:layout_builder
+  - drupal:node
+  - drupal:views
+  - gin_toolbar:gin_toolbar
+  - layout_builder_browser:layout_builder_browser
+  - layoutbuilder_extras_live_update:layoutbuilder_extras_live_update
+  - layout_builder_restrictions:layout_builder_restrictions
+  - layout_builder_restrictions:layout_builder_restrictions_by_region
+  - media_library_form_element:media_library_form_element
+  - twig_tweak:twig_tweak
