@@ -77,7 +77,7 @@
 {#                {{ page.language_bar }}#}
 {#                <div class="site-language-bar__submit-btn" aria-label="{{ 'Submit'|t }}">{{ 'Continue'|t }}</div>#}
 {#                <div class="site-language-bar__close-btn" aria-label="{{ 'Close banner'|t }}">#}
-{#                  {% set close_btn = active_theme_path() ~  '/images/icon-close-btn.svg' %}#}
+{#                  {% set close_btn = active_theme_path() ~  '/icons/icon-close-btn.svg' %}#}
 {#                  {% include close_btn ignore missing %}#}
 {#                </div>#}
 {#              </div>#}
@@ -130,7 +130,7 @@
             {{ page.navigation }}
             <div class="header-anchors">
               <button type="button" id="search-menu-anchor" class="button-reset search-menu__button" aria-label="{{ "search"|t }}" aria-haspopup="true" aria-expanded="false" aria-controls="search-menu"><i aria-hidden="true" class="icon-search"></i>
-                {% set search = active_theme_path() ~  '/images/search.svg' %}
+                {% set search = active_theme_path() ~  '/icons/search.svg' %}
                 {% include search ignore missing %}
                 <span>{{ "Search"|t }}</span>
               </button>
