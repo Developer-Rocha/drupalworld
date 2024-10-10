@@ -6,7 +6,7 @@ display:
         type:
           label: Tipo
         name:
-          separator: ', '
+          label: Usuário
         link:
           label: Operações
       pager:

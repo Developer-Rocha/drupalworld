@@ -1,0 +1,39 @@
+uuid: f7b9423e-76b6-4a99-939f-58da5363af5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+    - field.field.block_content.call_to_action.field_cta
+  module:
+    - link_attributes
+id: block_content.call_to_action.default
+targetEntityType: block_content
+bundle: call_to_action
+mode: default
+content:
+  field_cta:
+    type: link_attributes
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        variant: true
+        cta_id: true
+        size: true
+        color: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true

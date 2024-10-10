@@ -3,20 +3,10 @@ display:
     display_title: Padrão
     display_options:
       fields:
-        id:
-          separator: ', '
         provider:
           label: Provedor
-          separator: ', '
-        model:
-          separator: ', '
-        prompt:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        tags_value:
-          separator: ', '
         view_ai_log:
           label: Ver
           text: Ver

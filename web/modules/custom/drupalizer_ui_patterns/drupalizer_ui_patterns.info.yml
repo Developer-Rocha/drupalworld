@@ -1,0 +1,15 @@
+name: Drupalizer UI Patterns
+type: module
+description: 'Integration with ui patterns.'
+package: Calibr8
+core_version_requirement: ^9 || ^10
+dependencies:
+  - link_attributes:link_attributes
+  - ui_patterns:ui_patterns
+  - ui_patterns_extends:ui_patterns_extends
+  - ui_patterns_field_formatters:ui_patterns_field_formatters
+  - ui_patterns_settings:ui_patterns_settings
+  - ui_patterns_views_style:ui_patterns_views_style
+
+# Added manually.
+version: '2.0'

@@ -7,11 +7,8 @@ display:
       fields:
         filename:
           label: Nome
-          separator: ', '
         filesize:
           label: Tamanho
-        status:
-          label: Status
         count:
           label: 'Usado em'
         operations:
@@ -35,9 +32,6 @@ display:
         filename:
           expose:
             label: 'Nome do arquivo'
-        status:
-          expose:
-            label: Status
   page_1:
     display_options:
       menu:
@@ -45,6 +39,8 @@ display:
   page_2:
     display_options:
       fields:
+        entity_label:
+          label: Entidade
         type:
           label: 'Tipo de entidade'
       pager:

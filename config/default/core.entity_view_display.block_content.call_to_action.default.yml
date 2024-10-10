@@ -1,0 +1,50 @@
+uuid: a40c5a61-51df-4b82-84c7-62cb8fe1174a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+    - field.field.block_content.call_to_action.field_cta
+  module:
+    - ui_patterns_field_formatters
+id: block_content.call_to_action.default
+targetEntityType: block_content
+bundle: call_to_action
+mode: default
+content:
+  field_cta:
+    type: pattern_all_formatter
+    label: hidden
+    settings:
+      type: link
+      settings:
+        trim_length: 80
+        url_only: false
+        url_plain: false
+        rel: '0'
+        target: '0'
+      pattern: button
+      pattern_variant: button
+      pattern_mapping:
+        'field_raw_properties:uri':
+          weight: 0
+          destination: url
+          plugin: field_raw_properties
+          source: uri
+        'field_raw_properties:title':
+          weight: 1
+          destination: text
+          plugin: field_raw_properties
+          source: title
+      pattern_settings:
+        button:
+          cta_id: ''
+          size: medium
+          color: primary
+      variants_token: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

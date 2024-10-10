@@ -3,12 +3,8 @@ display:
     display_title: Padrão
     display_options:
       fields:
-        status:
-          label: Status
         operations:
           label: Operações
-        mail:
-          separator: ', '
       pager:
         options:
           tags:
@@ -24,9 +20,5 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
-      filters:
-        status:
-          group_info:
-            label: Status
   page_1:
     display_title: Página

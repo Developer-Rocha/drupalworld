@@ -1,19 +1,18 @@
+label: Conteúdo
 display:
   default:
     display_title: Padrão
     display_options:
+      title: Conteúdo
       fields:
         title:
           label: Título
-        type:
-          separator: ', '
         status:
-          label: Status
           settings:
             format_custom_false: 'Não publicado'
             format_custom_true: Publicado
         langcode:
-          separator: ', '
+          label: Language
         operations:
           label: Operações
       pager:
@@ -32,13 +31,19 @@ display:
           expose:
             label: Título
         status:
-          expose:
-            label: Status
           group_info:
             group_items:
               1:
                 title: Publicado
               2:
                 title: 'Não publicado'
+        langcode:
+          expose:
+            label: Language
   page_1:
     display_title: Página
+    display_options:
+      menu:
+        title: Conteúdo
+      tab_options:
+        title: Conteúdo

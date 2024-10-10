@@ -3,20 +3,8 @@ display:
     display_title: Padrão
     display_options:
       fields:
-        subject:
-          separator: ', '
-        uid:
-          separator: ', '
-        name:
-          separator: ', '
-        entity_id:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Operações
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -34,20 +22,16 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+      filters:
+        langcode:
+          expose:
+            label: Language
   page_unapproved:
     display_options:
       fields:
-        subject:
-          separator: ', '
-        uid:
-          separator: ', '
-        name:
-          separator: ', '
-        entity_id:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Operações
-        name_1:
-          separator: ', '
+      filters:
+        langcode:
+          expose:
+            label: Language

@@ -1,0 +1,11 @@
+uuid: e14ca222-55bf-4f65-9a4e-d76cec4c5382
+langcode: en
+status: true
+dependencies: {  }
+id: button
+block_id: 'inline_block:call_to_action'
+category: content
+label: Button
+image_path: /themes/custom/drupalizer/components/button/lb-preview.png
+image_alt: ''
+weight: null

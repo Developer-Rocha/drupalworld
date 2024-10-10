@@ -1,0 +1,11 @@
+uuid: 8e76ca35-5393-43ba-a6f3-75eaea8f32c1
+langcode: en
+status: true
+dependencies: {  }
+id: text
+block_id: 'inline_block:text'
+category: content
+label: Text
+image_path: /modules/custom/drupalizer_layout_builder/images/text.png
+image_alt: ''
+weight: null

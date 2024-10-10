@@ -1,0 +1,140 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for the drupalizer UI Patterns module.
+ */
+
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\link\Plugin\Field\FieldType\LinkItem;
+use Drupal\ui_patterns\UiPatterns;
+use Drupal\ui_patterns_settings\UiPatternsSettings;
+
+/**
+ * Add UIPatterns settings as link widget options.
+ *
+ * @param array[] $plugins
+ *   Link attribute plugin definitions.
+ */
+function drupalizer_ui_patterns_link_attributes_plugin_alter(array &$plugins): void {
+  $pattern = UiPatterns::getManager()->getDefinition('button');
+  if ($pattern !== NULL) {
+    if (count($pattern->getVariantsAsOptions()) > 0) {
+      $plugins['variant'] = [
+        'title' => t('Variant'),
+        'type' => 'select',
+        'options' => $pattern->getVariantsAsOptions(),
+      ];
+    }
+    $settings = UiPatternsSettings::getPatternDefinitionSettings($pattern);
+    foreach ($settings as $setting) {
+      if (in_array($setting->getType(), ['select', 'radios'])) {
+        $plugins[$setting->getName()] = [
+          'title' => $setting->getLabel(),
+          'type' => $setting->getType(),
+          'options' => $setting->getOptions(),
+          'default_value' => $setting->getDefaultValue(),
+        ];
+      }
+      if (in_array($setting->getType(), ['boolean'])) {
+        $options = [
+          '' => t('- Use default -'),
+          1 => t('True'),
+          0 => t('False'),
+        ];
+        $plugins[$setting->getName()] = [
+          'title' => $setting->getLabel(),
+          'type' => 'select',
+          'options' => $options,
+        ];
+      }
+      if (in_array($setting->getType(), ['textfield'])) {
+        $plugins[$setting->getName()] = [
+          'title' => $setting->getLabel(),
+          'type' => 'textfield',
+        ];
+      }
+      if (in_array($setting->getType(), ['iconpicker'])) {
+        $plugins[$setting->getName()] = [
+          'title' => $setting->getLabel(),
+          'type' => 'iconpicker',
+          'options' => $setting->getOptions(),
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_ui_pattern_settings_variant_alter().
+ *
+ * Replace variant with link variant options.
+ */
+function drupalizer_ui_patterns_ui_pattern_settings_variant_alter(
+  &$variant,
+  array $context
+): void {
+  if ($context['#pattern_id'] === 'button') {
+    /** @var \Drupal\ui_patterns\Element\PatternContext $pattern_context */
+    $pattern_context = $context['#pattern_context'];
+
+    if ($pattern_context->getType() !== 'empty') {
+      /** @var \Drupal\link\Plugin\Field\FieldType\LinkItem $link */
+      $link = $pattern_context->getProperty('item');
+      if (empty($link)) {
+        // The pattern_each_formatter is selected so use the first item in the
+        // list.
+        $items = $pattern_context->getProperty('items');
+        if (!empty($items) && $items instanceof FieldItemListInterface) {
+          $link = $items->first();
+        }
+      }
+      elseif ($link instanceof LinkItem) {
+        $values = $link->get('options')->getValue();
+        if (!empty($values['attributes']['variant'])) {
+          $variant = $values['attributes']['variant'];
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_ui_pattern_settings_settings_alter().
+ *
+ * Replace settings with link options.
+ */
+function drupalizer_ui_patterns_ui_pattern_settings_settings_alter(
+  array &$settings,
+  array $context
+): void {
+  if ($context['#pattern_id'] === 'button') {
+    /** @var \Drupal\ui_patterns\Element\PatternContext $pattern_context */
+    $pattern_context = $context['#pattern_context'];
+
+    if ($pattern_context->getType() !== 'empty') {
+      /** @var \Drupal\link\Plugin\Field\FieldType\LinkItem $link */
+      $link = $pattern_context->getProperty('item');
+      if (empty($link)) {
+        // The pattern_each_formatter is selected so use the first item in the
+        // list.
+        $items = $pattern_context->getProperty('items');
+        if (!empty($items) && $items instanceof FieldItemListInterface) {
+          $link = $items->first();
+        }
+      }
+      elseif ($link instanceof LinkItem) {
+        $options = $link->get('options');
+        $values = $options->getValue();
+        $settings['url'] = $link->getUrl()->toString();
+        if (isset($values['attributes'])) {
+          foreach ($values['attributes'] as $name => $value) {
+            if (!empty($value)) {
+              $settings[$name] = $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}

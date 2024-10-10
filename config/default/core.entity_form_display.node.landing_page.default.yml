@@ -74,6 +74,10 @@ content:
       placeholder_title: ''
       enabled_attributes:
         target: true
+        variant: true
+        cta_id: true
+        size: true
+        color: true
         id: false
         name: false
         rel: false

@@ -9,3 +9,6 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+  block_1:
+    display_options:
+      block_category: Usuário

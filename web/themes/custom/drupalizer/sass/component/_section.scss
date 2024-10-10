@@ -1,3 +1,51 @@
+
+// ==========================================================================
+// Layout Builder Blocks
+// ==========================================================================
+
+// Spacing
+// --------------------------------------------------------------------------
+
+// General spacing between blocks inside a region.
+.lb-block {
+  & + .lb-block {
+    margin-top: var(--drupalizer__content-spacing, var(--drupalizer-lb__content-spacing));
+  }
+}
+
+// General spacing between blocks inside a region, part 2.
+// @todo: below block + block is needed cause not all layout builder blocks get lb-block classes at the moment?
+.lb-section {
+  .block + .block {
+    margin-top: var(--drupalizer__content-spacing, var(--drupalizer-lb__content-spacing));
+  }
+}
+
+// Remove bottom margins of last direct child.
+.lb-block {
+  &__content {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Equal blocks
+// --------------------------------------------------------------------------
+
+// @todo: Check if still relevant/used
+.lb-block.equal {
+  height: 100%;
+
+  .lb-block__layout,
+  .lb-block__content-wrapper,
+  .lb-block__content {
+    height: 100%;
+  }
+}
+
+
 .theme--yellow_theme {
   isolation: isolate;
 

@@ -33,12 +33,13 @@ display:
             label: 'Tipo de mídia'
           group_info:
             label: 'Tipo de mídia'
+        langcode:
+          expose:
+            label: Language
   page:
     display_title: Página
     display_options:
       fields:
-        name:
-          separator: ', '
         edit_media:
           text: Editar
         delete_media:

@@ -1,0 +1,8 @@
+uuid: 0cb4ae2c-5d06-43ea-b234-fb649721aa4e
+langcode: en
+status: true
+dependencies: {  }
+id: text
+label: Text
+revision: false
+description: 'Use <em>Text</em> for adding texts using layout builder.'

@@ -16,58 +16,28 @@ display:
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
       fields:
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
   embed_administer:
     display_options:
       fields:
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
-        sticky:
-          separator: ', '
-        locked:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        completed:
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         operations:
           label: Operações
   embed_manage:
     display_options:
       fields:
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
-        sticky:
-          separator: ', '
-        locked:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        completed:
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
         edit_webform_submission:
@@ -75,21 +45,9 @@ display:
   embed_review:
     display_options:
       fields:
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
-        sticky:
-          separator: ', '
-        locked:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        completed:
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         view_webform_submission:
           label: Operações

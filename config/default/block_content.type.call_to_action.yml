@@ -1,0 +1,8 @@
+uuid: e4e72e81-8c37-4926-ad74-200a2ece7b9f
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action
+label: 'Call to action'
+revision: false
+description: 'Use <em>Call to action</em> for adding buttons using layout builder.'
