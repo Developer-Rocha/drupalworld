@@ -1,0 +1,20 @@
+uuid: 469644ea-7888-496c-bfb3-26858bd2fd1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - drupalizer
+id: mobile_languageswitcher
+theme: drupalizer
+region: mobile_menu
+weight: -5
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility: {  }

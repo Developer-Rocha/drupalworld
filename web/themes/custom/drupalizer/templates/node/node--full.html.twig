@@ -1,0 +1,39 @@
+{% extends "node.html.twig" %}
+
+{% block before %}
+  {%
+    set classes = [
+    'page-layout',
+    node.field_hero_image.0 ? 'page-layout--hero' : 'page-layout--no-hero',
+    node.bundle|clean_class,
+    view_mode ? node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  ]
+  %}
+
+  {% set attributes = attributes.addClass(classes) %}
+{% endblock before %}
+
+{% block node %}
+  <main{{ attributes.addClass(classes) }}>
+    {# Contextual links #}
+    {{ title_prefix }}
+    {{ title_suffix }}
+
+    {% block header %}
+    {% endblock header %}
+
+    {% block content %}
+      <div{{ content_attributes.addClass('page-layout__content') }}>
+        <div class="page-layout__content-wrapper">
+          <div class="container">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    {% endblock content %}
+
+    {% block footer %}
+    {% endblock footer %}
+
+  </main>
+{% endblock node %}

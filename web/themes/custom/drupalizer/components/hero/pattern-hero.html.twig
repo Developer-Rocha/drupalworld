@@ -1,0 +1,70 @@
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-hero' %}
+
+{# Override the defaults #}
+{% set component_element = 'header' %}
+
+{% block component_content %}
+  <div class="container">
+    {% if image|render|striptags('<img><picture>') %}
+      <div class="{{ component ~ '__image' }}">{{ image }}</div>
+    {% endif %}
+
+    <div class="{{ component ~ '__content-wrapper' }}">
+      <div class="{{ component ~ '__content' }}">
+        {% if pretitle %}
+          <div class="{{ component ~ '__pretitle' }}">
+            {{ pretitle }}
+          </div>
+        {% endif %}
+        <h1 class="{{ component ~ '__title' }}">
+          {% if title %}
+            {{ title }}
+          {% else %}
+            {{ node_title }}
+          {% endif %}
+        </h1>
+        {% if subtitle %}
+          <div class="{{ component ~ '__subtitle' }}">
+            {{ subtitle }}
+          </div>
+        {% endif %}
+
+        {% if breadcrumb %}
+          {{ breadcrumb }}
+        {% endif %}
+
+        {% if text %}
+          <div class="{{ component ~ '__text' }}">
+            {{ text }}
+          </div>
+        {% endif %}
+
+        {% if cta %}
+          <div class="{{ component ~ '__call-to-action' }}">
+            {% if cta.text is not empty %}
+              {{ pattern('button', cta, 'button') }}
+              {{ pattern('button', cta, 'outline') }}
+            {% elseif cta.content %}
+              {{ cta.content }}
+            {% else %}
+              {{ cta }}
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if content %}
+          {% for item in content %}
+            <div class="{{ component ~ '__content-item' }}">{{ item }}</div>
+          {% endfor %}
+        {% endif %}
+
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

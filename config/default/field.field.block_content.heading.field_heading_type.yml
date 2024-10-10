@@ -1,0 +1,23 @@
+uuid: de611e7a-e6f4-41de-9fc7-4cacbbdfc235
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heading
+    - field.storage.block_content.field_heading_type
+  module:
+    - options
+id: block_content.heading.field_heading_type
+field_name: field_heading_type
+entity_type: block_content
+bundle: heading
+label: 'Heading type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

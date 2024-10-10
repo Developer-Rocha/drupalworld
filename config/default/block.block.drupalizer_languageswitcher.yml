@@ -3,13 +3,17 @@ langcode: pt-br
 status: true
 dependencies:
   module:
+    - block_class
     - language
   theme:
     - drupalizer
+third_party_settings:
+  block_class:
+    classes: language-switcher--banner
 id: drupalizer_languageswitcher
 theme: drupalizer
-region: secondary_menu
-weight: -6
+region: language_bar
+weight: -9
 provider: null
 plugin: 'language_block:language_interface'
 settings:

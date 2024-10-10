@@ -1,0 +1,25 @@
+uuid: 9bc64be3-c991-470e-bbea-4c62fd84648b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_square_xs
+label: 'Teaser square (xs) 450x450'
+effects:
+  e39cfec9-79e8-40c7-914a-a791e94eb2a4:
+    uuid: e39cfec9-79e8-40c7-914a-a791e94eb2a4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 450
+      crop_type: focal_point
+  c33d4791-a9ff-4b07-9af6-4274bf61e8ec:
+    uuid: c33d4791-a9ff-4b07-9af6-4274bf61e8ec
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 450
+      crop_type: focal_point

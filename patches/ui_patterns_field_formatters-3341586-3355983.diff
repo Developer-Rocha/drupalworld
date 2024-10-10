@@ -1,0 +1,43 @@
+diff --git a/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php b/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
+index 3814584..aabd2fd 100644
+--- a/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
+@@ -175,6 +175,16 @@ class PatternOneForAllFormatter extends FieldWrapperBase implements ContainerFac
+         if ($field['source'] == '_label') {
+           $fields[$field['destination']][] = $items->getFieldDefinition()->getLabel();
+         }
++        elseif ($field['source'] == '_field_display_label') {
++          if ($this->moduleHandler->moduleExists('field_display_label')) {
++            $fields[$field['destination']][] = $items->getFieldDefinition()->getThirdPartySetting('field_display_label', 'display_label');
++          }
++        }
++        elseif ($field['source'] == '_entity_form_field_label') {
++          if ($this->moduleHandler->moduleExists('entity_form_field_label')) {
++            $fields[$field['destination']][] = $this->getThirdPartySetting('entity_form_field_label', 'new_label');
++          }
++        }
+         elseif ($field['source'] == '_formatted') {
+           $field_output = $this->getFieldOutput($items, $langcode);
+           // Take the element children from the field output and return them.
+diff --git a/src/Plugin/UiPatterns/Source/FieldMetaPropertiesSource.php b/src/Plugin/UiPatterns/Source/FieldMetaPropertiesSource.php
+index 8c2f4d8..a2465ba 100644
+--- a/src/Plugin/UiPatterns/Source/FieldMetaPropertiesSource.php
++++ b/src/Plugin/UiPatterns/Source/FieldMetaPropertiesSource.php
+@@ -23,6 +23,17 @@ class FieldMetaPropertiesSource extends PatternSourceBase {
+   public function getSourceFields() {
+     $sources = [];
+     $sources[] = $this->getSourceField('_label', 'Label');
++
++    // Support Field Display Label module.
++    if (\Drupal::moduleHandler()->moduleExists('field_display_label')) {
++      $sources[] = $this->getSourceField('_field_display_label', 'Label (Field Display Label)');
++    }
++
++    // Support Entity Form/Display Field Label module.
++    if (\Drupal::moduleHandler()->moduleExists('entity_form_field_label')) {
++      $sources[] = $this->getSourceField('_entity_form_field_label', 'Label (Entity Form/Display Field Label)');
++    }
++
+     $sources[] = $this->getSourceField('_formatted', 'Formatted values');
+     return $sources;
+   }

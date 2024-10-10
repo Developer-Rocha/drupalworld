@@ -1,0 +1,151 @@
+
+
+// Menu
+// --------------------------------------------------
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include font-size($default-font-size);
+
+  li {
+    margin-bottom: .5rem;
+  }
+
+  a {
+    color: $color-text;
+    font-weight: 400;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+
+  li.menu-item--active-trail > a {
+    color: $color-primary;
+  }
+}
+
+// Horizontal menu
+// --------------------------------------------------
+
+.menu-horizontal {
+  ul.menu {
+    li {
+      float: left;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// Centered menu
+// --------------------------------------------------
+
+.menu-centered {
+  ul.menu {
+    position: relative;
+    display: block;
+    float: left;
+    left: 50%;
+
+    li {
+      position: relative;
+      display: block;
+      float: left;
+      right: 50%;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// Dropdown menu
+// --------------------------------------------------
+
+.menu-dropdown {
+  z-index: 100;
+
+  // Globals
+  ul.menu {
+    li {
+      position: relative;
+      float: left;
+      margin: 0 1rem 0 0;
+      padding: 0;
+    }
+
+    > li:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+      padding: .5rem;
+
+      @include font-size(16, 0);
+    }
+  }
+
+  ul.menu ul {
+    display: none;
+  }
+
+  ul.menu li:hover > ul {
+    display: block;
+  }
+
+  // Level 1 (Top level, always shown)
+  ul.menu {
+    > li {
+      &.menu-item--expanded > a {
+        // @todo: include an arrow-down icon here using "after".
+      }
+    }
+  }
+
+  // Level 2+ (Sub levels, shown on hover)
+  ul.menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 101;
+    border: $default-border;
+    background: $color-white;
+    box-shadow: 0 3px 0 3px rgba($color-black, .03);
+
+    > li {
+      position: relative;
+      float: none;
+      margin: 0;
+      width: 240px;
+    }
+
+    > li:not(:last-child) {
+      margin-right: 0; // reset
+
+      > a {
+        border-bottom: $default-border;
+      }
+    }
+
+    > li.menu-item--expanded > a {
+      padding-right: 2rem;
+
+      // @todo: include an arrow-right using "after".
+    }
+  }
+
+  // Level 3+ (Sub sub levels)
+  ul.menu ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}

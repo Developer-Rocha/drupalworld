@@ -1,0 +1,28 @@
+
+
+// Messages
+// --------------------------------------------------
+
+.messages {
+
+  &.messages--status {
+    border-color: $color-status;
+    background-color: lighten($color-status, 20%);
+  }
+
+  &.messages--warning {
+    border-color: $color-warning;
+    background-color: lighten($color-warning, 20%);
+  }
+
+  &.messages--error {
+    border-color: $color-error;
+    background-color: lighten($color-error, 20%);
+  }
+}
+
+.region--content-info {
+  .messages {
+    @extend .extendfull;
+  }
+}

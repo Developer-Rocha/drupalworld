@@ -1,0 +1,8 @@
+{% extends 'pattern-button.html.twig' %}
+
+{% block icon %}
+  <span class="{{ component_name }}__icon" aria-hidden="true">
+    {% set icon = active_theme_path() ~ '/components/button/icon-search.svg' %}
+    {% include icon ignore missing %}
+  </span>
+{% endblock icon %}

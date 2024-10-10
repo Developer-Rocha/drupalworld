@@ -1,0 +1,46 @@
+diff --git a/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php b/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
+index 3814584..5d4718f 100644
+--- a/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/PatternOneForAllFormatter.php
+@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+ use Drupal\Core\Render\Element;
+ use Drupal\field_formatter\Plugin\Field\FieldFormatter\FieldWrapperBase;
++use Drupal\media\Entity\Media;
+ use Drupal\text\TextProcessed;
+ use Drupal\ui_patterns\Form\PatternDisplayFormTrait;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+@@ -296,6 +297,33 @@ class PatternOneForAllFormatter extends FieldWrapperBase implements ContainerFac
+         $options = $item->get('options')->toArray();
+       }
+       $value = Url::fromUri($value, $options)->toString();
++
++      // @see https://www.drupal.org/project/ui_patterns_field_formatters/issues/3342332
++      // Return the file URI if the Uri contains media data.
++      if (substr($value, 0, 7) === '/media/') {
++        $mediaId = substr($value, 7);
++        $media = Media::load($mediaId);
++        if ($media) {
++          // Quick fix. Ideally we get this from the configured matcher.
++          $mediaFields = [
++            'field_media_file',
++            'field_media_image',
++            'field_media_oembed_video',
++          ];
++
++          foreach ($mediaFields as $mediaField) {
++            if ($media->hasField($mediaField)) {
++              $file = $media->get($mediaField)->entity;
++              if ($file) {
++                $value = $file->createFileUrl();
++              }
++
++              break;
++            }
++          }
++        }
++
++      }
+     }
+     return $value;
+   }

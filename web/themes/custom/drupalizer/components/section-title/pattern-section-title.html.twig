@@ -1,0 +1,27 @@
+
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-section-title' %}
+
+{% block component %}
+{% if 'secondary' in title[0].0['#text'] %}
+  {% set underline_color = 'bt-title__underline--dark-blue' %}
+{% endif %}
+
+{% if heading|render == 'h2' %}
+  <{{ heading }} {{ attributes.addClass(classes).setAttribute('id', anchor) }}>
+    {{ icon }} {{ title }}
+  <span class="{{ underline_color }} bt-title__underline" aria-hidden="true" role="presentation">
+    {% set underline = active_theme_path() ~  '/icons/underline-short.svg' %}
+    {% include underline ignore missing %}
+  </span>
+  </{{ heading }}>
+{% else %}
+  <{{ heading }} {{ attributes.addClass(classes).setAttribute('id', anchor) }}>
+    {{ icon }} {{ title }}
+  </{{ heading }}>
+{% endif %}
+{% endblock %}

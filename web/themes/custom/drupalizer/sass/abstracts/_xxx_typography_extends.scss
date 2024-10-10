@@ -1,0 +1,111 @@
+
+// Typography Extends (Silent Classes)
+// --------------------------------------------------
+
+// Headings
+%heading-defaults {
+  margin: 0;
+  font-family: $title-font;
+  font-weight: 700;
+  margin-block-end: 1.25rem;
+
+  a {
+    color: inherit;
+  }
+}
+
+%h1 {
+  font-size: var(--drupalizer__font-size--h1);
+  line-height: 1.25;
+}
+
+%h2 {
+  font-size: var(--drupalizer__font-size--h2);
+  line-height: 1.2;
+}
+
+%h3 {
+  font-size: var(--drupalizer__font-size--h3);
+  line-height: 1.25;
+}
+
+%h4 {
+  font-size: var(--drupalizer__font-size--h4);
+  line-height: 1.2;
+}
+
+%h5 {
+  font-size: var(--drupalizer__font-size--h5);
+  line-height: 1.2;
+}
+
+%h6 {
+  font-size: var(--drupalizer__font-size--h6);
+  line-height: 1.2;
+}
+
+// Font sizes
+%text-base {
+  font-size: var(--drupalizer__font-size);
+  line-height: $line-height-factor;
+}
+
+%text-xs {
+  font-size: var(--drupalizer__font-size--xs);
+  line-height: calc(var(--drupalizer__font-size--xs) * #{$line-height-factor});
+}
+
+%text-sm {
+  font-size: var(--drupalizer__font-size--sm);
+  line-height: calc(var(--drupalizer__font-size--sm) * #{$line-height-factor});
+}
+
+%text-lg {
+  font-size: var(--drupalizer__font-size--lg);
+  line-height: calc(var(--drupalizer__font-size--lg) * #{$line-height-factor});
+}
+
+%text-xl {
+  font-size: var(--drupalizer__font-size--xl);
+  line-height: calc(var(--drupalizer__font-size--xl) * #{$line-height-factor});
+}
+
+%text-2xl {
+  font-size: var(--drupalizer__font-size--2xl);
+  line-height: calc(var(--drupalizer__font-size--2xl) * #{$line-height-factor});
+}
+
+%text-3xl {
+  font-size: var(--drupalizer__font-size--3xl);
+  line-height: calc(var(--drupalizer__font-size--3xl) * #{$line-height-factor});
+}
+
+%text-4xl {
+  font-size: var(--drupalizer__font-size--4xl);
+  line-height: calc(var(--drupalizer__font-size--4xl) * #{$line-height-factor});
+}
+
+%text-5xl {
+  font-size: var(--drupalizer__font-size--5xl);
+  line-height: 1;
+}
+
+%text-6xl {
+  font-size: var(--drupalizer__font-size--6xl);
+  line-height: 1;
+}
+
+%text-7xl {
+  font-size: var(--drupalizer__font-size--7xl);
+  line-height: 1;
+}
+
+%text-8xl {
+  font-size: var(--drupalizer__font-size--8xl);
+  line-height: 1;
+}
+
+%text-9xl {
+  font-size: var(--drupalizer__font-size--9xl);
+  line-height: 1;
+}

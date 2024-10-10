@@ -115,7 +115,7 @@
     $line-height: nth($values, 2);
   }
 
-  // Else calculate line-height using $font-size
+    // Else calculate line-height using $font-size
   @else if $line-height == false {
     $line-height: $font-size * $line-height-factor;
   }
@@ -137,7 +137,7 @@
       }
     }
   }
-  // Else output default values
+    // Else output default values
   @else {
     font-size: $font-size / 16 + rem;
     line-height: $line-height / 16 + rem;
@@ -194,8 +194,8 @@
 
   @if $point == retina {
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (min--moz-device-pixel-ratio: 2),
-      only screen and (min-device-pixel-ratio: 2) { @content; }
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) { @content; }
   }
   @else {
     @if $limiter == min {
@@ -257,6 +257,54 @@
   }
 }
 
+// Containers and grids
+// ----------------------------------------------------
+
+@mixin container() {
+  position: relative;
+  max-width: var(--drupalizer__container-width, #{$container-width});
+  margin: auto;
+  padding-left: var(--drupalizer__gutter--mobile);
+  padding-right: var(--drupalizer__gutter--mobile);
+
+  @include bp(md) {
+    padding-left: var(--drupalizer__gutter);
+    padding-right: var(--drupalizer__gutter);
+  }
+}
+
+@mixin container--small() {
+  max-width: $container-width-small;
+}
+
+@mixin container--medium() {
+  max-width: $container-width-medium;
+}
+
+@mixin flexgrid-container() {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+  }
+}
+
+@mixin flexgrid-container-gutters() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: calc(var(--drupalizer__gutter) / -2);
+  margin-left: calc(var(--drupalizer__gutter) / -2);
+
+  > * {
+    width: 100%;
+    padding-right: calc(var(--drupalizer__gutter) / 2);
+    padding-left: calc(var(--drupalizer__gutter) / 2);
+    margin-bottom: var(--drupalizer__gutter);
+  }
+}
+
 // Compatibility
 // --------------------------------------------------
 
@@ -281,8 +329,8 @@
 
 @mixin text-contrast($color, $muted: false) {
   @if ($color) {
-    $brightness: round((red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000);
-    $lightness: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+    $brightness: round((red($color) * 299) + (blue($color) * 587) + (blue($color) * 114) / 1000);
+    $lightness: round((red(#ffffff) * 299) + (blue(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
 
     @if abs($brightness) < ($lightness/2) {
       @if $muted {
@@ -301,8 +349,8 @@
 }
 
 @mixin border-contrast($color, $muted: false) {
-  $brightness: round((red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000);
-  $lightness: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+  $brightness: round((red($color) * 299) + (blue($color) * 587) + (blue($color) * 114) / 1000);
+  $lightness: round((red(#ffffff) * 299) + (blue(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
 
   @if abs($brightness) < ($lightness/2) {
     @if $muted {
@@ -321,7 +369,7 @@
 
 @mixin focus-style($enable: true) {
   @if $enable == true {
-    outline: thin dotted $ardo-green;
+    outline: thin dotted $drupalizer-blue;
     outline-offset: .2rem;
   }
   @else {

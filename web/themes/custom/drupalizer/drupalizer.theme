@@ -4,6 +4,13 @@
  * template.php
  */
 
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Template\Attribute;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Implements hook_preprocess_block().
  */
@@ -19,4 +26,60 @@ function drupalizer_preprocess_block(&$variables) {
 //  switch ($variables['plugin_id']) {
 //
 //  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function drupalizer_preprocess_page(&$variables) {
+  $site_config = \Drupal::config('system.site');
+  $route_match = \Drupal::service('current_route_match');
+
+  if ($route_match->getParameter('node') instanceof Node) {
+    $node = $route_match->getParameter('node');
+
+    if ($node) {
+      $variables['is_node'] = TRUE;
+      $variables['node_type'] = $node->getType();
+    }
+  }
+
+  // Site name.
+  $variables['site_name'] = $site_config->get('name');
+
+  // Site slogan
+  $variables['site_slogan'] = $site_config->get('slogan');
+
+  // Page title
+  $variables['page_title'] = $variables['page']['#title'];
+
+  // Add layout variables
+  $variables['content_attributes'] = new Attribute();
+  $variables['sidebar_left_attributes'] = new Attribute();
+  $variables['sidebar_right_attributes'] = new Attribute();
+
+  $variables['layout_attributes'] = new Attribute();
+  $variables['layout_attributes']->addClass('page-layout');
+
+  // Check if the URL contains a language prefix.
+  $language_manager = \Drupal::languageManager();
+  $languages = $language_manager->getLanguages();
+  $hide_language_bar_region = FALSE;
+
+  $url = \Drupal::request()->getRequestUri();
+  $prefix = NULL;
+
+  if (preg_match('/^\/([a-z]{2}(-[a-z]{2})?)($|\/)/', $url, $matches)) {
+    $prefix = $matches[1];
+  }
+  foreach ($languages as $language) {
+    if ($language->getId() === $prefix || ($prefix !== NULL)) {
+      // Language prefix found or no prefix in the URL with the current language, unset the flag to show the "language-bar" region.
+      $hide_language_bar_region = TRUE;
+      break;
+    }
+  }
+
+  // Add the flag to the template variables.
+  $variables['hide_language_bar_region'] = $hide_language_bar_region;
 }

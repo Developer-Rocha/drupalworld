@@ -1,0 +1,13 @@
+diff --git a/modules/ui_patterns_ds/ui_patterns_ds.module b/modules/ui_patterns_ds/ui_patterns_ds.module
+index 07b2291..05429a4 100644
+--- a/modules/ui_patterns_ds/ui_patterns_ds.module
++++ b/modules/ui_patterns_ds/ui_patterns_ds.module
+@@ -46,7 +46,7 @@ function ui_patterns_ds_field_overview_submit(array $form, FormStateInterface $f
+   });
+
+   foreach ($components as $name => $component) {
+-    PatternDisplayFormTrait::processFormStateValues($component['third_party_settings']['ds']['ft']['settings']);
++    (new class { use PatternDisplayFormTrait; })::processFormStateValues($component['third_party_settings']['ds']['ft']['settings']);
+     $display->setComponent($name, $component);
+   }
+

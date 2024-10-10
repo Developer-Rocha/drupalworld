@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for the Drupalizer Layout Builder module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\layout_builder\Form\ConfigureBlockFormBase;
+
+/**
+ * Implements hook_form_alter().
+ */
+function drupalizer_layout_builder_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $form_object = $form_state->getFormObject();
+
+  if (in_array($form_id, [
+      'layout_builder_update_block',
+      'layout_builder_add_block',
+    ]) && $form_object instanceof ConfigureBlockFormBase) {
+
+    $component = $form_object->getCurrentComponent();
+
+    if ($form_id === 'layout_builder_add_block') {
+      $form['settings']['label']['#default_value'] = $form['settings']['admin_label']['#plain_text'];
+      $form['settings']['label_display']['#default_value'] = FALSE;
+    }
+
+    $form['#attributes']['class'][] = 'blocktype-' . preg_replace('/[^\\pL\d]+/u', '-', strtolower($form["settings"]["admin_label"]["#plain_text"]));
+
+    // Additional block settings.
+    $plugin_id = $component->getPluginId();
+    $form['settings']['general'] = [
+      '#type' => 'fieldset',
+      '#title' => t('General'),
+      '#attributes' => ['class' => ['lb-fieldset']],
+    ];
+
+    // Changes for both insert and update block form.
+    unset($form['settings']['label']['#description']);
+    $form['settings']['admin_label'] = ['#markup' => '<div class="layoutbuilder-blocktype">' . $form['settings']['admin_label']['#plain_text'] . '</div>'];
+    $form['settings']['label_display']['#access'] = FALSE;
+    $form['settings']['label']['#type'] = 'hidden';
+  }
+}

@@ -1,0 +1,24 @@
+uuid: 7f37ead3-a61a-43b1-8fe7-1992c49b42bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - field.field.block_content.images.field_images
+id: block_content.images.default
+targetEntityType: block_content
+bundle: images
+mode: default
+content:
+  field_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

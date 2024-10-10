@@ -7,6 +7,7 @@ main:
   css:
     theme:
       css/theme.css: {weight: 91}
+      components/_helper/component-themes.css: {}
   js:
     js/scripts.min.js: {}
   dependencies:
@@ -14,3 +15,15 @@ main:
     - core/jquery
     - core/once
     - core/drupalSettings
+
+toggle-stuff:
+  js:
+    js/toggle-stuff.min.js: {}
+  dependencies:
+    - core/drupal
+
+toggle-tag-popup:
+  js:
+    js/toggle-tag-popup.min.js: {}
+  dependencies:
+    - core/drupal

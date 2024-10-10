@@ -47,20 +47,25 @@
         "drupal/ajax_loader": "^2.1",
         "drupal/autocomplete_deluxe": "^2.1",
         "drupal/better_exposed_filters": "^7.0",
+        "drupal/block_class": "^2.0",
         "drupal/config_pages": "^2.16",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
+        "drupal/ctools": "^4.1",
         "drupal/dropzonejs": "^2.11",
         "drupal/ds": "^3.23",
         "drupal/entity_browser": "^2.11",
         "drupal/entity_reference_revisions": "^1.12",
         "drupal/estimated_read_time": "^1.1",
         "drupal/eu_cookie_compliance": "^1.24",
+        "drupal/field_formatter": "^3.0@RC",
         "drupal/field_group": "^3.6",
         "drupal/field_validation": "^3.0@beta",
+        "drupal/focal_point": "^2.1",
         "drupal/gin": "^3.0@RC",
+        "drupal/gin_lb": "^1.0@RC",
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
         "drupal/graphql_webform": "^1.0@alpha",
@@ -68,9 +73,20 @@
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/jsonapi_response_alter": "^2.0",
         "drupal/key": "*",
+        "drupal/layout_builder_at": "^2.13",
+        "drupal/layout_builder_browser": "^1.7",
+        "drupal/layout_builder_lock": "^1.4",
+        "drupal/layout_builder_operation_link": "^2.2",
+        "drupal/layout_builder_reorder": "^1.0",
+        "drupal/layout_builder_restrictions": "^3.0",
+        "drupal/layoutbuilder_extras": "^2.0",
+        "drupal/layoutbuilder_extras_live_update": "^1.0",
+        "drupal/link_attributes": "^2.1",
         "drupal/mailsystem": "^4.5",
         "drupal/manage_display": "^3.0",
         "drupal/maxlength": "^3.1",
+        "drupal/media_library_form_element": "^2.1",
+        "drupal/menu_block": "^1.13",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/mobile_number": "^2.0",
@@ -85,7 +101,12 @@
         "drupal/simple_pass_reset": "^1.2",
         "drupal/simple_sitemap": "^4.2",
         "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.4",
         "drupal/ui_patterns": "^1.9",
+        "drupal/ui_patterns_extends": "^1.0@beta",
+        "drupal/ui_patterns_field_formatters": "^2.1",
+        "drupal/ui_patterns_settings": "^2.4",
+        "drupal/ui_patterns_views_style": "^1.4",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/unstructured": "^2.0@beta",
         "drupal/upgrade_status": "^4.3",
@@ -179,11 +200,25 @@
                 "2851580 - Re-order + remove broken with the Entity Reference (and File) widget": "https://www.drupal.org/files/issues/2023-12-12/2851580-117.patch",
                 "2856138 - Error messages are not being displayed correctly in modal windows": "https://www.drupal.org/files/issues/0001-Issue-2856138-by-gordon-Error-messages-are-not-being.patch"
             },
+            "drupal/field_formatter": {
+                "3358395 - LogicException: Getting the base fields is not supported for entity type Domain record": "https://www.drupal.org/files/issues/2023-05-05/field_formatter-3358395-3.patch"
+            },
             "drupal/s3fs": {
                 "3247639 - Files being written to s3fs_file table with s3:// when they are in file_managed with private://": "https://www.drupal.org/files/issues/2021-11-04/3247639-6.patch"
             },
+            "drupal/ui_patterns": {
+                "PR299 - Incorrect \"path\" in hook_theme definitions when the theme that contains patterns is not active": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/299.diff",
+                "3315661 - Check for views live preview instead of preview when rendering row warning": "https://www.drupal.org/files/issues/2023-07-06/check-for-views-preview-3315661-21.patch"
+            },
+            "drupal/ui_patterns_field_formatters": {
+                "3342332 - Changing the sub formatter within a UI patterns field formatter doesn't work as expected (temporary solution to get file URI from media entity into the pattern wrapper)": "./patches/ui_patterns_field_formatters-3342332-local.diff",
+                "3355989 - Support UI limit from Display Suite": "./patches/ui_patterns_field_formatters-3355989.diff"
+            },
             "drupal/views_infinite_scroll": {
                 "2894307 - Any way to Automatically Load Content when scrolling within a DIV": "https://www.drupal.org/files/issues/2022-02-09/support-for-overflow-scrolls-2894307-23.patch"
+            },
+            "drupal/block_class": {
+                "3345981 - Initial class save causes array_merge error": "https://git.drupalcode.org/project/block_class/-/merge_requests/12.diff"
             }
         }
     },

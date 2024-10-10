@@ -1,0 +1,23 @@
+uuid: 47bd1ba7-7bbc-4f55-8d94-69cbb86fd138
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - drupalizer
+id: drupalizer_entityviewcontent
+theme: drupalizer
+region: full_width
+weight: -5
+provider: null
+plugin: 'entity_view:node'
+settings:
+  id: 'entity_view:node'
+  label: Hero
+  label_display: '0'
+  provider: ctools
+  view_mode: hero
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

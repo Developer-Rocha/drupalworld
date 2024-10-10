@@ -1,0 +1,10 @@
+uuid: fa211ccd-229a-4292-b1de-aaba6f5c6073
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: Media
+weight: null
+opened: true
+image_path: ''
+image_alt: ''

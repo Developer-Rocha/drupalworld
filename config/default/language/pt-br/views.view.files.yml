@@ -12,6 +12,8 @@ display:
           label: Tamanho
         status:
           label: Status
+        count:
+          label: 'Usado em'
         operations:
           label: Operações
       pager:

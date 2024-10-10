@@ -10,8 +10,8 @@ modifiers:
       options:
         # default: Automatic
         # light: Light
-        primary: Green
-        secondary: Orange
+        primary: Primary
+        secondary: Secondary
         # success: Success
         # warning: Warning
         # error: Error

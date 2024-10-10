@@ -1,0 +1,25 @@
+uuid: f24754c3-f324-463a-9287-cae66bfffbda
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary
+  module:
+    - system
+  theme:
+    - drupalizer
+id: drupalizer_secondary
+theme: drupalizer
+region: header
+weight: -8
+provider: null
+plugin: 'system_menu_block:secondary'
+settings:
+  id: 'system_menu_block:secondary'
+  label: Secondary
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

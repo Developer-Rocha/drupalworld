@@ -1,0 +1,15 @@
+uuid: 6775274c-4eed-40ff-abdf-89f430ba62e0
+langcode: en
+status: true
+dependencies: {  }
+name: content_image_fluid_sm
+label: 'Content image fluid (sm) - 700'
+effects:
+  dfeeb167-914d-4e47-85d1-8c95e3f24dc4:
+    uuid: dfeeb167-914d-4e47-85d1-8c95e3f24dc4
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: null
+      upscale: false

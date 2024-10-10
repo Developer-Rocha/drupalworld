@@ -1,0 +1,22 @@
+
+
+// Maintenance page
+// --------------------------------------------------
+
+.maintenance-message {
+  max-width: 600px;
+  margin: 3rem auto 3rem;
+  background: $color-white;
+  border: $default-border;
+  padding: 3rem var(--drupalizer__gutter);
+  text-align: center;
+
+  .branding {
+    float: none;
+    margin-bottom: 2rem;
+  }
+
+  .site-logo {
+    display: inline-block;
+  }
+}

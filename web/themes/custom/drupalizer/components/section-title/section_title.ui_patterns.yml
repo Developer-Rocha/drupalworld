@@ -1,0 +1,31 @@
+section_title:
+  label: Section title
+  extends:
+    - modifiers.settings
+  description: Display a title
+  fields:
+    title:
+      type: text
+      label: Title
+      description: The title.
+      preview: Title of my section
+    heading:
+      type: text
+      label: Heading
+      description: The heading html tag.
+      preview: h2
+    icon:
+      type: text
+      label: Icon
+      description: Anchor for this title.
+      preview: icon-heart
+    anchor:
+      type: text
+      label: Anchor
+      description: Anchor for linking to the title.
+      preview: title-anchor
+  libraries:
+    - section_title:
+        css:
+          component:
+            section-title.css: {}

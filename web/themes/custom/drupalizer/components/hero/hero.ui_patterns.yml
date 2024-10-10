@@ -1,0 +1,67 @@
+hero:
+  label: Hero
+  description: Display a page hero.
+  fields:
+    tags:
+      type: pattern
+      label: Tags
+      description: Tags for the page.
+    breadcrumb:
+      type: pattern
+      label: Breadcrumb
+      description: breadcrumb for the page.
+    image:
+      type: image
+      label: Image
+      description: Hero image.
+      preview: <div><img src="/themes/custom/drupalizer/components/hero/preview.jpg" /></div>
+    pretitle:
+      type: text
+      label: Pretitle
+      description: A small title above the main title.
+      preview: Lorem ipsum
+    title:
+      type: text
+      label: Title
+      description: The hero title.
+      preview: Welcome to our site
+    node_title:
+      type: text
+      label: Node title (fallback)
+      description: The node title (used if the hero title does not exist).
+      preview: Welcome to our site
+    subtitle:
+      type: text
+      label: Subtitle
+      description: A small title below the main title.
+      preview: Latinium fakium.
+    text:
+      type: text
+      label: Text
+      description: Text inside the header.
+      preview: At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    content:
+      type: mixed
+      label: Content
+      description: Add content here that doesn't fit in any other region.
+    cta:
+      type: pattern
+      label: Call to action(s)
+      description: Call to action buttons.
+      preview:
+        text: Call to action
+        url: https://drupalizer.tech
+    varia:
+      type: text
+      label: Varia
+      description: varia content.
+  variants:
+    full:
+      label: Full header
+    full_location:
+      label: Full header location
+  libraries:
+    - hero:
+       css:
+         component:
+           hero.css: {}

@@ -1,0 +1,368 @@
+
+// Button Extends (Silent Classes)
+// --------------------------------------------------
+
+%default-button {
+  @include font-size(16);
+
+  display: inline-block;
+  padding: .65rem 1.5rem .45rem;
+  color: $color-black;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: $color-white;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  transition: $default-transition;
+  margin-bottom: 1rem;
+  border: .0625rem solid $color-black;
+  font-family: $title-font;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-black;
+  }
+
+  &[class^='icon-'],
+  &[class*=' icon-'] {
+    padding: .6rem 1rem;
+    line-height: 1rem;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      margin-bottom: -.2rem;
+    }
+
+    &:before {
+      margin-right: .4rem;
+    }
+
+    &:after {
+      margin-left: .4rem;
+    }
+  }
+
+  &.hide-text {
+    width: 2.45rem;
+    height: 2.45rem;
+    padding: .6rem;
+  }
+}
+
+%default-link {
+  @include font-size(16);
+
+  display: inline-block;
+  padding: 0;
+  color: $color-black;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $default-transition;
+  margin-bottom: 1rem;
+  border-bottom: .0625rem solid $color-black;
+  border-radius: 0;
+  font-family: $title-font;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $drupalizer-neutral-2;
+  }
+
+  &[class^='icon-'],
+  &[class*=' icon-'] {
+    padding: .6rem 1rem;
+    line-height: 1rem;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      margin-bottom: -.2rem;
+    }
+
+    &:before {
+      margin-right: .4rem;
+    }
+
+    &:after {
+      margin-left: .4rem;
+    }
+  }
+
+  &.hide-text {
+    width: 2.45rem;
+    height: 2.45rem;
+    padding: .6rem;
+  }
+}
+
+%default-link {
+  @include font-size(16);
+
+  display: inline-block;
+  padding: 0;
+  color: $color-black;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $default-transition;
+  margin-bottom: 1rem;
+  border-bottom: .0625rem solid $color-black;
+  border-radius: 0;
+  font-family: $title-font;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $drupalizer-neutral-2;
+  }
+
+  &[class^='icon-'],
+  &[class*=' icon-'] {
+    padding: .6rem 1rem;
+    line-height: 1rem;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      margin-bottom: -.2rem;
+    }
+
+    &:before {
+      margin-right: .4rem;
+    }
+
+    &:after {
+      margin-left: .4rem;
+    }
+  }
+
+  &.hide-text {
+    width: 2.45rem;
+    height: 2.45rem;
+    padding: .6rem;
+  }
+}
+
+%blue-button {
+  @extend %default-button;
+
+  background-color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-dark-blue-7;
+  }
+}
+
+%blue-link {
+  @extend %default-link;
+
+  color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-dark-blue-1;
+  }
+}
+
+%blue-button {
+  @extend %default-button;
+
+  background-color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-red-7;
+  }
+}
+
+%blue-link {
+  @extend %default-link;
+
+  color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-red-1;
+  }
+}
+
+%yellow-button {
+  @extend %default-button;
+
+  background-color: $drupalizer-yellow-6;
+  border-color: $drupalizer-yellow-6;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-yellow-7;
+    color: $color-black;
+  }
+}
+
+%white-button {
+  @extend %default-button;
+
+  background-color: $color-white;
+  border-color: $color-white;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $color-black;
+    color: $color-white;
+    border-color: $color-black;
+  }
+}
+
+%white-w-outline-button {
+  @extend %default-button;
+
+  background-color: $color-white;
+  border-color: $color-black;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+%blue-button {
+  @extend %default-button;
+
+  background-color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-dark-blue-7;
+  }
+}
+
+%blue-link {
+  @extend %default-link;
+
+  color: $drupalizer-dark-blue;
+  border-color: $drupalizer-dark-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-dark-blue-1;
+  }
+}
+
+%blue-button {
+  @extend %default-button;
+
+  background-color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-red-7;
+  }
+}
+
+%blue-link {
+  @extend %default-link;
+
+  color: $drupalizer-blue;
+  border-color: $drupalizer-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-red-1;
+  }
+}
+
+%yellow-button {
+  @extend %default-button;
+
+  background-color: $drupalizer-yellow-6;
+  border-color: $drupalizer-yellow-6;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-yellow-7;
+    color: $color-black;
+  }
+}
+
+%white-button {
+  @extend %default-button;
+
+  background-color: $color-white;
+  border-color: $color-white;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $color-black;
+    color: $color-white;
+    border-color: $color-black;
+  }
+}
+
+%white-w-outline-button {
+  @extend %default-button;
+
+  background-color: $color-white;
+  border-color: $color-black;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+%black-button {
+  @extend %default-button;
+
+  background-color: $color-black;
+  border-color: $color-black;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+
+.black-button:not(.glb-button) {
+  @extend %black-button;
+}
+
+%black-link {
+  @extend %default-link;
+
+  color: $color-black;
+  border-color: $color-black;
+
+  &:hover,
+  &:focus {
+    background-color: $drupalizer-neutral-2;
+  }
+}

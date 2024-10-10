@@ -1,0 +1,33 @@
+uuid: 98e25094-023f-4676-91fe-7a71e637b5c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - entity_browser.browser.upload_or_existing
+    - field.field.block_content.images.field_images
+  module:
+    - entity_browser
+id: block_content.images.default
+targetEntityType: block_content
+bundle: images
+mode: default
+content:
+  field_images:
+    type: entity_browser_entity_reference
+    weight: 0
+    region: content
+    settings:
+      entity_browser: upload_or_existing
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: thumbnail
+      selection_mode: selection_append
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true

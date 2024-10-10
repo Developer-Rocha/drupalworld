@@ -1,6 +1,6 @@
 uuid: 7259c8f0-297e-43f2-8037-342209c35954
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: drupalizer_breadcrumbs
 theme: drupalizer
-region: breadcrumb
-weight: 0
+region: toolbar
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:

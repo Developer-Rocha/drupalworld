@@ -1,0 +1,11 @@
+uuid: 73c8ac12-16da-461a-a3db-3d462cf58e4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_landscape
+label: 'Teaser landscape'
+description: ''
+targetEntityType: media
+cache: true

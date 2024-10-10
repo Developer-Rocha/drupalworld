@@ -1,0 +1,39 @@
+
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-button' %}
+
+{% set component_default_color = 'neutral' %}
+
+{# Add custom classes to component. #}
+{%
+  set custom_classes = [
+  icon and display_style ? component_name ~ '--' ~ display_style : '',
+]
+%}
+
+{% block component %}
+  {% if html_element == 'button' %}
+    <button {{ attributes.addClass(classes).setAttribute('id', cta_id) }}>
+  {% else %}
+    <a href="{{ clean_url }}" {{ attributes.addClass(classes).setAttribute('id', cta_id) }}>
+  {% endif %}
+  {% block component_content %}
+    {% if display_style == 'icon-only' %}
+      <span class="visually-hidden">{{- text -}}</span>
+    {% else %}
+      {{- text -}}
+    {% endif %}
+    {% if icon %}
+      <span class="{{ component ~ '__icon' }} {{ icon }}" aria-hidden="true"></span>
+    {% endif %}
+  {% endblock %}
+  {% if html_element == 'button' %}
+    </button>
+  {% else %}
+    </a>
+  {% endif %}
+{% endblock %}
+

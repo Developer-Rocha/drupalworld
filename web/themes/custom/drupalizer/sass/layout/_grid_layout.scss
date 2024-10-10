@@ -1,0 +1,74 @@
+
+// CSS Grid Layout
+// --------------------------------------------------
+
+.grid-layout {
+  display: grid;
+  grid-gap: var(--drupalizer__gutter);
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(16.125rem, 1fr));
+  //&--one-col {
+  //
+  //}
+  //
+  //&--two-col {
+  //  &--33-66 {
+  //
+  //  }
+  //}
+
+  &--related-content {
+    .c-card__title {
+      @extend %h4;
+    }
+  }
+
+  &--two-col {
+    &, // Equal columns as default.
+    &--50-50 {
+      grid-template-columns: repeat(3, minmax(0, 2fr));
+    }
+
+    &--33-66 {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    &--66-33 {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &--three-col {
+    // Equal columns as default.
+    grid-template-columns: repeat(3, 1fr);
+
+    &--50-25-25 {
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    &--25-50-25 {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    &--25-25-50 {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
+  }
+
+  &--four-col {
+    // Equal columns as default.
+    grid-template-columns: repeat(4, 1fr);
+
+    &--25-25-25-25 {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    &--25-25-50 {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    &--50-25-25 {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+}

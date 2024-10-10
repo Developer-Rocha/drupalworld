@@ -40,3 +40,5 @@ display:
                 title: Publicado
               2:
                 title: 'Não publicado'
+  page_1:
+    display_title: Página

@@ -1,0 +1,42 @@
+// Branding
+// --------------------------------------------------
+
+.branding {
+
+  &--header {
+    line-height: 0;
+  }
+
+  &--footer {
+    text-align: center;
+    margin-block: .5rem;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__logo {
+    display: inline-block;
+
+    svg {
+      transition: all $default-transition;
+
+      .branding--header & {
+        min-width: 4.7rem;
+
+        @include bp(md) {
+          min-width: 9.375rem;
+        }
+      }
+
+      .branding--footer & {
+        min-width: 10rem;
+      }
+    }
+  }
+
+  &__slogan {
+    display: none;
+  }
+}

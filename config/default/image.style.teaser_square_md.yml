@@ -1,0 +1,17 @@
+uuid: 46ed9ba6-0dfb-4bbe-b846-50bd43fccaef
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_square_md
+label: 'Teaser square (md) 900x900'
+effects:
+  9e170072-71a7-4e12-80f9-ff6d94899c72:
+    uuid: 9e170072-71a7-4e12-80f9-ff6d94899c72
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 900
+      height: 900
+      crop_type: focal_point

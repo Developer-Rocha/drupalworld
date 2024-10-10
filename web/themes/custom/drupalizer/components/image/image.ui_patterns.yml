@@ -1,0 +1,36 @@
+image:
+  label: Image
+  description: Display an image
+  fields:
+    image:
+      type: image
+      label: Image
+      description: The main image.
+      preview: <img src="/themes/custom/drupalizer/components/image/preview.jpg" />
+    title:
+      type: text
+      label: Title
+      description: Title of the image.
+      preview: Explore the world.
+    caption:
+      type: text
+      label: Caption
+      description: Caption for the image.
+      preview: © Jonatan Pie - Unsplash
+    url:
+      type: text
+      label: URL
+      description: URL the image links to.
+      preview: https://drupalizer.tech
+  variants:
+    only_image:
+      label: Image only
+    on_image:
+      label: Text on image
+    below_image:
+      label: Text below image
+  libraries:
+    - image:
+        css:
+          component:
+            image.css: {}

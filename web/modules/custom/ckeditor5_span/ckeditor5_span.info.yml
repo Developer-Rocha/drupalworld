@@ -1,0 +1,7 @@
+name: CKEditor 5 Span
+type: module
+description: "Allows using span tags inside CKEditor."
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - ckeditor5:ckeditor5

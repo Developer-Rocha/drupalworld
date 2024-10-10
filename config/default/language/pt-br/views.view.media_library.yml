@@ -1,3 +1,4 @@
+label: 'Biblioteca de mídia'
 display:
   default:
     display_title: Padrão
@@ -33,6 +34,7 @@ display:
           group_info:
             label: 'Tipo de mídia'
   page:
+    display_title: Página
     display_options:
       fields:
         name:

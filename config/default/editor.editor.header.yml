@@ -1,0 +1,25 @@
+uuid: c6921276-8305-4db8-9eae-697d6775c743
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.header
+  module:
+    - ckeditor5
+format: header
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - style
+  plugins:
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Dark blue color'
+          element: '<span class="color-primary">'
+        -
+          label: 'Blue color'
+          element: '<span class="color-secondary">'
+image_upload:
+  status: false

@@ -1,0 +1,8 @@
+uuid: 60b3c768-c035-4f8a-900e-a307f6e3c714
+langcode: en
+status: true
+dependencies: {  }
+id: heading
+label: Heading
+revision: false
+description: 'Use <em>Heading</em> for adding a heading to a section using layout builder.'

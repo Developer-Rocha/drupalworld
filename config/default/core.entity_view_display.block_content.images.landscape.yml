@@ -1,0 +1,31 @@
+uuid: fae4137a-1850-4a4d-96d1-3cac0f94e659
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - core.entity_view_mode.block_content.landscape
+    - field.field.block_content.images.field_images
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.images.landscape
+targetEntityType: block_content
+bundle: images
+mode: landscape
+content:
+  field_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser_landscape
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,24 @@
+uuid: 5226aa1e-3153-4d49-90cb-5aa9a130166e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heading
+    - field.storage.block_content.field_heading
+    - filter.format.header
+  module:
+    - text
+id: block_content.heading.field_heading
+field_name: field_heading
+entity_type: block_content
+bundle: heading
+label: Heading
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - header
+field_type: text_long

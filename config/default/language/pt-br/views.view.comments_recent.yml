@@ -1,3 +1,5 @@
 display:
   default:
     display_title: Padrão
+  block_1:
+    display_title: Bloco

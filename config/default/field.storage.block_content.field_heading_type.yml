@@ -1,0 +1,33 @@
+uuid: dd0d27c7-ee7c-4b05-8976-ab71fe13bb3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_heading_type
+field_name: field_heading_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: h2
+      label: h2
+    -
+      value: h3
+      label: h3
+    -
+      value: h4
+      label: h4
+    -
+      value: h5
+      label: h5
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+uuid: b14d2bc1-dc4a-4fc5-ae70-354f79f45396
+langcode: en
+status: true
+dependencies: {  }
+name: content_image_fluid_xl
+label: 'Content image fluid (xl) - 1600'
+effects:
+  979c9c5e-e848-493f-8dbf-f5d1fa868933:
+    uuid: 979c9c5e-e848-493f-8dbf-f5d1fa868933
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: false

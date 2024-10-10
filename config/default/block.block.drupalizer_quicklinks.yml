@@ -1,0 +1,33 @@
+uuid: 4add3443-6212-43f2-98db-280be08eecf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.quick-links
+  module:
+    - menu_block
+  theme:
+    - drupalizer
+id: drupalizer_quicklinks
+theme: drupalizer
+region: search_menu
+weight: 0
+provider: null
+plugin: 'menu_block:quick-links'
+settings:
+  id: 'menu_block:quick-links'
+  label: 'Quick links'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'quick-links:'
+  render_parent: false
+  suggestion: quick_links
+  hide_on_nonactive: false
+visibility: {  }

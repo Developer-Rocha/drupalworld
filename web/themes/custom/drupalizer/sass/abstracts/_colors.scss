@@ -1,38 +1,54 @@
 
 // Corporate colors
 $drupalizer-green: #00843d;
-$drupalizer-orange: #ff6900;
-$drupalizer-sustain: #48a23f;
-$drupalizer-bio: #84bd00;
-$drupalizer-yellow: #fed141;
+$drupalizer-dark-blue: #005a8b;
+$drupalizer-blue: #0077c0;
+$drupalizer-sustain: #33a9dc;
+$drupalizer-bio: #0081a7;
+$drupalizer-yellow: #ffd700;
 $drupalizer-red: #d50032;
-$drupalizer-blue: #ccdff5;
-$drupalizer-dark: #333333;
-$drupalizer-light: #f0f0f0;
+$drupalizer-blue: #0077c0;
+$drupalizer-dark: #1e1e2c;
+$drupalizer-light: #e6f2f5;
 
 // Color pallets
-$drupalizer-green-1: #f0f8f3;
-$drupalizer-green-2: #d6ebe0;
-$drupalizer-green-3: #b7dcc8;
-$drupalizer-green-4: #8ec8a9;
-$drupalizer-green-5: #5bb082;
-$drupalizer-green-6: $drupalizer-green;
-$drupalizer-green-7: #005e2f;
-$drupalizer-green-8: #00381e;
-$drupalizer-green-9: #00120a;
-$drupalizer-green-10: #000000;
-$drupalizer-green-11: #97c664;
+$drupalizer-dark-blue-1: #f0f8ff;
+$drupalizer-dark-blue-2: #d6eaff;
+$drupalizer-dark-blue-3: #b7d6ff;
+$drupalizer-dark-blue-4: #8ec0ff;
+$drupalizer-dark-blue-5: #5ba6ff;
+$drupalizer-dark-blue-6: #0077c0;
+$drupalizer-dark-blue-7: #005a8b;
+$drupalizer-dark-blue-8: #003b5c;
+$drupalizer-dark-blue-9: #00243a;
+$drupalizer-dark-blue-10: #000d18;
+$drupalizer-dark-blue-11: #26537a;
 
-$drupalizer-orange-1: #fff4e6;
-$drupalizer-orange-2: #ffd6a3;
-$drupalizer-orange-3: #ffbf7a;
-$drupalizer-orange-4: #ffa552;
-$drupalizer-orange-5: #ff8929;
-$drupalizer-orange-6: $drupalizer-orange;
-$drupalizer-orange-7: #d95300;
-$drupalizer-orange-8: #b33e00;
-$drupalizer-orange-9: #8c2c00;
-$drupalizer-orange-10: #661d00;
+
+$drupalizer-blue-1: #f0f8ff;
+$drupalizer-blue-2: #d6eaff;
+$drupalizer-blue-3: #b7d6ff;
+$drupalizer-blue-4: #8ec0ff;
+$drupalizer-blue-5: #5ba6ff;
+$drupalizer-blue-6: #0077c0;
+$drupalizer-blue-7: #005a8b;
+$drupalizer-blue-8: #003b5c;
+$drupalizer-blue-9: #00243a;
+$drupalizer-blue-10: #000d18;
+$drupalizer-blue-11: #26537a;
+
+
+$drupalizer-red-1: #ffe6e6;
+$drupalizer-red-2: #ffb3b3;
+$drupalizer-red-3: #ff8080;
+$drupalizer-red-4: #ff4d4d;
+$drupalizer-red-5: #ff1a1a;
+$drupalizer-red-6: $drupalizer-red;
+$drupalizer-red-7: #cc0000;
+$drupalizer-red-8: #990000;
+$drupalizer-red-9: #660000;
+$drupalizer-red-10: #330000;
+
 
 $drupalizer-yellow-1: #fffef0;
 $drupalizer-yellow-2: #fffdf0;
@@ -79,8 +95,8 @@ $drupalizer-neutral-9: #1f1f1f;
 $drupalizer-neutral-10: #000000;
 
 // Theming colors
-$color-primary:               $drupalizer-green-7;
-$color-secondary:             $drupalizer-orange;
+$color-primary:               $drupalizer-dark-blue-7;
+$color-secondary:             $drupalizer-blue;
 $color-tertiary:              $drupalizer-bio;
 $color-background:            #ffffff;
 
@@ -94,8 +110,8 @@ $color-caption:               #999999; // muted text like descriptions etc.
 $color-link:                  $color-black;
 $color-link-hover:            lighten($color-link, 10%);
 
-$color-success:               $drupalizer-sustain; // status messages
-$color-status:                $drupalizer-sustain; // Fallback
+$color-success:               $drupalizer-green; // status messages
+$color-status:                $drupalizer-green; // Fallback
 $color-warning:               $drupalizer-yellow; // warning messages
 $color-error:                 $drupalizer-red; // error messages
 $color-info:                  #55acee; // info messages
