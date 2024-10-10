@@ -1,3 +1,322 @@
+
+
+// Forms
+// --------------------------------------------------
+
+// Reset
+
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+input[type='date'],
+input[type='time'],
+textarea {
+  @include appearance(none);
+}
+
+fieldset {
+  padding: 0;
+  border: 0 none;
+
+  > legend {
+    @extend label;
+  }
+}
+
+// Form item
+
+.form-item {
+  // margin-bottom: $form-group-margin-bottom;
+
+  &--error-message {
+    color: $color-error;
+  }
+}
+
+// Labels
+
+.form-item {
+  label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+}
+
+.webform-element--title-inline {
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 12rem;
+  }
+
+  .description {
+    padding-left: 12rem;
+  }
+}
+
+// Description
+
+.form-item {
+  .description {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+
+    p,
+    ul,
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Prefix
+
+.field-prefix {
+  margin-right: .5rem;
+}
+
+// Suffix
+
+.field-suffix {
+  margin-left: .5rem;
+}
+
+// Required
+
+.form-required-marker {
+  color: $color-error;
+}
+
+// Form elements
+// --------------------------------------------------
+
+// Text fields
+
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+input[type='date'],
+input[type='time'],
+input.form-color {
+  height: 50px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: $form-background;
+  border: $form-border;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: border $default-transition;
+  width: 100%;
+
+  @include font-size($form-font-size);
+
+  @include bp(md, min, 'print,') {
+    max-width: $form-width;
+  }
+
+  &:hover {
+    border-color: $color-form-hover;
+  }
+
+  &:focus {
+    border-color: $color-form-focus;
+  }
+
+  .form-item--error & {
+    border-color: $color-error;
+    outline-color: $color-error;
+  }
+}
+
+// Submit button
+
+button.form-submit,
+input.form-submit {
+  @extend .button-primary;
+
+  @include bp(md, max) {
+    width: 100%;
+  }
+}
+
+// Textarea
+
+textarea {
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: $form-background;
+  border: $form-border;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  box-sizing: border-box;
+  min-height: 65px;
+  padding-top: 6;
+  padding-bottom: 6;
+  transition: border $default-transition;
+
+  @include font-size($form-font-size);
+
+  &:hover {
+    border: solid 1px $color-form-hover;
+  }
+
+  &:focus {
+    border: solid 1px $color-form-focus;
+  }
+}
+
+// Select
+
+select {
+  height: 50px;
+  //padding: 6px 10px;
+  padding-block: 6px;
+  padding-inline: 10px 30px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: $form-background;
+  border: $form-border;
+  border-radius: $form-border-radius;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: border $default-transition;
+  width: 100%;
+  appearance: none;
+  background-image: url(../icons/icon-chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+  background-size: .625rem;
+
+  @include bp(md, min, 'print,') {
+    max-width: $form-width;
+  }
+
+  &:hover {
+    border: solid 1px $color-form-hover;
+  }
+
+  &:focus {
+    border: solid 1px $color-form-focus;
+  }
+}
+
+.form-type-webform-select-other > .form-type-select {
+  margin-bottom: 0;
+}
+
+.webform-select-other-input {
+  margin-top: 1rem;
+}
+
+// Checkbox
+
+.form-type-checkbox {
+  input {
+    margin-right: .5rem;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}
+
+.form-checkboxes {
+  .form-type-checkbox:not(:last-child) {
+    margin-bottom: .25rem;
+  }
+
+  .form-type-checkbox:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Radio
+
+.form-type-radio {
+  input {
+    margin-right: .5rem;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}
+
+.form-radios {
+  .form-type-radio {
+    margin-bottom: .25rem;
+  }
+
+  .form-type-radio:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// YAML multiple columns
+
+.webform-options-display-two-columns,
+.webform-options-display-three-columns {
+  margin: 0;
+}
+
+// Color
+
+input[type='color'] {
+  border: 0 none !important;
+  border-top-left-radius: $form-border-radius;
+  border-bottom-left-radius: $form-border-radius;
+}
+
+input.form-color-output {
+  border: $form-border;
+  border-radius: $form-border-radius;
+
+  &,
+  &:hover,
+  &:focus {
+    border-left: 0 none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// Signature
+
+.webform-signature-pad {
+  background: $form-background;
+  border: $form-border;
+  border-radius: $form-border-radius;
+}
+
+// Toggle
+
+.form-type-webform-toggle {
+  .description {
+    clear: both;
+  }
+}
+
+// jQuery UI overides
+// --------------------------------------------------
+
+.ui-widget {
+  font-family: $default-font;
+
+  @include font-size($form-font-size);
+}
+
 // Autocomplete
 
 .ui-autocomplete {

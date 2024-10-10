@@ -2,7 +2,8 @@
 // Flex Layout
 // --------------------------------------------------
 
-.flex-layout {
+.flex-layout,
+.layout {
   display: flex;
   flex-wrap: wrap;
   margin-right: calc(var(--drupalizer__gutter) / -2);
