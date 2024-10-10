@@ -1,0 +1,17 @@
+uuid: 1f50710e-1cad-4641-a142-db646a97b97e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_landscape_sm
+label: 'Teaser landscape (sm) - 600x400'
+effects:
+  a60c4bf4-bd97-4ef0-9e79-13b43e13846d:
+    uuid: a60c4bf4-bd97-4ef0-9e79-13b43e13846d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      crop_type: focal_point

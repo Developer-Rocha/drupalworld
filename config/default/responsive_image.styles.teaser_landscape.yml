@@ -1,0 +1,36 @@
+uuid: e3d7668b-d917-45b7-b8fd-fdc1d44e1c7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.teaser_landscape_lg
+    - image.style.teaser_landscape_md
+    - image.style.teaser_landscape_sm
+    - image.style.teaser_landscape_xl
+  theme:
+    - drupalizer
+id: teaser_landscape
+label: 'Teaser landscape'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_xl
+    breakpoint_id: drupalizer_easytheme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_lg
+    breakpoint_id: drupalizer_easytheme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_md
+    breakpoint_id: drupalizer_easytheme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_sm
+    breakpoint_id: drupalizer_easytheme.sm
+    multiplier: 1x
+breakpoint_group: drupalizer
+fallback_image_style: teaser_landscape_md

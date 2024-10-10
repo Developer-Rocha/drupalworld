@@ -1,0 +1,17 @@
+uuid: d1640a1d-e097-47c4-84f1-adcf51910261
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_square_sm
+label: 'Teaser square (sm) 600x600'
+effects:
+  d707f677-f854-4a4e-89c8-cc76974bfd22:
+    uuid: d707f677-f854-4a4e-89c8-cc76974bfd22
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      crop_type: focal_point

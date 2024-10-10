@@ -1,0 +1,17 @@
+uuid: a2f18478-46af-401e-8c98-a2af205a2963
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_landscape_xs
+label: 'Teaser landscape (xs) - 450x300'
+effects:
+  2222887e-9a4b-4a21-9b4b-0bbc0c126a04:
+    uuid: 2222887e-9a4b-4a21-9b4b-0bbc0c126a04
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 300
+      crop_type: focal_point

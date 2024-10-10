@@ -1,0 +1,17 @@
+uuid: 6eccabab-cab6-4e08-9b0a-4444027e9cd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_square_lg
+label: 'Teaser square (lg) - 1200x1200'
+effects:
+  9d57074c-6857-49dc-94cd-6f4c33d05a2e:
+    uuid: 9d57074c-6857-49dc-94cd-6f4c33d05a2e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 1200
+      crop_type: focal_point

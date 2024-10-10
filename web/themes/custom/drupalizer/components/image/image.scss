@@ -1,0 +1,205 @@
+
+@import '../_helper/config';
+
+// Component: image
+// --------------------------------------------------
+
+// Precede the component's name with c- to indicate it is a component.
+$component: 'c-image';
+
+// Style variables
+
+$component-border: $default-border;
+$component-hover: $color-link-hover;
+$component-background: $color-white;
+$component-transition: $default-transition;
+
+// Styling
+.#{$component} {
+  //display: flex;
+  //align-items: flex-start;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  // Image
+
+  &__image {
+    background-color: $color-white;
+    flex: 0 0 auto;
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      transition: $component-transition;
+    }
+  }
+
+  // Header
+
+  &__header {
+    margin-bottom: .5rem;
+    width: 100%;
+  }
+
+  &__title {
+    @extend %h3;
+
+    margin-bottom: 0;
+    transition: color $component-transition;
+  }
+
+  // Content
+
+  &__content-wrapper {
+    flex: 1 0 auto;
+    align-self: stretch;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    background: $component-background;
+    padding: var(--drupalizer__gutter);
+
+    > * {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__content {
+    align-self: stretch;
+    flex: 1 0 auto;
+  }
+
+  // Footer
+
+  &__footer {
+    margin-top: 1rem;
+  }
+
+  &__more-link {
+    margin-top: 1rem;
+
+    .button {
+      margin-bottom: 0;
+    }
+  }
+
+  // General spacing of elements inside sections.
+  &__header,
+  &__content,
+  &__footer {
+    > * {
+      margin-bottom: .5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // If there is no content between header and footer, remove margin.
+  &__header + &__footer {
+    margin-top: 0;
+  }
+
+  // Variant: On image
+
+  &--on_image {
+    //flex-direction: column;
+
+    &.has-link:hover {
+      .#{$component} {
+        &__image {
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        &__content-wrapper {
+          transform: translate3d(0, 0, 0);
+        }
+
+        &__header {
+          transform: translate3d(0, 0, 0);
+        }
+
+        &__footer {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &--on_image & {
+    &__image {
+      &:after {
+        content: ' ';
+        background-color: rgba(0, 0, 0, .25);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    &__content-wrapper {
+      //align-self: stretch;
+      //flex: 1 0 auto;
+      //bottom: 0;
+      position: absolute;
+      z-index: 2;
+      background-color: transparent;
+      color: $color-white;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      transition: transform $component-transition;
+      transform: translate3d(0, 100%, 0);
+      padding: 0;
+    }
+
+    &__header {
+      margin: 0;
+      display: block;
+      transform: translate3d(0, -100%, 0);
+      transition: transform $component-transition;
+      padding: 1rem;
+    }
+
+    &__footer {
+      //align-self: stretch;
+      //flex: 1 0 auto;
+      z-index: 2;
+      background-color: transparent;
+      color: $color-white;
+      flex-grow: 1;
+      padding: 0 1rem 1rem;
+      opacity: 0;
+      transition: opacity $component-transition;
+    }
+  }
+
+  // Variant: Below image
+
+  &--below_image {
+    flex-direction: column;
+  }
+
+  &--below_image & {
+    &__content {
+      align-self: stretch;
+      flex: 1 0 auto;
+    }
+  }
+}
+
+// Compatibility with drupalizer 'Theme' field
+@include theme_compatibility($component);

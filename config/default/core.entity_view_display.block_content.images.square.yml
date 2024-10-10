@@ -1,0 +1,31 @@
+uuid: 2e2469e0-897a-4145-95aa-3ba833da87ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - core.entity_view_mode.block_content.square
+    - field.field.block_content.images.field_images
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.images.square
+targetEntityType: block_content
+bundle: images
+mode: square
+content:
+  field_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser_square
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

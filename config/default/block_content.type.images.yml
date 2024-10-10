@@ -1,0 +1,8 @@
+uuid: f5a09dff-55be-4b26-86c3-10dba26fde16
+langcode: en
+status: true
+dependencies: {  }
+id: images
+label: Images
+revision: false
+description: 'Use <em>Image</em> for adding images using layout builder.'

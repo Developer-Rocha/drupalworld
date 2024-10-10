@@ -1,0 +1,17 @@
+
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-image' %}
+
+{% block component_content %}
+  {% if clean_url %}
+    <a class="overlay-link" href="{{ clean_url }}"></a>
+  {% endif %}
+
+  {% if image %}
+    <div class="{{ component ~ '__image' }}">{{ image }}</div>
+  {% endif %}
+{% endblock %}

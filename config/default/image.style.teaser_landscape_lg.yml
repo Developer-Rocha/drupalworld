@@ -1,0 +1,17 @@
+uuid: d36b5039-8a1b-4b95-a272-e1616080cbc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_landscape_lg
+label: 'Teaser landscape (lg) - 1200x800'
+effects:
+  e7f05e18-95c4-4b32-8bc4-161c612bc855:
+    uuid: e7f05e18-95c4-4b32-8bc4-161c612bc855
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 800
+      crop_type: focal_point

@@ -1,0 +1,47 @@
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-image' %}
+
+{% block component_content %}
+  {# Contextual links #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if clean_url %}
+    <a class="overlay-link" href="{{ clean_url }}"></a>
+  {% endif %}
+
+  {% if image %}
+    <div class="{{ component ~ '__image' }}">{{ image }}</div>
+  {% endif %}
+
+  {% if title.0|field_value or content.0|field_value or caption.0|field_value %}
+    <div class="{{ component ~ '__content-wrapper' }}">
+      <header class="{{ component ~ '__header' }}">
+        <h3 class="{{ component ~ '__title' }} auto-heading">{{ title }}</h3>
+      </header>
+
+      {# If any fields are set in content (Add any fields you add to the if as well) #}
+      {% if content.0|field_value %}
+        <div class="{{ component ~ '__content' }}">
+          {% if content %}
+            {% for item in content %}
+              <div class="{{ component ~ '__content-item' }}">{{ item }}</div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <footer class="{{ component ~ '__footer' }}">
+        {% if caption %}
+          <div class="{{ component ~ '__caption' }} text-muted">
+            {{ caption }}
+          </div>
+        {% endif %}
+      </footer>
+    </div>
+  {% endif %}
+{% endblock %}

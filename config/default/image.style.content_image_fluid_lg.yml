@@ -1,0 +1,15 @@
+uuid: 71fa8f40-6fe7-4969-a3c8-c64fecc03cf1
+langcode: en
+status: true
+dependencies: {  }
+name: content_image_fluid_lg
+label: 'Content image fluid (lg) - 1300'
+effects:
+  7b657330-0161-410e-97b1-a32c1d42aec4:
+    uuid: 7b657330-0161-410e-97b1-a32c1d42aec4
+    id: image_scale
+    weight: 1
+    data:
+      width: 1300
+      height: null
+      upscale: false

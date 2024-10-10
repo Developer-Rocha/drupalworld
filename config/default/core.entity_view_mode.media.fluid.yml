@@ -1,0 +1,11 @@
+uuid: 16116337-630e-47e7-a473-1ea6f0fd9546
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.fluid
+label: Fluid
+description: ''
+targetEntityType: media
+cache: true

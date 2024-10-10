@@ -1,0 +1,36 @@
+uuid: 56645edf-8786-4e06-91ee-1e9d222895a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.images
+    - field.storage.block_content.field_images
+    - media.type.image
+  module:
+    - ai_translate
+third_party_settings:
+  ai_translate:
+    entity_reference:
+      translate_references: default
+    translate_references: default
+id: block_content.images.field_images
+field_name: field_images
+entity_type: block_content
+bundle: images
+label: Images
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

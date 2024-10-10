@@ -1,0 +1,15 @@
+uuid: 06e04477-0de2-4ed3-b5f3-bcd01d4e3dec
+langcode: en
+status: true
+dependencies: {  }
+name: content_image_fluid_md
+label: 'Content image fluid (md) - 1000'
+effects:
+  9609436c-9da3-4651-817d-d7ff5ba7d18e:
+    uuid: 9609436c-9da3-4651-817d-d7ff5ba7d18e
+    id: image_scale
+    weight: 1
+    data:
+      width: 1000
+      height: null
+      upscale: false

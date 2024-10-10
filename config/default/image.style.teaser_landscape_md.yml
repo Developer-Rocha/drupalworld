@@ -1,0 +1,17 @@
+uuid: b80484a9-773b-4f3b-8ac1-ff0000aa373b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_landscape_md
+label: 'Teaser landscape (md) - 900x600'
+effects:
+  3a160546-af0a-469d-b675-46ec748fb345:
+    uuid: 3a160546-af0a-469d-b675-46ec748fb345
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 900
+      height: 600
+      crop_type: focal_point

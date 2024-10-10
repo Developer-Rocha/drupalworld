@@ -1,0 +1,11 @@
+uuid: e4049144-21a3-4623-b5c6-631518b2c401
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.fluid
+label: Fluid
+description: ''
+targetEntityType: block_content
+cache: true

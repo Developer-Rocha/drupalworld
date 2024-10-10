@@ -1,0 +1,11 @@
+uuid: 1d9ff0a1-6623-4a49-805a-b3e8bf82d1cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_square
+label: 'Teaser square'
+description: ''
+targetEntityType: media
+cache: true
