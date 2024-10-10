@@ -6,6 +6,6 @@ id: text
 block_id: 'inline_block:text'
 category: content
 label: Text
-image_path: /modules/custom/drupalizer_layout_builder/images/text.png
+image_path: /modules/custom/drupalizer_layout_builder/source/images/text.png
 image_alt: ''
 weight: null
