@@ -1,0 +1,142 @@
+
+// Region: Footer
+// --------------------------------------------------
+
+.site-footer {
+  background-image: url(../icons/curved-on-top-background-trimmed.svg);
+  padding-block-start: 1.6rem;
+  background-position: top center;
+  background-size: cover;
+
+  &__title {
+    font-size: 1.5rem;
+    flex-basis: 100%;
+    line-height: 1;
+    margin-block-end: 1.5rem;
+    text-align: center;
+    text-wrap: balance;
+
+    @include bp(lg) {
+      text-align: left;
+      flex-basis: 100%;
+    }
+  }
+
+  &__top {
+    background-color: $drupalizer-neutral-6;
+    color: $color-white;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+
+    @include bp(lg) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__top-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: baseline;
+  }
+
+  &__communicate {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    flex-basis: 100%;
+
+    @include bp(lg) {
+      flex-basis: 22rem;
+    }
+
+    > *:not(.site-footer__title) {
+      flex-basis: 100%;
+
+      @include bp(lg) {
+        flex-basis: auto;
+      }
+    }
+  }
+
+  &__newsletter {
+    flex-grow: 1;
+    flex-basis: 24rem;
+  }
+
+  &__middle {
+    margin-block: 2.5rem;
+  }
+
+  &__middle-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 7.5rem;
+  }
+
+  &__corporate {
+    flex-basis: 100%;
+
+    @include bp(lg) {
+      flex-basis: auto;
+      order: -1;
+    }
+
+    .site-address {
+      text-align: center;
+
+      p {
+        display: inline-block;
+
+        &::before {
+          content: ' - ';
+        }
+
+        &:first-child,
+        &:last-child {
+          &::before {
+            content: none;
+          }
+        }
+      }
+
+      @include bp(lg) {
+        text-align: start;
+
+        p {
+          display: block;
+
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    flex-grow: 1;
+    align-items: end;
+    justify-content: end;
+    flex-basis: 26rem;
+  }
+
+  &__bottom {
+    border-top: thin solid $drupalizer-light;
+    padding-block: 1rem;
+  }
+
+  &__bottom-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: .4rem;
+    justify-content: center;
+
+    @include bp(md) {
+      justify-content: normal;
+    }
+  }
+}

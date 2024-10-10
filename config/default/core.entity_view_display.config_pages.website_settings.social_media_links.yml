@@ -1,0 +1,47 @@
+uuid: 8874b76a-4e1b-48fb-998b-de1d9f00af5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - core.entity_view_mode.config_pages.social_media_links
+    - field.field.config_pages.website_settings.field_sm_facebook
+    - field.field.config_pages.website_settings.field_sm_instagram
+    - field.field.config_pages.website_settings.field_sm_linkedin
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: config_pages.website_settings.social_media_links
+targetEntityType: config_pages
+bundle: website_settings
+mode: social_media_links
+content:
+  field_sm_facebook:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sm_instagram:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sm_linkedin:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

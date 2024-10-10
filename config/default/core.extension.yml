@@ -27,6 +27,7 @@ module:
   ckeditor5_span: 0
   comment: 0
   config: 0
+  config_pages: 0
   config_split: 0
   config_translation: 0
   contact: 0

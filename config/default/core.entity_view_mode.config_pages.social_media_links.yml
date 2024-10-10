@@ -1,0 +1,11 @@
+uuid: 60c60027-006d-4454-ad0b-a19b55b9d37b
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+id: config_pages.social_media_links
+label: 'Social media links'
+description: ''
+targetEntityType: config_pages
+cache: true

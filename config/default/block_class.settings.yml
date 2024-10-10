@@ -4,6 +4,7 @@ default_case: standard
 block_classes_stored:
   - main-menu--mobile
   - language-switcher--banner
+  - language-switcher--footer
 enable_attributes: true
 enable_auto_complete: true
 qty_classes_per_block: 10

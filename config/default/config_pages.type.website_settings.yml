@@ -1,0 +1,17 @@
+uuid: e01954a7-6f45-4e47-97be-bcfb23d35ac6
+langcode: en
+status: true
+dependencies: {  }
+id: website_settings
+label: 'Website settings'
+token: false
+context:
+  show_warning: true
+  group:
+    language: true
+  fallback:
+    language: ''
+menu:
+  path: /admin/webmaster-tools
+  weight: 0
+  description: 'Website settings'

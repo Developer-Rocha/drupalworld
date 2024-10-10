@@ -1,0 +1,71 @@
+.social-share {
+  $social-share-icon-size: 1.5rem;
+
+  &__title {
+    @include font-size(14);
+
+    font-weight: 500;
+    margin-block-end: 0;
+
+    .page-layout__intro & {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+    margin: 0;
+  }
+
+  button,
+  &__link {
+    display: block;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: .1rem;
+    box-shadow: none;
+    margin: 0;
+    line-height: 0;
+    border: none;
+
+    svg {
+      transition: all $default-transition;
+      width: $social-share-icon-size;
+      height: $social-share-icon-size;
+      fill: $drupalizer-neutral-6;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+
+      svg {
+        fill: $drupalizer-dark;
+      }
+    }
+
+    &:focus-visible {
+      outline: thin solid $color-primary;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: $social-share-icon-size;
+    height: $social-share-icon-size;
+  }
+
+  &__text {
+    @extend .visually-hidden;
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 92e96fbf-c0c5-4aae-b750-aff66892256f
+langcode: en
+status: true
+dependencies: {  }
+id: legal
+label: Legal
+description: 'Legal section links'
+locked: false

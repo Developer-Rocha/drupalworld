@@ -60,9 +60,26 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: pattern
           settings:
-            lb: ''
+            pattern: button
+            pattern_mapping:
+              'ds_field_template:field_hero_cta__uri':
+                destination: url
+                weight: 0
+                plugin: ds_field_template
+                source: field_hero_cta__uri
+              'ds_field_template:field_hero_cta__title':
+                destination: text
+                weight: 1
+                plugin: ds_field_template
+                source: field_hero_cta__title
+            pattern_settings:
+              button:
+                cta_id: ''
+                size: medium
+                color: primary
+            pattern_variant: link
     weight: 6
     region: cta
   field_hero_image:

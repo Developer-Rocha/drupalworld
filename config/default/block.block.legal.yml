@@ -1,0 +1,33 @@
+uuid: f32511ef-1fa9-4702-a627-ff8c034abc63
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.legal
+  module:
+    - menu_block
+  theme:
+    - drupalizer
+id: legal
+theme: drupalizer
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'menu_block:legal'
+settings:
+  id: 'menu_block:legal'
+  label: 'Legal menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'legal:'
+  render_parent: false
+  suggestion: legal
+  hide_on_nonactive: false
+visibility: {  }

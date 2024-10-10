@@ -1,0 +1,19 @@
+uuid: fd69200b-b711-4f9e-83fa-ab010a6687ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - field.storage.config_pages.field_sm_facebook
+id: config_pages.website_settings.field_sm_facebook
+field_name: field_sm_facebook
+entity_type: config_pages
+bundle: website_settings
+label: Facebook
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

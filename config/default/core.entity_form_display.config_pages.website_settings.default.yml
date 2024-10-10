@@ -1,0 +1,77 @@
+uuid: a665f8b5-0981-4025-b522-3a207c87aba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - field.field.config_pages.website_settings.field_sm_facebook
+    - field.field.config_pages.website_settings.field_sm_instagram
+    - field.field.config_pages.website_settings.field_sm_linkedin
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_social_media_links
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: vertical
+        width_breakpoint: 640
+    group_social_media_links:
+      children:
+        - field_sm_facebook
+        - field_sm_instagram
+        - field_sm_linkedin
+      label: 'Social media links'
+      region: content
+      parent_name: group_tabs
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: true
+id: config_pages.website_settings.default
+targetEntityType: config_pages
+bundle: website_settings
+mode: default
+content:
+  field_sm_facebook:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sm_instagram:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sm_linkedin:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true

@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a config_page.
+ *
+ * @see template_preprocess_config_pages()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="social-media">
+
+  <ul class="social-media__items">
+
+    {% if content.field_sm_facebook|field_value is not empty  %}
+      <li class="social-media__item">
+        <a href="{{ content.field_sm_facebook|field_value }}" target="_blank" class="social-media__link">
+          <span class="visually-hidden">{{ 'Facebook'|t }}</span>
+          {% set icon_name = 'facebook' %}
+          {% set file = active_theme_path() ~ '/icons/icon-' ~ icon_name ~ '.svg' %}
+          <span class="social-media__icon social-media__icon--{{ icon_name }}" aria-hidden="true">
+            {% include file ignore missing %}
+          </span>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if content.field_sm_twitter|field_value is not empty  %}
+      <li class="social-media__item">
+        <a href="{{ content.field_sm_twitter|field_value }}" target="_blank" class="social-media__link">
+          <span class="visually-hidden">{{ 'Twitter'|t }}</span>
+          {% set icon_name = 'twitter' %}
+          {% set file = active_theme_path() ~ '/icons/icon-' ~ icon_name ~ '.svg' %}
+          <span class="social-media__icon social-media__icon--{{ icon_name }}" aria-hidden="true">
+            {% include file ignore missing %}
+          </span>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if content.field_sm_youtube|field_value is not empty %}
+      <li class="social-media__item">
+        <a href="{{ content.field_sm_youtube|field_value }}" target="_blank" class="social-media__link">
+          <span class="visually-hidden">{{ 'YouTube'|t }}</span>
+          {% set icon_name = 'youtube' %}
+          {% set file = active_theme_path() ~ '/icons/icon-' ~ icon_name ~ '.svg' %}
+          <span class="social-media__icon social-media__icon--{{ icon_name }}" aria-hidden="true">
+            {% include file ignore missing %}
+          </span>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if content.field_sm_instagram|field_value is not empty %}
+      <li class="social-media__item">
+        <a href="{{ content.field_sm_instagram|field_value }}" target="_blank" class="social-media__link">
+          <span class="visually-hidden">{{ 'Instagram'|t }}</span>
+          {% set icon_name = 'instagram' %}
+          {% set file = active_theme_path() ~ '/icons/icon-' ~ icon_name ~ '.svg' %}
+          <span class="social-media__icon social-media__icon--{{ icon_name }}" aria-hidden="true">
+            {% include file ignore missing %}
+          </span>
+        </a>
+      </li>
+    {% endif %}
+
+    {% if content.field_sm_linkedin|field_value is not empty %}
+      <li class="social-media__item">
+        <a href="{{ content.field_sm_linkedin|field_value }}" target="_blank" class="social-media__link">
+          <span class="visually-hidden">{{ 'LinkedIn'|t }}</span>
+          {% set icon_name = 'linkedin' %}
+          {% set file = active_theme_path() ~ '/icons/icon-' ~ icon_name ~ '.svg' %}
+          <span class="social-media__icon social-media__icon--{{ icon_name }}" aria-hidden="true">
+            {% include file ignore missing %}
+          </span>
+        </a>
+      </li>
+    {% endif %}
+
+  </ul>
+
+</div>

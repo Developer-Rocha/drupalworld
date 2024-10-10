@@ -1,0 +1,40 @@
+uuid: b03ed5f8-c34b-47fd-9585-b807af06330b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - field.field.config_pages.website_settings.field_sm_facebook
+    - field.field.config_pages.website_settings.field_sm_instagram
+    - field.field.config_pages.website_settings.field_sm_linkedin
+id: config_pages.website_settings.default
+targetEntityType: config_pages
+bundle: website_settings
+mode: default
+content:
+  field_sm_facebook:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sm_instagram:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sm_linkedin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

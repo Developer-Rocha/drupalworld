@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a config_page.
+ *
+ * @see template_preprocess_config_pages()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+set classes = [
+  config_pages.bundle|clean_class,
+  view_mode ? config_pages.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ content }}
+</div>

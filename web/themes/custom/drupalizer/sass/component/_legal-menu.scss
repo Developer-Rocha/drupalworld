@@ -1,0 +1,62 @@
+.legal-menu {
+  font-size: .75rem;
+  color: $drupalizer-dark;
+
+  @include bp(md) {
+    margin-inline-end: auto;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    list-style: none;
+    row-gap: .4rem;
+  }
+
+  &__item {
+    $cicle-size: 1.5rem;
+
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding-inline-start: $cicle-size;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: ($cicle-size / 2);
+      width: .2rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: currentColor;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:first-child {
+      padding-inline: 0;
+
+      &::before {
+        content: none;
+      }
+
+      @include bp(md) {
+        padding-inline-start: 1.5rem;
+
+        &::before {
+          content: '';
+        }
+      }
+    }
+  }
+
+  a,
+  &__link {
+    display: inline-block;
+    padding-block: .5rem;
+    text-decoration: underline;
+    color: inherit;
+  }
+}
