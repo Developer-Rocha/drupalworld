@@ -15,7 +15,7 @@ settings:
       value: blue
       label: Blue
     -
-      value: dark_blue
+      value: dark-blue
       label: 'Dark Blue'
   allowed_values_function: ''
 module: options
