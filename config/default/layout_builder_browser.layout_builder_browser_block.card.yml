@@ -1,0 +1,11 @@
+uuid: a768f9d5-9c60-4030-bcdc-eda25fa3dfad
+langcode: en
+status: true
+dependencies: {  }
+id: card
+block_id: 'inline_block:card'
+category: content_advanced
+label: Card
+image_path: /themes/custom/drupalizer/components/card/lb-preview.png
+image_alt: ''
+weight: null

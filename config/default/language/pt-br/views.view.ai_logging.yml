@@ -3,10 +3,20 @@ display:
     display_title: Padrão
     display_options:
       fields:
+        id:
+          separator: ', '
         provider:
           label: Provedor
+          separator: ', '
+        model:
+          separator: ', '
+        prompt:
+          separator: ', '
         created:
           label: Criado
+          separator: ', '
+        tags_value:
+          separator: ', '
         view_ai_log:
           label: Ver
           text: Ver
@@ -15,6 +25,9 @@ display:
           text: Apagar
       pager:
         options:
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'

@@ -43,9 +43,9 @@ widgets:
       dropzone_description: 'Drop images here to upload them'
       max_filesize: 100M
       extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
-      clientside_resize: false
-      resize_width: null
-      resize_height: null
+      clientside_resize: true
+      resize_width: 1920
+      resize_height: 1080
       resize_quality: 1.0
       resize_method: contain
       thumbnail_method: contain

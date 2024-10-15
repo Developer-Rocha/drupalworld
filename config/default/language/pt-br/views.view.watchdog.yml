@@ -7,10 +7,14 @@ display:
           label: Tipo
         name:
           label: Usuário
+          separator: ', '
         link:
           label: Operações
       pager:
         options:
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'

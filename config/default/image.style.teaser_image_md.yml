@@ -1,0 +1,17 @@
+uuid: cecfc4bd-058b-4246-a668-84545f73a52f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_image_md
+label: 'Teaser image (md) - 440x220'
+effects:
+  38294213-a172-4da6-a612-5abe303cbee1:
+    uuid: 38294213-a172-4da6-a612-5abe303cbee1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 220
+      crop_type: focal_point

@@ -7,6 +7,9 @@ display:
           label: Título
       pager:
         options:
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
@@ -18,5 +21,7 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+  attachment_1:
+    display_title: Attachment
   page_1:
     display_title: Página

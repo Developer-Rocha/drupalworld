@@ -1,0 +1,145 @@
+uuid: 281a0c96-fd15-4591-ab94-c2a6df7ef690
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.entity_view_mode.block_content.card_vertical
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_background
+    - field.field.block_content.card.field_button
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_title
+    - field.field.block_content.card.field_url
+  module:
+    - ds
+    - layout_builder
+    - link
+    - options
+    - text
+    - ui_patterns_field_formatters
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: vertical
+    regions:
+      image:
+        - field_image
+      title:
+        - field_title
+      content:
+        - body
+        - field_button
+      url:
+        - field_url
+      card_classes:
+        - field_background
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.card.card_vertical
+targetEntityType: block_content
+bundle: card
+mode: card_vertical
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_background:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: card_classes
+  field_button:
+    type: pattern_all_formatter
+    label: hidden
+    settings:
+      type: link
+      settings:
+        trim_length: 80
+        url_only: true
+        url_plain: false
+        rel: '0'
+        target: '0'
+      pattern: button
+      pattern_variant: button
+      pattern_mapping:
+        'field_raw_properties:uri':
+          weight: 0
+          destination: url
+          plugin: field_raw_properties
+          source: uri
+        'field_raw_properties:title':
+          weight: 1
+          destination: text
+          plugin: field_raw_properties
+          source: title
+      pattern_settings:
+        button:
+          cta_id: ''
+          size: medium
+          color: ''
+      variants_token: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 0
+    region: image
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: title
+  field_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 4
+    region: url
+hidden:
+  langcode: true
+  search_api_excerpt: true

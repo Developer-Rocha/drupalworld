@@ -5,12 +5,23 @@ display:
     display_options:
       title: Mídia
       fields:
+        thumbnail__target_id:
+          separator: ', '
+        name:
+          separator: ', '
         bundle:
           label: Tipo
+          separator: ', '
+        uid:
+          separator: ', '
         status:
+          label: Status
           settings:
             format_custom_false: 'Não publicado'
             format_custom_true: Publicado
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Operações
       pager:

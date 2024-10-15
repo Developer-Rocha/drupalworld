@@ -63,7 +63,8 @@
         "drupal/field_formatter": "^3.0@RC",
         "drupal/field_group": "^3.6",
         "drupal/field_validation": "^3.0@beta",
-        "drupal/focal_point": "^2.1",
+        "drupal/file_upload_secure_validator": "^2.1",
+        "drupal/focal_point": "^2.0",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_lb": "^1.0@RC",
         "drupal/gin_toolbar": "^1.0@rc",
@@ -79,6 +80,7 @@
         "drupal/layout_builder_operation_link": "^2.2",
         "drupal/layout_builder_reorder": "^1.0",
         "drupal/layout_builder_restrictions": "^3.0",
+        "drupal/layout_builder_styles": "^2.1",
         "drupal/layoutbuilder_extras": "^2.0",
         "drupal/layoutbuilder_extras_live_update": "^1.0",
         "drupal/link_attributes": "^2.1",
@@ -86,6 +88,7 @@
         "drupal/mailsystem": "^4.5",
         "drupal/manage_display": "^3.0",
         "drupal/maxlength": "^3.1",
+        "drupal/media_bulk_upload": "^3.0",
         "drupal/media_library_form_element": "^2.1",
         "drupal/menu_block": "^1.13",
         "drupal/migrate_plus": "^6.0",
@@ -196,7 +199,8 @@
                 "3218674 - Translation file not found notice for en langcode": "https://www.drupal.org/files/issues/2022-10-10/drupal-install-throwing-translation-file-not-found-3218674-9.diff",
                 "3218426 - Using partially synchronized image fields causes validation errors and PHP warnings": "https://www.drupal.org/files/issues/2024-08-27/drupal-11.x-MR-5385--20240827-1.patch",
                 "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch",
-                "3052617 - Media library does not open when clicking \"Add media\": “TypeError: Argument 2 passed to Drupal\\media_library\\MediaLibraryState::create() must be of the type array, null given": "https://www.drupal.org/files/issues/2023-04-10/3052617.patch"
+                "3052617 - Media library does not open when clicking \"Add media\": “TypeError: Argument 2 passed to Drupal\\media_library\\MediaLibraryState::create() must be of the type array, null given": "https://www.drupal.org/files/issues/2023-04-10/3052617.patch",
+                "3343670 - Allow to merge AjaxCommands inside of AjaxResponse": "https://git.drupalcode.org/project/drupal/-/merge_requests/3544.diff"
             },
             "drupal/entity_browser": {
                 "2851580 - Re-order + remove broken with the Entity Reference (and File) widget": "https://www.drupal.org/files/issues/2023-12-12/2851580-117.patch",
@@ -204,6 +208,9 @@
             },
             "drupal/field_formatter": {
                 "3358395 - LogicException: Getting the base fields is not supported for entity type Domain record": "https://www.drupal.org/files/issues/2023-05-05/field_formatter-3358395-3.patch"
+            },
+            "drupal/layout_builder_styles": {
+                "3180131 - Incompatible with Layout Builder UX module": "https://www.drupal.org/files/issues/2023-01-23/3180131-6.patch"
             },
             "drupal/s3fs": {
                 "3247639 - Files being written to s3fs_file table with s3:// when they are in file_managed with private://": "https://www.drupal.org/files/issues/2021-11-04/3247639-6.patch"

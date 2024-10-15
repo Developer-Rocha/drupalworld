@@ -3,8 +3,20 @@ display:
     display_title: Padrão
     display_options:
       fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Operações
+        name_1:
+          separator: ', '
       pager:
         options:
           tags:
@@ -29,8 +41,20 @@ display:
   page_unapproved:
     display_options:
       fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Operações
+        name_1:
+          separator: ', '
       filters:
         langcode:
           expose:

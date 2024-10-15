@@ -6,6 +6,9 @@ display:
       title: Mídia
       pager:
         options:
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
@@ -40,12 +43,18 @@ display:
     display_title: Página
     display_options:
       fields:
+        name:
+          separator: ', '
         edit_media:
           text: Editar
         delete_media:
           text: Apagar
   widget:
     display_options:
+      arguments:
+        bundle:
+          exception:
+            title: All
       filters:
         name:
           expose:
@@ -55,6 +64,10 @@ display:
       fields:
         name:
           label: Nome
+      arguments:
+        bundle:
+          exception:
+            title: All
       filters:
         name:
           expose:

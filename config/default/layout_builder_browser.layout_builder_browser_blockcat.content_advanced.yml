@@ -1,0 +1,10 @@
+uuid: 1463bfcc-036a-4089-ab48-827f76b4485f
+langcode: en
+status: true
+dependencies: {  }
+id: content_advanced
+label: 'Content (advanced)'
+weight: null
+opened: true
+image_path: ''
+image_alt: ''

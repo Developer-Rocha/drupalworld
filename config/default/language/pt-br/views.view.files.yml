@@ -7,8 +7,13 @@ display:
       fields:
         filename:
           label: Nome
+          separator: ', '
+        filemime:
+          label: 'Tipo MIME'
         filesize:
           label: Tamanho
+        status:
+          label: Status
         count:
           label: 'Usado em'
         operations:
@@ -32,6 +37,12 @@ display:
         filename:
           expose:
             label: 'Nome do arquivo'
+        filemime:
+          expose:
+            label: 'Tipo MIME'
+        status:
+          expose:
+            label: Status
   page_1:
     display_options:
       menu:
@@ -52,3 +63,7 @@ display:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
+      arguments:
+        fid:
+          exception:
+            title: All

@@ -61,7 +61,7 @@
       {% endif %}
     {% endblock %}
 
-    {% if content.0|field_value %}
+    {% if content %}
       <div class="{{ component ~ '__content' }}">
         {% for item in content %}
           <div class="{{ component ~ '__content-item' }}">{{ item }}</div>

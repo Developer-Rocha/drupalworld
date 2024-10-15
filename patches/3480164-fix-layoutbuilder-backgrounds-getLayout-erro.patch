@@ -1,0 +1,37 @@
+diff --git a/layout_builder_backgrounds.module b/layout_builder_backgrounds.module
+index feaecca2335b63e2ce8192c024d147afdeda644f..cd33a153695c984b0be916ec3278767a5ba31b68 100644
+--- a/layout_builder_backgrounds.module
++++ b/layout_builder_backgrounds.module
+@@ -17,9 +17,9 @@ use Drupal\file\Entity\File;
+  */
+ function layout_builder_backgrounds_form_layout_builder_configure_section_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+-  /** @var Drupal\layout_builder_styles\Form\ConfigureSectionForm $form_object */
++  /** @var \Drupal\layout_builder\Form\ConfigureSectionForm $formObject */
+   $form_object = $form_state->getFormObject();
+-  $config = $form_object->getLayout()->getConfiguration();
++  $config = $form_object->getCurrentLayout()->getConfiguration();
+
+   $selected_color = $config['layout_builder_backgrounds']['color'] ?? NULL;
+   $selected_media = $config['layout_builder_backgrounds']['media'] ?? NULL;
+@@ -78,9 +78,9 @@ function layout_builder_backgrounds_form_layout_builder_configure_section_alter(
+  */
+ function _layout_builder_backgrounds_section_form_submit(array $form, FormStateInterface $form_state) {
+
+-  /** @var Drupal\layout_builder_styles\Form\ConfigureSectionForm $form_object */
++  /** @var \Drupal\layout_builder\Form\ConfigureSectionForm $formObject */
+   $form_object = $form_state->getFormObject();
+-  $config = $form_object->getLayout()->getConfiguration();
++  $config = $form_object->getCurrentLayout()->getConfiguration();
+   if (!$config) {
+     $config = [];
+   }
+@@ -108,7 +108,7 @@ function _layout_builder_backgrounds_section_form_submit(array $form, FormStateI
+   }
+
+   $form_object
+-    ->getLayout()
++    ->getCurrentLayout()
+     ->setConfiguration($config);
+ }
+

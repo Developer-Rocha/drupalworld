@@ -1,0 +1,17 @@
+uuid: 8958bcef-e4a8-4356-9a69-d40fb3906ea8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_image_xs
+label: 'Teaser image (xs) - 400x200'
+effects:
+  4a80088d-57df-4354-8386-9478e913dc6b:
+    uuid: 4a80088d-57df-4354-8386-9478e913dc6b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 200
+      crop_type: focal_point

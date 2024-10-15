@@ -15,6 +15,7 @@ dependencies:
     - file
     - filter
     - help
+    - media_bulk_upload
     - node
     - path
     - system
@@ -50,6 +51,7 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'translate article node'
+  - 'use multiple_images bulk upload form'
   - 'use text format header'
   - 'view all revisions'
   - 'view own unpublished content'

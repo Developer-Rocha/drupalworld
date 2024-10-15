@@ -1,0 +1,8 @@
+uuid: 6182401d-7a8e-4ce6-9f72-69c6b19af012
+langcode: en
+status: true
+dependencies: {  }
+id: card
+label: Card
+revision: false
+description: 'Use <em>Card</em> for manually adding cards using layout builder.'

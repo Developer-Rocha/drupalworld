@@ -1,0 +1,24 @@
+uuid: b3e01dd4-01a6-4057-b452-f582fa4dba5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.teaser_image_md
+    - image.style.teaser_image_sm
+  theme:
+    - drupalizer
+id: teaser_image
+label: 'Teaser image'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_image_sm
+    breakpoint_id: drupalizer_easytheme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_image_md
+    breakpoint_id: drupalizer_easytheme.sm
+    multiplier: 1x
+breakpoint_group: drupalizer
+fallback_image_style: teaser_image_sm

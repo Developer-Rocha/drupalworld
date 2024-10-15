@@ -1,0 +1,21 @@
+uuid: a490a275-f4f4-4cbb-a768-2461cb976b8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_background
+  module:
+    - options
+id: block_content.card.field_background
+field_name: field_background
+entity_type: block_content
+bundle: card
+label: Background
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -7,12 +7,16 @@ display:
       fields:
         title:
           label: Título
+        type:
+          separator: ', '
         status:
+          label: Status
           settings:
             format_custom_false: 'Não publicado'
             format_custom_true: Publicado
         langcode:
           label: Language
+          separator: ', '
         operations:
           label: Operações
       pager:
@@ -31,6 +35,8 @@ display:
           expose:
             label: Título
         status:
+          expose:
+            label: Status
           group_info:
             group_items:
               1:

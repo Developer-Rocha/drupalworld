@@ -5,6 +5,15 @@ display:
       fields:
         title:
           label: Título
+          separator: ', '
+        type:
+          separator: ', '
+        name:
+          separator: ', '
+        moderation_state:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Operações
       pager:

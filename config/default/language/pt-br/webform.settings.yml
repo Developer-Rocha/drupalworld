@@ -1,4 +1,5 @@
 settings:
+  default_submit_button_label: Enviar
   default_reset_button_label: Redefinir
   default_delete_button_label: Apagar
   default_preview_next_button_label: Pré-visualizar

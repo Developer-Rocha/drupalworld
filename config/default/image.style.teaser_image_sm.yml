@@ -1,0 +1,17 @@
+uuid: 1b4ccedc-d0e5-424d-b359-a2669cf415a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_image_sm
+label: 'Teaser image (sm) - 640x320'
+effects:
+  87b62cfc-56fa-4edd-96f2-d244278af4a9:
+    uuid: 87b62cfc-56fa-4edd-96f2-d244278af4a9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 320
+      crop_type: focal_point

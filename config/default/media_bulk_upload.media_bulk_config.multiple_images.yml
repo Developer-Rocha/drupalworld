@@ -1,0 +1,16 @@
+uuid: cf01993a-7530-4194-afbd-fb0b902289f9
+langcode: en
+status: true
+dependencies: {  }
+id: multiple_images
+label: 'Multiple Images'
+media_types:
+  image: image
+  audio: 0
+  document: 0
+  remote_video: 0
+  video: 0
+form_mode: default
+upload_location: 'public://bulk-media'
+show_alt: null
+show_title: null

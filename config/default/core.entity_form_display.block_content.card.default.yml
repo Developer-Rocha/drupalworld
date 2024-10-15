@@ -1,0 +1,95 @@
+uuid: 1b777ad9-72c2-4a5a-adb5-6f49bdaf914b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - entity_browser.browser.upload_or_existing
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_background
+    - field.field.block_content.card.field_button
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_title
+    - field.field.block_content.card.field_url
+  module:
+    - entity_browser
+    - link
+    - link_attributes
+    - text
+id: block_content.card.default
+targetEntityType: block_content
+bundle: card
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_background:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_button:
+    type: link_attributes
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        variant: true
+        cta_id: true
+        color: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+        size: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_image:
+    type: entity_browser_entity_reference
+    weight: 0
+    region: content
+    settings:
+      entity_browser: upload_or_existing
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: thumbnail
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_url:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true
