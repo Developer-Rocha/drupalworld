@@ -8,4 +8,4 @@ category: content
 label: Button
 image_path: /themes/custom/drupalizer/components/button/lb-preview.png
 image_alt: ''
-weight: null
+weight: -100

@@ -8,4 +8,4 @@ category: content
 label: Text
 image_path: /modules/custom/drupalizer_layout_builder/source/images/text.png
 image_alt: ''
-weight: null
+weight: -100

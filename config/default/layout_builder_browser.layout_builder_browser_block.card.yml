@@ -8,4 +8,4 @@ category: content_advanced
 label: Card
 image_path: /themes/custom/drupalizer/components/card/lb-preview.png
 image_alt: ''
-weight: null
+weight: -100

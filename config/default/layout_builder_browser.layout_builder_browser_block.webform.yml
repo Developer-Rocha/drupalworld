@@ -1,0 +1,11 @@
+uuid: 1eabb8f7-988e-4c4c-ace5-5aca77da0c29
+langcode: en
+status: true
+dependencies: {  }
+id: webform
+block_id: webform_block
+category: content_advanced
+label: Webform
+image_path: /modules/custom/drupalizer_layout_builder/source/images/lb-preview-todo.png
+image_alt: ''
+weight: -100
