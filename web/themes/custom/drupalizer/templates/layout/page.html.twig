@@ -178,11 +178,8 @@
 
   {# Only display breadcumbs when no hero image is present #}
   {% if node and not node.field_hero_image.0.target_id %}
-    {% if 'location' in node.getType %}
-    {% else %}
-      {% if breadcrumb %}
-        {{ pattern('breadcrumbs', {breadcrumb: breadcrumb}) }}
-      {% endif %}
+    {% if breadcrumb %}
+      {{ pattern('breadcrumbs', {breadcrumb: breadcrumb}) }}
     {% endif %}
   {% endif %}
 

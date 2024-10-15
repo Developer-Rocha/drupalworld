@@ -51,15 +51,13 @@ hero:
       preview:
         text: Call to action
         url: https://drupalizer.tech
-    varia:
+    variant:
       type: text
       label: Varia
       description: varia content.
   variants:
     full:
       label: Full header
-    full_location:
-      label: Full header location
   libraries:
     - hero:
        css:

@@ -19,9 +19,8 @@
   <div class="{{ component ~ '__content-wrapper' }}">
     <div class="container">
       <div class="{{ component ~ '__content' }}">
-
         <h1 class="{{ component ~ '__title' }}">
-          {% if title %}
+          {% if title.field_hero_title|field_value %}
             {{ title }}
           {% else %}
             {{ node_title }}
