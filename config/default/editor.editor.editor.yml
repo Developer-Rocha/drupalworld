@@ -1,0 +1,120 @@
+uuid: 7cf2f08a-2867-447c-b1d7-856e535203c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.editor
+  module:
+    - ckeditor5
+format: editor
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - style
+      - bold
+      - italic
+      - '|'
+      - bulletedList
+      - numberedList
+      - codeBlock
+      - '|'
+      - aickeditor
+  plugins:
+    ai_ckeditor_ai:
+      dialog:
+        autoresize: 'min-width: 600px'
+        height: '750'
+        width: '900'
+        dialog_class: ai-ckeditor-modal
+      plugins:
+        ai_ckeditor_completion:
+          provider: openai__gpt-4o
+          enabled: false
+        ai_ckeditor_help:
+          enabled: false
+        ai_ckeditor_summarize:
+          provider: openai__gpt-4o
+          enabled: false
+        ai_ckeditor_tone:
+          autocreate: false
+          provider: openai__gpt-4o
+          tone_vocabulary: languages
+          use_description: 0
+          enabled: false
+        ai_ckeditor_translate:
+          autocreate: false
+          provider: openai__gpt-4o
+          translate_vocabulary: languages
+          use_description: false
+          enabled: false
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_style:
+      styles:
+        -
+          label: 'H2 Blue color'
+          element: '<h2 class="color-primary">'
+        -
+          label: 'H2 Smaller title'
+          element: '<h2 class="smaller-title">'
+        -
+          label: Highlight
+          element: '<p class="highlight">'
+image_upload:
+  status: false
