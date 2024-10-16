@@ -5,7 +5,7 @@ dependencies:
   config:
     - comment.type.comment
     - field.storage.comment.comment_body
-    - filter.format.basic_html
+    - filter.format.comment
   module:
     - text
 _core:
@@ -22,5 +22,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    - basic_html
+    - comment
 field_type: text_long

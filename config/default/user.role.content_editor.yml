@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.comment
     - filter.format.editor
     - filter.format.header
     - node.type.article
@@ -53,6 +54,7 @@ permissions:
   - 'revert all revisions'
   - 'translate article node'
   - 'use multiple_images bulk upload form'
+  - 'use text format comment'
   - 'use text format editor'
   - 'use text format header'
   - 'view all revisions'

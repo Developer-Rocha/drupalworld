@@ -1,20 +1,7 @@
 {% extends "node.html.twig" %}
 
-{% block before %}
-  {%
-    set classes = [
-    'page-layout',
-    node.field_hero_image.0 ? 'page-layout--hero' : 'page-layout--no-hero',
-    node.bundle|clean_class,
-    view_mode ? node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
-  ]
-  %}
-
-  {% set attributes = attributes.addClass(classes) %}
-{% endblock before %}
-
 {% block node %}
-  <main{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass('container') }}>
     {% block header %}
       <header class="node__header">
         <h1 class="page-title">{{ node.label }}</h1>
@@ -22,11 +9,18 @@
     {% endblock header %}
 
     {% block content %}
-      {{ content }}
+      {% if content %}
+        <div class="article__content">
+          <div class="article__header">
+            {{ content.created }}
+            {{ content.field_read_time }}
+          </div>
+          {{ content|without('field_read_time', 'created') }}
+        </div>
+      {% endif %}
     {% endblock content %}
 
     {% block footer %}
     {% endblock footer %}
-
-  </main>
+  </div>
 {% endblock node %}

@@ -64,30 +64,6 @@
     </nav>
   {% endif %}
 
-{#  {% if not hide_language_bar_region %}#}
-{#    {% if page.language_bar %}#}
-{#      <div class="region region--language-bar">#}
-{#        <div class="site-language-bar">#}
-{#          <div class="container">#}
-{#            <div class="site-language-bar__wrapper">#}
-{#              <p class="site-language-bar__label">#}
-{#                {{ 'Choose another country or region if you want to see the content for your location.'|t }}#}
-{#              </p>#}
-{#              <div class="site-language-bar__wrapper-content">#}
-{#                {{ page.language_bar }}#}
-{#                <div class="site-language-bar__submit-btn" aria-label="{{ 'Submit'|t }}">{{ 'Continue'|t }}</div>#}
-{#                <div class="site-language-bar__close-btn" aria-label="{{ 'Close banner'|t }}">#}
-{#                  {% set close_btn = active_theme_path() ~  '/icons/icon-close-btn.svg' %}#}
-{#                  {% include close_btn ignore missing %}#}
-{#                </div>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-{#    {% endif %}#}
-{#  {% endif %}#}
-
   <header class="region region--header">
     <div class="container">
       <div class="site-header">
@@ -190,55 +166,44 @@
   {% endif %}
 
   <div {{ content_attributes.addClass('content-wrapper') }}>
-
-    {% if page.content_top %}
-      <div class="region region--content-top">
-        <div class="container">
-          {{ page.content_top }}
-        </div>
-      </div>
-    {% endif %}
-
     {% block page_content %}
       {% if page.content %}
+        <div class="container">
+          {%
+            set classes = [
+            'page-layout',
+            node.field_hero_image.0 ? 'page-layout--hero' : 'page-layout--no-hero',
+            node.bundle|clean_class,
+            view_mode ? node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+          ]
+          %}
+          <main{{ layout_attributes.addClass(classes) }}>
+            {% if page.sidebar_left %}
+              {% block sidebar_left %}
+                <aside {{ sidebar_left_attributes.addClass('page-layout__sidebar-left') }}>
+                  <div class="container">
+                    {{ page.sidebar_left }}
+                  </div>
+                </aside>
+              {% endblock sidebar_left %}
+            {% endif %}
 
-        <main{{ layout_attributes }}>
-{#          {% block page_title_region %}#}
-{#            <div class="page-header page-layout__header">#}
-{#              <div class="container">#}
-{#                <h1 class="page-title">{{ page_title }}</h1>#}
-{#              </div>#}
-{#            </div>#}
-{#          {% endblock page_title_region %}#}
-
-          {% if page.sidebar_left %}
-            {% block sidebar_left %}
-              <aside {{ sidebar_left_attributes.addClass('page-layout__sidebar-left') }}>
-                <div class="container">
-                  {{ page.sidebar_left }}
-                </div>
-              </aside>
-            {% endblock sidebar_left %}
-          {% endif %}
-
-          <div class="page-layout__content">
-            <div class="page-layout__content-wrapper">
-              <div class="container">
-                {{ page.content }}
-              </div>
+            <div class="page-layout__content">
+              {{ page.content }}
             </div>
-          </div>
 
-          {% if page.sidebar_right %}
-            {% block sidebar_right %}
-              <aside {{ sidebar_right_attributes.addClass('page-layout__sidebar-right') }}>
-                <div class="container">
-                  {{ page.sidebar_right }}
-                </div>
-              </aside>
-            {% endblock sidebar_right %}
-          {% endif %}
-        </main>
+            {% if page.sidebar_right %}
+              {% block sidebar_right %}
+                <aside {{ sidebar_right_attributes.addClass('page-layout__sidebar-right') }}>
+                  <div class="container">
+                    {{ page.sidebar_right }}
+                  </div>
+                </aside>
+              {% endblock sidebar_right %}
+            {% endif %}
+          </main>
+        </div>
+
 
       {% endif %}
     {% endblock page_content %}
@@ -250,7 +215,6 @@
         </div>
       </div>
     {% endif %}
-
   </div>
 
 

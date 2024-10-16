@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.comment
     - filter.format.webform_default
     - search_api_autocomplete.search.search
   module:
@@ -33,5 +34,6 @@ permissions:
   - 'skip comment approval'
   - 'use search_api_autocomplete for search'
   - 'use text format basic_html'
+  - 'use text format comment'
   - 'use text format webform_default'
   - 'view media'

@@ -1,20 +1,7 @@
 {% extends "node.html.twig" %}
 
-{% block before %}
-  {%
-    set classes = [
-    'page-layout',
-    node.field_hero_image.0 ? 'page-layout--hero' : 'page-layout--no-hero',
-    node.bundle|clean_class,
-    view_mode ? node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
-  ]
-  %}
-
-  {% set attributes = attributes.addClass(classes) %}
-{% endblock before %}
-
 {% block node %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes }}>
     {# Contextual links #}
     {{ title_prefix }}
     {{ title_suffix }}

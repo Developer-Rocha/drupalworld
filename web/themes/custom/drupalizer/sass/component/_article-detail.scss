@@ -1,0 +1,46 @@
+
+
+// Article detail
+// --------------------------------------------------
+
+.article {
+  .node__header {
+    h1 {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    .field--name-field-image {
+      margin-bottom: 2rem;
+    }
+
+    .field--name-body {
+      display: inline-grid;
+      margin-bottom: 2rem;
+
+      pre {
+        overflow: auto;
+      }
+    }
+
+    .field__article_tag {
+      display: flex;
+      margin-bottom: 4rem;
+
+      .field__item:not(:last-child) {
+        margin-right: .4rem;
+      }
+    }
+  }
+
+  .ck.ck-editor {
+    max-width: 99%;
+  }
+}

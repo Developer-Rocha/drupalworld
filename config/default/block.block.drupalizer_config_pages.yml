@@ -10,7 +10,7 @@ dependencies:
 id: drupalizer_config_pages
 theme: drupalizer
 region: sidebar_right
-weight: -11
+weight: -10
 provider: null
 plugin: config_pages_block
 settings:
