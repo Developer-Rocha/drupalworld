@@ -28,7 +28,8 @@
 
     &:hover,
     &:focus {
-      .social-media__icon svg {
+      .social-media__icon svg,
+      .social-media__icon svg g path {
         fill: $drupalizer-blue-7;
       }
     }
@@ -38,6 +39,12 @@
     display: inline-block;
     width: 2rem;
     aspect-ratio: 1;
+
+    &--github {
+      svg {
+        width: 26px;
+      }
+    }
 
     svg {
       transition: $default-transition;

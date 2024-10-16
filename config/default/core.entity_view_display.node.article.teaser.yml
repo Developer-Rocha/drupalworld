@@ -27,14 +27,20 @@ third_party_settings:
           field_templates: default
           variant: vertical
     regions:
-      tags:
-        - field_tags
       image:
         - field_image
       title:
         - title
       text:
         - field_teaser
+      url:
+        - node_links
+    fields:
+      node_links:
+        plugin_id: node_links
+        weight: 3
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
 id: node.article.teaser
@@ -54,16 +60,8 @@ content:
           id: reset
           settings:
             lb: ''
-    weight: 1
-    region: image
-  field_tags:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
     weight: 0
-    region: tags
+    region: image
   field_teaser:
     type: field_link
     label: hidden
@@ -71,7 +69,7 @@ content:
       type: ''
       settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: text
   title:
     type: title
@@ -80,13 +78,14 @@ content:
       link_to_entity: true
       tag: h2
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: title
 hidden:
   body: true
   comment: true
   created: true
   field_read_time: true
+  field_tags: true
   langcode: true
   links: true
   search_api_excerpt: true

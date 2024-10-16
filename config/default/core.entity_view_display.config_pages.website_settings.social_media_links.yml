@@ -6,6 +6,7 @@ dependencies:
     - config_pages.type.website_settings
     - core.entity_view_mode.config_pages.social_media_links
     - field.field.config_pages.website_settings.field_sm_facebook
+    - field.field.config_pages.website_settings.field_sm_github
     - field.field.config_pages.website_settings.field_sm_instagram
     - field.field.config_pages.website_settings.field_sm_linkedin
   module:
@@ -26,6 +27,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_sm_github:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_sm_instagram:
     type: string

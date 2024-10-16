@@ -33,6 +33,14 @@
     .field__article_tag {
       display: flex;
       margin-bottom: 4rem;
+      align-items: center;
+      flex-wrap: wrap;
+
+      svg {
+        display: block;
+        margin-right: 0.8rem;
+        width: 1.6rem;
+      }
 
       .field__item:not(:last-child) {
         margin-right: .4rem;

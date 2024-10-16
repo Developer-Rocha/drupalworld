@@ -1,0 +1,19 @@
+uuid: 58c0e243-c673-456f-bc19-f64c12eb73f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - field.storage.config_pages.field_sm_github
+id: config_pages.website_settings.field_sm_github
+field_name: field_sm_github
+entity_type: config_pages
+bundle: website_settings
+label: Github
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
