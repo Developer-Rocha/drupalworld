@@ -1,0 +1,22 @@
+breadcrumbs:
+  extends:
+    - modifiers.settings
+    - icons.settings
+  label: Breadcrumbs
+  description: Display a trail of breadcrumbs.
+  fields:
+    breadcrumb:
+      type: mixed
+      label: Crumbs
+      description: The breadcrumbs data.
+      preview:
+        - text: Page
+          url: https://drupalizer.tech
+        - text: Page 2
+          url: https://drupalizer.tech
+        - text: Page 3
+  libraries:
+    - breadcrumbs:
+       css:
+         component:
+           breadcrumbs.css: {}

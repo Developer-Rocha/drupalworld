@@ -4,6 +4,7 @@
  * template.php
  */
 
+use Drupal\Component\Plugin\Exception\PluginException;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Template\Attribute;
 use Drupal\node\Entity\Node;
@@ -61,6 +62,9 @@ function drupalizer_preprocess_page(&$variables) {
   $variables['layout_attributes'] = new Attribute();
   $variables['layout_attributes']->addClass('page-layout');
 
+  // Add breadcrumb
+  $variables['breadcrumb'] = _drupalizer_get_breadcrumb();
+
   // Check for sidebars
   $sidebar_left = $variables['page']['sidebar_left'];
   $sidebar_right = $variables['page']['sidebar_right'];
@@ -99,4 +103,98 @@ function drupalizer_preprocess_page(&$variables) {
 
   // Add the flag to the template variables.
   $variables['hide_language_bar_region'] = $hide_language_bar_region;
+}
+
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function drupalizer_preprocess_node(&$variables) {
+
+  if (isset($variables['elements']['#node'])) {
+    $node = $variables['elements']['#node'];
+    $css_node_type = Html::cleanCssIdentifier($node->getType());
+    $css_view_mode = Html::cleanCssIdentifier($variables['elements']['#view_mode']);
+
+    // Change modifier classes to use BEM syntax.
+    if (!isset($variables['attributes']['class']) || !is_array($variables['attributes']['class'])) {
+      $variables['attributes']['class'] = [];
+    }
+
+    // Add modifier classes for node type.
+    $variables['attributes']['class'] = preg_replace('/^node--type-' . $css_node_type . '$/', 'node--' . $css_node_type, $variables['attributes']['class']);
+    if (!in_array('node--' . $css_node_type, $variables['attributes']['class'])) {
+      $variables['attributes']['class'][] = 'node--' . $css_node_type;
+    }
+
+    // Add modifier classes for view mode.
+    $variables['attributes']['class'] = preg_replace('/^node--view-mode-' . $css_view_mode . '$/', 'node--' . $css_view_mode, $variables['attributes']['class']);
+    if (!in_array('node--' . $css_view_mode, $variables['attributes']['class'])) {
+      $variables['attributes']['class'][] = 'node--' . $css_view_mode;
+    }
+
+    // Add node class.
+    if (!in_array('node', $variables['attributes']['class'])) {
+      $variables['attributes']['class'][] = 'node';
+    }
+
+    // Add modifier classes for view mode.
+    $variables['attributes']['class'][] = 'node--' . $css_node_type . '--' . $css_view_mode;
+  }
+
+  // View mode 'Full' specific additions.
+  if ($variables['view_mode'] == 'full' && $node && (node_is_page($node) || !$node->isDefaultRevision())) {
+
+    // Add breadcrumb
+    $variables['breadcrumb'] = _drupalizer_get_breadcrumb();
+
+    // Add hero attributes
+    $variables['hero_attributes'] = new Attribute();
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for pattern-breadcrumbs.html.twig.
+ */
+//function drupalizer_preprocess_pattern_breadcrumbs(array &$variables) {
+//  $breadcrumb = $variables['breadcrumb'];
+//
+//  if(isset($breadcrumb['#links'])) {
+//    foreach ($breadcrumb['#links'] as $item) {
+//      // Get the text of the label.
+//      $text = $item->getText();
+//      // Check if the text is a number type (ID).
+//      if (ctype_digit($text)){
+//        $node = Node::load($text);
+//        if ($node) {
+//          // Set the new text and URL for the breadcrumb item.
+//          $item->setText($node->getTitle());
+//          $item->setUrl($node->toUrl());
+//        }
+//      }
+//    }
+//  }
+//}
+
+/**
+ * Get breadcrumb.
+ *
+ * @return array
+ *   The breadcrumb render array.
+ */
+function _drupalizer_get_breadcrumb() {
+  $breadcrumb = &drupal_static(__FUNCTION__, FALSE);
+  if (!$breadcrumb) {
+    $block_manager = \Drupal::service('plugin.manager.block');
+    $breadcrumb_block = $block_manager->createInstance('system_breadcrumb_block', []);
+
+    // Render the block
+    $breadcrumb_block_content = $breadcrumb_block->build();
+
+    // Inject the rendered block into $variables['breadcrumb']
+    $breadcrumb = $breadcrumb_block_content;
+  }
+
+  return $breadcrumb;
 }

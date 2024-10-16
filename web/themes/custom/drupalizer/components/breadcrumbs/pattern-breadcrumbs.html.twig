@@ -1,0 +1,37 @@
+
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-breadcrumbs' %}
+
+{% block component_content %}
+  <div class="container">
+    <nav class="c-breadcrumbs-nav" aria-label="{{ 'Breadcrumb'|t }}">
+      <ol class="c-breadcrumbs__list">
+        {% for item in breadcrumb['#links'] %}
+          <li class="c-breadcrumbs__item">
+            {% if loop.index0 == 0 %}
+              <a href="{{ path('<front>') }}" class="c-breadcrumbs__link breadcrumb__link--home" rel="home">
+                <span class="c-breadcrumbs__label">{{ item.text }}</span>
+              </a>
+              <span class="c-breadcrumbs__spacer" aria-hidden="true">-</span>
+            {% elseif loop.last %}
+              <span class="c-breadcrumbs__label c-breadcrumbs__label--current">{{ item.text }}</span>
+            {% else %}
+              {% if item.url %}
+                <a href="{{ item.url }}" class="c-breadcrumbs__link">
+                  <span class="c-breadcrumbs__label">{{ item.text }}</span>
+                </a>
+              {% else %}
+                <span class="c-breadcrumbs__label">{{ item.text }}</span>
+              {% endif %}
+              <span class="c-breadcrumbs__spacer" aria-hidden="true">-</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </div>
+{% endblock %}

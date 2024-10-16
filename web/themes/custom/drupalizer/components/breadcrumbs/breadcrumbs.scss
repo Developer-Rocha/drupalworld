@@ -1,0 +1,83 @@
+
+@import '../_helper/config';
+
+// Pattern: Pill
+// --------------------------------------------------
+
+// Precede the component's name with c- to indicate it is a component.
+$component: 'c-breadcrumbs';
+
+// Style variables
+
+// Styling
+.#{$component} {
+  $spacing-size: .4rem;
+
+  font-size: var(--drupalizer__font-size--sm);
+  font-family: $default-font;
+  padding-block: 4rem 1rem;
+
+  &--no-container {
+    .container {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: $spacing-size;
+  }
+
+  &__item {
+    display: none;
+    margin: 0;
+    padding: 0;
+    column-gap: $spacing-size;
+
+    &:nth-last-child(-n+2) {
+      display: inline-flex;
+    }
+
+    @include bp(lg) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    transition: $default-transition;
+    color: $breadcrumb-link-color;
+    text-decoration: underline;
+    text-decoration-color: $drupalizer-neutral-5;
+    text-underline-offset: .4rem;
+
+    &:hover,
+    &:focus {
+      color: $breadcrumb-link-hover;
+      text-decoration-color: $color-black;
+    }
+  }
+
+  &__label {
+    color: $breadcrumb-link-color;
+    font-weight: 500;
+
+    &--current {
+      font-weight: 400;
+    }
+  }
+}
+
+@each $variant, $color in $color-variants {
+  .#{$component}--#{$variant} {
+    background-color: $color;
+
+    @include text-contrast($color);
+  }
+}
+
+// Compatibility with drupalizer 'Theme' field
+@include theme_compatibility($component);
