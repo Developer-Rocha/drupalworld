@@ -1,0 +1,28 @@
+uuid: 4da91f54-aa48-46da-a567-3778e94fe2fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - system
+    - views
+  theme:
+    - drupalizer
+id: visibleformsearchsearch
+theme: drupalizer
+region: sidebar_left
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-search'
+settings:
+  id: 'views_exposed_filter_block:search-search'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

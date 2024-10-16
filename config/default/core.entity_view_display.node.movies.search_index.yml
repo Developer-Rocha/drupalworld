@@ -1,0 +1,52 @@
+uuid: 9770bf7d-0578-4ec9-8b01-e59c69d45634
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.movies.body
+    - field.field.node.movies.comment
+    - field.field.node.movies.field_ai_review
+    - field.field.node.movies.field_genre
+    - field.field.node.movies.field_movie_poster
+    - field.field.node.movies.field_overview
+    - field.field.node.movies.field_release_date
+    - field.field.node.movies.field_tmdb_id
+    - field.field.node.movies.field_vote_average
+    - node.type.movies
+  module:
+    - layout_builder
+    - manage_display
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.movies.search_index
+targetEntityType: node
+bundle: movies
+mode: search_index
+content:
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  comment: true
+  created: true
+  field_ai_review: true
+  field_genre: true
+  field_movie_poster: true
+  field_overview: true
+  field_release_date: true
+  field_tmdb_id: true
+  field_vote_average: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uid: true

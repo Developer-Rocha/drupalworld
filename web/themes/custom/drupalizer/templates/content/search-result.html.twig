@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - See node.html.twig
+ *
+ * @see template_preprocess_node()
+ *
+ */
+#}
+{%
+  set classes = [
+  'node',
+  'search-result',
+  not node.isPublished() ? 'node--unpublished',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% block image %}
+    {% if content.field_featured_image|field_value %}
+      <div class="search-result__image">{{ content.field_featured_image|field_value }}</div>
+    {% endif %}
+  {% endblock image %}
+  <div class="search-result__content-wrapper">
+    {% block header %}
+      <div class="search-result__header">
+        <h3 {{ title_attributes.addClass('teaser-title') }}>
+          <a class="overlay-link" href="{{ url }}">
+            {{ label|field_value }}
+          </a>
+        </h3>
+      </div>
+    {% endblock header %}
+    {% block content %}
+      <div{{ content_attributes.addClass('search-result__content') }}>
+        {% if content.search_api_excerpt %}
+        <div class="field--excerpt">
+          <p>{{ content.search_api_excerpt }}</p>
+        </div>
+        {% endif %}
+        {{ content|without(
+          'field_featured_image',
+          'search_api_excerpt'
+        ) }}
+      </div>
+    {% endblock content %}
+  </div>
+</article>

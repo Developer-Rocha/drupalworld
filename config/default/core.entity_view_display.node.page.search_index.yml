@@ -1,32 +1,25 @@
-uuid: faaf7d90-2483-44a9-a7f8-be21683829a3
+uuid: 87b5235d-8eea-4055-bdcd-3bbf7de1ef14
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.field.node.page.body
     - node.type.page
   module:
+    - layout_builder
     - manage_display
-    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
-id: node.page.default
+id: node.page.search_index
 targetEntityType: node
 bundle: page
-mode: default
+mode: search_index
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
   title:
     type: title
     label: hidden
@@ -34,10 +27,12 @@ content:
       link_to_entity: true
       tag: h2
     third_party_settings: {  }
-    weight: -49
+    weight: 0
     region: content
 hidden:
+  body: true
   created: true
   langcode: true
+  links: true
   search_api_excerpt: true
   uid: true

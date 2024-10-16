@@ -252,6 +252,24 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      style:
+        type: default
+        options:
+          row_class: views-row
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              article: search_index
+              landing_page: search_index
+              movies: search_index
+              page: search_index
+      defaults:
+        style: false
+        row: false
       exposed_block: true
       display_extenders: {  }
       path: search

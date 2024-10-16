@@ -29,6 +29,18 @@ function drupalizer_preprocess_block(&$variables) {
 //  }
 }
 
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function drupalizer_preprocess_html(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name == 'view.search.search') {
+    $variables['attributes']['class'][] = 'search-page';
+  }
+}
+
 /**
  * Implements hook_preprocess_page().
  */
