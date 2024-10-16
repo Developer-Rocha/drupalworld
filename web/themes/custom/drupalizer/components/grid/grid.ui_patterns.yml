@@ -1,0 +1,58 @@
+grid:
+  label: Grid
+  description: Display content in a css grid.
+  fields:
+    content:
+      type: mixed
+      label: Content
+      description: Add content here that doesn't fit in any other region.
+      preview: Een extra veld met content naar keuze.
+    grid_items:
+      type: text
+      label: Grid items
+      description: The items displayed in the grid.
+      preview:
+        - image: X
+          title: Into the unknown
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+        - image: X
+          title: Explore the world
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+        - image: X
+          title: The big outdoors
+          caption: Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+          url: https://drupalizer.tech
+        - image: X
+          title: Welcome to the jungle
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+        - image: X
+          title: Into the unknown
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+        - image: X
+          title: Explore the world
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+        - image: X
+          title: The big outdoors
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+        - image: X
+          title: Welcome to the jungle
+          caption: © Fabrício Rocha - Unsplash
+          url: https://drupalizer.tech
+  variants:
+    threecol_auto:
+      label: 3 columns - Auto height
+    threecol_fixed:
+      label: 3 columns - Fixed height
+    image_cloud:
+      label: Image cloud
+  libraries:
+    - grid:
+       css:
+         component:
+           grid.css: {}

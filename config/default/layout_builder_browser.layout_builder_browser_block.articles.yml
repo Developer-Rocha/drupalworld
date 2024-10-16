@@ -1,0 +1,11 @@
+uuid: e2d1fb13-24fd-405d-9202-bfb2363c709b
+langcode: en
+status: true
+dependencies: {  }
+id: articles
+block_id: 'views_block:articles-overview_articles'
+category: automatic_lists
+label: Articles
+image_path: /themes/custom/drupalizer/components/card/lb-preview_multiple.png
+image_alt: ''
+weight: null

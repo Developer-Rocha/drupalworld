@@ -1,0 +1,33 @@
+uuid: f96fef98-0182-4860-9eca-f9e0d5377584
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:images:1d3101a9-a9af-4118-aab6-3c4c151cf75d'
+  module:
+    - block_content
+    - node
+  theme:
+    - drupalizer
+id: drupalizer_images17
+theme: drupalizer
+region: sidebar_right
+weight: -11
+provider: null
+plugin: 'block_content:1d3101a9-a9af-4118-aab6-3c4c151cf75d'
+settings:
+  id: 'block_content:1d3101a9-a9af-4118-aab6-3c4c151cf75d'
+  label: 'Images: 17'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: fluid
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

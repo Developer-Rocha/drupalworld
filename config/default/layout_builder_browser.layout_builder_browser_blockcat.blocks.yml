@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: blocks
 label: Blocks
-weight: null
+weight: -6
 opened: true
 image_path: ''
 image_alt: ''

@@ -1,7 +1,7 @@
 {% extends "node.html.twig" %}
 
 {% block node %}
-  <div{{ attributes }}>
+  <div{{ attributes.addClass('lb-section') }}>
     {# Contextual links #}
     {{ title_prefix }}
     {{ title_suffix }}

@@ -48,6 +48,16 @@ third_party_settings:
         weight: 3
         label: hidden
         formatter: default
+        settings:
+          link: false
+          'link class': ''
+          link_target: ''
+          wrapper: ''
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
 id: node.landing_page.hero
 targetEntityType: node
 bundle: landing_page

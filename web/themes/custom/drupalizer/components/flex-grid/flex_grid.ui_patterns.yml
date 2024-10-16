@@ -1,0 +1,44 @@
+flex_grid:
+  label: Flex-grid
+  description: Display content in an equal-columns flex grid.
+  fields:
+    content:
+      type: mixed
+      label: Content
+      description: Add content here that doesn't fit in any other region.
+      preview: Een extra veld met content naar keuze.
+    grid_items:
+      type: Pattern
+      label: Grid items
+      description: The items displayed in the grid.
+      preview:
+        - title: Into the unknown
+          text: Nam liber tempor cum soluta nobis eleifend option.
+        - title: Explore the world
+          text: Congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+        - title: The big outdoors
+          text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+        - title: Into the unknown
+          text: Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
+        - title: Explore the world
+          text: Duis autem vel eum iriure dolor in hendrerit in vulputate velit.
+        - title: The big outdoors
+          text: Vel illum dolore eu feugiat nulla facilisis at vero eros.
+  variants:
+    auto:
+      label: Auto
+    two-col:
+      label: 2 Columns
+    three-col:
+      label: 3 columns
+    four-col:
+      label: 4 columns
+    five-col:
+      label: 5 columns
+    six-col:
+      label: 6 columns
+  libraries:
+    - flex-grid:
+       css:
+         component:
+           flex-grid.css: {}

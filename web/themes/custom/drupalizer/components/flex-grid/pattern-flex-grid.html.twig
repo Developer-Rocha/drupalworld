@@ -1,0 +1,43 @@
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-flex-grid' %}
+
+{% block component_content %}
+  <div class="{{ component ~ '__content-wrapper' }}">
+    <div class="{{ component ~ '__content' }}">
+      <div class="{{ component ~ '__grid-items' }}">
+        {% for key, grid_item in grid_items %}
+          {% if grid_item.title is not empty %}
+            {# If a title is set, this means we're dealing with the preview. #}
+            <div class="{{ component ~ '__grid-item' }}">
+              {{ pattern('card', grid_item) }}
+            </div>
+          {% elseif grid_item['#field_name'] %}
+            {# If #field_name is set, this means we're dealing with a field. #}
+            {% if grid_item['#field_type'] == 'entity_reference' %}
+              {# If it's an entity reference field, add the wrapper to every reference. #}
+              {% for field_item in grid_item %}
+                {% if field_item['#view_mode']%}
+                  <div class="{{ component ~ '__grid-item' }}">
+                    {{ field_item }}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <div class="{{ component ~ '__grid-item' }}">
+                {{ grid_item }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="{{ component ~ '__grid-item' }}">
+              {{ grid_item }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

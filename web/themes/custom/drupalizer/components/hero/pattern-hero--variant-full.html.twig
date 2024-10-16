@@ -28,7 +28,7 @@
 
           {% if not image|render|striptags('<img><picture>') %}
             <span class="{{ component ~ '__title__underline' }}" aria-hidden="true" role="presentation">
-              {% set underline = active_theme_path() ~  '/images/underline-short.svg' %}
+              {% set underline = active_theme_path() ~  '/icons/underline-short.svg' %}
               {% include underline ignore missing %}
             </span>
           {% endif %}

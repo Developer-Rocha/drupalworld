@@ -1,0 +1,17 @@
+uuid: 00aaeed7-df6b-4571-a487-d381d481d214
+langcode: en
+status: true
+dependencies: {  }
+name: Comment
+format: comment
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <strong> <em> <u> <code> <a href> <span>'
+      filter_html_help: true
+      filter_html_nofollow: false

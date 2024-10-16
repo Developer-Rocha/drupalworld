@@ -9,10 +9,32 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_read_time
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser
     - node.type.article
   module:
+    - ds
+    - field_formatter
     - manage_display
-    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: vertical
+    regions:
+      tags:
+        - field_tags
+      image:
+        - field_image
+      title:
+        - title
+      text:
+        - field_teaser
 _core:
   default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
 id: node.article.teaser
@@ -20,25 +42,37 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
+  field_image:
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 0
-    region: content
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 1
+    region: image
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
-    region: content
-  links:
-    weight: 100
-    region: content
+    weight: 0
+    region: tags
+  field_teaser:
+    type: field_link
+    label: hidden
+    settings:
+      type: ''
+      settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: text
   title:
     type: title
     label: hidden
@@ -46,14 +80,14 @@ content:
       link_to_entity: true
       tag: h2
     third_party_settings: {  }
-    weight: -49
-    region: content
+    weight: 2
+    region: title
 hidden:
+  body: true
   comment: true
   created: true
-  field_image: true
   field_read_time: true
-  field_tags: true
   langcode: true
+  links: true
   search_api_excerpt: true
   uid: true

@@ -1,0 +1,158 @@
+
+@import '../_helper/config';
+
+// Component: Grid
+// --------------------------------------------------
+
+// Precede the component's name with c- to indicate it is a component.
+$component: 'c-grid';
+
+// Style variables
+
+// Styling
+.#{$component} {
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  //&__content {
+  //
+  //}
+
+  &__grid-items {
+    display: grid;
+    grid-gap: calc(var(--drupalizer__gutter));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow: dense;
+  }
+
+  &__grid-item {
+    //border-radius: $default-border-radius;
+    overflow: hidden;
+
+    // Image component specific
+    .c-image.c-image--on_image {
+      .c-image__image {
+        height: 100%;
+
+        * {
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--wide {
+      grid-column: span 2;
+    }
+
+    &--tall {
+      grid-row: span 2;
+    }
+
+    &--big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+  &:hover {
+
+    // Image component specific
+    .c-image.c-image--on_image {
+      .c-image__image {
+        img {
+          filter: grayscale(.75);
+        }
+      }
+
+      &:hover {
+        .c-image__image {
+          img {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+
+
+  &--threecol_fixed & {
+    &__grid-items {
+      grid-auto-rows: 200px;
+    }
+  }
+
+  &--image-cloud {
+    $small-width: clamp(6rem, 16.5vw, 12rem); // 3*4
+    $medium-width: clamp(12rem, 33vw, 24rem); // 6*4
+    $large-width: clamp(14rem, 38.5vw, 28rem); // 7*4
+
+    .c-grid__grid-items {
+      @include bp(md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+      }
+    }
+
+    .c-grid__grid-item {
+      @include bp(md) {
+        flex-basis: $medium-width;
+        align-self: end;
+
+        img {
+          aspect-ratio: 2/1;
+          object-fit: cover;
+        }
+
+        &:first-of-type {
+          flex-basis: $small-width;
+          align-self: end;
+
+          img {
+            aspect-ratio: 1;
+          }
+        }
+
+        &:nth-of-type(2) {
+          flex-basis: $large-width;
+
+          img {
+            aspect-ratio: 3/2;
+          }
+        }
+
+        &:nth-last-of-type(2) {
+          flex-basis: $large-width;
+
+          img {
+            aspect-ratio: 3/2;
+          }
+        }
+
+        &:last-of-type {
+          flex-basis: $large-width;
+          align-self: start;
+
+          img {
+            aspect-ratio: 2/1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Compatibility with drupalizer 'Theme' field
+@include theme_compatibility($component);

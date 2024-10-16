@@ -1,0 +1,11 @@
+#block-drupalizer-views-block-articles-related-articles {
+  .btn-outline {
+    margin: 24px 0;
+
+    @extend .button-reset;
+
+    a {
+      @extend %white-w-outline-button;
+    }
+  }
+}

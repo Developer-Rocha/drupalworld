@@ -1,0 +1,24 @@
+uuid: 9aa4e397-16e3-432d-b34c-701678ebed34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - filter.format.plain_text
+    - node.type.article
+  module:
+    - text
+id: node.article.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: article
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

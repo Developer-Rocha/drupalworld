@@ -1,0 +1,118 @@
+@import '../_helper/config';
+
+// Component: Grid
+// --------------------------------------------------
+
+// Precede the component's name with c- to indicate it is a component.
+$component: 'c-flex-grid';
+
+// Style variables
+
+// Styling
+.#{$component} {
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  &__grid-items {
+    display: grid;
+    grid-gap: var(--drupalizer__gutter);
+    grid-template-columns: repeat(auto-fill, minmax(16.125rem, 1fr));
+    grid-auto-flow: dense;
+  }
+
+  &--three-col & {
+    &__grid-items {
+      grid-template-columns: 1fr;
+
+      @include bp(md) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  &__grid-item {
+
+    // Image component specific
+    .c-image.c-image--on_image {
+      .c-image__image {
+        height: 100%;
+
+        * {
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--wide {
+      grid-column: span 2;
+    }
+
+    &--tall {
+      grid-row: span 2;
+    }
+
+    &--big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+// Grid auto placement
+$container: 1160px;
+$gutter: 2rem;
+$grid-padding: 2rem;
+$grid-layout-item-size-1: auto;
+$grid-layout-item-size-2: ($container / 16px * 1rem - 2 * $grid-padding - 1 * $gutter) / 3;
+$grid-layout-item-size-3: ($container / 16px * 1rem - 2 * $grid-padding - 2 * $gutter) / 4;
+$grid-layout-item-size-4: ($container / 16px * 1rem - 2 * $grid-padding - 3 * $gutter) / 5;
+$grid-layout-item-size-5: ($container / 16px * 1rem - 2 * $grid-padding - 4 * $gutter) / 6;
+$grid-layout-item-size-6: ($container / 16px * 1rem - 2 * $grid-padding - 5 * $gutter) / 7;
+$grid-layout-item-size-7: ($container / 16px * 1rem - 2 * $grid-padding - 6 * $gutter) / 8;
+$grid-layout-item-size-8: ($container / 16px * 1rem - 2 * $grid-padding - 7 * $gutter) / 9;
+
+.page-teasers[data-grid-xl='5'] {
+  .#{$component}__grid-items {
+    //grid-template-columns: repeat(auto-fill, minmax(#{$grid-layout-item-size-5}, 1fr));
+  }
+}
+
+$item-sizes: (
+  2: $grid-layout-item-size-2,
+  3: $grid-layout-item-size-3,
+  4: $grid-layout-item-size-4,
+  5: $grid-layout-item-size-5,
+  6: $grid-layout-item-size-6,
+  7: $grid-layout-item-size-7,
+  8: $grid-layout-item-size-8,
+);
+
+@each $item, $size in $item-sizes {
+  .page-teasers[data-grid-xl='#{$item}'],
+  .block-views:not(.block-views-blockstory-views-block-override-1)[data-grid-xl='#{$item}'] {
+    .#{$component}__grid-items {
+      grid-template-columns: repeat(auto-fill, minmax($size - 2 * $grid-padding, 1fr));
+
+      @include bp(md) {
+        @media (min-width: $size) {
+          grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
+        }
+      }
+    }
+  }
+}
+
+// Compatibility with drupalizer 'Theme' field
+@include theme_compatibility($component);

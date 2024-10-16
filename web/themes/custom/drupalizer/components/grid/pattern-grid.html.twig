@@ -1,0 +1,55 @@
+{# Include default classes for each component. #}
+{% extends '@drupalizer/components/_helper/component.html.twig' %}
+
+
+{# Precede the component's name with c- to indicate it is a component. #}
+{% set component_name = 'c-grid' %}
+
+{# Used for preview #}
+{# todo: also used atm for normal display, ideally this would be set on individual items (for example, media) #}
+{% set nice_grid = [
+  'normal', 'normal', 'tall', 'wide', 'normal', 'tall', 'big', 'normal', 'wide',
+  'big', 'tall', 'normal', 'normal', 'normal', 'normal', 'wide', 'normal', 'normal',
+  'wide', 'normal', 'wide', 'big', 'normal', 'normal', 'big', 'tall', 'normal', 'normal'
+] %}
+
+{% block component_content %}
+  <div class="{{ component ~ '__content-wrapper' }}">
+    <div class="{{ component ~ '__content' }}">
+      <div class="{{ component ~ '__grid-items' }}">
+        {% for key, grid_item in grid_items %}
+          {% if grid_item.title is not empty %}
+            {# If a title is set, this means we're dealing with the preview. #}
+            {% set variant = nice_grid[key] ? component ~ '__grid-item' ~ '--' ~ nice_grid[key] : '' %}
+
+            <div class="{{ component ~ '__grid-item' }} {{ variant }}">
+              {{ pattern('image', grid_item, 'on_image') }}
+            </div>
+          {% elseif grid_item['#field_name'] %}
+            {# If #field_name is set, this means we're dealing with a field. #}
+            {% if grid_item['#field_type'] == 'entity_reference' %}
+              {# If it's an entity reference field, add the wrapper to every reference. #}
+              {% for id, field_item in grid_item %}
+                {# todo: see todo above #}
+                {% set variant = nice_grid[id] ? component ~ '__grid-item' ~ '--' ~ nice_grid[id] : '' %}
+                {% if field_item['#view_mode']%}
+                  <div class="{{ component ~ '__grid-item' }} {{ variant }}">
+                    {{ field_item }}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <div class="{{ component ~ '__grid-item' }}">
+                {{ grid_item }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="{{ component ~ '__grid-item' }}">
+              {{ grid_item }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

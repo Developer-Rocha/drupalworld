@@ -1,0 +1,23 @@
+uuid: be77b6f7-4051-4000-adf5-0a6aa8564e2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.comment
+  module:
+    - ckeditor5
+format: comment
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - underline
+      - link
+      - code
+  plugins:
+    linkit_extension:
+      linkit_enabled: false
+image_upload:
+  status: false

@@ -1,0 +1,39 @@
+{% extends 'pattern-grid.html.twig' %}
+
+{% block component_content %}
+  <div class="{{ component ~ '__content-wrapper' }}">
+    <div class="{{ component ~ '__content' }}">
+      <div class="{{ component ~ '__grid-items' }}">
+        {% for key, grid_item in grid_items %}
+          {% if grid_item.title is not empty %}
+            {# If a title is set, this means we're dealing with the preview. #}
+            <div class="{{ component ~ '__grid-item' }}">
+              {{ pattern('image', grid_item, 'on_image') }}
+            </div>
+          {% elseif grid_item['#field_name'] %}
+            {# If #field_name is set, this means we're dealing with a field. #}
+            {% if grid_item['#field_type'] == 'entity_reference' %}
+              {# If it's an entity reference field, add the wrapper to every reference. #}
+              {% for id, field_item in grid_item %}
+                {# todo: see todo above #}
+                {% if field_item['#view_mode']%}
+                  <div class="{{ component ~ '__grid-item' }}">
+                    {{ field_item }}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <div class="{{ component ~ '__grid-item' }}">
+                {{ grid_item }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="{{ component ~ '__grid-item' }}">
+              {{ grid_item }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

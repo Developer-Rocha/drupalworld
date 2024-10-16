@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: content_advanced
 label: 'Content (advanced)'
-weight: null
+weight: -9
 opened: true
 image_path: ''
 image_alt: ''
