@@ -61,6 +61,23 @@ function drupalizer_preprocess_page(&$variables) {
   $variables['layout_attributes'] = new Attribute();
   $variables['layout_attributes']->addClass('page-layout');
 
+  // Check for sidebars
+  $sidebar_left = $variables['page']['sidebar_left'];
+  $sidebar_right = $variables['page']['sidebar_right'];
+  if ($sidebar_left && $sidebar_right) {
+    $variables['layout_attributes']->addClass('page-layout--sidebar', 'page-layout--sidebar--both');
+  }
+  else {
+    if ($sidebar_left) {
+      $variables['layout_attributes']->addClass('page-layout--sidebar', 'page-layout--sidebar--left');
+    }
+    else {
+      if ($sidebar_right) {
+        $variables['layout_attributes']->addClass('page-layout--sidebar', 'page-layout--sidebar--right');
+      }
+    }
+  }
+
   // Check if the URL contains a language prefix.
   $language_manager = \Drupal::languageManager();
   $languages = $language_manager->getLanguages();

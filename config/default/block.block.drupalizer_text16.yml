@@ -1,0 +1,33 @@
+uuid: acea42ed-2444-4f67-8924-8f07637dde99
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text:3d0bbb23-b476-4ee4-a889-8d40a88398d9'
+  module:
+    - block_content
+    - node
+  theme:
+    - drupalizer
+id: drupalizer_text16
+theme: drupalizer
+region: sidebar_right
+weight: -10
+provider: null
+plugin: 'block_content:3d0bbb23-b476-4ee4-a889-8d40a88398d9'
+settings:
+  id: 'block_content:3d0bbb23-b476-4ee4-a889-8d40a88398d9'
+  label: 'Text: 16'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

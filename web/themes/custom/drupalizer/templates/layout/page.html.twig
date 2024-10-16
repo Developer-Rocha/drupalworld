@@ -202,57 +202,43 @@
     {% block page_content %}
       {% if page.content %}
 
-        {% if(is_node or is_taxonomy_term) %}
-          {#
-          Regular node:
-          Page title, breadcrumb and sidebars are shown on node--full.html.twig
-          #}
-          {{ page.content }}
+        <main{{ layout_attributes }}>
+{#          {% block page_title_region %}#}
+{#            <div class="page-header page-layout__header">#}
+{#              <div class="container">#}
+{#                <h1 class="page-title">{{ page_title }}</h1>#}
+{#              </div>#}
+{#            </div>#}
+{#          {% endblock page_title_region %}#}
 
-        {% else %}
-          {#
-          Not node: (For example user login, etc.)
-          Show page title, breadcrumb, sidebars.
-          #}
-          <main{{ layout_attributes.addClass('page-layout--no-hero') }}>
-            {% block page_title_region %}
-              <div class="page-header page-layout__header">
+          {% if page.sidebar_left %}
+            {% block sidebar_left %}
+              <aside {{ sidebar_left_attributes.addClass('page-layout__sidebar-left') }}>
                 <div class="container">
-                  <h1 class="page-title">{{ page_title }}</h1>
+                  {{ page.sidebar_left }}
                 </div>
-              </div>
-            {% endblock page_title_region %}
+              </aside>
+            {% endblock sidebar_left %}
+          {% endif %}
 
-            {% if page.sidebar_left %}
-              {% block sidebar_left %}
-                <aside {{ sidebar_left_attributes.addClass('page-layout__sidebar-left') }}>
-                  <div class="container">
-                    {{ page.sidebar_left }}
-                  </div>
-                </aside>
-              {% endblock sidebar_left %}
-            {% endif %}
-
-            <div class="page-layout__content">
-              <div class="page-layout__content-wrapper">
-                <div class="container">
-                  {{ page.content }}
-                </div>
+          <div class="page-layout__content">
+            <div class="page-layout__content-wrapper">
+              <div class="container">
+                {{ page.content }}
               </div>
             </div>
+          </div>
 
-            {% if page.sidebar_right %}
-              {% block sidebar_right %}
-                <aside {{ sidebar_right_attributes.addClass('page-layout__sidebar-right') }}>
-                  <div class="container">
-                    {{ page.sidebar_right }}
-                  </div>
-                </aside>
-              {% endblock sidebar_right %}
-            {% endif %}
-          </main>
-
-        {% endif %}
+          {% if page.sidebar_right %}
+            {% block sidebar_right %}
+              <aside {{ sidebar_right_attributes.addClass('page-layout__sidebar-right') }}>
+                <div class="container">
+                  {{ page.sidebar_right }}
+                </div>
+              </aside>
+            {% endblock sidebar_right %}
+          {% endif %}
+        </main>
 
       {% endif %}
     {% endblock page_content %}

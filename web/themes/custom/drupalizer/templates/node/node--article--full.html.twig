@@ -14,12 +14,11 @@
 {% endblock before %}
 
 {% block node %}
-  <div{{ attributes.addClass(classes) }}>
-    {# Contextual links #}
-    {{ title_prefix }}
-    {{ title_suffix }}
-
+  <main{{ attributes.addClass(classes) }}>
     {% block header %}
+      <header class="node__header">
+        <h1 class="page-title">{{ node.label }}</h1>
+      </header>
     {% endblock header %}
 
     {% block content %}
@@ -29,5 +28,5 @@
     {% block footer %}
     {% endblock footer %}
 
-  </div>
+  </main>
 {% endblock node %}

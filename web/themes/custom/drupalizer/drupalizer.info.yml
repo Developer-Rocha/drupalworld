@@ -21,7 +21,7 @@ regions:
   content: 'Content'
   content_bottom: 'Content bottom'
   sidebar_left: 'Sidebar left'
-  #  sidebar_right: 'Sidebar right'
+  sidebar_right: 'Sidebar right'
   footer_top: 'Footer Top'
   footer: 'Footer'
   footer_bottom: 'Footer bottom'

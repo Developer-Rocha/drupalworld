@@ -227,8 +227,8 @@
     }
 
     .page-layout__sidebar-right {
-      //order: 6;
-      //flex: 0 0 $sidebar-width;
+      flex-basis: $sidebar-width;
+      max-width: $sidebar-width;
     }
   }
 }
