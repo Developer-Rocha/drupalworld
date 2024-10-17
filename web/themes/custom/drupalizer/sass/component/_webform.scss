@@ -1,0 +1,269 @@
+
+
+.form-type-email,
+.form-type-textfield,
+.form-type-text,
+.form-type-search-api-autocomplete,
+.form-type-textarea,
+.form-type-password {
+  input,
+  textarea {
+    border-radius: 1.25rem;
+    color: $color-black;
+    font-family: $default-font;
+    background-color: $drupalizer-neutral-2;
+    max-width: 100%;
+    border: none;
+  }
+}
+
+.form-type-email,
+.form-type-textfield,
+.form-type-text,
+.form-type-textarea,
+.form-type-password {
+  input,
+  textarea {
+    &:focus {
+      border: .0625rem solid $drupalizer-blue-4;
+      outline: .125rem solid $color-white;
+      box-shadow: 0 0 0 .1875rem $drupalizer-blue-6;
+      background-color: $drupalizer-blue-1;
+      outline-offset: 0;
+    }
+  }
+}
+
+.form-type-search-api-autocomplete {
+
+  ::placeholder {
+    padding-left: 0;
+  }
+}
+
+
+::placeholder {
+  color: $color-black;
+  font-family: $default-font;
+  padding: 1.125rem .875rem;
+  opacity: 1;
+}
+
+.facets--widget-checkbox .facet-item,
+.form-type-checkbox {
+  $custom-checkbox-size: 1.125rem;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+
+  label {
+    position: relative;
+    padding-left: 1.875rem;
+    display: flex;
+
+    &::before {
+      content: '';
+      background-image: url(../icons/icon-checkbox.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: .3125rem;
+      left: 0;
+      display: inline-block;
+      width: $custom-checkbox-size;
+      height: $custom-checkbox-size;
+    }
+
+    .layout__region--content {
+      display: flex;
+
+      img {
+        width: 1.5rem;
+        max-width: none;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+
+  .facet-item__count {
+    margin-left: .5rem;
+  }
+
+  input {
+    position: absolute !important;
+    width: $custom-checkbox-size;
+    height: $custom-checkbox-size;
+    top: .3125rem;
+    z-index: -1;
+  }
+
+  input:checked ~ label {
+    &:before {
+      background-image: url(../icons/icon-active-checkbox.svg);
+    }
+  }
+}
+
+.facets--widget-checkbox .facet-item--expanded {
+  display: block;
+
+  >label {
+    margin-right: 2rem;
+    z-index: 10;
+  }
+
+  .js-toggle-stuff {
+    position: relative;
+    margin-top: -2rem;
+
+    .facets__group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.webform {
+  position: relative;
+
+  label {
+    color: $color-black;
+  }
+
+  .form-actions {
+    margin-block-start: 2rem;
+  }
+
+  .form-type-email,
+  .form-type-textfield,
+  .form-type-text,
+  .form-type-search-api-autocomplete {
+    input {
+      border-radius: .5rem;
+    }
+  }
+
+  textarea {
+    ::placeholder {
+      padding: 0;
+    }
+  }
+
+  .form-item {
+    margin-block: .56rem;
+  }
+
+  .form-type-checkbox {
+    margin-block-start: 1rem;
+  }
+
+  .form-type-webform-markup {
+    margin-block-start: 3rem;
+    margin-bottom: 0;
+
+    > * {
+      margin-block-end: 0;
+    }
+  }
+
+  div.js-form-item:first-of-type {
+    &.form-type-webform-markup {
+      margin-block-start: 0;
+      margin-block-end: 2.88rem;
+    }
+  }
+
+  &--footer & {
+    margin: 0;
+
+    .form-type-email {
+      input {
+        border-radius: 1.75rem;
+        background-color: $color-white;
+        height: 4rem;
+      }
+    }
+
+    .form-actions {
+      margin: 0;
+    }
+
+    .form-type-checkbox {
+      display: none;
+      margin-bottom: 0;
+
+      label::before {
+        background-image: url(../icons/icon-checkbox-white.svg);
+      }
+
+      input:checked ~ label {
+        &:before {
+          background-image: url(../icons/icon-active-checkbox.svg);
+        }
+      }
+    }
+
+    &-button--submit {
+      border-radius: 50% !important;
+      width: 3.5rem;
+      height: 3.5rem;
+      position: absolute;
+      top: .25rem;
+      right: .25rem;
+      padding: 0 !important;
+      background-color: $drupalizer-blue;
+
+      span {
+        @include visually-hidden;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $drupalizer-blue-7;
+      }
+
+      &::before {
+        content: '';
+        background-image: url(../icons/icon-arrow-white.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        width: 1.625rem;
+        height: 1.125rem;
+      }
+    }
+  }
+
+  &-submission-contact-form {
+    select {
+      width: 100%;
+      max-width: 100%;
+      font-family: $default-font;
+      background-color: $drupalizer-neutral-2;
+      border-radius: .5rem;
+      border: none;
+      height: fit-content;
+      padding-inline: 1.5rem;
+      min-height: 50px;
+      cursor: pointer;
+
+      span {
+        padding: .65rem;
+      }
+
+      &:focus,
+      &:hover {
+        border: .0625rem solid $drupalizer-blue-4;
+        outline: .125rem solid $color-white;
+        box-shadow: 0 0 0 .1875rem $drupalizer-blue-6;
+        background-color: $drupalizer-blue-1;
+        outline-offset: 0;
+      }
+    }
+  }
+}

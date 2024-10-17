@@ -1,0 +1,36 @@
+{% extends "page.html.twig" %}
+
+{% block page_title_region %}
+  <div class="page-header page-layout__header visually-hidden">
+    <div class="container">
+      <h1 class="page-title ">{{ page_title }}</h1>
+    </div>
+  </div>
+{% endblock page_title_region %}
+
+{% block sidebar_left %}
+  {{ attach_library('drupalizer/toggle-stuff') }}
+  {% set component = 'article-finder-filters' %}
+  <aside {{ sidebar_left_attributes.addClass('sidebar', 'page-layout__sidebar-left', component, 'js-toggle-stuff') }}>
+    <div class="container">
+      <button class="{{ component }}__filter-toggler js-toggle-stuff-trigger" aria-label="{{ 'Filter articles'|t }}" aria-expanded="false">
+        {% set filter_icon = active_theme_path() ~ '/icons/icon-filter.svg' %}
+        {% set close_icon = active_theme_path() ~ '/icons/icon-close-btn.svg' %}
+        <span class="{{ component }}__filter-toggler__icon" aria-hidden="true" role="presentation">
+          <span class="{{ component }}__filter-toggler__icon__open-filter">
+            {% include filter_icon ignore missing %}
+          </span>
+          <span class="{{ component }}__filter-toggler__icon__close-filter">
+            {% include close_icon ignore missing %}
+          </span>
+        </span>
+        <span class="{{ component }}__filter-toggler__text">
+          {{- 'Filters'|t -}}
+        </span>
+      </button>
+      <div class="{{ component }}__facets js-toggle-stuff-target ">
+        {{ page.sidebar_left }}
+      </div>
+    </div>
+  </aside>
+{% endblock sidebar_left %}

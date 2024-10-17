@@ -5,6 +5,8 @@ display:
       fields:
         type:
           label: Tipo
+        timestamp:
+          label: Data
         name:
           label: Usuário
           separator: ', '

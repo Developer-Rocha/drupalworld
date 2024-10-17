@@ -1,0 +1,121 @@
+// @see: views-view--articles-index.html.twig
+.article-finder-header {
+  display: grid;
+  grid-template-columns: 1fr minmax(2rem, 1fr);
+  gap: 2rem;
+  padding-block: 2rem;
+
+  .views-exposed-form {
+    margin-block-end: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+
+    & > .form--inline {
+      display: grid;
+      grid-template-columns: 1fr minmax(2rem, 1fr);
+      gap: 2rem;
+      position: relative;
+
+      &::after {
+        content: none;
+      }
+
+      > * {
+        float: none;
+        margin: 0;
+        grid-column: span 2;
+      }
+
+      .form-type-search-api-autocomplete {
+        grid-row: 1;
+        grid-column: 1 / -1;
+      }
+
+      .form-actions {
+        grid-row: 1;
+        grid-column: 2 / -1;
+        position: relative;
+        z-index: 201; // Above focus element
+        align-self: stretch;
+        justify-self: end;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .button {
+          position: relative;
+          margin: 0;
+          background-image: url(../icons/icon-search.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 2rem;
+          background-color: transparent;
+          border-radius: 1.25rem;
+          border: none;
+          border-start-start-radius: 0;
+          border-end-start-radius: 0;
+
+          &[id*='reset'] {
+            background-image: url(../icons/icon-close-btn.svg);
+            background-size: 1rem;
+          }
+
+          &:nth-child(2) {
+            margin-inline-start: .1rem;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: .1rem;
+              background-color: $color-text;
+              inset-block: 1rem;
+              inset-inline-end: -.1rem;
+            }
+          }
+
+          span {
+            @extend .visually-hidden;
+          }
+        }
+      }
+
+      .form-item-sort-by {
+        grid-column: 2 / -1;
+        justify-self: end;
+
+        label {
+          @extend .visually-hidden;
+        }
+      }
+
+      .form-type-search-api-autocomplete {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__content {
+    margin-block-start: 1rem;
+    grid-row: 2;
+    grid-column: 1 / 2;
+
+    p {
+      font-family: $title-font;
+      font-size: var(--drupalizer__font-size--h5);
+      font-weight: 700;
+    }
+  }
+
+  input.form-autocomplete {
+    position: relative;
+    z-index: 0;
+
+    &:focus {
+      border-radius: 0;
+      outline-color: transparent;
+    }
+
+    .js & {
+      background-image: none;
+    }
+  }
+}

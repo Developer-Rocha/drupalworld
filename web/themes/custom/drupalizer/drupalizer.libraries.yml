@@ -22,6 +22,20 @@ toggle-stuff:
   dependencies:
     - core/drupal
 
+facets:
+  js:
+    js/facets.min.js: {}
+  dependencies:
+    - core/drupal
+
+search-effects:
+  js:
+    js/search-effects.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
 toggle-tag-popup:
   js:
     js/toggle-tag-popup.min.js: {}

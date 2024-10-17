@@ -1,0 +1,49 @@
+uuid: 90450ab2-c58c-4116-9937-f26cc5a80a26
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - taxonomy.vocabulary.tags
+  module:
+    - ds
+    - layout_builder
+    - manage_display
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - name
+id: taxonomy_term.tags.teaser
+targetEntityType: taxonomy_term
+bundle: tags
+mode: teaser
+content:
+  name:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: div
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

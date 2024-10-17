@@ -1,0 +1,14 @@
+{% extends "views-view.html.twig" %}
+
+{% block view_header %}
+{% endblock view_header %}
+
+{% block view_exposed %}
+{#  {{ attach_library('drupalizer/search-effects') }}#}
+  <div class="article-finder-header js-search-effects">
+    {{ exposed }}
+    <div class="article-finder-header__content">
+      {{ header }}
+    </div>
+  </div>
+{% endblock view_exposed %}

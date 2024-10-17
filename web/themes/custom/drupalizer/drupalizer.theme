@@ -39,6 +39,10 @@ function drupalizer_preprocess_html(&$variables) {
   if ($route_name == 'view.search.search') {
     $variables['attributes']['class'][] = 'search-page';
   }
+
+  if ($route_name == 'view.articles_index.page_1') {
+    $variables['attributes']['class'][] = 'article-finder';
+  }
 }
 
 /**

@@ -1,0 +1,6 @@
+{% if tooltip is not null and tooltip is not empty %}
+  <div class="tooltip icon-info-circle" tabindex="0" role="tooltip">
+    <div class="arrow-up-rounded"></div>
+    <span class="tooltip-text">{{ tooltip | check_markup('editor') }}</span>
+  </div>
+{% endif %}

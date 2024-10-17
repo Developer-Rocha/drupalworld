@@ -1,0 +1,13 @@
+{% extends "facets-item-list.html.twig" %}
+
+{% block trigger %}
+  <h3 class="facets__title">
+    <button class="facets__expand-trigger js-toggle-stuff-trigger" aria-expanded="true">
+      {{ trigger_vars.trigger }}
+      {% set icon = active_theme_path() ~ '/icons/expand-chevron.svg' %}
+      <span class="facets__expand-trigger__icon" aria-hidden="true" role="presentation">
+        {% include icon ignore missing %}
+      </span>
+    </button>
+  </h3>
+{% endblock trigger %}

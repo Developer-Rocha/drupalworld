@@ -48,6 +48,11 @@ module:
   entity_browser: 0
   entity_reference_revisions: 0
   estimated_read_time: 0
+  facets: 0
+  facets_raw: 0
+  facets_searchbox_widget: 0
+  facets_summary: 0
+  facets_view_mode_processor: 0
   field: 0
   field_formatter: 0
   field_group: 0

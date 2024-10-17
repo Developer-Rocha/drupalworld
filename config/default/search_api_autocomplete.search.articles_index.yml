@@ -1,0 +1,43 @@
+uuid: b6cfe90d-cc82-4d4c-bc7c-7eb583fb4f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.articles
+    - views.view.articles_index
+  module:
+    - views
+    - search_api_autocomplete
+id: articles_index
+label: 'Articles Index'
+index_id: articles
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes:
+      'entity:node':
+        article: ''
+  server:
+    fields: {  }
+suggester_weights:
+  live_results: 0
+  server: 0
+suggester_limits:
+  live_results: 3
+  server: 10
+search_settings:
+  'views:articles_index':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 3
+  show_count: false
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: true

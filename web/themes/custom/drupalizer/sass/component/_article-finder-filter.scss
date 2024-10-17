@@ -1,0 +1,208 @@
+// @see: page--article-finder.html.twig
+.article-finder-filters {
+  padding-block-start: 2rem;
+  margin-block-end: 1rem;
+
+  @include bp(lg) {
+    margin-block-end: var(--drupalizer__block-spacing, var(--drupalizer-lb__block-spacing));
+    border-inline-end: $default-border;
+  }
+
+  // <button>
+  &__filter-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: .65rem 1.5rem .45rem;
+    text-align: center;
+    font-family: $title-font;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: $button-border-radius;
+    cursor: pointer;
+    transition: $default-transition;
+    line-height: $line-height-factor;
+    margin-block-end: 2rem;
+    color: $color-white;
+
+    &[aria-expanded='false'] {
+      background-color: $drupalizer-sustain;
+
+      &:hover {
+        background-color: $drupalizer-sustain-7;
+      }
+
+      .article-finder-filters__filter-toggler__icon__close-filter {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    &[aria-expanded='true'] {
+      background-color: $drupalizer-sustain-7;
+
+      .article-finder-filters__filter-toggler__icon__open-filter {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    @include bp(lg) {
+      display: none;
+    }
+
+    &__icon {
+      display: grid;
+      line-height: 0;
+      margin-inline-end: 1rem;
+      margin-inline-start: -.25rem;
+      aspect-ratio: 1;
+      width: 1.5rem;
+
+      &__open-filter,
+      &__close-filter {
+        transition: $default-transition;
+        grid-row: 1;
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      svg {
+        aspect-ratio: 1;
+        width: 1.5rem;
+        margin: auto;
+
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+
+    &__text {
+      transform: translateY(.1rem);
+    }
+  }
+
+  &__facets {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+
+    &.is-hidden {
+      display: none;
+
+      @include bp(lg) {
+        display: flex;
+      }
+    }
+
+    .facets__title {
+      position: relative;
+
+      &__group {
+        display: flex;
+        align-items: center;
+      }
+
+      &__icon {
+        height: 1.5rem;
+        margin-right: .75rem;
+
+        img {
+          height: 100%;
+          max-width: none;
+        }
+      }
+
+      &__tooltip {
+        .icon-info-circle:before {
+          content: '';
+          background-image: url(../icons/icon-info.svg);
+          opacity: .6;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: .9rem;
+          background-color: transparent;
+          width: .9rem;
+          height: .9rem;
+          vertical-align: middle;
+        }
+
+        .tooltip {
+          display: inline-block;
+          margin-left: 0.5rem;
+          border: 1rem transparent;
+          background-clip: content-box;
+
+          .tooltip-text {
+            background-color: $drupalizer-blue-6;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: absolute;
+            z-index: 1020;
+            top: 2.5rem;
+            margin-left: -3rem;
+            margin-right: 0.5rem;
+            cursor: auto;
+            font-weight: normal;
+            text-align: left;
+
+            a {
+              color: white;
+              border-color: white;
+            }
+
+            p:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          .arrow-up-rounded {
+            position: absolute;
+            top: 3rem;
+            width: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-radius: 0.2rem;
+            overflow: hidden;
+            transform-origin: 100% 0;
+            transform: rotate(45deg);
+            margin-left: 0.2rem;
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 150%;
+              transform-origin: inherit;
+              transform: rotate(45deg);
+              background: $drupalizer-blue-6;
+            }
+          }
+
+          .tooltip-text,
+          .arrow-up-rounded,
+          .arrow-up-rounded:after {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.1s ease-in-out;
+          }
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+
+            .tooltip-text,
+            .arrow-up-rounded,
+            .arrow-up-rounded:after {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

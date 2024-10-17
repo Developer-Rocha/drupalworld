@@ -1,0 +1,29 @@
+uuid: f5d5b659-18b3-4166-abf7-6dd23511c830
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.category
+  module:
+    - facets
+    - system
+  theme:
+    - drupalizer
+id: drupalizer_category
+theme: drupalizer
+region: sidebar_left
+weight: 0
+provider: null
+plugin: 'facet_block:category'
+settings:
+  id: 'facet_block:category'
+  label: Category
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: drupalizer_category
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /article-finder

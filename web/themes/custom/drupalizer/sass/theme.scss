@@ -25,9 +25,13 @@
 // Components
 @import 'component/ajax-loading';
 @import 'component/article-detail';
+@import 'component/article-finder';
+@import 'component/article-finder-filter';
+@import 'component/article-finder-header';
 @import 'component/branding';
 @import 'component/bt-title';
 @import 'component/button';
+@import 'component/facets';
 @import 'component/forms';
 @import 'component/language-switcher';
 @import 'component/legal-menu';
@@ -52,4 +56,5 @@
 @import 'component/social-media';
 @import 'component/social-share';
 @import 'component/voting';
+@import 'component/webform';
 @import 'component/section';

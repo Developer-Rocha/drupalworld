@@ -1,0 +1,91 @@
+{{ attach_library('drupalizer/toggle-stuff') }}
+{{ attach_library('drupalizer/facets') }}
+
+{% block before %}{% endblock %}
+
+<div class="facets js-toggle-stuff facets--widget- {{- facet.widget.type -}}">
+  {% if items or empty %}
+
+    {# Render the title into a twig variable "rendered_title". #}
+    {% set rendered_title %}
+      {%- if title is not empty -%}
+        {% set facet_page = '' %}
+
+        {% if facet.id == 'category' %}
+          {% set facet_page = 'article_finder' %}
+        {% endif %}
+
+        {% if facet_page is not empty %}
+          <div class="facets__title__group">
+            {% set facet_icon = drupal_config('drupalizer_custom.' ~ facet_page, facet_id ~ '_icon')[0] %}
+            {% if facet_icon is not empty %}
+              <div class="facets__title__icon">
+                {{ drupal_image(facet_icon, 'icon') }}
+              </div>
+            {% endif %}
+
+            {% if drupal_config('drupalizer_custom.' ~ facet_page, facet_id ~ '_title_' ~ current_language) is not empty %}
+              <div class="facets__title__title">
+                {{ drupal_config('drupalizer_custom.' ~ facet_page, facet_id ~ '_title_' ~ current_language) }}
+              </div>
+            {% else %}
+              <div class="facets__title__title">
+                {{ title }}
+              </div>
+            {% endif %}
+
+            {% set facet_tooltip = drupal_config('drupalizer_custom.' ~ facet_page, facet_id ~ '_tooltip_' ~ current_language) %}
+            {% if facet_tooltip is not empty %}
+              <div class="facets__title__tooltip">
+                {% include '@drupalizer/facets/facets-tooltip.html.twig' with {tooltip: facet_tooltip} %}
+              </div>
+            {% endif %}
+          </div>
+        {% else %}
+          {{ title }}
+        {% endif %}
+      {%- endif -%}
+    {% endset %}
+
+    {# Render the content into a twig variable "rendered_content". #}
+    {% set rendered_content %}
+      {%- if items -%}
+        {% if facet.widget.type %}
+          {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
+        {% endif %}
+        {% block content %}
+        <{{ list_type }}{{ attributes.addClass('facets__items') }}>
+          {%- for item in items -%}
+            <li{{ item.attributes.addClass('facets__item') }}>
+              {{ item.value }}
+            </li>
+          {%- endfor -%}
+        </{{ list_type }}>
+        {% endblock content %}
+      {%- else -%}
+        {{- empty -}}
+      {%- endif -%}
+    {% endset %}
+
+  {%- endif %}
+
+  {% set trigger_vars = {'trigger': rendered_title, 'initial_expanded': facet.getActiveItems() ? 'true' : 'false' } %}
+  {% block trigger %}
+    <h3 class="facets__title">
+      <button class="facets__expand-trigger js-toggle-stuff-trigger" aria-expanded={{ trigger_vars.initial_expanded }}>
+        {{ trigger_vars.trigger }}
+        {% set icon = active_theme_path() ~ '/icons/expand-chevron.svg' %}
+        <span class="facets__expand-trigger__icon" aria-hidden="true" role="presentation">
+          {% include icon ignore missing %}
+        </span>
+      </button>
+    </h3>
+  {% endblock trigger %}
+
+  <div class="facets__group js-toggle-stuff-target">
+    {{ rendered_content }}
+  </div>
+
+</div>
+
+{% block after %}{% endblock %}

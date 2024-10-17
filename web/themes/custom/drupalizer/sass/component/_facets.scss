@@ -1,0 +1,63 @@
+.facets {
+
+  // heading
+  &__title {
+    text-align: left;
+    font-size: 1rem;
+    font-family: $default-font;
+    margin: 0;
+  }
+
+  // <button>
+  &__expand-trigger {
+    padding: .4rem .8rem .4rem 0;
+    display: flex;
+    width: 100%;
+
+    &__icon {
+      margin-inline-start: auto;
+      padding-inline-start: .5rem;
+
+      svg {
+        width: .625rem;
+        aspect-ratio: 1;
+        fill: $drupalizer-blue;
+      }
+    }
+
+    &[aria-expanded='true'] {
+      svg {
+        scale: -1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $drupalizer-blue-7;
+      }
+    }
+  }
+
+  &__group {
+    margin-block: .5rem 2rem;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  // <ul>
+  &__items {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: .25rem;
+  }
+
+  // <li>
+  &__item {
+    margin: 0;
+  }
+}

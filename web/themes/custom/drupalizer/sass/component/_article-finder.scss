@@ -1,0 +1,9 @@
+
+body.article-finder {
+  .page-layout__content {
+    @include bp(md) {
+      padding: 0 2rem;
+    }
+  }
+}
+
