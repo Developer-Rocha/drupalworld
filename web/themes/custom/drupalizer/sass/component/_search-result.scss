@@ -1,0 +1,52 @@
+
+
+// Search result
+// --------------------------------------------------
+
+.search-result {
+  position: relative;
+
+  .teaser-title {
+    @extend %h4;
+
+    margin-bottom: 0;
+    transition: $default-transition;
+    transition-property: color, text-decoration-color;
+    text-decoration: solid underline transparent .05rem;
+    text-underline-offset: .5rem;
+  }
+
+  .field--excerpt {
+    transition: color $default-transition;
+  }
+
+  .field--excerpt {
+    strong {
+      font-weight: inherit;
+      background-color: rgba($color-primary, .2);
+      padding: 2px;
+    }
+  }
+
+  // Focus states
+  &:hover,
+  &:focus-within {
+    .teaser-title {
+      color: inherit;
+      text-decoration-color: inherit;
+    }
+
+    .overlay-link:focus-visible {
+      &::after {
+        @include focus-style;
+      }
+    }
+
+    .overlay-link:focus {
+      &,
+      &:not(:focus-visible)::after {
+        @include focus-style(false);
+      }
+    }
+  }
+}

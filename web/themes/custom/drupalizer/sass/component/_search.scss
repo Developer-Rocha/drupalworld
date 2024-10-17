@@ -60,6 +60,12 @@ body.search-page {
     width: 100%;
   }
 
+  .page-layout__content {
+    @include bp(md) {
+      padding: 0 2rem;
+    }
+  }
+
   .region--content-top__items {
     display: flex;
     column-gap: 4rem;

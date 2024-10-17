@@ -16,7 +16,6 @@ dependencies:
     - node.type.movies
   module:
     - layout_builder
-    - manage_display
 third_party_settings:
   layout_builder:
     enabled: false
@@ -25,16 +24,7 @@ id: node.movies.search_index
 targetEntityType: node
 bundle: movies
 mode: search_index
-content:
-  title:
-    type: title
-    label: hidden
-    settings:
-      link_to_entity: false
-      tag: h2
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   body: true
   comment: true
@@ -49,4 +39,5 @@ hidden:
   langcode: true
   links: true
   search_api_excerpt: true
+  title: true
   uid: true

@@ -13,7 +13,6 @@ dependencies:
     - node.type.article
   module:
     - layout_builder
-    - manage_display
     - text
 third_party_settings:
   layout_builder:
@@ -31,15 +30,6 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
-  title:
-    type: title
-    label: hidden
-    settings:
-      link_to_entity: false
-      tag: h2
-    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -52,4 +42,5 @@ hidden:
   langcode: true
   links: true
   search_api_excerpt: true
+  title: true
   uid: true
