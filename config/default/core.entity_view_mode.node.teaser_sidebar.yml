@@ -1,0 +1,11 @@
+uuid: ecc1072d-e889-4589-80ea-9338e1ca7c89
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_sidebar
+label: 'Teaser sidebar'
+description: ''
+targetEntityType: node
+cache: true

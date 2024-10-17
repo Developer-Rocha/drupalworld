@@ -204,7 +204,8 @@
                 "3218426 - Using partially synchronized image fields causes validation errors and PHP warnings": "https://www.drupal.org/files/issues/2024-08-27/drupal-11.x-MR-5385--20240827-1.patch",
                 "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2024-05-01/3025039-94.patch",
                 "3052617 - Media library does not open when clicking \"Add media\": “TypeError: Argument 2 passed to Drupal\\media_library\\MediaLibraryState::create() must be of the type array, null given": "https://www.drupal.org/files/issues/2023-04-10/3052617.patch",
-                "3343670 - Allow to merge AjaxCommands inside of AjaxResponse": "https://git.drupalcode.org/project/drupal/-/merge_requests/3544.diff"
+                "3343670 - Allow to merge AjaxCommands inside of AjaxResponse": "https://git.drupalcode.org/project/drupal/-/merge_requests/3544.diff",
+                "3101714 - Link field display defaults to trim at 80 chars, breaking longer plaintext URLs": "https://www.drupal.org/files/issues/2022-05-18/drupal-3101714-30.patch"
             },
             "drupal/entity_browser": {
                 "2851580 - Re-order + remove broken with the Entity Reference (and File) widget": "https://www.drupal.org/files/issues/2023-12-12/2851580-117.patch",

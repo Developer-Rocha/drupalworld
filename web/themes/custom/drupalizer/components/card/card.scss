@@ -64,7 +64,7 @@ $component-transition: $default-transition;
       margin-block-start: .5rem;
     }
 
-    .view-products-indexed & {
+    .view-articles-indexed & {
       font-family: $default-font;
       text-transform: uppercase;
       font-weight: 500;
@@ -80,15 +80,7 @@ $component-transition: $default-transition;
     text-decoration: solid underline transparent .05rem;
     text-underline-offset: .5rem;
 
-    .#{$component}--story & {
-      @extend %h4;
-    }
-
-    .#{$component}--job & {
-      @extend %h4;
-    }
-
-    .view-products-indexed & {
+    .view-articles-indexed & {
       @extend %h4;
     }
   }
@@ -139,7 +131,7 @@ $component-transition: $default-transition;
   }
 
   // States
-  &:not(.has-image) {
+  &:not(.has-image):not(.c-card--horizontal) {
     background-color: $drupalizer-dark-blue;
     color: $color-white;
     justify-content: flex-end;
@@ -220,19 +212,8 @@ $component-transition: $default-transition;
     }
   }
 
-  &--job,
-  &--faq {
-    &:not(.has-image) {
-      .#{$component}__text {
-        -webkit-line-clamp: 9;
-      }
-    }
-  }
-
-  // Product, Recipe
-  &--product,
-  &--recipe {
-
+  // Article
+  &--article{
     &:not(.has-image) {
       background-color: transparent;
       color: inherit;
@@ -246,8 +227,8 @@ $component-transition: $default-transition;
     }
 
     .c-card__image {
-      .view-products &,
-      .view-products-indexed & {
+      .view-articles &,
+      .view-articles-indexed & {
         aspect-ratio: 1;
         background-color: $drupalizer-neutral-2;
       }
@@ -344,35 +325,46 @@ $component-transition: $default-transition;
   &--horizontal {
     flex-direction: row;
 
-    .search-api-autocomplete-search & {
-      gap: .75rem;
-      margin: .5rem;
+    .#{$component}__image {
+      flex-basis: 3.5rem;
+      height: 80px;
+      width: 80px;
+      min-width: 80px;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      margin-right: 20px;
 
-      .#{$component}__image {
-        flex-basis: 3.5rem;
+      img {
+        height: 80px;
+        width: 80px;
+        min-width: 80px;
+        object-fit: cover;
       }
+    }
 
-      .#{$component}__content-wrapper {
-        padding-block: .5rem .2rem;
-      }
+    .#{$component}__content-wrapper {
+      padding-block: .5rem .2rem;
+    }
 
-      .#{$component}__title {
-        font-family: $default-font;
-        font-size: var(--drupalizer__font-size--h6);
-        margin: 0;
-        font-weight: 400;
-      }
+    .#{$component}__title {
+      font-family: $default-font;
+      font-size: var(--drupalizer__font-size--h6);
+      margin: 0;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
 
-      .#{$component}__tags,
-      .#{$component}__date {
-        font-family: $default-font;
-        font-size: var(--drupalizer__font-size--sm);
-        margin: 0;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: $drupalizer-neutral-6;
-        line-height: 1.25;
-      }
+    .#{$component}__tags,
+    .#{$component}__date {
+      font-family: $default-font;
+      font-size: var(--drupalizer__font-size--sm);
+      margin: 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $drupalizer-neutral-6;
+      line-height: 1.25;
     }
   }
 
@@ -525,20 +517,6 @@ $component-transition: $default-transition;
     }
   }
 
-  &--location & {
-    &__content-wrapper {
-      padding-inline: 0 !important;
-      padding-block-start: 1.44rem;
-    }
-
-    &__content-item--phone,
-    &__content-item--mail {
-      pointer-events: all;
-      z-index: 10;
-      position: relative;
-    }
-  }
-
   &--vertical {
     &.is-highlighted,
     &.is-highlight,
@@ -635,70 +613,11 @@ $component-transition: $default-transition;
     //color: var(--drupalizer-component__color-text, $color-text);
   }
 
-  // States
-
-  //&.has-link:hover {
-  //  border-color:
-  //    hsl(
-  //      var(--drupalizer-component__color-interactive-h),
-  //      var(--drupalizer-component__color-interactive-s),
-  //      var(--drupalizer-component__color-interactive-l)
-  //    );
-  //
-  //  .#{$component}__title {
-  //    &,
-  //    * {
-  //      color:
-  //        hsl(
-  //          var(--drupalizer-component__color-interactive-h),
-  //          var(--drupalizer-component__color-interactive-s),
-  //          var(--drupalizer-component__color-interactive-l)
-  //        );
-  //    }
-  //  }
-  //}
-
-  // Focus states
-  //&:focus-within {
-  //  .#{$component}__title {
-  //    &,
-  //    * {
-  //      color:
-  //        hsl(
-  //          var(--drupalizer-component__color-interactive-h),
-  //          var(--drupalizer-component__color-interactive-s),
-  //          var(--drupalizer-component__color-interactive-l)
-  //        );
-  //    }
-  //  }
-  //}
-
   &:hover,
   &:focus {
     .#{$component}__more-link {
       svg {
         margin-right: 20px;
-      }
-    }
-  }
-}
-
-.block-views__story-overview-block {
-  .#{$component} {
-    &.has-image {
-      .c-card__text {
-        display: none;
-      }
-    }
-  }
-
-  .c-flex-grid__grid-item {
-    &:nth-child(1),
-    &:nth-child(2) {
-      .#{$component} {
-        &__text {
-          display: block;
-        }
       }
     }
   }

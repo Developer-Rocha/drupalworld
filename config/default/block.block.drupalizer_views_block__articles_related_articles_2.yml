@@ -1,18 +1,17 @@
-uuid: 7a70230c-d225-4a1b-9740-dc54fec317fc
+uuid: a67f2c42-2cdc-4363-a091-820f6c3f1a04
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.articles
   module:
-    - node
     - views
   theme:
     - drupalizer
-id: drupalizer_views_block__articles_related_articles
+id: drupalizer_views_block__articles_related_articles_2
 theme: drupalizer
-region: content_bottom
-weight: 0
+region: sidebar_right
+weight: -12
 provider: null
 plugin: 'views_block:articles-related_articles'
 settings:
@@ -23,11 +22,4 @@ settings:
   context_mapping: {  }
   views_label: ''
   items_per_page: none
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      article: article
+visibility: {  }

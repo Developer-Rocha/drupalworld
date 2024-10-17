@@ -1,9 +1,9 @@
-uuid: 17414a1e-fb52-46a9-8852-3e2c1ad06d58
+uuid: 57448a31-ea9b-40cb-b4c7-f42400b4aa25
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_condensed
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
@@ -13,9 +13,11 @@ dependencies:
     - node.type.article
   module:
     - ds
-    - field_formatter
-    - manage_display
+    - layout_builder
 third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
   ds:
     layout:
       id: pattern_card
@@ -25,29 +27,69 @@ third_party_settings:
       settings:
         pattern:
           field_templates: default
-          variant: vertical
+          variant: horizontal
     regions:
       image:
         - field_image
       title:
-        - title
-      text:
-        - field_teaser
+        - node_title
+      content:
+        - created
       url:
         - 'dynamic_token_field:node-url'
     fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          'link class': ''
+          link_target: ''
+          wrapper: ''
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
       'dynamic_token_field:node-url':
         plugin_id: 'dynamic_token_field:node-url'
         weight: 3
         label: hidden
         formatter: default
 _core:
-  default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
-id: node.article.teaser
+  default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
+id: node.article.teaser_condensed
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: teaser_condensed
 content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: olivero_medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+        description: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 2
+    region: content
   field_image:
     type: entity_reference_entity_view
     label: hidden
@@ -62,31 +104,14 @@ content:
             lb: ''
     weight: 0
     region: image
-  field_teaser:
-    type: field_link
-    label: hidden
-    settings:
-      type: ''
-      settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: text
-  title:
-    type: title
-    label: hidden
-    settings:
-      link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
-    weight: 1
-    region: title
 hidden:
   body: true
   comment: true
-  created: true
   field_read_time: true
   field_tags: true
+  field_teaser: true
   langcode: true
   links: true
   search_api_excerpt: true
+  title: true
   uid: true

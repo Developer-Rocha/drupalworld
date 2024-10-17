@@ -37,7 +37,7 @@
   <div class="container">
     {{ title_prefix }}
     {% if label %}
-      <h3{{ title_attributes.addClass('block-views__title bt-title') }}>
+      <h3{{ title_attributes.addClass('block-views__title') }}>
         {{ label }}
         <span class="{{ 'bt-title__underline' }}" aria-hidden="true" role="presentation">
           {% set underline = active_theme_path() ~  '/icons/underline-short.svg' %}
@@ -47,7 +47,7 @@
 
     {% else %}
       {% if configuration.label %}
-        <h3{{ title_attributes.addClass('block-views__title bt-title') }}>
+        <h3{{ title_attributes.addClass('block-views__title') }}>
           {{ configuration.label }}
           <span class="{{ 'bt-title__underline' }}" aria-hidden="true" role="presentation">
             {% set underline = active_theme_path() ~  '/icons/underline-short.svg' %}
@@ -60,11 +60,5 @@
     {% block content %}
       {{ content }}
     {% endblock %}
-    {#    @TODO: Set the correct link for more link.#}
-    <div class="btn-outline">
-      <a href="#">
-        {{ "See all articles"|trans }}
-      </a>
-    </div>
   </div>
 </div>

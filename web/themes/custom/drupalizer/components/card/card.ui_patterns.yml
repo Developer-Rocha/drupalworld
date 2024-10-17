@@ -29,7 +29,7 @@ card:
       type: text
       label: Text
       description: Teaser text for the card.
-      preview: Digitale communicatie die expertise en focus koppelt aan transparantie en een no-bullshit aanpak. Dat is Calibrate.
+      preview: Digitale communicatie die expertise en focus koppelt aan transparantie en een no-bullshit aanpak. Dat is Drupalizer.
     content:
       type: mixed
       label: Content
@@ -47,7 +47,7 @@ card:
       type: text
       label: URL to link the card to.
       description: Add an url this card links to.
-      preview: https://calibrate.be
+      preview: https://drupalizer.tech
     card_classes:
       type: text
       label: Card Classes
