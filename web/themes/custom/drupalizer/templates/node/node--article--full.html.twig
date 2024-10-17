@@ -1,7 +1,7 @@
 {% extends "node.html.twig" %}
 
 {% block node %}
-  <div{{ attributes.addClass('container') }}>
+  <div{{ attributes }}>
     {% block header %}
       <header class="node__header">
         <h1 class="page-title">{{ node.label }}</h1>
