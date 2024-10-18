@@ -3,22 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.movies.ai_automator_status
     - field.field.node.movies.body
     - field.field.node.movies.comment
     - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
+    - field.field.node.movies.field_meta_tags
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
     - field.field.node.movies.field_tmdb_id
     - field.field.node.movies.field_vote_average
+    - field.field.node.movies.field_yoast_seo
     - node.type.movies
   module:
     - comment
     - datetime
     - media_library
+    - metatag
     - path
     - text
+    - yoast_seo
 id: node.movies.default
 targetEntityType: node
 bundle: movies
@@ -64,6 +69,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 133
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
   field_movie_poster:
     type: media_library_widget
     weight: 128
@@ -98,6 +111,13 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_yoast_seo:
+    type: yoast_seo_widget
+    weight: 134
+    region: content
+    settings:
+      body: body
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -161,4 +181,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  ai_automator_status: true

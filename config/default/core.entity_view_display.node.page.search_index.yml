@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
     - layout_builder
@@ -20,8 +22,11 @@ bundle: page
 mode: search_index
 content: {  }
 hidden:
+  addtoany: true
   body: true
   created: true
+  field_meta_tags: true
+  field_yoast_seo: true
   langcode: true
   links: true
   search_api_excerpt: true

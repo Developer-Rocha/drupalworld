@@ -3,8 +3,12 @@ display:
     display_title: Padrão
     display_options:
       fields:
+        name:
+          label: 'Nome de usuário'
         status:
           label: Status
+          settings:
+            format_custom_true: Ativo
         operations:
           label: Operações
         mail:
@@ -28,6 +32,9 @@ display:
         status:
           group_info:
             label: Status
+            group_items:
+              1:
+                title: Ativo
   page_1:
     display_title: Página
     display_options:

@@ -7,14 +7,17 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_read_time
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser
+    - field.field.node.article.field_yoast_seo
     - node.type.article
   module:
     - comment
     - estimated_read_time
     - manage_display
+    - metatag
     - text
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
@@ -23,6 +26,11 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
   body:
     type: text_default
     label: hidden
@@ -68,6 +76,13 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_read_time:
     type: estimated_read_time_text
     label: hidden
@@ -83,6 +98,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_yoast_seo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
     region: content
   links:
     settings: {  }

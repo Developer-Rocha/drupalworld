@@ -1,0 +1,21 @@
+uuid: 2e7178a2-e076-4d4f-9dc1-f7496be1a4de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.movies
+  module:
+    - yoast_seo
+id: node.movies.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: movies
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

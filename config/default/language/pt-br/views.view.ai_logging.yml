@@ -3,6 +3,8 @@ display:
     display_title: Padrão
     display_options:
       fields:
+        ai_log_bulk_form:
+          action_title: Ação
         id:
           separator: ', '
         provider:
@@ -16,6 +18,7 @@ display:
           label: Criado
           separator: ', '
         tags_value:
+          label: Tags
           separator: ', '
         view_ai_log:
           label: Ver
@@ -23,6 +26,8 @@ display:
         delete_ai_log:
           label: Apagar
           text: Apagar
+        dropbutton:
+          label: Ação
       pager:
         options:
           tags:
@@ -43,5 +48,8 @@ display:
         provider:
           expose:
             label: Provedor
+        tags_value:
+          expose:
+            label: Tags
   page_1:
     display_title: Página

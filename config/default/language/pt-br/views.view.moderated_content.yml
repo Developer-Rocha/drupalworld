@@ -7,8 +7,10 @@ display:
           label: Título
           separator: ', '
         type:
+          label: 'Tipo de conteúdo'
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         moderation_state:
           separator: ', '
@@ -35,6 +37,9 @@ display:
         title:
           expose:
             label: Título
+        type:
+          expose:
+            label: 'Tipo de conteúdo'
         langcode:
           expose:
             label: Language

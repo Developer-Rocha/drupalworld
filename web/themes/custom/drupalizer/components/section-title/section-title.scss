@@ -43,7 +43,7 @@ $component: 'c-section-title';
 h2.#{$component} {
   @extend %h2;
 
-  color: $drupalizer-red-7;
+  color: $drupalizer-blue-7;
   margin-bottom: 0;
   text-wrap: balance;
 }

@@ -284,10 +284,10 @@ $component-themes: (
   'secondary': (
     'main': $drupalizer-blue,
     'interactive': $drupalizer-blue,
-    'on-interactive-l': $drupalizer-red-7,
+    'on-interactive-l': $drupalizer-blue-7,
     'background': $drupalizer-blue,
     'text': #ffffff,
-    'border': $drupalizer-red-4,
+    'border': $drupalizer-blue-4,
     'text-hover': $color-white,
     'link': $drupalizer-blue,
     'link-hover': rgba($drupalizer-blue, .08),

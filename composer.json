@@ -42,6 +42,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/address": "^2.0",
+        "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ai": "1.0.x-dev@dev",
         "drupal/ajax_loader": "^2.1",
@@ -95,6 +96,7 @@
         "drupal/media_bulk_upload": "^3.0",
         "drupal/media_library_form_element": "^2.1",
         "drupal/menu_block": "^1.13",
+        "drupal/metatag_async_widget": "^1.1",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/mobile_number": "^2.0",
@@ -103,6 +105,7 @@
         "drupal/phpmailer_smtp": "^2.2",
         "drupal/restui": "^1.22",
         "drupal/s3fs": "^3.6",
+        "drupal/schema_metatag": "^3.0",
         "drupal/search_api": "^1.35",
         "drupal/search_api_autocomplete": "^1.9",
         "drupal/simple_oauth": "^5.2",
@@ -122,6 +125,7 @@
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/votingapi": "^3.0@beta",
         "drupal/webform": "^6.2",
+        "drupal/yoast_seo": "^1.9",
         "drush/drush": "^12.4",
         "enyo/dropzone": "^5.9",
         "exif-js/exif-js": "^2.3"
@@ -224,6 +228,9 @@
             },
             "drupal/s3fs": {
                 "3247639 - Files being written to s3fs_file table with s3:// when they are in file_managed with private://": "https://www.drupal.org/files/issues/2021-11-04/3247639-6.patch"
+            },
+            "drupal/yoast_seo": {
+                "3362165 - Fix Deprecated function: Creation of dynamic property Drupal\\yoast_seo\\YoastSeoManager::$yoast_seo_field_manager is deprecated": "https://www.drupal.org/files/issues/2023-11-01/yoast_seo-php8_2-3362165-19.patch"
             },
             "drupal/ui_patterns": {
                 "PR299 - Incorrect \"path\" in hook_theme definitions when the theme that contains patterns is not active": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/299.diff",

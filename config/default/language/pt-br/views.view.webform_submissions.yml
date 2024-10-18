@@ -38,6 +38,8 @@ display:
   embed_administer:
     display_options:
       fields:
+        webform_submission_bulk_form:
+          action_title: Ação
         sid:
           separator: ', '
         in_draft:
@@ -59,6 +61,8 @@ display:
   embed_manage:
     display_options:
       fields:
+        webform_submission_bulk_form:
+          action_title: Ação
         sid:
           separator: ', '
         in_draft:

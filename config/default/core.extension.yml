@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  addtoany: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   ai: 0
@@ -88,6 +89,7 @@ module:
   locale: 0
   mailsystem: 0
   manage_display: 0
+  maxlength: 0
   media: 0
   media_bulk_upload: 0
   media_bulk_upload_dropzonejs: 0
@@ -96,6 +98,11 @@ module:
   menu_block: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_async_widget: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
+  metatag_views: 0
   migrate: 0
   migrate_plus: 0
   migrate_tools: 0
@@ -110,6 +117,7 @@ module:
   provider_lmstudio: 0
   provider_openai: 0
   responsive_image: 0
+  schema_metatag: 0
   search_api: 0
   search_api_autocomplete: 0
   search_api_db: 0
@@ -147,6 +155,7 @@ module:
   webform_templates: 0
   webform_ui: 0
   workflows: 0
+  yoast_seo: 0
   ds: 1
   pathauto: 1
   simple_pass_reset: 1

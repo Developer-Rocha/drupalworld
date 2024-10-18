@@ -4,21 +4,25 @@ status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
+    - field.field.node.movies.ai_automator_status
     - field.field.node.movies.body
     - field.field.node.movies.comment
     - field.field.node.movies.field_ai_review
     - field.field.node.movies.field_genre
+    - field.field.node.movies.field_meta_tags
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
     - field.field.node.movies.field_tmdb_id
     - field.field.node.movies.field_vote_average
+    - field.field.node.movies.field_yoast_seo
     - node.type.movies
   module:
     - comment
     - datetime
     - ds
     - manage_display
+    - metatag
     - text
 third_party_settings:
   ds:
@@ -81,6 +85,13 @@ content:
         ds_limit: ''
     weight: 4
     region: second
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_movie_poster:
     type: entity_reference_entity_view
     label: hidden
@@ -117,6 +128,14 @@ content:
     third_party_settings: {  }
     weight: 5
     region: second
+  field_yoast_seo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
   title:
     type: title
     label: hidden
@@ -127,6 +146,8 @@ content:
     weight: 2
     region: second
 hidden:
+  addtoany: true
+  ai_automator_status: true
   created: true
   field_tmdb_id: true
   langcode: true

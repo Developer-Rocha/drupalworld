@@ -3,11 +3,15 @@ display:
     display_title: Padrão
     display_options:
       fields:
+        comment_bulk_form:
+          action_title: Ação
         subject:
+          label: Assunto
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         entity_id:
           separator: ', '
@@ -35,17 +39,24 @@ display:
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
       filters:
+        subject:
+          expose:
+            label: Assunto
         langcode:
           expose:
             label: Language
   page_unapproved:
     display_options:
       fields:
+        comment_bulk_form:
+          action_title: Ação
         subject:
+          label: Assunto
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         entity_id:
           separator: ', '
@@ -56,6 +67,9 @@ display:
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Assunto
         langcode:
           expose:
             label: Language
