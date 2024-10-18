@@ -94,9 +94,12 @@
   }
 
   &__content {
-    margin-block-start: 1rem;
+    margin-block-start: 3rem;
     grid-row: 2;
     grid-column: 1 / 2;
+    font-family: $title-font;
+    font-size: var(--drupalizer__font-size--h5);
+    font-weight: 700;
 
     p {
       font-family: $title-font;
