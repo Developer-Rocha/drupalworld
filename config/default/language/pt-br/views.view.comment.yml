@@ -1,7 +1,9 @@
+label: Comentários
 display:
   default:
     display_title: Padrão
     display_options:
+      title: Comentários
       fields:
         comment_bulk_form:
           action_title: Ação
@@ -45,6 +47,10 @@ display:
         langcode:
           expose:
             label: Language
+  page_published:
+    display_options:
+      menu:
+        title: Comentários
   page_unapproved:
     display_options:
       fields:
