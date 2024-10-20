@@ -1,0 +1,15 @@
+uuid: f2d589ef-1348-4aa5-909d-26a353ddd6e9
+langcode: en
+status: true
+dependencies: {  }
+name: video_thumbnail
+label: 'Video Thumbnail (1200x450)'
+effects:
+  4441671a-6432-4e05-9d3a-63bd9e4d96e0:
+    uuid: 4441671a-6432-4e05-9d3a-63bd9e4d96e0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 450
+      anchor: center-center

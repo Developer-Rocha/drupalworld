@@ -1,0 +1,8 @@
+uuid: 9e8611bf-880a-459f-a701-320913e3e3e9
+langcode: en
+status: true
+dependencies: {  }
+id: embed
+label: Embed
+revision: false
+description: 'Use <em>Embed</em> for embedding external content using layout builder.'

@@ -1,0 +1,34 @@
+uuid: 59ac8ff8-7f6d-4182-a1ef-f12541ac59eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.embed
+    - field.field.block_content.embed.field_embed_code
+    - field.field.block_content.embed.field_title
+  module:
+    - text
+id: block_content.embed.default
+targetEntityType: block_content
+bundle: embed
+mode: default
+content:
+  field_embed_code:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true

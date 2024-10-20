@@ -1,0 +1,11 @@
+uuid: db3729d8-d51a-49d0-a6fc-89868d20fefa
+langcode: en
+status: true
+dependencies: {  }
+id: video
+block_id: 'inline_block:video'
+category: media
+label: Video
+image_path: /modules/custom/drupalizer_layout_builder/source/images/video.png
+image_alt: ''
+weight: -100

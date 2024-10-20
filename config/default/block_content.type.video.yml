@@ -1,0 +1,8 @@
+uuid: 6f8e3d0f-1d0d-42e5-8d14-b4c32d0b24d3
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+revision: false
+description: 'Use <em>Video</em> for adding videos using layout builder.'

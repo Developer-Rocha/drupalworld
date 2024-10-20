@@ -1,0 +1,26 @@
+uuid: f9998482-fb8b-4910-8a30-862ff1af4f42
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.embed
+    - core.entity_view_mode.block_content.card_vertical
+    - field.field.block_content.embed.field_embed_code
+    - field.field.block_content.embed.field_title
+id: block_content.embed.card_vertical
+targetEntityType: block_content
+bundle: embed
+mode: card_vertical
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: title
+hidden:
+  field_embed_code: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,51 @@
+.block-inline-blockvideo {
+  &,
+  .layout,
+  .lb-block__content-wrapper,
+  .lb-block__content,
+  .lb-block__content-thumbnail,
+  .media--view-mode-video-thumbnail {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .media--view-mode-video-thumbnail {
+
+    // Drimage
+    .drimage.is-background-image {
+      aspect-ratio: 16/9;
+      height: 100%;
+      background-color: $color-grey;
+      border-radius: .5rem;
+      overflow: hidden;
+
+      img {
+        @include visually-hidden;
+      }
+    }
+
+    // Non Drimage
+    > picture {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      img {
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        height: 100%;
+        background-color: $color-grey;
+        border-radius: .5rem;
+        overflow: hidden;
+
+        // Full width banners
+        .is-banner.width--full .flex-layout--one-col & {
+          @include bp(lg) {
+            aspect-ratio: 16/5;
+          }
+        }
+      }
+    }
+  }
+}

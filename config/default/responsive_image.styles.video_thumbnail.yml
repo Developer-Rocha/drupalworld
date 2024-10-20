@@ -1,0 +1,19 @@
+uuid: 3b05c9f1-f09f-4169-be3f-51365319ba68
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.video_thumbnail
+    - image.style.video_thumbnail_sm_358x201
+  theme:
+    - drupalizer
+id: video_thumbnail
+label: 'Video Thumbnail'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: video_thumbnail
+    breakpoint_id: drupalizer_easytheme.lg
+    multiplier: 1x
+breakpoint_group: drupalizer
+fallback_image_style: video_thumbnail_sm_358x201

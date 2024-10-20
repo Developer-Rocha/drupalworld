@@ -578,6 +578,101 @@
     }
   };
 
+  Drupal.behaviors.videoPopup = {
+    attach: function (context, settings) {
+      // Assign global jQuery objects
+      $video_menu_anchor = $('#video-anchor');
+      $video_menu_close = $('.button-video--close');
+
+      $(once('video-anchor', '#video-anchor')).each(function () {
+        $(this).click(function (e) {
+          e.preventDefault();
+          $video_menu = $(this).parent().find('#video-popup');
+          Drupal.behaviors.videoPopup.toggle();
+        });
+      });
+      $(once('button-video--close', '.button-video--close')).each(function () {
+        $(this).click(function (e) {
+          e.preventDefault();
+          Drupal.behaviors.videoPopup.pauseVideo();
+          Drupal.behaviors.videoPopup.hide();
+        });
+      });
+    },
+    toggle: function(animate) {
+      animate = typeof animate !== 'undefined' ? animate : true;
+      if(!$video_menu.is(':visible')) {
+        Drupal.behaviors.videoPopup.show(animate);
+      } else {
+        Drupal.behaviors.videoPopup.pauseVideo();
+        Drupal.behaviors.videoPopup.hide(animate);
+      }
+    },
+    show: function(animate) {
+      animate = typeof animate !== 'undefined' ? animate : true;
+      $video_menu_anchor.addClass('active');
+      $video_menu_anchor.attr('aria-expanded', true);
+      $video_menu.find('iframe').css('width','100%');
+      $video_menu.find('iframe').css('height','100%');
+      if(animate && mobile_menu_active) {
+        $video_menu.slideDown(function() {
+          setFocusToFirstItemInContainer($video_menu);
+        });
+      } else {
+        $video_menu.show();
+      }
+    },
+    hide: function(animate) {
+      animate = typeof animate !== 'undefined' ? animate : true;
+      $video_menu_anchor.removeClass('active');
+      $video_menu_anchor.attr('aria-expanded', false);
+      if(animate && mobile_menu_active) {
+        $video_menu.slideUp();
+      } else {
+        $video_menu.hide();
+      }
+    },
+    pauseVideo: function() {
+      var videos = document.querySelectorAll('iframe, video');
+      Array.prototype.forEach.call(videos, function (video) {
+        if (video.tagName.toLowerCase() === 'video') {
+          video.pause();
+        } else {
+          var src = video.src;
+          video.src = src;
+        }
+      });
+    }
+
+  };
+
+  /**
+   * Responsive Youtube/Vimeo videos
+   */
+  Drupal.behaviors.responsiveVideo = {
+    attach: function (context, settings) {
+      $(once('responsive-video', 'iframe[src*="//player.vimeo.com"], iframe[src*="//vimeo.com"], iframe[src*="//www.youtube.com"], iframe[src*="//youtube.com"], iframe[src*="//youtu.be"]', context)).each(function () {
+        // Add wrapper element with needed CSS styling
+        $(this).wrap('<div class="responsive-video-wrapper"></div>');
+        // Calculate aspect ratio
+        $(this).data('aspectRatio', this.height / this.width);
+        // Remove hardcoded dimensions to prevent issues
+        $(this).removeAttr('height').removeAttr('width');
+      });
+      Drupal.behaviors.responsiveVideo.resize();
+      $(window).resize(Drupal.behaviors.responsiveVideo.resize);
+    },
+    resize: function() {
+      $('.responsive-video-wrapper').each(function() {
+        var aspect_ratio = $('iframe', $(this)).data('aspectRatio');
+        if(aspect_ratio !== undefined) {
+          var newWidth = $(this).width();
+          $('iframe', this).width(newWidth).height(newWidth * aspect_ratio);
+        }
+      });
+    }
+  };
+
   /**
    * Mobile menu accordion
    */

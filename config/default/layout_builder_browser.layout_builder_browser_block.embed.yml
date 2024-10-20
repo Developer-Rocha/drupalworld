@@ -1,0 +1,11 @@
+uuid: 0ab08143-1cf0-4143-aa8c-5b6ae6af2301
+langcode: en
+status: true
+dependencies: {  }
+id: embed
+block_id: 'inline_block:embed'
+category: content_advanced
+label: Embed
+image_path: /modules/custom/drupalizer_layout_builder/source/images/lb-preview-todo.png
+image_alt: ''
+weight: -100

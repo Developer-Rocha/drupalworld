@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a Layout Builder Block.
+ *
+ * Available variables:
+ * - See block--layout-builder.html.twig
+ *
+ * @ingroup themeable
+ */
+#}
+{% extends  "block--layout-builder.html.twig" %}
+
+{% block content %}
+
+  {% set content_render = content|without('field_embed_code')|render %}
+  {% if content_render %}
+    <div class="lb-block__content">
+      {{ content_render }}
+    </div>
+  {% endif %}
+{% endblock content %}
+
+{% block attachment %}
+  <div class="lb-block__attachment">
+    {% if content.field_embed_code %}
+      <div class="field--embed-code">
+        {{ content.field_embed_code }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock attachment %}

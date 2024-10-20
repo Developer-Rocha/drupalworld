@@ -1,0 +1,11 @@
+uuid: ed1c9422-bb92-42b3-a5fc-595b99c55ab6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.video_thumbnail
+label: 'Video thumbnail'
+description: ''
+targetEntityType: media
+cache: true

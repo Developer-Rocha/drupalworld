@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+    'bt-quick-links',
+    'lb-block',
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    content.field_media_image|field_value ? 'has-image',
+    content.field_embed_video ? 'has-video',
+    content.field_color_selector_quick_links|field_value ? 'bt-quick-links--' ~ content.field_color_selector_quick_links.0["#markup"]|clean_class,
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }}>
+
+    {{ title_prefix }}
+    {{ title_suffix }}
+    <div class="layout lb-block__layout">
+      {% block layout %}
+
+      <div class="lb-block__content-wrapper">
+          {% block content_wrapper %}
+
+
+            {% block content %}
+                <div class="lb-block__content">
+                  {{ content|without('field_color_selector_quick_links') }}
+                </div>
+            {% endblock content %}
+
+
+          {% endblock content_wrapper %}
+        </div>
+
+        {% block attachment %}
+        {% endblock attachment %}
+
+    {% endblock layout %}
+  </div>
+</section>

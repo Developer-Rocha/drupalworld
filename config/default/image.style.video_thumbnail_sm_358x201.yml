@@ -1,0 +1,17 @@
+uuid: b2387063-2a3f-403a-80e1-5fd466b969b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: video_thumbnail_sm_358x201
+label: 'Video Thumbnail sm (358x201)'
+effects:
+  81583f6d-5406-4c1d-b957-5625dc2c7595:
+    uuid: 81583f6d-5406-4c1d-b957-5625dc2c7595
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 358
+      height: 201
+      crop_type: focal_point

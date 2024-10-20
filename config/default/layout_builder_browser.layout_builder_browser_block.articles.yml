@@ -8,4 +8,4 @@ category: automatic_lists
 label: Articles
 image_path: /themes/custom/drupalizer/components/card/lb-preview_multiple.png
 image_alt: ''
-weight: null
+weight: -100

@@ -1,0 +1,36 @@
+uuid: 40e9096e-47f8-4ddd-88aa-8f4b246050ba
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.video
+    - core.entity_view_mode.block_content.card_vertical
+    - field.field.block_content.video.field_image
+    - field.field.block_content.video.field_video
+    - field.field.block_content.video.field_video_embed
+  module:
+    - ds
+id: block_content.video.card_vertical
+targetEntityType: block_content
+bundle: video
+mode: card_vertical
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 0
+    region: image
+hidden:
+  field_video: true
+  field_video_embed: true
+  langcode: true
+  search_api_excerpt: true
