@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - highlight_js
     - linkit
 name: Editor
 format: editor
@@ -26,7 +27,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="highlight"> <h2 class="color-primary smaller-title"> <h3> <h4> <h5> <h6> <strong> <em> <pre> <code class="language-*"> <ul> <ol reversed start> <li> <span>'
+      allowed_html: '<br> <p class="highlight"> <h2 class="color-primary smaller-title"> <h3> <h4> <h5> <h6> <strong> <em> <ul> <ol reversed start> <li> <span> <highlight-js data-plugin-config data-plugin-id>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -40,6 +41,12 @@ filters:
     provider: filter
     status: true
     weight: 15
+    settings: {  }
+  highlight_js:
+    id: highlight_js
+    provider: highlight_js
+    status: true
+    weight: 100
     settings: {  }
   linkit:
     id: linkit

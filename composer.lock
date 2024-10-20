@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1d0fd66229233d6487577672752fa47",
+    "content-hash": "c4b82bf518a72e1903559224479ec9ce",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4327,6 +4327,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/graphql_webform",
                 "issues": "https://drupal.org/project/issues/graphql_webform"
+            }
+        },
+        {
+            "name": "drupal/highlight_js",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/highlight_js.git",
+                "reference": "1.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/highlight_js-1.1.4.zip",
+                "reference": "1.1.4",
+                "shasum": "3aae27604f04a8dfe10b83cbb8be0962382c611a"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.4",
+                    "datestamp": "1714293102",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "sujan shrestha",
+                    "homepage": "https://www.drupal.org/user/3475737"
+                }
+            ],
+            "description": "Adds the HighlightJs plugin to CKEditor 5 with syntax highlighting provided by HighlightJs.",
+            "homepage": "https://www.drupal.org/project/highlight_js",
+            "support": {
+                "source": "https://git.drupalcode.org/project/highlight_js"
             }
         },
         {
