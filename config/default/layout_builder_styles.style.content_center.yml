@@ -1,0 +1,12 @@
+uuid: ea16a5df-50be-4453-be3a-31924fb74aca
+langcode: en
+status: true
+dependencies: {  }
+id: content_center
+label: Center
+classes: align-c--center
+type: section
+group: content_align
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -6

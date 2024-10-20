@@ -1,0 +1,10 @@
+uuid: 41d5ab63-cb28-47f1-892a-67863957c883
+langcode: en
+status: true
+dependencies: {  }
+id: content_align
+label: 'Content align'
+multiselect: single
+form_type: checkboxes
+required: false
+weight: 0

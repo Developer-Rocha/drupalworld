@@ -1,0 +1,12 @@
+uuid: 950fd560-dbdb-4b66-8925-5c44c265fae0
+langcode: en
+status: true
+dependencies: {  }
+id: content_left
+label: Left
+classes: align-c--left
+type: section
+group: content_align
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -5

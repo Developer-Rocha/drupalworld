@@ -1,0 +1,12 @@
+uuid: 2947fa20-0d54-4b59-94d0-53d7e87a61f4
+langcode: en
+status: true
+dependencies: {  }
+id: background_primary
+label: Primary
+classes: "is-banner\r\nbackground-color\r\nbackground-color--primary"
+type: section
+group: background
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -3

@@ -1,0 +1,12 @@
+uuid: da3b4b89-4075-4304-b807-9b3c62595971
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_bottom
+label: Bottom
+classes: align-v--bottom
+type: section
+group: vertical_align
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -7

@@ -1,0 +1,12 @@
+uuid: 9a0efbf3-fb8a-4f5e-b2cd-3dd0a2b3f246
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_center
+label: Center
+classes: align-v--center
+type: section
+group: vertical_align
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -8

@@ -45,39 +45,6 @@
   }
 }
 
-
-.theme--yellow_theme {
-  isolation: isolate;
-
-  //&::before {
-  //  content: '';
-  //  background-image: linear-gradient(to bottom, transparent 26vw, $drupalizer-yellow-5 26vw, $drupalizer-yellow-5 30vw, $drupalizer-yellow-6), url(../icons/curved-on-top-background-yellow.svg),;
-  //  background-size: 100%;
-  //  background-repeat: no-repeat;
-  //  position: absolute;
-  //  margin: 0 auto;
-  //  background-position: top;
-  //  z-index: -1;
-  //  inset: 0;
-  //  top: 8rem;
-  //}
-
-  .bt-title {
-    color: $drupalizer-dark-blue-7;
-
-    .bt-title__underline {
-      svg {
-        fill: $drupalizer-dark-blue-7;
-      }
-    }
-  }
-
-  .bt-banner {
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-}
-
 .lb-section {
   position: relative;
   margin: var(--drupalizer__block-spacing, var(--drupalizer-lb__block-spacing)) 0;
@@ -132,13 +99,13 @@
     }
 
     .block-inline-blocktext,
-    .block-inline-blockcta {
+    .block-inline-blockcall-to-action {
       padding: clamp(1.5rem, 4vw, 3.75rem);
     }
 
     &.width--full {
       .block-inline-blocktext,
-      .block-inline-blockcta {
+      .block-inline-blockcall-to-action {
         padding: clamp(1.5rem, 4vw, 5rem);
       }
     }
@@ -175,13 +142,13 @@
       [class*='flex-layout--three-col'] {
         &,
         .block-inline-blocktext,
-        .block-inline-blockcta {
+        .block-inline-blockcall-to-action {
           max-width: 1800px;
           margin-inline: auto;
         }
 
         .block-inline-blocktext,
-        .block-inline-blockcta {
+        .block-inline-blockcall-to-action {
           width: 100%;
         }
       }
@@ -191,13 +158,13 @@
   &.align-c--left {
     text-align: left;
 
-    .column .lb-block__content,
+    .layout__region .lb-block__content,
     .lb-section__region .lb-block__content {
       text-align: left;
     }
   }
 
-  &.align--center {
+  &.align-c--center {
     .bt-title {
       width: fit-content;
       margin: 0 auto 2.5rem;
@@ -207,151 +174,60 @@
         margin: 0 auto;
       }
     }
+
+    .layout__region .lb-block__content,
+    .lb-section__region .lb-block__content {
+      text-align: center;
+    }
   }
 
-  &.align--right {
+  &.align-c--right {
     .bt-title {
       width: fit-content;
       text-align: right;
       margin-right: 0;
       margin-left: auto;
     }
-  }
 
-  // Gradient after gradient yellow
-  &.background--full.theme--yellow:not(.has-curved-background):not(.has-half-background) + .background--full.theme--yellow:not(.has-curved-background):not(.has-half-background) {
-    background: $drupalizer-yellow-6;
-  }
-
-  // Gradient after gradient dark-blue
-  &.background--full.theme--dark-blue:not(.has-curved-background):not(.has-half-background) + .background--full.theme--dark-blue:not(.has-curved-background):not(.has-half-background) {
-    background: $drupalizer-dark-blue;
-  }
-
-  // Curved background option
-  &.has-curved-background.background--full {
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 7rem 0 0;
-      mask-image: url(../icons/curved-on-top-mask.svg);
-      mask-size: 180%;
-      mask-position: left top;
-      mask-repeat: no-repeat;
-
-      @include bp(md) {
-        mask-size: 100%;
-        mask-position: center top;
-      }
-    }
-
-    &:not(.theme--transparent).background--full {
-      background: none;
-    }
-
-    // Changes for gradients
-    &.theme--yellow {
-      &::before {
-        background-color: $drupalizer-yellow-5;
-      }
-
-      & + .theme--yellow.background--full:not(.has-half-background) {
-        &,
-        & + .theme--yellow.background--full:not(.has-half-background),
-        & + .theme--yellow.background--full:not(.has-half-background) + .theme--yellow.background--full:not(.has-half-background),
-        & + .theme--yellow.background--full:not(.has-half-background) + .theme--yellow.background--full:not(.has-half-background) + .theme--yellow.background--full:not(.has-half-background) {
-          background: $drupalizer-yellow-5;
-        }
-      }
-    }
-
-    &.theme--dark-blue {
-      &::before {
-        background-color: $drupalizer-dark-blue-5;
-      }
-
-      & + .theme--dark-blue.background--full:not(.has-half-background) {
-        &,
-        & + .theme--dark-blue.background--full:not(.has-half-background),
-        & + .theme--dark-blue.background--full:not(.has-half-background) + .theme--dark-blue.background--full:not(.has-half-background),
-        & + .theme--dark-blue.background--full:not(.has-half-background) + .theme--dark-blue.background--full:not(.has-half-background) + .theme--dark-blue.background--full:not(.has-half-background) {
-          background: $drupalizer-dark-blue-5;
-        }
-      }
-    }
-
-    // Changes for solid colors
-    &.theme--blue {
-      &::before {
-        background-color: $drupalizer-blue;
-      }
-    }
-
-    &.theme--bio {
-      &::before {
-        background-color: $drupalizer-bio;
-      }
-    }
-
-    &.theme--gold {
-      &::before {
-        background-color: $drupalizer-yellow-7;
-      }
-    }
-
-    &.theme--grey {
-      &::before {
-        background-color: $drupalizer-neutral-2;
-      }
+    .layout__region .lb-block__content,
+    .lb-section__region .lb-block__content {
+      text-align: right;
     }
   }
 
-  // Half background option
-  &.has-half-background.background--full {
-
-    // Changes for gradients
-    &.theme--yellow {
-      background: linear-gradient(to bottom, $drupalizer-yellow-5, $drupalizer-yellow-6 50%, transparent 50%);
-    }
-
-    &.theme--dark-blue {
-      background: linear-gradient(to bottom, $drupalizer-dark-blue-5, $drupalizer-dark-blue 50%, transparent 50%);
-    }
-
-    // Changes for solid colors
-    &.theme--blue {
-      background: linear-gradient(to bottom, $drupalizer-blue 50%, transparent 50%);
-    }
-
-    &.theme--bio {
-      background: linear-gradient(to bottom, $drupalizer-bio 50%, transparent 50%);
-    }
-
-    &.theme--gold {
-      background: linear-gradient(to bottom, $drupalizer-yellow-7 50%, transparent 50%);
-    }
-
-    &.theme--grey {
-      background: linear-gradient(to bottom, $drupalizer-neutral-2 50%, transparent 50%);
+  &.align-v--top {
+    .layout__region {
+      align-self: start;
     }
   }
 
-  &.theme--yellow.background--full,
-  &.theme--dark-blue.background--full {
+  &.align-v--center {
+    .layout__region {
+      align-self: center;
+    }
+  }
 
-    .lb-section__column-wrapper > div[class*=theme--] {
-      //padding: 0;
+  &.align-v--bottom {
+    .layout__region {
+      align-self: end;
+    }
+  }
+
+  &.background-color {
+    color: $color-white;
+    border-radius: 15px;
+
+    &--primary {
+      background-color: $drupalizer-blue-7;
     }
 
-    .c-section-title,
-    .bt-title {
-      color: $drupalizer-dark-blue-7;
+    &--dark {
+      background-color: $drupalizer-dark;
+    }
 
-      svg {
-        fill: $drupalizer-dark-blue-6;
-      }
+    .layout__region {
+      padding: 0;
+      margin: 0;
     }
   }
 }
@@ -403,7 +279,7 @@
 }
 
 .lb-section {
-  .column {
+  .layout__region {
     &.padding--left {
       @include bp(md) {
         padding-left: calc(var(--drupalizer__gutter) * 2);
@@ -413,52 +289,6 @@
     &.padding--right {
       @include bp(md) {
         padding-right: calc(var(--drupalizer__gutter) * 2);
-      }
-    }
-  }
-}
-
-
-// Vertical offset
-.media-offset-v--outward {
-  $shift-value: 2rem;
-
-  margin-top: var(--drupalizer__block-spacing, var(--drupalizer-lb__block-spacing));
-
-  [class*='flex-layout--three-col'] {
-    padding-bottom: $shift-value;
-  }
-
-  .flex-layout--three-col--25-25-50 {
-    .column-1 {
-      transform: translateY($shift-value);
-    }
-  }
-
-  .flex-layout--three-col--33-33-33 {
-    .column-2 {
-      transform: translateY($shift-value);
-    }
-  }
-
-  .flex-layout--three-col--25-50-25 {
-    .column-1,
-    .column-3 {
-      transform: translateY($shift-value);
-    }
-  }
-
-  .flex-layout--three-col--50-25-25 {
-    .column-3 {
-      transform: translateY($shift-value);
-    }
-  }
-
-  // Reset module theming
-  .lb-section__column-wrapper {
-    .column {
-      .block-inline-blockimage:first-child {
-        margin-top: 0;
       }
     }
   }

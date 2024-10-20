@@ -1,0 +1,12 @@
+uuid: 0e30f861-f08f-4be6-910c-12956c126a25
+langcode: en
+status: true
+dependencies: {  }
+id: background_dark
+label: Dark
+classes: "is-banner\r\nbackground-color\r\nbackground-color--dark"
+type: section
+group: background
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,12 @@
+uuid: a4f57b49-4d40-47b7-8905-e0cf48f4c213
+langcode: en
+status: true
+dependencies: {  }
+id: content_right
+label: Right
+classes: align-c--right
+type: section
+group: content_align
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -4

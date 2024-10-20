@@ -1,0 +1,10 @@
+uuid: 778ccc12-8b02-4133-9b68-26636d4a30a1
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_align
+label: 'Vertical align'
+multiselect: single
+form_type: checkboxes
+required: false
+weight: 0

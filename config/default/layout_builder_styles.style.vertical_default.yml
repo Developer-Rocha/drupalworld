@@ -1,0 +1,12 @@
+uuid: c585494b-2ecd-44b0-9744-2cde310dd68d
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_default
+label: Default
+classes: align-v--default
+type: section
+group: vertical_align
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: -10
