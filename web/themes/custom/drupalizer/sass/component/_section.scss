@@ -293,3 +293,48 @@
     }
   }
 }
+
+// Vertical offset
+.media-offset-v--outward {
+  $shift-value: 2rem;
+
+  margin-top: var(--drupalizer__block-spacing, var(--drupalizer-lb__block-spacing));
+
+  [class*='flex-layout--three-col'] {
+    padding-bottom: $shift-value;
+  }
+
+  &.layout--threecol-section--25-25-50 {
+    .layout__region--first {
+      transform: translateY($shift-value);
+    }
+  }
+
+  &.layout--threecol-section--33-33-33 {
+    .layout__region--second {
+      transform: translateY($shift-value);
+    }
+  }
+
+  &.layout--threecol-section--25-50-25 {
+    .layout__region--first,
+    .layout__region--third {
+      transform: translateY($shift-value);
+    }
+  }
+
+  &.layout--threecol-section--50-25-25 {
+    .layout__region--third {
+      transform: translateY($shift-value);
+    }
+  }
+
+  // Reset module theming
+  .lb-section__column-wrapper {
+    .layout__region {
+      .block-inline-blockimage:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -203,6 +203,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/block_class": {
+                "3345981 - Initial class save causes array_merge error": "https://git.drupalcode.org/project/block_class/-/merge_requests/12.diff"
+            },
             "drupal/core": {
                 "3301782 - PHP8 Deprecated function : htmlspecialchars(): Passing null to parameter #1": "https://www.drupal.org/files/issues/2023-08-02/htmlspecialchars_passing_null_to_parameter1-3301782-23.patch",
                 "3052608 - DateTimeComputed tries to compute from an empty value": "https://www.drupal.org/files/issues/2023-04-11/3052608-22.patch",
@@ -245,8 +248,8 @@
             "drupal/views_infinite_scroll": {
                 "2894307 - Any way to Automatically Load Content when scrolling within a DIV": "https://www.drupal.org/files/issues/2022-02-09/support-for-overflow-scrolls-2894307-23.patch"
             },
-            "drupal/block_class": {
-                "3345981 - Initial class save causes array_merge error": "https://git.drupalcode.org/project/block_class/-/merge_requests/12.diff"
+            "drupal/webform": {
+                "3443934 - Item format custom HTML is not valid.": "https://www.drupal.org/files/issues/2024-05-14/3443934-10.patch"
             }
         }
     },

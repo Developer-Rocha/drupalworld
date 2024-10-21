@@ -1,0 +1,12 @@
+uuid: b35b05d0-d7c9-4540-bdde-a21914bbb383
+langcode: en
+status: true
+dependencies: {  }
+id: media_offset_v_outward
+label: Outward
+classes: media-offset-v--outward
+type: section
+group: media_offset_vertical
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

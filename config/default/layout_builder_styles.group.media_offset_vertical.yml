@@ -1,0 +1,10 @@
+uuid: 269fa9e2-38bd-4090-bd3c-80db1b89f02f
+langcode: en
+status: true
+dependencies: {  }
+id: media_offset_vertical
+label: 'Media offset vertical'
+multiselect: single
+form_type: checkboxes
+required: false
+weight: 0
