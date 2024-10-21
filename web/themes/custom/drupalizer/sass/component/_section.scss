@@ -99,12 +99,14 @@
     }
 
     .block-inline-blocktext,
+    .block-inline-blockbasic,
     .block-inline-blockcall-to-action {
       padding: clamp(1.5rem, 4vw, 3.75rem);
     }
 
     &.width--full {
       .block-inline-blocktext,
+      .block-inline-blockbasic,
       .block-inline-blockcall-to-action {
         padding: clamp(1.5rem, 4vw, 5rem);
       }
@@ -142,12 +144,14 @@
       [class*='flex-layout--three-col'] {
         &,
         .block-inline-blocktext,
+        .block-inline-blockbasic,
         .block-inline-blockcall-to-action {
           max-width: 1800px;
           margin-inline: auto;
         }
 
         .block-inline-blocktext,
+        .block-inline-blockbasic,
         .block-inline-blockcall-to-action {
           width: 100%;
         }
