@@ -80,6 +80,8 @@
 
   // Banner display setting
   &.is-banner {
+    border-radius: 1rem;
+    overflow: hidden;
 
     // Remove gutter
     .flex-layout {
@@ -125,6 +127,10 @@
     }
 
     img {
+      border-radius: 0 !important;
+    }
+
+    .c-image__image {
       border-radius: 0 !important;
     }
 
