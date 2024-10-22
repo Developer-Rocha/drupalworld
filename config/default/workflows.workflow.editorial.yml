@@ -16,11 +16,6 @@ label: Editorial
 type: content_moderation
 type_settings:
   states:
-    archived:
-      label: Archived
-      weight: 7
-      published: false
-      default_revision: true
     draft:
       label: Draft
       weight: -5
@@ -61,24 +56,6 @@ type_settings:
         - unpublished
       to: unpublished
       weight: 2
-    archive:
-      label: Archive
-      from:
-        - published
-      to: archived
-      weight: 3
-    archived_draft:
-      label: 'Restore to Draft'
-      from:
-        - archived
-      to: draft
-      weight: 4
-    archived_published:
-      label: Restore
-      from:
-        - archived
-      to: published
-      weight: 5
   entity_types:
     node:
       - article
