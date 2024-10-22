@@ -61,6 +61,24 @@ type_settings:
         - unpublished
       to: unpublished
       weight: 2
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 3
+    archived_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 4
+    archived_published:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 5
   entity_types:
     node:
       - article
