@@ -7,7 +7,7 @@ module:
   ai: 0
   ai_api_explorer: 0
   ai_assistant_api: 0
-  ai_automator: 0
+  ai_automators: 0
   ai_chatbot: 0
   ai_ckeditor: 0
   ai_content: 0
@@ -139,7 +139,6 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
-  tmdb_movies: 0
   token: 0
   toolbar: 0
   twig_field_value: 0
