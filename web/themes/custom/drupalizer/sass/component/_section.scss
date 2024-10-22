@@ -348,3 +348,32 @@
     }
   }
 }
+
+// Section title
+.layout.lb-section {
+  // Colors
+  .section-blue-title {
+    color: $drupalizer-dark-blue;
+  }
+
+  .section-black-title {
+    color: #000000;
+  }
+
+  .section-white-title {
+    color: #FFFFFF;
+  }
+
+  // Horizontal align.
+  .section-center-title {
+    text-align: center;
+  }
+
+  .section-left-title {
+    text-align: left;
+  }
+
+  .section-right-title {
+    text-align: right;
+  }
+}

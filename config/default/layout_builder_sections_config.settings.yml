@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: 60guVIkNx4OgBUD6QJ4mtWFoOtScN8qV9-IzU0K5h24
+title_wrappers: "h1|H1\r\nh2|H2\r\nh3|H3\r\nh4|H4\r\nh5|H5\r\nh6|H6"
+title_positions: "section-left-title|Left\r\nsection-center-title|Center\r\nsection-right-title|Right"
+title_colors: "section-black-title|Black\r\nsection-white-title|White\r\nsection-blue-title|Blue"

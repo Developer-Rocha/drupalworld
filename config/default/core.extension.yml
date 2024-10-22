@@ -83,6 +83,7 @@ module:
   layout_builder_reorder: 0
   layout_builder_restrictions: 0
   layout_builder_restrictions_by_region: 0
+  layout_builder_sections_config: 0
   layout_builder_styles: 0
   layout_discovery: 0
   layoutbuilder_extras_live_update: 0

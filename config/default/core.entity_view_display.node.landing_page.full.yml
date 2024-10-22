@@ -33,9 +33,10 @@ third_party_settings:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       allowed_layouts:
-        - ds_reset
+        - layout_onecol
         - layout_twocol_section
         - layout_threecol_section
+        - ds_reset
       denylisted_blocks:
         'Inline blocks': {  }
       allowlisted_blocks: {  }
@@ -43,9 +44,10 @@ third_party_settings:
         - AI
     entity_view_mode_restriction_by_region:
       allowed_layouts:
-        - ds_reset
+        - layout_onecol
         - layout_twocol_section
         - layout_threecol_section
+        - ds_reset
       allowlisted_blocks: {  }
 id: node.landing_page.full
 targetEntityType: node
