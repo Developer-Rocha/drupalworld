@@ -1,0 +1,18 @@
+uuid: e55ca7a0-2778-46ed-a8d4-040effcb53af
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.skill
+id: node.skill.created
+field_name: created
+entity_type: node
+bundle: skill
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,14 +1,14 @@
-uuid: cb7f4380-e2e7-4bf7-ac92-28459f6e25d7
+uuid: edd9adfb-70a5-4d43-be35-686f5d10d772
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.skill
-id: node.skill.promote
-field_name: promote
+id: node.skill.sticky
+field_name: sticky
 entity_type: node
 bundle: skill
-label: 'Promoted to front page'
+label: 'Sticky at top of lists'
 description: ''
 required: false
 translatable: false

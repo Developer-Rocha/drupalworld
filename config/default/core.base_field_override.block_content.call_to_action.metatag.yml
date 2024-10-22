@@ -1,0 +1,20 @@
+uuid: a42b2a2f-c658-4624-877a-ce564c46ced7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+  module:
+    - metatag
+id: block_content.call_to_action.metatag
+field_name: metatag
+entity_type: block_content
+bundle: call_to_action
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

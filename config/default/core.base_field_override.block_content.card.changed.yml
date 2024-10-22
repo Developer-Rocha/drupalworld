@@ -1,19 +1,18 @@
-uuid: 339e8fc8-e404-4ebe-8d42-6c72942fdc6b
+uuid: c79e1737-f830-4413-985b-2c5d98d2a2c2
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.card
-    - field.storage.block_content.field_title
-id: block_content.card.field_title
-field_name: field_title
+id: block_content.card.changed
+field_name: changed
 entity_type: block_content
 bundle: card
-label: Title
-description: ''
+label: Changed
+description: 'The time that the content block was last edited.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: changed

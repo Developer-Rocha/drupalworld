@@ -1,0 +1,18 @@
+uuid: 57657997-035c-49b7-b444-f5a56faa94e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.skill
+id: node.skill.changed
+field_name: changed
+entity_type: node
+bundle: skill
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,20 @@
+uuid: fa6f7c18-0cea-4855-a05b-f68457dd9f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.skill
+  module:
+    - metatag
+id: node.skill.metatag
+field_name: metatag
+entity_type: node
+bundle: skill
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

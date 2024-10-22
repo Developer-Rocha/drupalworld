@@ -1,0 +1,20 @@
+uuid: caa9cfc1-9755-4820-a164-5bb3aeec5a54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.skill
+  module:
+    - path
+id: node.skill.path
+field_name: path
+entity_type: node
+bundle: skill
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,18 @@
+uuid: a7fbb599-44c8-4ee1-b837-e848b3b4694f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.skill
+id: node.skill.rh_redirect
+field_name: rh_redirect
+entity_type: node
+bundle: skill
+label: 'Rabbit Hole redirect path.'
+description: 'The path to where the user should get redirected to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

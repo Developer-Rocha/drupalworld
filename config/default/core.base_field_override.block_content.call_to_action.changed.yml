@@ -1,13 +1,13 @@
-uuid: c39f96af-1c87-434b-b36b-4daeae5f34b7
+uuid: 27a94430-8a26-4029-aeb9-fe16824928c7
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
-id: block_content.basic.changed
+    - block_content.type.call_to_action
+id: block_content.call_to_action.changed
 field_name: changed
 entity_type: block_content
-bundle: basic
+bundle: call_to_action
 label: Changed
 description: 'The time that the content block was last edited.'
 required: false
