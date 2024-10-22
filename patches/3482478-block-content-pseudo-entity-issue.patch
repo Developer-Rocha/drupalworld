@@ -1,0 +1,17 @@
+diff --git a/src/BlockContentPseudoEntity.php b/src/BlockContentPseudoEntity.php
+index 5bcecb3..eceed1c 100644
+--- a/src/BlockContentPseudoEntity.php
++++ b/src/BlockContentPseudoEntity.php
+@@ -44,10 +44,11 @@ class BlockContentPseudoEntity {
+       ->execute();
+     $blocks = [];
+     foreach ($result as $row) {
++      $info = $row->info ?? '';
+       $blocks[] = new static(
+         $row->uuid,
+         $row->type,
+-        $row->info,
++        $info,
+         $row->id
+       );
+     }

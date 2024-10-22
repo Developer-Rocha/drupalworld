@@ -1,0 +1,11 @@
+uuid: 60dd1ead-aa7d-447f-b990-8f0b246ccc75
+langcode: en
+status: true
+dependencies: {  }
+id: skills_slider
+block_id: 'views_block:skills-block_1'
+category: content_advanced
+label: 'Skills Slider'
+image_path: /themes/custom/drupalizer/components/card/lb-preview_multiple.png
+image_alt: ''
+weight: -100

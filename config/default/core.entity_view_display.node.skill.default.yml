@@ -1,0 +1,49 @@
+uuid: eb419219-0707-4d21-85d2-ac9991fcbddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.skill.field_icon
+    - field.field.node.skill.field_level
+    - field.field.node.skill.field_years_experience
+    - node.type.skill
+  module:
+    - options
+id: node.skill.default
+targetEntityType: node
+bundle: skill
+mode: default
+content:
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: slick
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_level:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_years_experience:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  title: true
+  uid: true

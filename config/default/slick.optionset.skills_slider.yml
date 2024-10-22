@@ -1,0 +1,77 @@
+uuid: 10767f7f-1da9-4a1b-9f12-97239bf15544
+langcode: en
+status: true
+dependencies: {  }
+id: skills_slider
+name: skills_slider
+weight: 0
+label: 'Skills Slider'
+group: main
+skin: grid
+breakpoints: 3
+optimized: true
+options:
+  options__active_tab: edit-options-responsives
+  settings:
+    mobileFirst: true
+    adaptiveHeight: true
+    autoplay: true
+    pauseOnHover: false
+    pauseOnFocus: false
+    autoplaySpeed: 2500
+    arrows: false
+    centerMode: true
+    dots: true
+    lazyLoad: ondemand
+    rows: 0
+    slidesToShow: 1
+  responsives:
+    responsive:
+      -
+        breakpoint: 400
+        unslick: false
+        settings:
+          adaptiveHeight: true
+          autoplay: true
+          pauseOnHover: false
+          pauseOnFocus: false
+          autoplaySpeed: 2500
+          arrows: false
+          centerMode: true
+          dots: true
+          slidesToShow: 2
+          swipe: false
+          touchMove: false
+          waitForAnimate: false
+      -
+        breakpoint: 692
+        unslick: false
+        settings:
+          adaptiveHeight: true
+          autoplay: true
+          pauseOnHover: false
+          pauseOnFocus: false
+          autoplaySpeed: 2500
+          centerMode: true
+          dots: true
+          rows: 0
+          slidesToShow: 3
+          swipe: false
+          touchMove: false
+          waitForAnimate: false
+      -
+        breakpoint: 992
+        unslick: false
+        settings:
+          adaptiveHeight: true
+          autoplay: true
+          pauseOnHover: false
+          pauseOnFocus: false
+          autoplaySpeed: 2500
+          centerMode: true
+          dots: true
+          rows: 0
+          slidesToShow: 4
+          swipe: false
+          touchMove: false
+          waitForAnimate: false

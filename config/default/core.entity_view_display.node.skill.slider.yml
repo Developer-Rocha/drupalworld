@@ -1,0 +1,55 @@
+uuid: 061b1139-3d3c-4e39-b828-5a2d85b992c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider
+    - field.field.node.skill.field_icon
+    - field.field.node.skill.field_level
+    - field.field.node.skill.field_years_experience
+    - node.type.skill
+  module:
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.skill.slider
+targetEntityType: node
+bundle: skill
+mode: slider
+content:
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: slick
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_level:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_years_experience:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  title: true
+  uid: true

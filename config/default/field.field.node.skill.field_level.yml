@@ -1,0 +1,21 @@
+uuid: f81f0abf-392b-4dc1-9be0-65c0effb41d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_level
+    - node.type.skill
+  module:
+    - options
+id: node.skill.field_level
+field_name: field_level
+entity_type: node
+bundle: skill
+label: Level
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

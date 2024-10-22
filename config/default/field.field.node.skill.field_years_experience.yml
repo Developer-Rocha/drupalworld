@@ -1,0 +1,23 @@
+uuid: f1bed238-6013-4550-b027-b0d42202a775
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_years_experience
+    - node.type.skill
+id: node.skill.field_years_experience
+field_name: field_years_experience
+entity_type: node
+bundle: skill
+label: "Years experience\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: df6eb923-05c9-4aa5-b164-4b2ef4ed3458
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.vector_image
+id: media.vector_image.name
+field_name: name
+entity_type: media
+bundle: vector_image
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

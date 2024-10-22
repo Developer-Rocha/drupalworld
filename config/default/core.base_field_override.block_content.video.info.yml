@@ -1,0 +1,18 @@
+uuid: 83f60ca8-36bf-43f4-8aed-a5a48278cddc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+id: block_content.video.info
+field_name: info
+entity_type: block_content
+bundle: video
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

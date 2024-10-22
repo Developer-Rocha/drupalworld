@@ -1,0 +1,61 @@
+// Slick Skills.
+.slick--view--skills {
+  .slick-arrow {
+    &::before,
+    &::after {
+      color: $drupalizer-dark-blue;
+    }
+  }
+}
+
+// Skill card.
+.skill {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  margin: .5rem;
+  padding: 1rem;
+  min-height: 250px;
+
+  @include bp(md) {
+    min-height: 250px;
+  }
+
+  &__icon {
+    margin-bottom: 1rem;
+
+    img {
+      height: 60px;
+      width: auto;
+
+      @include bp(md) {
+        height: 70px
+      }
+    }
+  }
+
+  &__header {
+    h3 {
+      font-size: var(--drupalizer__font-size--h5);
+      margin-bottom: .7rem;
+
+      @include bp(md) {
+        font-size: var(--drupalizer__font-size--h4);
+      }
+    }
+  }
+
+  &__content {
+    p {
+      font-size: var(--drupalizer__font-size--xl);
+      line-height: 1.1rem;
+      margin-bottom: .6rem;
+    }
+  }
+}
