@@ -1,0 +1,22 @@
+uuid: fd4feae3-ec59-4b66-b695-75be18a52c79
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+  theme:
+    - drupalizer
+id: whatsapp
+theme: drupalizer
+region: footer_top
+weight: 0
+provider: null
+plugin: config_pages_block
+settings:
+  id: config_pages_block
+  label: Whatsapp
+  label_display: '0'
+  provider: config_pages
+  config_page_type: website_settings
+  config_page_view_mode: whatsapp
+visibility: {  }

@@ -13,10 +13,13 @@
   set classes = [
     'layout',
     'layout--onecol',
-    'lb-section',
   ]
 %}
-{% if content %}
+{% if is_node %}
+  {% set classes = classes|merge(['lb-section']) %}
+{% endif %}
+
+  {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {% if content.title %}
       {% set label = content.title.label %}

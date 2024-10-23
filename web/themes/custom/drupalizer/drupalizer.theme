@@ -171,27 +171,20 @@ function drupalizer_preprocess_node(&$variables) {
 
 
 /**
- * Implements hook_preprocess_HOOK() for pattern-breadcrumbs.html.twig.
+ * Implements hook_preprocess_template().
  */
-//function drupalizer_preprocess_pattern_breadcrumbs(array &$variables) {
-//  $breadcrumb = $variables['breadcrumb'];
-//
-//  if(isset($breadcrumb['#links'])) {
-//    foreach ($breadcrumb['#links'] as $item) {
-//      // Get the text of the label.
-//      $text = $item->getText();
-//      // Check if the text is a number type (ID).
-//      if (ctype_digit($text)){
-//        $node = Node::load($text);
-//        if ($node) {
-//          // Set the new text and URL for the breadcrumb item.
-//          $item->setText($node->getTitle());
-//          $item->setUrl($node->toUrl());
-//        }
-//      }
-//    }
-//  }
-//}
+function drupalizer_preprocess_layout(array &$variables) {
+  $route_match = \Drupal::service('current_route_match');
+
+  if ($route_match->getParameter('node') instanceof Node) {
+    $node = $route_match->getParameter('node');
+
+    if ($node) {
+      $variables['is_node'] = TRUE;
+      $variables['node_type'] = $node->getType();
+    }
+  }
+}
 
 /**
  * Get breadcrumb.

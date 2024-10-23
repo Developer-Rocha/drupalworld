@@ -8,13 +8,16 @@ dependencies:
     - field.field.config_pages.website_settings.field_sm_github
     - field.field.config_pages.website_settings.field_sm_instagram
     - field.field.config_pages.website_settings.field_sm_linkedin
+    - field.field.config_pages.website_settings.field_whatsapp
   module:
     - field_group
+    - telephone
 third_party_settings:
   field_group:
     group_tabs:
       children:
         - group_social_media_links
+        - group_whatsapp
       label: Tabs
       region: content
       parent_name: ''
@@ -44,6 +47,22 @@ third_party_settings:
         id: ''
         label_as_html: false
         open: true
+        description: ''
+        required_fields: true
+    group_whatsapp:
+      children:
+        - field_whatsapp
+      label: Whatsapp
+      region: content
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
         description: ''
         required_fields: true
 id: config_pages.website_settings.default
@@ -81,6 +100,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_whatsapp:
+    type: telephone_default
+    weight: 6
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
 hidden:

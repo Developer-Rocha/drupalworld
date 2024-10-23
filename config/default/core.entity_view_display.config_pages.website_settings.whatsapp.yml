@@ -1,0 +1,37 @@
+uuid: 82093973-06be-4679-975c-6ce669455b68
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - core.entity_view_mode.config_pages.whatsapp
+    - field.field.config_pages.website_settings.field_sm_facebook
+    - field.field.config_pages.website_settings.field_sm_github
+    - field.field.config_pages.website_settings.field_sm_instagram
+    - field.field.config_pages.website_settings.field_sm_linkedin
+    - field.field.config_pages.website_settings.field_whatsapp
+  module:
+    - drupalizer_ui_patterns
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: config_pages.website_settings.whatsapp
+targetEntityType: config_pages
+bundle: website_settings
+mode: whatsapp
+content:
+  field_whatsapp:
+    type: telephone_link_href
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_sm_facebook: true
+  field_sm_github: true
+  field_sm_instagram: true
+  field_sm_linkedin: true
+  search_api_excerpt: true

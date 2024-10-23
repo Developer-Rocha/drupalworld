@@ -185,3 +185,33 @@ button.eye-open {
 .link {
   border-bottom: 1px solid $color-primary;
 }
+
+.button-whatsapp {
+  text-decoration: none;
+  padding: 10px;
+  padding-right: 15px;
+  color: $color-white;
+  background-color: #25d366;
+  border-radius: 25px 30px 5px 25px;
+  font-size: 17px;
+  box-shadow: 1px 2px 5px 2px rgba(30, 30, 30, .3);
+  transition: all .3s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: #128c7e;
+    color: $color-white;
+  }
+
+  svg {
+    height: 20px;
+    width: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    fill: $color-white;
+  }
+}

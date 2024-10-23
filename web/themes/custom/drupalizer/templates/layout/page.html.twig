@@ -221,19 +221,21 @@
   <footer class="site-footer">
     <div class="container">
 
-      <section class="site-footer__top">
-        <div class="site-footer__top-layout">
-          <div class="site-footer__communicate">
-            <h2 class="site-footer__title">{{ 'Contact & Follow'|t }}</h2>
-            {{ page.footer_top.contact }}
-            {{ page.footer_top.social_media_links }}
+      {% if page.footer_top %}
+        <section class="site-footer__top">
+          <div class="site-footer__top-layout">
+            <div class="site-footer__communicate">
+              <h2 class="site-footer__title">{{ 'Follow us'|t }}</h2>
+              {{ page.footer_top.contact }}
+              {{ page.footer_top.social_media_links }}
+            </div>
+            <div class="site-footer__whatsapp">
+              <h2 class="site-footer__title">{{ "Let's Chat on WhatsApp"|t }}</h2>
+              {{ page.footer_top.whatsapp }}
+            </div>
           </div>
-          <div class="site-footer__newsletter">
-            <h2 class="site-footer__title">{{ 'Stay up to date on the latest Drupalizer news'|t }}</h2>
-            {{ page.footer_top|without('contact', 'social_media_links') }}
-          </div>
-        </div>
-      </section>
+        </section>
+      {% endif %}
 
       <section class="site-footer__middle">
         <div class="site-footer__middle-layout">
