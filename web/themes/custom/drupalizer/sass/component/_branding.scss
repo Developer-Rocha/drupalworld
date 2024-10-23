@@ -24,14 +24,17 @@
 
       .branding--header & {
         min-width: 4.7rem;
+        max-width: 5rem;
 
         @include bp(md) {
           min-width: 9.375rem;
+          max-width: 11rem;
         }
       }
 
       .branding--footer & {
         min-width: 10rem;
+        max-width: 10rem;
       }
     }
   }
