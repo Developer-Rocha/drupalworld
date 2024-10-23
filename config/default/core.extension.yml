@@ -102,6 +102,7 @@ module:
   media_library_form_element: 0
   menu_block: 0
   menu_link_content: 0
+  menu_trail_by_path: 0
   menu_ui: 0
   metatag: 0
   metatag_async_widget: 0

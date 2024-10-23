@@ -1,0 +1,82 @@
+.footer-menu {
+  color: $color-text;
+
+  &__items {
+    margin: 0;
+    list-style: none;
+    flex-basis: 100%;
+    margin-block-end: 1rem;
+
+    &--parent {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem 2rem;
+      margin-block-end: 0;
+
+      @include bp(lg) {
+        grid-template-columns: repeat(auto-fill, minmax(clamp(6rem, 11vw, 7.5rem), 1fr));
+      }
+    }
+
+    &.is-hidden {
+      display: none;
+
+      @include bp(lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    margin: 0;
+
+    &--ground {
+      > a {
+        font-weight: 700;
+      }
+    }
+
+    &--expanded {
+      display: flex;
+      flex-wrap: wrap;
+      align-self: start;
+    }
+  }
+
+  a,
+  &__link {
+    display: inline-block;
+    padding-block: .5rem;
+    color: inherit;
+  }
+
+  &__expand-trigger {
+    padding: .4rem .8rem;
+    margin-inline-start: auto;
+
+    @include bp(lg) {
+      display: none;
+    }
+
+    &__icon svg {
+      width: .625rem;
+      aspect-ratio: 1;
+      fill: $drupalizer-blue;
+    }
+
+    &[aria-expanded='true'] {
+      svg {
+        scale: -1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $drupalizer-blue-7;
+      }
+    }
+  }
+}

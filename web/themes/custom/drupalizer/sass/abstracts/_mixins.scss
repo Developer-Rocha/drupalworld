@@ -115,7 +115,7 @@
     $line-height: nth($values, 2);
   }
 
-    // Else calculate line-height using $font-size
+  // Else calculate line-height using $font-size
   @else if $line-height == false {
     $line-height: $font-size * $line-height-factor;
   }
@@ -137,7 +137,8 @@
       }
     }
   }
-    // Else output default values
+
+  // Else output default values
   @else {
     font-size: $font-size / 16 + rem;
     line-height: $line-height / 16 + rem;
@@ -194,8 +195,8 @@
 
   @if $point == retina {
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (min-device-pixel-ratio: 2) { @content; }
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (min-device-pixel-ratio: 2) { @content; }
   }
   @else {
     @if $limiter == min {

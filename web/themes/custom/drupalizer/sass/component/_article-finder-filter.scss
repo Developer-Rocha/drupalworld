@@ -132,20 +132,20 @@
 
         .tooltip {
           display: inline-block;
-          margin-left: 0.5rem;
+          margin-left: .5rem;
           border: 1rem transparent;
           background-clip: content-box;
 
           .tooltip-text {
             background-color: $drupalizer-blue-6;
             color: white;
-            border-radius: 0.5rem;
+            border-radius: .5rem;
             padding: 1rem;
             position: absolute;
             z-index: 1020;
             top: 2.5rem;
             margin-left: -3rem;
-            margin-right: 0.5rem;
+            margin-right: .5rem;
             cursor: auto;
             font-weight: normal;
             text-align: left;
@@ -165,14 +165,14 @@
             top: 3rem;
             width: 1.5rem;
             padding-bottom: 1.5rem;
-            border-radius: 0.2rem;
+            border-radius: .2rem;
             overflow: hidden;
             transform-origin: 100% 0;
             transform: rotate(45deg);
-            margin-left: 0.2rem;
+            margin-left: .2rem;
 
             &:after {
-              content: "";
+              content: '';
               position: absolute;
               width: 100%;
               height: 150%;
@@ -187,7 +187,7 @@
           .arrow-up-rounded:after {
             visibility: hidden;
             opacity: 0;
-            transition: visibility 0s, opacity 0.1s ease-in-out;
+            transition: visibility 0s, opacity .1s ease-in-out;
           }
 
           &:hover,

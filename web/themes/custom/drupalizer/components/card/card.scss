@@ -213,7 +213,7 @@ $component-transition: $default-transition;
   }
 
   // Article
-  &--article{
+  &--article {
     &:not(.has-image) {
       background-color: transparent;
       color: inherit;
@@ -330,7 +330,7 @@ $component-transition: $default-transition;
       height: 80px;
       width: 80px;
       min-width: 80px;
-      background-color: #ddd;
+      background-color: #dddddd;
       background-size: cover;
       background-position: center;
       border-radius: 50%;
@@ -353,7 +353,7 @@ $component-transition: $default-transition;
       font-size: var(--drupalizer__font-size--h6);
       margin: 0;
       font-weight: 400;
-      margin-bottom: 0.5rem;
+      margin-bottom: .5rem;
     }
 
     .#{$component}__tags,
