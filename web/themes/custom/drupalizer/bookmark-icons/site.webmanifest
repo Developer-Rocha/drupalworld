@@ -1,5 +1,5 @@
 {
-  "name": "Fabrício Rocha",
+  "name": "DevRocha",
   "short_name": "DevFR",
   "icons": [
     {
@@ -16,6 +16,6 @@
     }
   ],
   "theme_color": "#ffffff",
-  "background_color": "#f5f5f5",
+  "background_color": "#fffbfb",
   "display": "standalone"
 }
