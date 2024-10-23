@@ -122,6 +122,7 @@ module:
   provider_lmstudio: 0
   provider_openai: 0
   rabbit_hole: 0
+  responsive_favicons: 0
   responsive_image: 0
   rh_node: 0
   rh_taxonomy: 0

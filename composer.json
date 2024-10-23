@@ -121,6 +121,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/phpmailer_smtp": "^2.2",
         "drupal/rabbit_hole": "^1.0",
+        "drupal/responsive_favicons": "^2.0",
         "drupal/restui": "^1.22",
         "drupal/s3fs": "^3.6",
         "drupal/schema_metatag": "^3.0",
