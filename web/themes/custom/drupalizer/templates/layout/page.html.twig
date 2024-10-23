@@ -229,10 +229,12 @@
               {{ page.footer_top.contact }}
               {{ page.footer_top.social_media_links }}
             </div>
-            <div class="site-footer__whatsapp">
-              <h2 class="site-footer__title">{{ "Let's Chat on WhatsApp"|t }}</h2>
-              {{ page.footer_top.whatsapp }}
-            </div>
+            {% if page.footer_top.whatsapp %}
+              <div class="site-footer__whatsapp">
+                <h2 class="site-footer__title">{{ "Let's Chat on WhatsApp"|t }}</h2>
+                {{ page.footer_top.whatsapp }}
+              </div>
+            {% endif %}
           </div>
         </section>
       {% endif %}

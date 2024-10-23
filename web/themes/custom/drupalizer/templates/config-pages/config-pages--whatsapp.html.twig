@@ -12,7 +12,7 @@
 <div class="whatsapp-cta">
   {% if content %}
     {% set phone_data = content.field_whatsapp|field_value %}
-    {% set phone_number = phone_data.0['#markup']|replace({'tel:+': ''}) %}
+    {% set phone_number = phone_data.0['#markup']|replace({'tel:': ''}) %}
     <a href="https://wa.me/{{ phone_number }}?text={{ 'Hello! I want to know more about your job'|t|url_encode }}" target="_blank" class="button-whatsapp">
       {% set icon_name = 'whatsapp' %}
       {% set file = active_theme_path() ~ '/icons/icon-' ~ icon_name ~ '.svg' %}
