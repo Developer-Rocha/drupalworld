@@ -1,0 +1,5 @@
+label: Artigos
+display:
+  default:
+    display_options:
+      title: 'Artigos relacionados'
