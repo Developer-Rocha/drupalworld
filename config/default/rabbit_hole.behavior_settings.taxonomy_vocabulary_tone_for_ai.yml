@@ -1,0 +1,14 @@
+uuid: 72a253a8-0071-4e34-bb5c-fad13230b397
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tone_for_ai
+id: taxonomy_vocabulary_tone_for_ai
+entity_type_id: taxonomy_vocabulary
+entity_id: tone_for_ai
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

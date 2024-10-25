@@ -1,0 +1,14 @@
+uuid: 17388e74-db37-4bd4-93b5-f1f42d4ceb87
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.movie_genre
+id: taxonomy_vocabulary_movie_genre
+entity_type_id: taxonomy_vocabulary
+entity_id: movie_genre
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
