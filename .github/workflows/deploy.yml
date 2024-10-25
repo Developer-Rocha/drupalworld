@@ -36,7 +36,7 @@ jobs:
         run: vendor/bin/phpunit --configuration phpunit.xml
 
       - name: Run Code Sniffer
-        run: vendor/bin/phpcs --standard=phpcs.xml src/
+        run: vendor/bin/phpcs --standard=phpcs.xml web/modules/custom/ web/themes/custom/
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
