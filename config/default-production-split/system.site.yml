@@ -7,7 +7,7 @@ mail: webmaster@drupalizer.tech
 slogan: Developer
 page:
   403: ''
-  404: /node/843
+  404: /node/828
   front: /node/811
 admin_compact_mode: false
 weight_select_max: 100
