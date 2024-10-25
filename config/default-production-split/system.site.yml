@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 1114e631-308b-4df1-9907-67e7d72ce878
+name: 'Fabrício Rocha'
+mail: webmaster@drupalizer.tech
+slogan: Developer
+page:
+  403: ''
+  404: /node/828
+  front: /node/811
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

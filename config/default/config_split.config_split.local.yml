@@ -20,4 +20,5 @@ complete_list:
   - key.key.unstructured
   - key.key.zillix_milvus
   - phpmailer_smtp.settings
+  - system.site
 partial_list: {  }
