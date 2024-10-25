@@ -7,8 +7,11 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_description
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_read_time
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_sharing_image
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser
     - field.field.node.article.field_yoast_seo
@@ -67,6 +70,11 @@ targetEntityType: node
 bundle: article
 mode: teaser_sidebar
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   created:
     type: timestamp
     label: hidden
@@ -105,8 +113,11 @@ hidden:
   addtoany: true
   body: true
   comment: true
+  field_meta_description: true
   field_meta_tags: true
   field_read_time: true
+  field_seo_title: true
+  field_sharing_image: true
   field_tags: true
   field_teaser: true
   field_yoast_seo: true

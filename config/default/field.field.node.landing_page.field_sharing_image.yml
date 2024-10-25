@@ -1,0 +1,36 @@
+uuid: 64c48451-c7ca-4a75-b27e-fdf9f0db924e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sharing_image
+    - media.type.image
+    - node.type.landing_page
+  module:
+    - ai_translate
+third_party_settings:
+  ai_translate:
+    entity_reference:
+      translate_references: default
+    translate_references: default
+id: node.landing_page.field_sharing_image
+field_name: field_sharing_image
+entity_type: node
+bundle: landing_page
+label: 'Sharing image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
