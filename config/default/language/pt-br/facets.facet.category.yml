@@ -1,0 +1,9 @@
+name: Categoria
+missing_label: outras
+url_alias: categoria
+widget:
+  config:
+    reset_text: 'Exibir todos'
+    soft_limit_settings:
+      show_less_label: 'Exibir menos'
+      show_more_label: 'Exibir mais'

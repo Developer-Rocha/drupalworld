@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      title: Artigos
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Resetar
+          exposed_sorts_label: 'Sortear por'
+      header:
+        area:
+          content:
+            value: '<p>[view:total-rows] artigos</p>'
+            format: basic_html
