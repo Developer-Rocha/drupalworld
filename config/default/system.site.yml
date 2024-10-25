@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 1114e631-308b-4df1-9907-67e7d72ce878
-name: Drupalizer
+name: 'Fabrício Rocha'
 mail: webmaster@drupalizer.tech
-slogan: ''
+slogan: Developer
 page:
   403: ''
   404: ''

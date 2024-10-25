@@ -107,6 +107,7 @@
         "drupal/layoutbuilder_extras_live_update": "^1.0",
         "drupal/link_attributes": "^2.1",
         "drupal/linkit": "^6.1",
+        "drupal/login_security": "^2.0",
         "drupal/mailsystem": "^4.5",
         "drupal/manage_display": "^3.0",
         "drupal/maxlength": "^3.1",
