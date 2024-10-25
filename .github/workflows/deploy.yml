@@ -1,0 +1,45 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, ctype, iconv, tokenizer, gd, openssl, json, pdo_mysql
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run PHP Unit Tests
+        run: vendor/bin/phpunit --configuration phpunit.xml
+
+      - name: Run Code Sniffer
+        run: vendor/bin/phpcs --standard=phpcs.xml src/
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.Hostgator }}
+
+      - name: Deploy to Production Server
+        run: |
+          ssh -o StrictHostKeyChecking=no fabr1995@162.241.2.203 'cd ~/public_html && git pull && composer install && drush @default.production cr && drush @default.production updb -y && drush @default.production cim -y && drush @default.production cr'
