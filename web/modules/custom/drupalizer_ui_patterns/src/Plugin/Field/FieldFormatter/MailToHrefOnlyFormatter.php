@@ -2,8 +2,8 @@
 
 namespace Drupal\drupalizer_ui_patterns\Plugin\Field\FieldFormatter;
 
-use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Field\FormatterBase;
 
 /**
  * Plugin implementation of the 'email_mailto_href' formatter.

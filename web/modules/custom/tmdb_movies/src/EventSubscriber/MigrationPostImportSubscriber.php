@@ -2,10 +2,10 @@
 
 namespace Drupal\tmdb_movies\EventSubscriber;
 
-use Drupal\migrate\Event\MigrateImportEvent;
-use Drupal\migrate\Event\MigrateEvents;
-use Drupal\Core\Queue\QueueFactory;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Queue\QueueFactory;
+use Drupal\migrate\Event\MigrateEvents;
+use Drupal\migrate\Event\MigrateImportEvent;
 use Drupal\node\Entity\Node;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

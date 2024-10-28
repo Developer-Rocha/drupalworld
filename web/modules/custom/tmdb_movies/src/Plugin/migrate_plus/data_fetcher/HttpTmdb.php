@@ -1,16 +1,16 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Drupal\tmdb_movies\Plugin\migrate_plus\data_fetcher;
 
 use Drupal\Component\Utility\NestedArray;
-use GuzzleHttp\Client;
-use Psr\Http\Message\ResponseInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\migrate\MigrateException;
 use Drupal\migrate_plus\DataFetcherPluginBase;
+use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Retrieve data over an HTTP connection for migration.
