@@ -40,7 +40,7 @@ jobs:
       - name: Run Code Sniffer
         run: |
           export PHPCS_MEMORY_LIMIT=512M
-          vendor/bin/phpcs --standard=Drupal web/modules/custom/ web/themes/custom/
+          vendor/bin/phpcs --standard=Drupal --ignore=*.min.js,*.min.css,web/themes/custom/drupalizer/css/*,web/themes/custom/drupalizer/js/*,web/themes/custom/drupalizer/scripts/*,web/themes/custom/drupalizer/sass/* web/modules/custom/ web/themes/custom/
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
