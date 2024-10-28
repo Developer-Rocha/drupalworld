@@ -78,10 +78,10 @@ config-import
 /config/default/key.key*.yml
 /config/default-local-split/key.key*.yml
 /config/default-production-split/key.key*.yml
-/config/default-local-split/phpmailer_smtp.settings
-/config/default-production-split/phpmailer_smtp.settings
+/config/default-local-split/phpmailer_smtp.settings.yml
+/config/default-production-split/phpmailer_smtp.settings.yml
 /config/vue_sphere/key.key*.yml
 /config/vue-sphere-local-split/key.key*.yml
 /config/vue-sphere-production-split/key.key*.yml
-/config/vue-sphere-local-split/phpmailer_smtp.settings
-/config/vue-sphere-production-split/phpmailer_smtp.settings
+/config/vue-sphere-local-split/phpmailer_smtp.settings.yml
+/config/vue-sphere-production-split/phpmailer_smtp.settings.yml
