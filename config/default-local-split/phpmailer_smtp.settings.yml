@@ -5,7 +5,7 @@ smtp_hostbackup: ''
 smtp_port: 465
 smtp_protocol: ssl
 smtp_username: webmaster@drupalizer.tech
-smtp_password: ''
+smtp_password: key.smtp_password
 smtp_hide_password: true
 smtp_authentication_type: basic_auth
 smtp_fromname: ''
