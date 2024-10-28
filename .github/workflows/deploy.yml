@@ -31,8 +31,8 @@ jobs:
 
       - name: Set up PHPCS and Drupal Coder
         run: |
-          composer require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer slevomat/coding-standard
-          vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer,vendor/slevomat/coding-standard
+          composer require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer
+          vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
 
       - name: Run PHP Unit Tests
         run: vendor/bin/phpunit --configuration phpunit.xml
