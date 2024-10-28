@@ -6,7 +6,6 @@ namespace Drupal\tmdb_movies\Plugin\migrate_plus\data_fetcher;
 
 use Drupal\Component\Utility\NestedArray;
 use GuzzleHttp\Client;
-use Drupal\migrate_plus\AuthenticationPluginInterface;
 use Psr\Http\Message\ResponseInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\migrate\MigrateException;
@@ -75,7 +74,6 @@ class HttpTmdb extends DataFetcherPluginBase implements ContainerFactoryPluginIn
     $this->configuration['method'] = $configuration['method'];
   }
 
-
   /**
    * {@inheritdoc}
    */
@@ -141,17 +139,5 @@ class HttpTmdb extends DataFetcherPluginBase implements ContainerFactoryPluginIn
 
     return array_merge(parent::getNextUrls($url), $next_urls);
   }
-
-  /**
-   * Returns the initialized authentication plugin.
-   *
-   *   The authentication plugin.
-   */
-//  public function getAuthenticationPlugin(): AuthenticationPluginInterface {
-//    if (!isset($this->authenticationPlugin)) {
-//      $this->authenticationPlugin = \Drupal::service('plugin.manager.migrate_plus.authentication')->createInstance($this->configuration['authentication']['plugin'], $this->configuration['authentication']);
-//    }
-//    return $this->authenticationPlugin;
-//  }
 
 }

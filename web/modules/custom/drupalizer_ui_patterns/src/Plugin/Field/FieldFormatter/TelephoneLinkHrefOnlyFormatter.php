@@ -4,8 +4,6 @@ namespace Drupal\drupalizer_ui_patterns\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 
 /**
  * Plugin implementation of the 'telephone_link_href' formatter.

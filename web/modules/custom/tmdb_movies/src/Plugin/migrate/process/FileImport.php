@@ -105,4 +105,5 @@ class FileImport extends ProcessPluginBase implements MigrateProcessInterface {
 
     return NULL;
   }
+
 }

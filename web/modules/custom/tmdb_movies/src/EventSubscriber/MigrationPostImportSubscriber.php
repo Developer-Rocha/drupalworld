@@ -4,7 +4,6 @@ namespace Drupal\tmdb_movies\EventSubscriber;
 
 use Drupal\migrate\Event\MigrateImportEvent;
 use Drupal\migrate\Event\MigrateEvents;
-use Drupal\migrate\Plugin\migrate\id_map\Sql;
 use Drupal\Core\Queue\QueueFactory;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\node\Entity\Node;
@@ -99,7 +98,8 @@ class MigrationPostImportSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents(): array {
     return [
-      MigrateEvents::POST_IMPORT => ['onPostImport']
+      MigrateEvents::POST_IMPORT => ['onPostImport'],
     ];
   }
+
 }
