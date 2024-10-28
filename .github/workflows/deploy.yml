@@ -52,6 +52,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          ssh-keygen -yf ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
           ssh-add ~/.ssh/id_rsa
 
       - name: Deploy to Production Server
