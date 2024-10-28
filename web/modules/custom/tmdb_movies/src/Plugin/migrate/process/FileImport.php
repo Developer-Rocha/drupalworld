@@ -11,7 +11,6 @@ use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\Row;
 use GuzzleHttp\Exception\RequestException;
 
-
 /**
  * Downloads and saves an image file.
  *
