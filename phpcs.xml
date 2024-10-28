@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Drupal">
+  <description>Drupal coding standards</description>
+  <rule ref="Drupal"/>
+  <rule ref="DrupalPractice"/>
+  <file>web/modules/custom/</file>
+  <file>web/themes/custom/</file>
+  <exclude-pattern>vendor/*</exclude-pattern>
+</ruleset>

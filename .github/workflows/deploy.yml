@@ -29,14 +29,16 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Install PHPUnit
-        run: composer require --dev phpunit/phpunit
+      - name: Set up PHPCS and Drupal Coder
+        run: |
+          composer require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer
+          vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
 
       - name: Run PHP Unit Tests
         run: vendor/bin/phpunit --configuration phpunit.xml
 
       - name: Run Code Sniffer
-        run: vendor/bin/phpcs --standard=phpcs.xml web/modules/custom/ web/themes/custom/
+        run: vendor/bin/phpcs --standard=Drupal web/modules/custom/ web/themes/custom/
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
