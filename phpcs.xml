@@ -12,4 +12,5 @@
   <exclude-pattern>web/themes/custom/drupalizer/js/*</exclude-pattern>
   <exclude-pattern>web/themes/custom/drupalizer/scripts/*</exclude-pattern>
   <exclude-pattern>web/themes/custom/drupalizer/sass/*</exclude-pattern>
+  <exclude-pattern>web/themes/custom/drupalizer/components/*</exclude-pattern>
 </ruleset>
