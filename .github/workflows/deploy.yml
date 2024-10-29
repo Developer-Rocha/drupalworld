@@ -57,6 +57,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
+          use_insecure_cipher: true
           script: |
             cd ~/public_html
             git pull
