@@ -4,7 +4,7 @@ _core:
 banner_enabled: 1
 banner_enabled_on_admin_routes: 0
 banner_show_again_minutes: 0
-banner_color: default--red
+banner_color: default--white
 banner_text:
-  value: '<p><span>🔔 <strong>Important Update</strong> 🔔</span></p><p><span>I’m excited to announce a rebrand! Soon, my website’s domain will change to </span><a href="https://fabriciorocha.com/?form=MG0AV3"><strong>fabriciorocha.com</strong></a><span>. Stay tuned for a refreshed look and feel. Thank you for your continued support!</span></p>'
+  value: '<p><span>🚀 <strong>Important Update</strong> 🚀</span><br><span>I’m excited to announce a rebrand! Soon, my website’s domain will change to </span><a href="https://fabriciorocha.com/?form=MG0AV3"><strong>fabriciorocha.com</strong></a><span>. Stay tuned for a refreshed look and feel. Thank you for your continued support!</span></p>'
   format: basic_html

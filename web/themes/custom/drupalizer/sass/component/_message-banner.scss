@@ -1,7 +1,24 @@
 .message-banner {
   text-align: center;
+  position: relative;
+  font-size: .9rem;
 
   &__close-button {
-    margin-block-start: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+
+    .close-button {
+      background-image: url(../icons/icon-close-btn.svg);
+      width: .8125rem;
+      height: .8125rem;
+      top: 1rem;
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      font-size: 0;
+      color: transparent;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
