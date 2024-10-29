@@ -59,8 +59,10 @@ jobs:
           port: 22
           use_insecure_cipher: true
           script: |
-            source ~/.bash_profile || true
+            source /etc/profile || true
+            source /etc/bashrc || true
             source ~/.bashrc || true
+            source ~/.bash_profile || true
             export PATH="$HOME/.composer/vendor/bin:$PATH"
             cd ~/public_html
             git pull
