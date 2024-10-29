@@ -45,7 +45,7 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.hostgator_secret }}
+          ssh-private-key: ${{ secrets.HOSTGATOR_SECRET }}
       - run: ssh-add -D
 
       - name: Deploy to Production Server
