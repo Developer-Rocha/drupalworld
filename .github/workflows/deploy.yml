@@ -42,6 +42,13 @@ jobs:
           export PHPCS_MEMORY_LIMIT=512M
           vendor/bin/phpcs --standard=Drupal --ignore=*.min.js,*.min.css,web/themes/custom/drupalizer/css/*,web/themes/custom/drupalizer/js/*,web/themes/custom/drupalizer/scripts/*,web/themes/custom/drupalizer/sass/*,web/themes/custom/drupalizer/components/* web/modules/custom/ web/themes/custom/
 
+      - name: Add SSH Key and Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 162.241.2.203 >> ~/.ssh/known_hosts
+
       - name: Deploy to Production Server
         uses: cross-the-world/ssh-pipeline@master
         with:
