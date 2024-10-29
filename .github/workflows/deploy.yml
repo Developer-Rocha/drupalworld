@@ -45,12 +45,11 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.HOSTGATOR_SECRET }}
-      - run: ssh-add -D
+          ssh-private-key: ${{ secrets.hostgator_secret }}
 
       - name: Deploy to Production Server
         run: |
-          ssh -i ~/.ssh/id_rsa_hostgator -o StrictHostKeyChecking=no -o IdentitiesOnly=yes fabr1995@162.241.2.203 << 'EOF'
+          ssh -o StrictHostKeyChecking=no fabr1995@162.241.2.203 << 'EOF'
             cd ~/public_html
             git pull
             composer install
