@@ -9,6 +9,7 @@ dependencies:
     - field.field.config_pages.website_settings.field_sm_instagram
     - field.field.config_pages.website_settings.field_sm_linkedin
     - field.field.config_pages.website_settings.field_whatsapp
+    - field.field.config_pages.website_settings.field_x
   module:
     - field_group
     - telephone
@@ -36,6 +37,7 @@ third_party_settings:
         - field_sm_linkedin
         - field_sm_facebook
         - field_sm_instagram
+        - field_x
       label: 'Social media links'
       region: content
       parent_name: group_tabs
@@ -107,6 +109,14 @@ content:
     weight: 6
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_x:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
 hidden:

@@ -1,0 +1,19 @@
+uuid: d7ae2bd3-df08-406d-8b4d-ec5556e8409e
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.website_settings
+    - field.storage.config_pages.field_x
+id: config_pages.website_settings.field_x
+field_name: field_x
+entity_type: config_pages
+bundle: website_settings
+label: 'X (Twitter)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
