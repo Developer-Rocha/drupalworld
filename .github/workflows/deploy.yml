@@ -48,13 +48,14 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 162.241.2.203 >> ~/.ssh/known_hosts
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
       - name: Deploy to Production Server
-        uses: cross-the-world/ssh-pipeline@master
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
-          pass: ${{ secrets.SSH_PASSWORD }}
+          password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
             cd ~/public_html
@@ -64,4 +65,4 @@ jobs:
             drush @default.production updb -y
             drush @default.production cim -y
             drush @default.production cr
-
+          ssh-args: -o StrictHostKeyChecking=no
