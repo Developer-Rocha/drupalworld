@@ -19,7 +19,6 @@ dependencies:
   module:
     - comment
     - estimated_read_time
-    - field_formatter
     - manage_display
     - metatag
     - text
@@ -108,15 +107,6 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_yoast_seo:
-    type: field_link
-    label: above
-    settings:
-      type: ''
-      settings: {  }
-    third_party_settings: {  }
-    weight: 11
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -136,6 +126,7 @@ hidden:
   field_seo_title: true
   field_sharing_image: true
   field_teaser: true
+  field_yoast_seo: true
   langcode: true
   search_api_excerpt: true
   uid: true
