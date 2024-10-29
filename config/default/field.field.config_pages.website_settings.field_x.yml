@@ -9,7 +9,7 @@ id: config_pages.website_settings.field_x
 field_name: field_x
 entity_type: config_pages
 bundle: website_settings
-label: 'X (Twitter)'
+label: X
 description: ''
 required: false
 translatable: false

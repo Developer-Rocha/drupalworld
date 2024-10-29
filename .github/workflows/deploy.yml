@@ -59,6 +59,9 @@ jobs:
           port: 22
           use_insecure_cipher: true
           script: |
+            source ~/.bash_profile || true
+            source ~/.bashrc || true
+            export PATH="$HOME/.composer/vendor/bin:$PATH"
             cd ~/public_html
             git pull
             composer install
