@@ -42,13 +42,19 @@ jobs:
           export PHPCS_MEMORY_LIMIT=512M
           vendor/bin/phpcs --standard=Drupal --ignore=*.min.js,*.min.css,web/themes/custom/drupalizer/css/*,web/themes/custom/drupalizer/js/*,web/themes/custom/drupalizer/scripts/*,web/themes/custom/drupalizer/sass/*,web/themes/custom/drupalizer/components/* web/modules/custom/ web/themes/custom/
 
-      - name: Deploy to FTP Server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to Production Server
+        uses: cross-the-world/ssh-pipeline@master
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./
-          server-dir: /public_html/
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd ~/public_html
+            git pull
+            composer install
+            drush @default.production cr
+            drush @default.production updb -y
+            drush @default.production cim -y
+            drush @default.production cr
+
