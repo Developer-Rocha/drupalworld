@@ -57,6 +57,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
+          cipher: aes256-ctr
           script: |
             cd ~/public_html
             git pull
@@ -65,5 +66,3 @@ jobs:
             drush @default.production updb -y
             drush @default.production cim -y
             drush @default.production cr
-          kex: diffie-hellman-group14-sha256
-          cipher: aes256-ctr
