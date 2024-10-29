@@ -22,10 +22,10 @@
     svg {
       transition: all $default-transition;
       height: auto;
-      
+
       .branding--header & {
         min-width: 4.7rem;
-        max-width: 5rem;
+        max-width: 7rem;
 
         @include bp(md) {
           min-width: 9.375rem;
