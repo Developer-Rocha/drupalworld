@@ -13,6 +13,7 @@ dependencies:
     - eu_cookie_compliance
     - filter
     - media
+    - message_banner
     - search_api_autocomplete
     - system
 _core:
@@ -31,3 +32,4 @@ permissions:
   - 'use text format comment'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view message banner'

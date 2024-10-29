@@ -15,6 +15,7 @@ dependencies:
     - file
     - filter
     - media
+    - message_banner
     - search_api_autocomplete
     - shortcut
     - system
@@ -39,3 +40,4 @@ permissions:
   - 'use text format comment'
   - 'use text format webform_default'
   - 'view media'
+  - 'view message banner'
