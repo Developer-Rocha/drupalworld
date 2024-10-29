@@ -42,22 +42,11 @@ jobs:
           export PHPCS_MEMORY_LIMIT=512M
           vendor/bin/phpcs --standard=Drupal --ignore=*.min.js,*.min.css,web/themes/custom/drupalizer/css/*,web/themes/custom/drupalizer/js/*,web/themes/custom/drupalizer/scripts/*,web/themes/custom/drupalizer/sass/*,web/themes/custom/drupalizer/components/* web/modules/custom/ web/themes/custom/
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ssh-private-key: ${{ secrets.hostgator_secret }}
-
-      - name: Clear SSH identities
-        run: ssh-add -D
-
-      - name: Deploy to Production Server
-        run: |
-          ssh -o StrictHostKeyChecking=no -o IdentitiesOnly=yes fabr1995@162.241.2.203 << 'EOF'
-            cd ~/public_html
-            git pull
-            composer install
-            drush @default.production cr
-            drush @default.production updb -y
-            drush @default.production cim -y
-            drush @default.production cr
-          EOF
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/
