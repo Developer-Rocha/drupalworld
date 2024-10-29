@@ -18,6 +18,7 @@ languages:
   php: php
   scss: scss
   sql: sql
+  shell: shell
   twig: twig
   typescript: typescript
   yml: yml
@@ -215,7 +216,6 @@ languages:
   scilab: 0
   sfz: 0
   shexc: 0
-  shell: 0
   smali: 0
   smalltalk: 0
   sml: 0
