@@ -45,9 +45,17 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.Hostgator }}
+          ssh-private-key: ${{ secrets.hostgator_secret }}
       - run: ssh-add -D
 
       - name: Deploy to Production Server
         run: |
-          run: ssh -i ~/.ssh/id_rsa_hostgator -o IdentitiesOnly=yes -o StrictHostKeyChecking=no fabr1995@162.241.2.203 'cd ~/public_html && git pull && composer install && drush @default.production cr && drush @default.production updb -y && drush @default.production cim -y && drush @default.production cr'
+          ssh -i ~/.ssh/id_rsa_hostgator -o StrictHostKeyChecking=no -o IdentitiesOnly=yes fabr1995@162.241.2.203 << 'EOF'
+            cd ~/public_html
+            git pull
+            composer install
+            drush @default.production cr
+            drush @default.production updb -y
+            drush @default.production cim -y
+            drush @default.production cr
+          EOF
