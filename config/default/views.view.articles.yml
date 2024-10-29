@@ -697,8 +697,12 @@ display:
         style: false
         row: false
         fields: false
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       block_description: 'Article related (by tag)'
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
