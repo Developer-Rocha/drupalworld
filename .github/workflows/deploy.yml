@@ -65,4 +65,5 @@ jobs:
             drush @default.production updb -y
             drush @default.production cim -y
             drush @default.production cr
-          ssh-args: -o StrictHostKeyChecking=no
+          kex: diffie-hellman-group14-sha256
+          cipher: aes256-ctr
