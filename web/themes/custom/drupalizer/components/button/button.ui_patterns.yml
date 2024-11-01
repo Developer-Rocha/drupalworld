@@ -14,7 +14,7 @@ button:
       type: text
       label: URL
       description: URL the button should link to.
-      preview: https://drupalizer.tech
+      preview: https://fabriciorocha.com
   settings:
     cta_id:
       type: textfield

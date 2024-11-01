@@ -11,9 +11,9 @@ breadcrumbs:
       description: The breadcrumbs data.
       preview:
         - text: Page
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - text: Page 2
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - text: Page 3
   libraries:
     - breadcrumbs:

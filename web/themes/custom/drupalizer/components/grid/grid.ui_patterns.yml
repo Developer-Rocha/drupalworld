@@ -15,35 +15,35 @@ grid:
         - image: X
           title: Into the unknown
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: Explore the world
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: The big outdoors
           caption: Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: Welcome to the jungle
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: Into the unknown
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: Explore the world
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: The big outdoors
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
         - image: X
           title: Welcome to the jungle
           caption: © Fabrício Rocha - Unsplash
-          url: https://drupalizer.tech
+          url: https://fabriciorocha.com
   variants:
     threecol_auto:
       label: 3 columns - Auto height

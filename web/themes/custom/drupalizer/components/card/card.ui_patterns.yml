@@ -47,7 +47,7 @@ card:
       type: text
       label: URL to link the card to.
       description: Add an url this card links to.
-      preview: https://drupalizer.tech
+      preview: https://fabriciorocha.com
     card_classes:
       type: text
       label: Card Classes

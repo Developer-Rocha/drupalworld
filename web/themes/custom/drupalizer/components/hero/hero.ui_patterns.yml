@@ -50,7 +50,7 @@ hero:
       description: Call to action buttons.
       preview:
         text: Call to action
-        url: https://drupalizer.tech
+        url: https://fabriciorocha.com
     variant:
       type: text
       label: Varia

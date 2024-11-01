@@ -21,7 +21,7 @@ image:
       type: text
       label: URL
       description: URL the image links to.
-      preview: https://drupalizer.tech
+      preview: https://fabriciorocha.com
   variants:
     only_image:
       label: Image only

@@ -57,9 +57,9 @@
  */
 
 $sites = [
-  'drupalizer.tech'   => 'default',
-  'aihub.drupalizer.tech'   => 'aihub',
-  'vue-api.drupalizer.tech' => 'vue_sphere'
+  'fabriciorocha.com'   => 'default',
+  'aihub.fabriciorocha.com'   => 'aihub',
+  'vue-api.fabriciorocha.com' => 'vue_sphere'
 ];
 
 /**
