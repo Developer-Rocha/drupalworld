@@ -1,0 +1,73 @@
+uuid: 27f99155-a501-4c3c-8bd4-0092bee996cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio.body
+    - field.field.node.portfolio.field_image
+    - field.field.node.portfolio.field_project_url
+    - field.field.node.portfolio.field_technology
+    - node.type.portfolio
+  module:
+    - link
+    - manage_display
+    - text
+id: node.portfolio.teaser
+targetEntityType: node
+bundle: portfolio
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: fluid
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_project_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_technology:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uid: true

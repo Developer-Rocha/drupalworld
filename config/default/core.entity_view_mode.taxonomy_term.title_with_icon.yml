@@ -1,0 +1,11 @@
+uuid: 61d32267-68d4-4616-8cf1-97e7569c41ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.title_with_icon
+label: 'Title with Icon'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,17 @@
+uuid: 738bb89a-46aa-4ad9-b462-a21a086a8ab6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Portfolio
+type: portfolio
+description: 'Use <em>portfolio</em> for create portfolio contents.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

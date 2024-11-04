@@ -1,0 +1,14 @@
+uuid: 60aa976b-92c3-4b44-94d0-de15bf0d3e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.technology
+id: taxonomy_vocabulary_technology
+entity_type_id: taxonomy_vocabulary
+entity_id: technology
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

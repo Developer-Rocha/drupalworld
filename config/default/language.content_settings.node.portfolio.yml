@@ -1,0 +1,16 @@
+uuid: a12f69a3-ebe5-41e9-aac7-e5bdb858fb0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.portfolio
+target_entity_type_id: node
+target_bundle: portfolio
+default_langcode: site_default
+language_alterable: true

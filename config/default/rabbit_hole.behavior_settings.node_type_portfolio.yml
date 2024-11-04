@@ -1,0 +1,14 @@
+uuid: 3876c8cd-1abf-41b4-927f-b68ea2e43986
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio
+id: node_type_portfolio
+entity_type_id: node_type
+entity_id: portfolio
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
