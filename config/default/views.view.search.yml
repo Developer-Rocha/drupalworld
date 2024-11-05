@@ -265,13 +265,16 @@ display:
             'entity:node':
               article: search_index
               landing_page: search_index
-              movies: search_index
               page: search_index
+              portfolio: search_index
       defaults:
         style: false
         row: false
       exposed_block: true
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: search
     cache_metadata:
       max-age: -1

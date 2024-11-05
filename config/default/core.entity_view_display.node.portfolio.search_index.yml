@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.portfolio.field_yoast_seo
     - node.type.portfolio
   module:
-    - manage_display
     - text
 id: node.portfolio.search_index
 targetEntityType: node
@@ -24,25 +23,12 @@ bundle: portfolio
 mode: search_index
 content:
   field_teaser:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-  title:
-    type: title
+    type: text_trimmed
     label: hidden
     settings:
-      link_to_entity: true
-      tag: h2
+      trim_length: 200
     third_party_settings: {  }
-    weight: -49
+    weight: 0
     region: content
 hidden:
   addtoany: true
@@ -57,5 +43,7 @@ hidden:
   field_technology: true
   field_yoast_seo: true
   langcode: true
+  links: true
   search_api_excerpt: true
+  title: true
   uid: true

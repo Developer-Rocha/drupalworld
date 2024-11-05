@@ -67,8 +67,12 @@ field_settings:
 datasource_settings:
   'entity:node':
     bundles:
-      default: true
-      selected: {  }
+      default: false
+      selected:
+        - article
+        - landing_page
+        - page
+        - portfolio
     languages:
       default: true
       selected: {  }
