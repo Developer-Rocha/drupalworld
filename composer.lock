@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e8b5fa4f8ae2ac74a1b337c6fb42ab7",
+    "content-hash": "4bd231f9f30687bc7f32cac7632c4620",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6327,6 +6327,74 @@
             }
         },
         {
+            "name": "drupal/node_keep",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/node_keep.git",
+                "reference": "2.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/node_keep-2.2.3.zip",
+                "reference": "2.2.3",
+                "shasum": "b44343fda8b20aa33c71baf040e0226664dbf989"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.3",
+                    "datestamp": "1714052987",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marek tyczynski",
+                    "homepage": "https://www.drupal.org/u/sandboxpl"
+                },
+                {
+                    "name": "Nick Vanpraet",
+                    "homepage": "https://www.drupal.org/u/grayle"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "reszli",
+                    "homepage": "https://www.drupal.org/user/710368"
+                },
+                {
+                    "name": "sandboxpl",
+                    "homepage": "https://www.drupal.org/user/2187728"
+                },
+                {
+                    "name": "webfordreams",
+                    "homepage": "https://www.drupal.org/user/366525"
+                }
+            ],
+            "description": "Adds a base field to all nodes to prevent accidental deletion by unauthorized users.",
+            "homepage": "https://www.drupal.org/project/node_keep",
+            "support": {
+                "source": "http://git.drupal.org/project/node_keep.git",
+                "issues": "https://www.drupal.org/project/issues/node_keep"
+            }
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.18.0",
             "source": {
@@ -7538,6 +7606,76 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/token_filter",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token_filter.git",
+                "reference": "2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token_filter-2.2.1.zip",
+                "reference": "2.2.1",
+                "shasum": "1950ce8c0235418175e11c0d9ed15afbe1421dd7"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/token": "^1",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.1",
+                    "datestamp": "1719183798",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ademarco",
+                    "homepage": "https://www.drupal.org/user/186696"
+                },
+                {
+                    "name": "asciikewl",
+                    "homepage": "https://www.drupal.org/user/147292"
+                },
+                {
+                    "name": "darvanen",
+                    "homepage": "https://www.drupal.org/user/1068770"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                },
+                {
+                    "name": "pvhee",
+                    "homepage": "https://www.drupal.org/user/108811"
+                }
+            ],
+            "description": "This is a very simple module to make global token values available as an input filter.",
+            "homepage": "https://www.drupal.org/project/token_filter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/token_filter"
             }
         },
         {

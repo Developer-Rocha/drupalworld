@@ -1,0 +1,22 @@
+uuid: 473d2aff-1cd4-44a2-b979-0a585b8849cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.node_keeper
+field_name: node_keeper
+entity_type: node
+bundle: landing_page
+label: 'Prevent this node from being deleted'
+description: 'This option will prevent node deletion to avoid accidents. Only users with "administer node_keep per node" permission will be able to remove this node.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

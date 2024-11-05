@@ -7,12 +7,12 @@ dependencies:
 id: portfolio
 label: Portfolio
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '[node-keep:portfolio:alias]/[node:title]'
 selection_criteria:
-  d389bb30-3a2b-4bda-87eb-7df39e75bc0a:
+  2886504a-6c8f-4a71-af6e-4a090b4f8094:
     id: 'entity_bundle:node'
     negate: false
-    uuid: d389bb30-3a2b-4bda-87eb-7df39e75bc0a
+    uuid: 2886504a-6c8f-4a71-af6e-4a090b4f8094
     context_mapping:
       node: node
     bundles:

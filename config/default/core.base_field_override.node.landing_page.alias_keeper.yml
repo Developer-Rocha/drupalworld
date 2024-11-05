@@ -1,0 +1,22 @@
+uuid: 4458b291-e283-4854-8a56-427ad9c6bd57
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.alias_keeper
+field_name: alias_keeper
+entity_type: node
+bundle: landing_page
+label: "Prevent this node's alias from being changed"
+description: 'This option will prevent node alias changes to avoid accidents. Only users with "administer node_keep per node" permission will be able to change this node alias.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
