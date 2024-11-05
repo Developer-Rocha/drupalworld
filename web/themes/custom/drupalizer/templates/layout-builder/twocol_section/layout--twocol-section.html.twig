@@ -12,7 +12,7 @@
 {% if content %}
   <div{{ attributes.addClass('lb-section') }}>
 
-    {% if content.title %}
+    {% if content.title.label %}
       {% set label = content.title.label %}
       {% set wrapper = content.title.wrapper ?: 'h2' %}
       {% set title_classes = 'section-title ' ~ content.title.attributes.class|join(' ') %}
