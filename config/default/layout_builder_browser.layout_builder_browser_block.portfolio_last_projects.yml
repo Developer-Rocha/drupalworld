@@ -1,11 +1,11 @@
-uuid: 63345b1e-e632-414b-a727-b82cd401325e
+uuid: c297164d-f369-4052-a8be-2ceedaf026f5
 langcode: en
 status: true
 dependencies: {  }
-id: portfolio
-block_id: 'views_block:portfolio-block_1'
+id: portfolio_last_projects
+block_id: 'views_block:portfolio-block_2'
 category: content_advanced
-label: Portfolio
+label: 'Portfolio: Last projects'
 image_path: /themes/custom/drupalizer/components/card/lb-preview_multiple.png
 image_alt: ''
-weight: -100
+weight: null

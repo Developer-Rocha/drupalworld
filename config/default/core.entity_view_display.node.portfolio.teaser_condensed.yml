@@ -16,40 +16,75 @@ dependencies:
     - field.field.node.portfolio.field_yoast_seo
     - node.type.portfolio
   module:
+    - ds
     - manage_display
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: vertical
+    regions:
+      image:
+        - field_teaser_image
+      title:
+        - title
+      url:
+        - 'dynamic_token_field:node-url'
+    fields:
+      'dynamic_token_field:node-url':
+        plugin_id: 'dynamic_token_field:node-url'
+        weight: 2
+        label: hidden
+        formatter: default
 id: node.portfolio.teaser_condensed
 targetEntityType: node
 bundle: portfolio
 mode: teaser_condensed
 content:
-  field_image:
+  field_teaser_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: fluid
+      view_mode: teaser
       link: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
     weight: 0
-    region: content
+    region: image
   title:
     type: title
     label: hidden
     settings:
-      link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
+      link_to_entity: false
+      tag: h3
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
     weight: 1
-    region: content
+    region: title
 hidden:
   addtoany: true
   body: true
   created: true
+  field_image: true
   field_meta_description: true
   field_meta_tags: true
   field_project_url: true
   field_sharing_image: true
   field_teaser: true
-  field_teaser_image: true
   field_technology: true
   field_yoast_seo: true
   langcode: true

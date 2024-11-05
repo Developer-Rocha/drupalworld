@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_condensed
     - node.type.portfolio
   module:
     - node
+    - ui_patterns_views_style
     - user
     - views_infinite_scroll
 id: portfolio
@@ -240,10 +242,22 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Portfolio Overview'
     display_plugin: block
     position: 1
     display_options:
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        style: false
+        row: false
+      display_description: ''
       display_extenders:
         metatag_display_extender:
           metatags: {  }
@@ -255,6 +269,55 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    id: block_2
+    display_title: 'Last Portfolio'
+    display_plugin: block
+    position: 1
+    display_options:
+      title: 'Last Portfolio'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 3
+      style:
+        type: pattern
+        options:
+          uses_fields: false
+          pattern: flex_grid
+          pattern_mapping:
+            'view_style:rows':
+              destination: grid_items
+              weight: 0
+              plugin: view_style
+              source: rows
+          pattern_settings: {  }
+          pattern_variant: auto
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser_condensed
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+      display_description: ''
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
