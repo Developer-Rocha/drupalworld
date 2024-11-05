@@ -1,0 +1,20 @@
+.field-project-url {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  svg {
+    height: 15px;
+    width: auto;
+    margin-inline-end: .6rem;
+  }
+
+  a {
+    &:after {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      content: '';
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// Portfolio Teaser
+
+.view-portfolio {
+  &.view-display-id-block_1 {
+
+    .views-row {
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 2.5rem;
+
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+
+        .c-image__image {
+          background-color: #f9f9f9;
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: #ffffff;
+      }
+    }
+
+    .layout__region--first {
+      position: relative;
+
+      .field--name-dynamic-token-fieldnode-url {
+        font-size: 0;
+
+        a:after {
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          content: '';
+        }
+      }
+
+      &:hover {
+        .c-image__image {
+          img {
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+
+    .c-image__image {
+      img {
+        max-height: 450px;
+        width: auto;
+        margin: 0 auto;
+        transform: scale(1);
+        transition: .3s ease-in-out;
+      }
+    }
+
+    h2,
+    h3 {
+      a:hover {
+        opacity: .6;
+      }
+    }
+
+    .field--name-field-teaser {
+      margin-block-end: 2rem;
+    }
+  }
+}
+
+.portfolio {
+  .layout__region--first {
+    .c-image__image {
+      img {
+        max-height: 450px;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .layout__region--second {
+    .field--name-body {
+      margin-block-end: 2rem;
+    }
+  }
+}

@@ -6,35 +6,78 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.portfolio.body
     - field.field.node.portfolio.field_image
+    - field.field.node.portfolio.field_meta_description
+    - field.field.node.portfolio.field_meta_tags
     - field.field.node.portfolio.field_project_url
+    - field.field.node.portfolio.field_sharing_image
+    - field.field.node.portfolio.field_teaser
+    - field.field.node.portfolio.field_teaser_image
     - field.field.node.portfolio.field_technology
+    - field.field.node.portfolio.field_yoast_seo
     - node.type.portfolio
   module:
+    - ds
     - link
-    - manage_display
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol_section
+      library: layout_builder/twocol_section
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        column_widths: 50-50
+    regions:
+      first:
+        - field_image
+        - 'dynamic_token_field:node-url'
+      second:
+        - node_title
+        - field_teaser
+        - field_technology
+        - field_project_url
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          link_target: ''
+          wrapper: h3
+          class: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      'dynamic_token_field:node-url':
+        plugin_id: 'dynamic_token_field:node-url'
+        weight: 4
+        label: hidden
+        formatter: default
 id: node.portfolio.teaser
 targetEntityType: node
 bundle: portfolio
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_image:
     type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: fluid
       link: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
     weight: 0
-    region: content
+    region: first
   field_project_url:
     type: link
     label: hidden
@@ -42,32 +85,53 @@ content:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: _blank
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 5
+    region: second
+  field_teaser:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    weight: 4
-    region: content
+    weight: 2
+    region: second
   field_technology:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      view_mode: title_with_icon
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     weight: 3
-    region: content
-  title:
-    type: title
-    label: hidden
-    settings:
-      link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
-    weight: 1
-    region: content
+    region: second
 hidden:
   addtoany: true
+  body: true
   created: true
+  field_meta_description: true
+  field_meta_tags: true
+  field_sharing_image: true
+  field_teaser_image: true
+  field_yoast_seo: true
   langcode: true
   links: true
   search_api_excerpt: true
+  title: true
   uid: true

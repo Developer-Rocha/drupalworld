@@ -6,8 +6,14 @@ dependencies:
     - core.entity_view_mode.node.teaser_sidebar
     - field.field.node.portfolio.body
     - field.field.node.portfolio.field_image
+    - field.field.node.portfolio.field_meta_description
+    - field.field.node.portfolio.field_meta_tags
     - field.field.node.portfolio.field_project_url
+    - field.field.node.portfolio.field_sharing_image
+    - field.field.node.portfolio.field_teaser
+    - field.field.node.portfolio.field_teaser_image
     - field.field.node.portfolio.field_technology
+    - field.field.node.portfolio.field_yoast_seo
     - node.type.portfolio
   module:
     - ds
@@ -49,8 +55,14 @@ hidden:
   addtoany: true
   body: true
   created: true
+  field_meta_description: true
+  field_meta_tags: true
   field_project_url: true
+  field_sharing_image: true
+  field_teaser: true
+  field_teaser_image: true
   field_technology: true
+  field_yoast_seo: true
   langcode: true
   search_api_excerpt: true
   uid: true

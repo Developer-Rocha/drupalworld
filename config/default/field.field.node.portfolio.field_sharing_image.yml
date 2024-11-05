@@ -1,9 +1,9 @@
-uuid: 1134d083-ecba-4ef3-9d7f-3b0013dc0d48
+uuid: cced07a1-0144-4ecd-a945-5fbe47f2af9b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_sharing_image
     - media.type.image
     - node.type.portfolio
   module:
@@ -13,11 +13,11 @@ third_party_settings:
     entity_reference:
       translate_references: default
     translate_references: default
-id: node.portfolio.field_image
-field_name: field_image
+id: node.portfolio.field_sharing_image
+field_name: field_sharing_image
 entity_type: node
 bundle: portfolio
-label: 'Image Mockup'
+label: 'Sharing image'
 description: ''
 required: false
 translatable: false

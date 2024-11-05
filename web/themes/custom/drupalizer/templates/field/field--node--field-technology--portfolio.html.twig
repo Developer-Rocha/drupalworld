@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set classes = [
+  'field',
+  'field__item',
+  'technology-terms'
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+</div>

@@ -1,0 +1,11 @@
+uuid: 63345b1e-e632-414b-a727-b82cd401325e
+langcode: en
+status: true
+dependencies: {  }
+id: portfolio
+block_id: 'views_block:portfolio-block_1'
+category: content_advanced
+label: Portfolio
+image_path: /themes/custom/drupalizer/components/card/lb-preview_multiple.png
+image_alt: ''
+weight: -100

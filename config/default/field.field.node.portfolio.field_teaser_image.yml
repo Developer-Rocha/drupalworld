@@ -1,9 +1,9 @@
-uuid: 1134d083-ecba-4ef3-9d7f-3b0013dc0d48
+uuid: 2e83a513-bb4c-44dd-868a-99744efa97b3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_teaser_image
     - media.type.image
     - node.type.portfolio
   module:
@@ -13,11 +13,11 @@ third_party_settings:
     entity_reference:
       translate_references: default
     translate_references: default
-id: node.portfolio.field_image
-field_name: field_image
+id: node.portfolio.field_teaser_image
+field_name: field_teaser_image
 entity_type: node
 bundle: portfolio
-label: 'Image Mockup'
+label: 'Teaser Image'
 description: ''
 required: false
 translatable: false

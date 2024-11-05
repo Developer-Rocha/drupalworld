@@ -31,8 +31,8 @@ content:
     type: title
     label: hidden
     settings:
-      link_to_entity: true
-      tag: h2
+      link_to_entity: false
+      tag: span
     third_party_settings: {  }
     weight: 1
     region: content

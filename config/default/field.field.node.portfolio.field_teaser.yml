@@ -1,0 +1,24 @@
+uuid: d89b5ccf-faa1-431c-9e29-8c4a5e1dae1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser
+    - filter.format.plain_text
+    - node.type.portfolio
+  module:
+    - text
+id: node.portfolio.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: portfolio
+label: Teaser
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long
