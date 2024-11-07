@@ -72,6 +72,7 @@ module:
   help: 0
   highlight_js: 0
   history: 0
+  honeypot: 0
   image: 0
   inline_entity_form: 0
   key: 0

@@ -92,6 +92,7 @@
         "drupal/graphql_webform": "^1.0@alpha",
         "drupal/highlight_js": "^1.1",
         "drupal/highlight_php": "^1.0",
+        "drupal/honeypot": "^2.1",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/jsonapi_response_alter": "^2.0",
         "drupal/key": "*",
