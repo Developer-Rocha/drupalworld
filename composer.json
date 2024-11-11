@@ -66,6 +66,7 @@
         "drupal/block_usage_report": "^1.0",
         "drupal/config_pages": "^2.16",
         "drupal/config_split": "^2.0",
+        "drupal/content_access": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
@@ -114,7 +115,9 @@
         "drupal/maxlength": "^3.1",
         "drupal/media_bulk_upload": "^3.0",
         "drupal/media_library_form_element": "^2.1",
+        "drupal/menu_admin_per_menu": "^1.6",
         "drupal/menu_block": "^1.13",
+        "drupal/menu_per_role": "^1.8",
         "drupal/menu_trail_by_path": "^2.1",
         "drupal/message_banner": "^2.0",
         "drupal/metatag_async_widget": "^1.1",
@@ -259,6 +262,9 @@
             },
             "drupal/field_formatter": {
                 "3358395 - LogicException: Getting the base fields is not supported for entity type Domain record": "https://www.drupal.org/files/issues/2023-05-05/field_formatter-3358395-3.patch"
+            },
+            "drupal/gin_toolbar": {
+                "3263805 - Add option for node local tasks in toolbar.": "https://www.drupal.org/files/issues/2023-10-20/3121440-49.patch"
             },
             "drupal/node_keep": {
                 "3361172 - Node keep can be wrongly installed without creating the alias_keeper field": "https://www.drupal.org/files/issues/2023-06-07/node_keep-wrongly_installed_without_alias_keeper_field-3361172-8.patch"

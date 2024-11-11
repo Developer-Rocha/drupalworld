@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.node.landing_page.full
+    - entity_browser.browser.upload_or_existing
     - filter.format.comment
     - filter.format.editor
     - filter.format.embed
@@ -10,17 +12,20 @@ dependencies:
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
+    - workflows.workflow.editorial
   module:
     - comment
+    - contact
+    - content_moderation
     - content_translation
     - contextual
+    - dropzonejs
+    - entity_browser
     - eu_cookie_compliance
-    - file
     - filter
-    - help
+    - layout_builder
     - media_bulk_upload
     - node
-    - path
     - system
     - taxonomy
     - toolbar
@@ -32,33 +37,43 @@ weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access comments'
+  - 'access content'
   - 'access content overview'
   - 'access contextual links'
-  - 'access files overview'
-  - 'access help pages'
+  - 'access site-wide contact form'
   - 'access toolbar'
-  - 'administer url aliases'
+  - 'access upload_or_existing entity browser pages'
+  - 'access user contact forms'
+  - 'configure editable landing_page node layout overrides'
   - 'create article content'
+  - 'create content translations'
   - 'create page content'
   - 'create terms in tags'
-  - 'create url aliases'
   - 'delete article revisions'
+  - 'delete content translations'
   - 'delete own article content'
-  - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
   - 'display eu cookie compliance popup'
+  - 'dropzone upload files'
+  - 'edit any article content'
+  - 'edit any page content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
-  - 'revert all revisions'
   - 'translate article node'
+  - 'translate editable entities'
+  - 'translate page node'
+  - 'update content translations'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition unpublish'
   - 'use multiple_images bulk upload form'
   - 'use text format comment'
   - 'use text format editor'
   - 'use text format embed'
   - 'use text format header'
-  - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

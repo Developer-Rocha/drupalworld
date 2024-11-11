@@ -3,6 +3,7 @@ _core:
 module:
   addtoany: 0
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   ai: 0
   ai_api_explorer: 0
@@ -69,7 +70,6 @@ module:
   focal_point: 0
   gin_lb: 0
   gin_toolbar: 0
-  help: 0
   highlight_js: 0
   history: 0
   honeypot: 0
@@ -180,6 +180,7 @@ module:
   workflows: 0
   yoast_seo: 0
   ds: 1
+  menu_admin_per_menu: 1
   pathauto: 1
   simple_pass_reset: 1
   ds_extras: 2

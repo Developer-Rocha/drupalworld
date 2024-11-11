@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edf431622188b67c5955c6e2ad7c6138",
+    "content-hash": "a844455d559888556cb6ffedc9d7a40a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2643,6 +2643,61 @@
             "homepage": "https://www.drupal.org/project/consumers",
             "support": {
                 "source": "https://git.drupalcode.org/project/consumers"
+            }
+        },
+        {
+            "name": "drupal/content_access",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/content_access.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/content_access-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "01be4c9612d31b77f6117297b0bacaf78aeffd81"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "require-dev": {
+                "drupal/acl": "~1.0 || ~2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1694013168",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "gisle",
+                    "homepage": "https://www.drupal.org/user/409554"
+                },
+                {
+                    "name": "steven jones",
+                    "homepage": "https://www.drupal.org/user/99644"
+                }
+            ],
+            "description": "Provides flexible content access control.",
+            "homepage": "https://drupal.org/project/content_access",
+            "support": {
+                "source": "https://git.drupalcode.org/project/content_access"
             }
         },
         {
@@ -5922,6 +5977,66 @@
             }
         },
         {
+            "name": "drupal/menu_admin_per_menu",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_admin_per_menu.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_admin_per_menu-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "8ebbab26f0dad2b1f79d7aa185295ca033eece7a"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1726150514",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anrikun",
+                    "homepage": "https://www.drupal.org/user/410199"
+                },
+                {
+                    "name": "jeroent",
+                    "homepage": "https://www.drupal.org/user/2228934"
+                },
+                {
+                    "name": "jonas139",
+                    "homepage": "https://www.drupal.org/user/2873401"
+                },
+                {
+                    "name": "mkdok",
+                    "homepage": "https://www.drupal.org/user/3308753"
+                }
+            ],
+            "description": "Allows to give roles per menu admin permissions without giving them full administer menu permission.",
+            "homepage": "https://www.drupal.org/project/menu_admin_per_menu",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_admin_per_menu",
+                "issues": "https://drupal.org/project/issues/menu_admin_per_menu"
+            }
+        },
+        {
             "name": "drupal/menu_block",
             "version": "1.13.0",
             "source": {
@@ -5983,6 +6098,66 @@
             "homepage": "https://www.drupal.org/project/menu_block",
             "support": {
                 "source": "https://git.drupalcode.org/project/menu_block"
+            }
+        },
+        {
+            "name": "drupal/menu_per_role",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_per_role.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_per_role-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "4e7c27df2dfa3e4365b6069c78ffd11741f45c21"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1726948034",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AlexisWilke",
+                    "homepage": "https://www.drupal.org/user/356197"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "grimreaper",
+                    "homepage": "https://www.drupal.org/user/2388214"
+                },
+                {
+                    "name": "neerajskydiver",
+                    "homepage": "https://www.drupal.org/user/227792"
+                }
+            ],
+            "description": "Allows restricting access to menu items per role.",
+            "homepage": "https://www.drupal.org/project/menu_per_role",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_per_role"
             }
         },
         {
