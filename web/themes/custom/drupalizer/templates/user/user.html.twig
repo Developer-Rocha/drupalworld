@@ -31,7 +31,9 @@
     {% endif %}
   </div>
   <div class="profile-view__col-2">
-    <h3 class="view-label">{{ "Latest articles:"|trans }}</h3>
-    {{ drupal_view('articles', 'block_user_articles') }}
+    <div class="articles">
+      <h3 class="view-label">{{ "Latest articles:"|trans }}</h3>
+      {{ drupal_view('articles', 'block_user_articles') }}
+    </div>
   </div>
 </article>

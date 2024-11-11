@@ -18,7 +18,6 @@ dependencies:
     - node.type.article
   module:
     - ds
-    - field_formatter
     - manage_display
 third_party_settings:
   ds:
@@ -36,14 +35,12 @@ third_party_settings:
         - field_image
       title:
         - title
-      text:
-        - field_teaser
       url:
         - 'dynamic_token_field:node-url'
     fields:
       'dynamic_token_field:node-url':
         plugin_id: 'dynamic_token_field:node-url'
-        weight: 3
+        weight: 2
         label: hidden
         formatter: default
 _core:
@@ -67,28 +64,18 @@ content:
             lb: ''
     weight: 0
     region: image
-  field_teaser:
-    type: field_link
+  title:
+    type: title
     label: hidden
     settings:
-      type: text_trimmed
-      settings:
-        trim_length: 148
+      link_to_entity: true
+      tag: h3
     third_party_settings:
       ds:
         ft:
           id: reset
           settings:
             lb: ''
-    weight: 2
-    region: text
-  title:
-    type: title
-    label: hidden
-    settings:
-      link_to_entity: true
-      tag: h2
-    third_party_settings: {  }
     weight: 1
     region: title
 hidden:
@@ -103,6 +90,7 @@ hidden:
   field_seo_title: true
   field_sharing_image: true
   field_tags: true
+  field_teaser: true
   field_yoast_seo: true
   langcode: true
   links: true

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.node.teaser
     - core.entity_view_mode.node.teaser_sidebar
     - field.storage.node.field_image
     - node.type.article
@@ -522,16 +522,23 @@ display:
           break_phrase: false
           not: false
       style:
-        type: default
+        type: pattern
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
+          uses_fields: false
+          pattern: flex_grid
+          pattern_mapping:
+            'view_style:rows':
+              destination: grid_items
+              weight: 0
+              plugin: view_style
+              source: rows
+          pattern_settings: {  }
+          pattern_variant: auto
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: search_index
+          view_mode: teaser
       defaults:
         empty: false
         title: false
