@@ -53,16 +53,6 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  addtoany:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_image:
     type: entity_reference_entity_view
     label: hidden
@@ -81,9 +71,15 @@ content:
     type: field_link
     label: hidden
     settings:
-      type: ''
-      settings: {  }
-    third_party_settings: {  }
+      type: text_trimmed
+      settings:
+        trim_length: 148
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
     weight: 2
     region: text
   title:
@@ -96,8 +92,10 @@ content:
     weight: 1
     region: title
 hidden:
+  addtoany: true
   body: true
   comment: true
+  content_moderation_control: true
   created: true
   field_meta_description: true
   field_meta_tags: true

@@ -1,0 +1,26 @@
+.profile-view {
+  display: flex;
+  flex-direction: column;
+
+  @include bp(md) {
+    flex-direction: row;
+  }
+
+  &__col-1 {
+    @include bp(md) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  &__col-2 {
+    @include bp(md) {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
+  .view-label {
+    text-decoration: underline;
+  }
+}

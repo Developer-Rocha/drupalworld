@@ -3,3 +3,10 @@ display:
   default:
     display_options:
       title: 'Artigos relacionados'
+  block_user_articles:
+    display_options:
+      empty:
+        area:
+          content:
+            value: '<p>Nenhum artigo criado.</p>'
+            format: basic_html
