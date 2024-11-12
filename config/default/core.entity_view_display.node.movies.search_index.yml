@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
+    - field.field.node.movies.field_seo_description
     - field.field.node.movies.field_tmdb_id
     - field.field.node.movies.field_vote_average
     - field.field.node.movies.field_yoast_seo
@@ -27,7 +28,12 @@ id: node.movies.search_index
 targetEntityType: node
 bundle: movies
 mode: search_index
-content: {  }
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
 hidden:
   addtoany: true
   ai_automator_status: true
@@ -40,6 +46,7 @@ hidden:
   field_movie_poster: true
   field_overview: true
   field_release_date: true
+  field_seo_description: true
   field_tmdb_id: true
   field_vote_average: true
   field_yoast_seo: true

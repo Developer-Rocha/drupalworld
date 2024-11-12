@@ -1,0 +1,9 @@
+name: 'SEO Tokens'
+type: module
+description: 'Provides SEO description tokens for content types.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - token:token
+  - metatag:metatag
+version: 1.0

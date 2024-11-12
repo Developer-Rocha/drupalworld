@@ -7,13 +7,11 @@ display:
       fields:
         filename:
           label: Nome
-          separator: ', '
         filemime:
           label: 'Tipo MIME'
         filesize:
           label: Tamanho
         status:
-          label: Status
           settings:
             format_custom_true: Permanente
         count:
@@ -31,6 +29,7 @@ display:
             offset_label: Deslocamento
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Redefinir
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
@@ -42,9 +41,6 @@ display:
         filemime:
           expose:
             label: 'Tipo MIME'
-        status:
-          expose:
-            label: Status
   page_1:
     display_options:
       menu:
@@ -65,7 +61,3 @@ display:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
-      arguments:
-        fid:
-          exception:
-            title: All

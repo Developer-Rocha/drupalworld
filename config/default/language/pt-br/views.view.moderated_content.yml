@@ -5,17 +5,10 @@ display:
       fields:
         title:
           label: Título
-          separator: ', '
         type:
           label: 'Tipo de conteúdo'
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
-        moderation_state:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Operações
       pager:
@@ -29,6 +22,7 @@ display:
             offset_label: Deslocamento
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Redefinir
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente

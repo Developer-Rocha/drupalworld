@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_meta_description
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_seo_description
     - field.field.node.page.field_seo_title
     - field.field.node.page.field_sharing_image
     - field.field.node.page.field_yoast_seo
@@ -80,6 +81,13 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  alias_keeper:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   body:
     type: text_textarea_with_summary
     weight: 3
@@ -141,6 +149,14 @@ content:
     settings:
       body: body
     third_party_settings: {  }
+  keeper_machine_name:
+    type: string_textfield
+    weight: 101
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 3
@@ -153,6 +169,13 @@ content:
     weight: 11
     region: content
     settings: {  }
+    third_party_settings: {  }
+  node_keeper:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   path:
     type: path
@@ -209,4 +232,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_seo_description: true

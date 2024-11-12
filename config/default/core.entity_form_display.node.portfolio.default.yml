@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.portfolio.field_meta_description
     - field.field.node.portfolio.field_meta_tags
     - field.field.node.portfolio.field_project_url
+    - field.field.node.portfolio.field_seo_description
     - field.field.node.portfolio.field_sharing_image
     - field.field.node.portfolio.field_teaser
     - field.field.node.portfolio.field_teaser_image
     - field.field.node.portfolio.field_technology
     - field.field.node.portfolio.field_yoast_seo
     - node.type.portfolio
+    - workflows.workflow.editorial
   module:
     - content_moderation
     - entity_browser
@@ -305,4 +307,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_seo_description: true

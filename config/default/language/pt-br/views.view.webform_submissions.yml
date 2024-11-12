@@ -11,51 +11,26 @@ display:
           sort_desc_label: Decrescente
       pager:
         options:
-          tags:
-            previous: ‹‹
-            next: ››
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
       fields:
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
-      arguments:
-        in_draft:
-          exception:
-            title: All
   embed_administer:
     display_options:
       fields:
         webform_submission_bulk_form:
           action_title: Ação
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
-        sticky:
-          separator: ', '
-        locked:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        completed:
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         operations:
           label: Operações
   embed_manage:
@@ -63,22 +38,10 @@ display:
       fields:
         webform_submission_bulk_form:
           action_title: Ação
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
-        sticky:
-          separator: ', '
-        locked:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        completed:
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
         edit_webform_submission:
@@ -86,21 +49,9 @@ display:
   embed_review:
     display_options:
       fields:
-        sid:
-          separator: ', '
-        in_draft:
-          separator: ', '
-        sticky:
-          separator: ', '
-        locked:
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
-        completed:
-          separator: ', '
         remote_addr:
           label: 'Endereço IP'
-          separator: ', '
         view_webform_submission:
           label: Operações

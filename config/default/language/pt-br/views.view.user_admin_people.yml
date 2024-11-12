@@ -6,13 +6,10 @@ display:
         name:
           label: 'Nome de usuário'
         status:
-          label: Status
           settings:
             format_custom_true: Ativo
         operations:
           label: Operações
-        mail:
-          separator: ', '
       pager:
         options:
           tags:
@@ -24,6 +21,7 @@ display:
             offset_label: Deslocamento
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Redefinir
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
@@ -31,7 +29,6 @@ display:
       filters:
         status:
           group_info:
-            label: Status
             group_items:
               1:
                 title: Ativo

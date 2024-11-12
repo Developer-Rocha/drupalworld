@@ -1,0 +1,22 @@
+uuid: d9a3ef9f-c517-4390-9541-a3bc77ab51d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_description
+    - node.type.skill
+  module:
+    - text
+id: node.skill.field_seo_description
+field_name: field_seo_description
+entity_type: node
+bundle: skill
+label: 'SEO Description'
+description: 'Custom SEO description field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

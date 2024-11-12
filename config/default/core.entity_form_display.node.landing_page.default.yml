@@ -12,12 +12,12 @@ dependencies:
     - field.field.node.landing_page.field_hero_title
     - field.field.node.landing_page.field_meta_description
     - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_seo_description
     - field.field.node.landing_page.field_seo_title
     - field.field.node.landing_page.field_sharing_image
     - field.field.node.landing_page.field_yoast_seo
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - entity_browser
@@ -89,6 +89,13 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  alias_keeper:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 4
@@ -193,6 +200,14 @@ content:
     settings:
       body: body
     third_party_settings: {  }
+  keeper_machine_name:
+    type: string_textfield
+    weight: 101
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -212,6 +227,13 @@ content:
     weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  node_keeper:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   path:
     type: path
@@ -271,3 +293,4 @@ content:
 hidden:
   field_hero_pretitle: true
   field_hero_subtitle: true
+  field_seo_description: true

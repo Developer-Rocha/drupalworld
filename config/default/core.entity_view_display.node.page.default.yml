@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_meta_description
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_seo_description
     - field.field.node.page.field_seo_title
     - field.field.node.page.field_sharing_image
     - field.field.node.page.field_yoast_seo
@@ -62,6 +63,7 @@ content:
 hidden:
   created: true
   field_meta_description: true
+  field_seo_description: true
   field_seo_title: true
   field_sharing_image: true
   field_yoast_seo: true

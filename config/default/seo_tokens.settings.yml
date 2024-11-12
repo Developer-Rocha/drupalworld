@@ -1,0 +1,13 @@
+content_types:
+  landing_page:
+    fallback_field-landing_page: ''
+  page:
+    fallback_field-page: ''
+  portfolio:
+    fallback_field-portfolio: ''
+  skill:
+    fallback_field-skill: ''
+  article:
+    fallback_field-article: field_teaser
+  movies:
+    fallback_field-movies: field_overview

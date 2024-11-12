@@ -5,5 +5,3 @@ settings:
   default_wizard_toggle_show_label: 'Mostrar todos'
   default_preview_next_button_label: Pré-visualizar
   default_preview_label: Pré-visualizar
-mail:
-  default_from_name: '[site:name]'

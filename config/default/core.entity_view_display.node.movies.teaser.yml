@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.movies.field_movie_poster
     - field.field.node.movies.field_overview
     - field.field.node.movies.field_release_date
+    - field.field.node.movies.field_seo_description
     - field.field.node.movies.field_tmdb_id
     - field.field.node.movies.field_vote_average
     - field.field.node.movies.field_yoast_seo
@@ -65,6 +66,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_genre:
     type: entity_reference_label
@@ -127,6 +133,7 @@ hidden:
   created: true
   field_ai_review: true
   field_meta_tags: true
+  field_seo_description: true
   field_tmdb_id: true
   field_yoast_seo: true
   langcode: true

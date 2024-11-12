@@ -1,0 +1,22 @@
+uuid: 35283383-edc6-4ad5-9182-d7233607d469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_description
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_seo_description
+field_name: field_seo_description
+entity_type: node
+bundle: landing_page
+label: 'SEO Description'
+description: 'Custom SEO description field.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
