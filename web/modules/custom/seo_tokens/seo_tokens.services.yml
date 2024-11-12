@@ -1,6 +1,0 @@
-services:
-  seo_tokens.token.seo_description:
-    class: 'Drupal\seo_tokens\Plugin\Token\SeoDescriptionToken'
-    arguments: ['@entity_type.manager', '@token.entity_mapper', '@current_user', '@config.factory']
-    tags:
-      - { name: 'token_entity_type', entity_type: 'node' }
