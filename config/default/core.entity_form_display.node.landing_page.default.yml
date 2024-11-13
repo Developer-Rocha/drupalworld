@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.landing_page.field_yoast_seo
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
+    - workflows.workflow.editorial
   module:
     - content_moderation
     - entity_browser
@@ -69,6 +70,7 @@ third_party_settings:
       children:
         - field_sharing_image
         - field_seo_title
+        - field_seo_description
         - field_meta_description
         - field_yoast_seo
       label: 'SEO & Sharing'
@@ -91,14 +93,14 @@ mode: default
 content:
   alias_keeper:
     type: boolean_checkbox
-    weight: 100
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -157,7 +159,7 @@ content:
     third_party_settings: {  }
   field_meta_description:
     type: string_textarea
-    weight: 103
+    weight: 104
     region: content
     settings:
       rows: 5
@@ -165,11 +167,19 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 11
+    weight: 12
     region: content
     settings:
       sidebar: true
       use_details: true
+    third_party_settings: {  }
+  field_seo_description:
+    type: text_textarea
+    weight: 103
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_seo_title:
     type: string_textfield
@@ -195,14 +205,14 @@ content:
     third_party_settings: {  }
   field_yoast_seo:
     type: yoast_seo_widget
-    weight: 104
+    weight: 105
     region: content
     settings:
       body: body
     third_party_settings: {  }
   keeper_machine_name:
     type: string_textfield
-    weight: 101
+    weight: 17
     region: content
     settings:
       size: 60
@@ -217,52 +227,52 @@ content:
     third_party_settings: {  }
   layout_builder__layout:
     type: layout_builder_at_copy
-    weight: 13
+    weight: 14
     region: content
     settings:
       appearance: unchecked
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   node_keeper:
     type: boolean_checkbox
-    weight: 100
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
@@ -276,13 +286,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -293,4 +303,3 @@ content:
 hidden:
   field_hero_pretitle: true
   field_hero_subtitle: true
-  field_seo_description: true
