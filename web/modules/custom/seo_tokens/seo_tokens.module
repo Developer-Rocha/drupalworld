@@ -11,9 +11,9 @@ use Drupal\Core\Entity\Entity\EntityViewDisplay;
  */
 function seo_tokens_install() {
   // Create the field storage if it doesn't exist.
-  if (!FieldStorageConfig::loadByName('node', 'field_seo_description')) {
+  if (!FieldStorageConfig::loadByName('node', 'field_seo_tokens_description')) {
     FieldStorageConfig::create([
-      'field_name' => 'field_seo_description',
+      'field_name' => 'field_seo_tokens_description',
       'entity_type' => 'node',
       'type' => 'text_long',
       'cardinality' => 1,
@@ -29,9 +29,9 @@ function seo_tokens_install() {
   // Gets all the ‘node’ bundles and adds the field to each one.
   $bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo('node');
   foreach ($bundles as $bundle => $bundle_info) {
-    if (!FieldConfig::loadByName('node', $bundle, 'field_seo_description')) {
+    if (!FieldConfig::loadByName('node', $bundle, 'field_seo_tokens_description')) {
       FieldConfig::create([
-        'field_name' => 'field_seo_description',
+        'field_name' => 'field_seo_tokens_description',
         'entity_type' => 'node',
         'bundle' => $bundle,
         'label' => 'SEO Description',
@@ -51,28 +51,28 @@ function seo_tokens_install() {
 function seo_tokens_uninstall() {
   // Remove the field configuration from all form displays.
   foreach (EntityFormDisplay::loadMultiple() as $form_display) {
-    if ($form_display->getComponent('field_seo_description')) {
-      $form_display->removeComponent('field_seo_description');
+    if ($form_display->getComponent('field_seo_tokens_description')) {
+      $form_display->removeComponent('field_seo_tokens_description');
       $form_display->save();
     }
   }
 
   // Remove the field configuration from all view displays.
   foreach (EntityViewDisplay::loadMultiple() as $view_display) {
-    if ($view_display->getComponent('field_seo_description')) {
-      $view_display->removeComponent('field_seo_description');
+    if ($view_display->getComponent('field_seo_tokens_description')) {
+      $view_display->removeComponent('field_seo_tokens_description');
       $view_display->save();
     }
   }
 
   // Delete all field configurations (FieldConfig) associated with the field.
-  $field_configs = \Drupal::entityTypeManager()->getStorage('field_config')->loadByProperties(['field_name' => 'field_seo_description']);
+  $field_configs = \Drupal::entityTypeManager()->getStorage('field_config')->loadByProperties(['field_name' => 'field_seo_tokens_description']);
   foreach ($field_configs as $field_config) {
     $field_config->delete();
   }
 
   // Delete the field storage configuration (FieldStorageConfig) only after confirming field configurations are removed.
-  if ($field_storage = FieldStorageConfig::loadByName('node', 'field_seo_description')) {
+  if ($field_storage = FieldStorageConfig::loadByName('node', 'field_seo_tokens_description')) {
     $field_storage->delete();
   }
 
@@ -156,8 +156,8 @@ function _seo_tokens_get_seo_description(\Drupal\node\NodeInterface $node) {
   $config = \Drupal::config('seo_tokens.settings');
   $fallback_field = $config->get('content_types.' . $bundle . '.fallback_field-' . $bundle);
 
-  if ($node->hasField('field_seo_description') && !$node->get('field_seo_description')->isEmpty()) {
-    return $node->get('field_seo_description')->value;
+  if ($node->hasField('field_seo_tokens_description') && !$node->get('field_seo_tokens_description')->isEmpty()) {
+    return $node->get('field_seo_tokens_description')->value;
   }
   elseif ($fallback_field && $node->hasField($fallback_field) && !$node->get($fallback_field)->isEmpty()) {
     return $node->get($fallback_field)->value;

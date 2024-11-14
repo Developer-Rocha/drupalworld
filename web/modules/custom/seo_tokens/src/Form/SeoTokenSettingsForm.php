@@ -24,7 +24,7 @@ class SeoTokenSettingsForm extends ConfigFormBase {
       $text_fields = ['' => $this->t('- None -')];
 
       foreach ($fields as $field_name => $field) {
-        if (in_array($field->getType(), ['text', 'text_long']) && $field_name !== 'field_seo_description') {
+        if (in_array($field->getType(), ['text', 'text_long']) && $field_name !== 'field_seo_tokens_description') {
           $text_fields[$field_name] = $field->getLabel();
         }
       }
