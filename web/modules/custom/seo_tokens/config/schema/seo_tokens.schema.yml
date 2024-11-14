@@ -1,0 +1,15 @@
+seo_tokens.settings:
+  type: config_object
+  label: 'SEO Tokens Settings'
+  mapping:
+    content_types:
+      type: mapping
+      label: 'Content Types'
+      mapping:
+        type:
+          type: mapping
+          label: 'Content Type'
+          mapping:
+            fallback_field:
+              type: string
+              label: 'Fallback field'

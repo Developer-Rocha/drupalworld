@@ -1,0 +1,169 @@
+<?php
+
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+
+/**
+ * Implements hook_install().
+ */
+function seo_tokens_install() {
+  // Create the field storage if it doesn't exist.
+  if (!FieldStorageConfig::loadByName('node', 'field_seo_description')) {
+    FieldStorageConfig::create([
+      'field_name' => 'field_seo_description',
+      'entity_type' => 'node',
+      'type' => 'text_long',
+      'cardinality' => 1,
+      'translatable' => TRUE,
+    ])->save();
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function seo_tokens_uninstall() {
+  // Remove the field configurations associated with the field storage.
+  foreach (FieldConfig::loadMultiple() as $field_config) {
+    if ($field_config->getName() === 'field_seo_description') {
+      $field_config->delete();
+    }
+  }
+
+  // Remove the field storage configuration.
+  if ($field_storage = FieldStorageConfig::loadByName('node', 'field_seo_description')) {
+    $field_storage->delete();
+  }
+
+  // Remove field from all form displays.
+  foreach (EntityFormDisplay::loadMultiple() as $form_display) {
+    if ($form_display->getComponent('field_seo_description')) {
+      $form_display->removeComponent('field_seo_description');
+      $form_display->save();
+    }
+  }
+
+  // Remove field from all view displays.
+  foreach (EntityViewDisplay::loadMultiple() as $view_display) {
+    if ($view_display->getComponent('field_seo_description')) {
+      $view_display->removeComponent('field_seo_description');
+      $view_display->save();
+    }
+  }
+
+  // Delete module configuration.
+  \Drupal::configFactory()->getEditable('seo_tokens.settings')->delete();
+}
+
+
+/**
+ * Implements hook_help().
+ */
+function seo_tokens_help($route_name, $route_match) {
+  switch ($route_name) {
+    case 'help.page.seo_tokens':
+      return '<p>' . t('SEO Tokens module provides custom tokens for SEO.') . '</p>';
+    case 'admin.modules':
+      return '<p>' . t('For configuration settings, visit the <a href="@url">SEO Tokens settings page</a>.', ['@url' => \Drupal::url('seo_tokens.settings')]) . '</p>';
+  }
+}
+
+
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function seo_tokens_entity_bundle_field_info_alter(array &$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() === 'node') {
+    $field_storage = FieldStorageConfig::loadByName('node', 'field_seo_description');
+
+    if ($field_storage && !FieldConfig::loadByName('node', $bundle, 'field_seo_description')) {
+      FieldConfig::create([
+        'field_name' => 'field_seo_description',
+        'entity_type' => 'node',
+        'bundle' => $bundle,
+        'label' => 'SEO Description',
+        'description' => 'Custom SEO description field.',
+        'field_storage' => $field_storage,
+        'settings' => [],
+        'required' => FALSE,
+      ])->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function seo_tokens_token_info() {
+  $type['seo'] = [
+    'name' => t('SEO Tokens'),
+    'description' => t('Provides SEO tokens for metatag module.'),
+  ];
+
+  $tokens = [];
+  $tokens['description'] = [
+    'name' => t('SEO description'),
+    'description' => t('Provides SEO description for metatag module.'),
+  ];
+
+  return [
+    'types' => [
+      'seo' => $type,
+    ],
+    'tokens' => [
+      'seo' => $tokens,
+    ],
+  ];
+}
+/**
+ * Implements hook_tokens().
+ */
+function seo_tokens_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+
+  if ($type === 'seo') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'seo_description':
+          if (!empty($data['node']) && $data['node'] instanceof \Drupal\node\NodeInterface) {
+            $node = $data['node'];
+            $description = _seo_tokens_get_seo_description($node);
+            if ($description) {
+              $replacements[$original] = $description;
+            }
+          }
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Helper function to get the SEO description.
+ *
+ * @param \Drupal\node\NodeInterface $node
+ * The node entity.
+ *
+ * @return string
+ * The SEO description.
+ */
+function _seo_tokens_get_seo_description(\Drupal\node\NodeInterface $node) {
+  $bundle = $node->bundle();
+  $config = \Drupal::config('seo_tokens.settings');
+  $fallback_field = $config->get('content_types.' . $bundle . '.fallback_field-' . $bundle);
+
+  if ($node->hasField('field_seo_description') && !$node->get('field_seo_description')->isEmpty()) {
+    return $node->get('field_seo_description')->value;
+  }
+  elseif ($fallback_field && $node->hasField($fallback_field) && !$node->get($fallback_field)->isEmpty()) {
+    return $node->get($fallback_field)->value;
+  }
+
+  return '';
+}
