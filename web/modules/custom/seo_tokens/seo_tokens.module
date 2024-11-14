@@ -20,6 +20,23 @@ function seo_tokens_install() {
   }
 }
 
+/**
+ * Implements hook_uninstall().
+ */
+function seo_tokens_uninstall() {
+  // Load the field storage configuration.
+  if ($field_storage = FieldStorageConfig::loadByName('node', 'field_seo_description')) {
+    // Remove all field configurations associated with the field storage.
+    foreach (FieldConfig::loadByName('node', 'field_seo_description') as $field_config) {
+      $field_config->delete();
+    }
+    // Remove the field storage configuration.
+    $field_storage->delete();
+  }
+
+  // Delete module configuration.
+  \Drupal::configFactory()->getEditable('seo_tokens.settings')->delete();
+}
 
 /**
  * Implements hook_help().
