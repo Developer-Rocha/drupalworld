@@ -21,11 +21,19 @@ class SeoTokenSettingsForm extends ConfigFormBase {
 
     foreach ($content_types as $type) {
       $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions('node', $type->id());
+      $title_fields = ['' => $this->t('- None -')];
       $text_fields = ['' => $this->t('- None -')];
+      $image_fields = ['' => $this->t('- None -')];
 
       foreach ($fields as $field_name => $field) {
+        if (in_array($field->getType(), ['text']) && $field_name !== 'field_seo_tokens_title') {
+          $title_fields[$field_name] = $field->getLabel();
+        }
         if (in_array($field->getType(), ['text', 'text_long']) && $field_name !== 'field_seo_tokens_description') {
           $text_fields[$field_name] = $field->getLabel();
+        }
+        if (in_array($field->getType(), ['image', 'entity_reference']) && $field_name !== 'field_seo_tokens_image' && $field->getSetting('target_type') == 'media') {
+          $image_fields[$field_name] = $field->getLabel();
         }
       }
 
@@ -36,11 +44,25 @@ class SeoTokenSettingsForm extends ConfigFormBase {
           '#open' => TRUE,
         ];
 
-        $form['content_types'][$type->id()]['fallback_field-' . $type->id()] = [
+        $form['content_types'][$type->id()]['fallback_field_title-' . $type->id()] = [
+          '#type' => 'select',
+          '#title' => $this->t('Fallback field for SEO title'),
+          '#options' => $title_fields,
+          '#default_value' => $config->get('content_types.' . $type->id() . '.fallback_field_title-' . $type->id()) ?: '',
+        ];
+
+        $form['content_types'][$type->id()]['fallback_field_description-' . $type->id()] = [
           '#type' => 'select',
           '#title' => $this->t('Fallback field for SEO description'),
           '#options' => $text_fields,
-          '#default_value' => $config->get('content_types.' . $type->id() . '.fallback_field-' . $type->id()) ?: '',
+          '#default_value' => $config->get('content_types.' . $type->id() . '.fallback_field_description-' . $type->id()) ?: '',
+        ];
+
+        $form['content_types'][$type->id()]['fallback_field_image-' . $type->id()] = [
+          '#type' => 'select',
+          '#title' => $this->t('Fallback field for SEO image'),
+          '#options' => $image_fields,
+          '#default_value' => $config->get('content_types.' . $type->id() . '.fallback_field_image-' . $type->id()) ?: '',
         ];
       } else {
         $form['content_types'][$type->id()] = [
@@ -58,10 +80,20 @@ class SeoTokenSettingsForm extends ConfigFormBase {
     $content_types = \Drupal\node\Entity\NodeType::loadMultiple();
 
     foreach ($content_types as $type) {
-      $form_values = $form_state->getValue('fallback_field-' . $type->id());
+      $title_value = $form_state->getValue('fallback_field_title-' . $type->id());
+      $description_value = $form_state->getValue('fallback_field_description-' . $type->id());
+      $image_value = $form_state->getValue('fallback_field_image-' . $type->id());
 
-      if (isset($form_values) && !empty($form_values)) {
-        $config->set('content_types.' . $type->id() . '.fallback_field-' . $type->id(), $form_values);
+      if (isset($title_value) && !empty($title_value)) {
+        $config->set('content_types.' . $type->id() . '.fallback_field_title-' . $type->id(), $title_value);
+      }
+
+      if (isset($description_value) && !empty($description_value)) {
+        $config->set('content_types.' . $type->id() . '.fallback_field_description-' . $type->id(), $description_value);
+      }
+
+      if (isset($image_value) && !empty($image_value)) {
+        $config->set('content_types.' . $type->id() . '.fallback_field_image-' . $type->id(), $image_value);
       }
     }
 

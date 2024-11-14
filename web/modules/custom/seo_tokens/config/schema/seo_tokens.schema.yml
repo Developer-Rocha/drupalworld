@@ -10,6 +10,12 @@ seo_tokens.settings:
           type: mapping
           label: 'Content Type'
           mapping:
-            fallback_field:
+            fallback_field_title:
               type: string
-              label: 'Fallback field'
+              label: 'Fallback field title'
+            fallback_field_description:
+              type: string
+              label: 'Fallback field description'
+            fallback_field_image:
+              type: string
+              label: 'Fallback field image'
