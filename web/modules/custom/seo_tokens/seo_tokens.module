@@ -18,7 +18,30 @@ function seo_tokens_install() {
       'type' => 'text_long',
       'cardinality' => 1,
       'translatable' => TRUE,
+      'settings' => [
+        'is_ascii' => FALSE,
+        'case_sensitive' => FALSE,
+      ],
+      'revisionable' => TRUE,
     ])->save();
+  }
+
+  // Gets all the ‘node’ bundles and adds the field to each one.
+  $bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo('node');
+  foreach ($bundles as $bundle => $bundle_info) {
+    if (!FieldConfig::loadByName('node', $bundle, 'field_seo_description')) {
+      FieldConfig::create([
+        'field_name' => 'field_seo_description',
+        'entity_type' => 'node',
+        'bundle' => $bundle,
+        'label' => 'SEO Description',
+        'description' => 'Custom SEO description field.',
+        'settings' => [
+          'allowed_formats' => ['plain_text'],
+        ],
+        'required' => FALSE,
+      ])->save();
+    }
   }
 }
 
@@ -26,7 +49,7 @@ function seo_tokens_install() {
  * Implements hook_uninstall().
  */
 function seo_tokens_uninstall() {
-  // Remove field from all form displays.
+  // Remove the field configuration from all form displays.
   foreach (EntityFormDisplay::loadMultiple() as $form_display) {
     if ($form_display->getComponent('field_seo_description')) {
       $form_display->removeComponent('field_seo_description');
@@ -34,7 +57,7 @@ function seo_tokens_uninstall() {
     }
   }
 
-  // Remove field from all view displays.
+  // Remove the field configuration from all view displays.
   foreach (EntityViewDisplay::loadMultiple() as $view_display) {
     if ($view_display->getComponent('field_seo_description')) {
       $view_display->removeComponent('field_seo_description');
@@ -42,19 +65,18 @@ function seo_tokens_uninstall() {
     }
   }
 
-  // Remove the field configurations associated with the field storage.
-  foreach (FieldConfig::loadMultiple() as $field_config) {
-    if ($field_config->getName() === 'field_seo_description') {
-      $field_config->delete();
-    }
+  // Delete all field configurations (FieldConfig) associated with the field.
+  $field_configs = \Drupal::entityTypeManager()->getStorage('field_config')->loadByProperties(['field_name' => 'field_seo_description']);
+  foreach ($field_configs as $field_config) {
+    $field_config->delete();
   }
 
-  // Remove the field storage configuration.
+  // Delete the field storage configuration (FieldStorageConfig) only after confirming field configurations are removed.
   if ($field_storage = FieldStorageConfig::loadByName('node', 'field_seo_description')) {
     $field_storage->delete();
   }
 
-  // Delete module configuration.
+  // Delete the module-specific configuration.
   \Drupal::configFactory()->getEditable('seo_tokens.settings')->delete();
 }
 
@@ -68,30 +90,6 @@ function seo_tokens_help($route_name, $route_match) {
       return '<p>' . t('SEO Tokens module provides custom tokens for SEO.') . '</p>';
     case 'admin.modules':
       return '<p>' . t('For configuration settings, visit the <a href="@url">SEO Tokens settings page</a>.', ['@url' => \Drupal::url('seo_tokens.settings')]) . '</p>';
-  }
-}
-
-
-
-/**
- * Implements hook_entity_bundle_field_info_alter().
- */
-function seo_tokens_entity_bundle_field_info_alter(array &$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
-  if ($entity_type->id() === 'node') {
-    $field_storage = FieldStorageConfig::loadByName('node', 'field_seo_description');
-
-    if ($field_storage && !FieldConfig::loadByName('node', $bundle, 'field_seo_description')) {
-      FieldConfig::create([
-        'field_name' => 'field_seo_description',
-        'entity_type' => 'node',
-        'bundle' => $bundle,
-        'label' => 'SEO Description',
-        'description' => 'Custom SEO description field.',
-        'field_storage' => $field_storage,
-        'settings' => [],
-        'required' => FALSE,
-      ])->save();
-    }
   }
 }
 
