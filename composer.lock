@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17c00b979766d2d7d377e0cdc59e82f6",
+    "content-hash": "41fd06cf72e35f234e28fb823ac0f5d6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1313,6 +1313,39 @@
                 "source": "https://github.com/deniskoronets/php-array-table/tree/2.0"
             },
             "time": "2023-02-10T10:13:42+00:00"
+        },
+        {
+            "name": "developer-rocha/seo_tokens",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Developer-Rocha/seo_tokens",
+                "reference": "9d7402ad3910c56c9e510d8e21101dcd110ca8e2"
+            },
+            "require": {
+                "drupal/core": "^10",
+                "drupal/metatag": "^2.0",
+                "drupal/token": "^1.9"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0.x-dev"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Developer Rocha",
+                    "email": "fabriciorocha.dev@gmail.com",
+                    "homepage": "https://www.fabriciorocha.com"
+                }
+            ],
+            "description": "Provides SEO description tokens for content types.",
+            "time": "2024-11-15T14:44:33+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -19432,6 +19465,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "developer-rocha/seo_tokens": 20,
         "drupal/ai": 15,
         "drupal/field_formatter": 5,
         "drupal/field_validation": 10,

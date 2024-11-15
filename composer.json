@@ -14,6 +14,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "git",
+            "url": "https://github.com/Developer-Rocha/seo_tokens"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "enyo/dropzone",
@@ -54,6 +58,7 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
+        "developer-rocha/seo_tokens": "1.0.x-dev",
         "drupal/address": "^2.0",
         "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.4",
