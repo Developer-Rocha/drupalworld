@@ -1320,7 +1320,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Developer-Rocha/seo_tokens",
-                "reference": "9d7402ad3910c56c9e510d8e21101dcd110ca8e2"
+                "reference": "1ebc14871c4103e20ae4e5f7546883b7499764b7"
             },
             "require": {
                 "drupal/core": "^10",
@@ -1345,7 +1345,7 @@
                 }
             ],
             "description": "Provides SEO description tokens for content types.",
-            "time": "2024-11-15T14:44:33+00:00"
+            "time": "2024-11-19T13:59:22+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
