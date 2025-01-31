@@ -7,7 +7,6 @@ dependencies:
     - search_api.server.server_db
   module:
     - node
-    - search_api
 id: movies
 name: Movies
 description: ''

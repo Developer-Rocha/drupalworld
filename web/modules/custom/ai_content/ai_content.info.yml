@@ -1,0 +1,5 @@
+name: AI Module
+type: module
+description: "Empty module to be remove from core.extends."
+package: Custom
+core_version_requirement: ^9 || ^10

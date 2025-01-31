@@ -6,13 +6,6 @@ dependencies:
     - field.storage.node.field_technology
     - node.type.portfolio
     - taxonomy.vocabulary.technology
-  module:
-    - ai_translate
-third_party_settings:
-  ai_translate:
-    entity_reference:
-      translate_references: default
-    translate_references: default
 id: node.portfolio.field_technology
 field_name: field_technology
 entity_type: node

@@ -9,7 +9,6 @@ dependencies:
     - search_api.server.server_db
   module:
     - node
-    - search_api
 id: articles
 name: Articles
 description: ''

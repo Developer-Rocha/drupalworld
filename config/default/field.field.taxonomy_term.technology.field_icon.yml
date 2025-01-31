@@ -6,13 +6,6 @@ dependencies:
     - field.storage.taxonomy_term.field_icon
     - media.type.vector_image
     - taxonomy.vocabulary.technology
-  module:
-    - ai_translate
-third_party_settings:
-  ai_translate:
-    entity_reference:
-      translate_references: default
-    translate_references: default
 id: taxonomy_term.technology.field_icon
 field_name: field_icon
 entity_type: taxonomy_term

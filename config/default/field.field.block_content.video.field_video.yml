@@ -6,13 +6,6 @@ dependencies:
     - block_content.type.video
     - field.storage.block_content.field_video
     - media.type.remote_video
-  module:
-    - ai_translate
-third_party_settings:
-  ai_translate:
-    entity_reference:
-      translate_references: default
-    translate_references: default
 id: block_content.video.field_video
 field_name: field_video
 entity_type: block_content

@@ -6,13 +6,6 @@ dependencies:
     - block_content.type.images
     - field.storage.block_content.field_images
     - media.type.image
-  module:
-    - ai_translate
-third_party_settings:
-  ai_translate:
-    entity_reference:
-      translate_references: default
-    translate_references: default
 id: block_content.images.field_images
 field_name: field_images
 entity_type: block_content

@@ -6,13 +6,6 @@ dependencies:
     - field.storage.node.field_icon
     - media.type.vector_image
     - node.type.skill
-  module:
-    - ai_translate
-third_party_settings:
-  ai_translate:
-    entity_reference:
-      translate_references: default
-    translate_references: default
 id: node.skill.field_icon
 field_name: field_icon
 entity_type: node

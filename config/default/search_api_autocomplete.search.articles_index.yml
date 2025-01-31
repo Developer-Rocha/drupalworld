@@ -7,7 +7,6 @@ dependencies:
     - views.view.articles_index
   module:
     - views
-    - search_api_autocomplete
 id: articles_index
 label: 'Articles Index'
 index_id: articles
