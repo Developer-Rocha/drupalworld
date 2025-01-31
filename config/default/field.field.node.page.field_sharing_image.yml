@@ -6,13 +6,6 @@ dependencies:
     - field.storage.node.field_sharing_image
     - media.type.image
     - node.type.page
-  module:
-    - ai_translate
-third_party_settings:
-  ai_translate:
-    entity_reference:
-      translate_references: default
-    translate_references: default
 id: node.page.field_sharing_image
 field_name: field_sharing_image
 entity_type: node
