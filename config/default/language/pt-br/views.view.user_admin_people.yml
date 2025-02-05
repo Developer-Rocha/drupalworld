@@ -6,6 +6,7 @@ display:
         name:
           label: 'Nome de usuário'
         status:
+          label: Status
           settings:
             format_custom_true: Ativo
         operations:
@@ -29,6 +30,7 @@ display:
       filters:
         status:
           group_info:
+            label: Status
             group_items:
               1:
                 title: Ativo

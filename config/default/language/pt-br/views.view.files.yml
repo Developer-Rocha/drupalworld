@@ -12,6 +12,7 @@ display:
         filesize:
           label: Tamanho
         status:
+          label: Status
           settings:
             format_custom_true: Permanente
         count:
@@ -42,6 +43,9 @@ display:
         filemime:
           expose:
             label: 'Tipo MIME'
+        status:
+          expose:
+            label: Status
   page_1:
     display_options:
       menu:

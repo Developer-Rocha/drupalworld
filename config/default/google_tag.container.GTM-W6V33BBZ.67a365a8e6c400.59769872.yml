@@ -1,0 +1,33 @@
+uuid: 0aefaa65-6c7c-4cb2-a965-e42d426fcfe1
+langcode: en
+status: true
+dependencies: {  }
+id: GTM-W6V33BBZ.67a365a8e6c400.59769872
+label: GTM-W6V33BBZ
+weight: 0
+tag_container_ids:
+  - GTM-W6V33BBZ
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-W6V33BBZ:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  search: {  }
+  sign_up:
+    method: CMS
+  generate_lead:
+    value: ''
+    currency: ''
+  custom: {  }
+  webform_purchase: {  }
+  login:
+    method: CMS
