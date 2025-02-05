@@ -90,6 +90,7 @@
         "drupal/gin": "^3.0@RC",
         "drupal/gin_lb": "^1.0@RC",
         "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/google_tag": "^2.0",
         "drupal/graphql": "^3.4",
         "drupal/graphql_webform": "^1.0@alpha",
         "drupal/gtm": "^1.9",
