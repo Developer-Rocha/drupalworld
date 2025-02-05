@@ -7,12 +7,12 @@ router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: true
 additional_hostnames:
-  - aihub
-  - vue-sphere
+  - "aihub"
+  - "vue-sphere"
 additional_fqdns: []
 database:
-    type: mariadb
-    version: "10.4"
+    type: mysql
+    version: "5.7"
 nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
