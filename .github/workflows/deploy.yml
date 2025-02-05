@@ -71,3 +71,7 @@ jobs:
             drush @default.production updb -y
             drush @default.production cim -y
             drush @default.production cr
+            drush @vuesphere.production cr
+            drush @vuesphere.production updb -y
+            drush @vuesphere.production cim -y
+            drush @vuesphere.production cr
