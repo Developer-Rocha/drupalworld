@@ -9,23 +9,14 @@ display:
           action_title: Ação
         thumbnail__target_id:
           label: Miniatura
-          separator: ', '
-        name:
-          separator: ', '
         bundle:
           label: Tipo
-          separator: ', '
         uid:
           label: Autor
-          separator: ', '
         status:
-          label: Status
           settings:
             format_custom_false: 'Não publicado'
             format_custom_true: Publicado
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Operações
       pager:
@@ -39,10 +30,14 @@ display:
             offset_label: Deslocamento
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Redefinir
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+      empty:
+        area_text_custom:
+          content: 'No media available.'
       filters:
         bundle:
           expose:

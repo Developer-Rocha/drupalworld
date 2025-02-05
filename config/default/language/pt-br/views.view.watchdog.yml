@@ -3,26 +3,25 @@ display:
     display_title: Padrão
     display_options:
       fields:
+        nothing:
+          admin_label: Icon
         type:
           label: Tipo
         timestamp:
           label: Data
         name:
           label: Usuário
-          separator: ', '
         link:
           label: Operações
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Redefinir
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente

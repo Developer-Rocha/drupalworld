@@ -92,6 +92,7 @@
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/graphql": "^3.4",
         "drupal/graphql_webform": "^1.0@alpha",
+        "drupal/gtm": "^1.9",
         "drupal/highlight_js": "^1.1",
         "drupal/highlight_php": "^1.0",
         "drupal/honeypot": "^2.1",

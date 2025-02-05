@@ -9,20 +9,10 @@ display:
           action_title: Ação
         subject:
           label: Assunto
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
-        entity_id:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Operações
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -36,6 +26,7 @@ display:
             offset_label: Deslocamento
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Redefinir
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Ascendente
@@ -58,20 +49,10 @@ display:
           action_title: Ação
         subject:
           label: Assunto
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
-        entity_id:
-          separator: ', '
-        changed:
-          separator: ', '
         operations:
           label: Operações
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:
